@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+.Blackjack-Header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Author {
+  font-size: 0.9em;
+}
+
+.Heart {
+  width: 50px;
+  height: 65px;
+  background-color: whitesmoke;
+  padding: 5px;
+  padding-top: 12px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 6px;
+  border: solid 1px black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/heart.png");
+}
+
+.Diamond {
+  width: 50px;
+  height: 65px;
+  background-color: whitesmoke;
+  padding: 5px;
+  padding-top: 12px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 6px;
+  border: solid 1px black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/diamond.png");
+}
+
+.Spade {
+  width: 50px;
+  height: 65px;
+  background-color: whitesmoke;
+  padding: 5px;
+  padding-top: 12px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 6px;
+  border: solid 1px black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/spade.png");
+  color: white;
+}
+
+.Club {
+  width: 50px;
+  height: 65px;
+  background-color: whitesmoke;
+  padding: 5px;
+  padding-top: 12px;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 6px;
+  border: solid 1px black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/club.png");
+  color: white;
+}
+
+.Flipped {
+  background-image: url("../../assets/images/diamond.png");
+  background-repeat: repeat;
+  background-size: 4px;
+  color: black;
+}
+.Flipped span {
+  display: none;
+}
+.Flipped::after {
+  content: "AB";
+}
+
+.Card-Table {
+  width: 80%;
+  background-color: green;
+  border: solid 15px darkgreen;
+  border-radius: 20px;
+  margin: auto;
+  padding: 10px;
+}
+
+.Hand {
+  border: solid white 1px;
+  border-radius: 6px;
+  width: 400px;
+  margin: 20px;
+  color: white;
+  background-color: darkgreen;
+  text-align: center;
+  padding: 10px;
+  flex-grow: 1;
+  position: relative;
+}
+.Hand-Container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border: solid red 1px;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+.Bust-Modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Bust-Modal-Text {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.5em;
+  width: 50%;
+  margin: auto;
+  margin-top: 200px;
+}
+.Bust-Modal-Active {
+  display: block;
+}
+
+.Blackjack-Modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Blackjack-Modal-Active {
+  display: block;
+}
+
+.Button-Container {
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+.Button-Container button {
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 6px;
+}

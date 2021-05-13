@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import PlayButton from "./PlayButton";
 
 export default {
-  title: "Components/Buttons/Play Button",
+  title: "Global/Buttons/Play Button",
   component: PlayButton,
   argTypes: {},
 };

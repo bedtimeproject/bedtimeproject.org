@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import LimerickButton from "./LimerickButton";
 
 export default {
-  title: "Components/Buttons/Limerick Button",
+  title: "Global/Buttons/Limerick Button",
   component: LimerickButton,
   argTypes: {},
 };

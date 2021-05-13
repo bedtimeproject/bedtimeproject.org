@@ -1,0 +1,145 @@
+.Main-Content {
+  font-family: "Indie Flower", cursive;
+  max-width: 100%;
+}
+
+.Main-Button-Container {
+  text-align: center;
+}
+.Main-Button {
+  font-size: 1.2em;
+  margin-top: 20px;
+  border: solid #938ec1 1px;
+  border-radius: 12px;
+
+  font-family: "Indie Flower", cursive;
+}
+
+/* Story */
+.Story-Container {
+  font-family: "Indie Flower", cursive;
+  background-color: #bee3c0;
+  border: solid #a7d7af 1px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  z-index: 10;
+}
+.Story-Content-Container {
+  transition-duration: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a7d7af;
+  border-radius: 12px;
+  padding: 5px 15px;
+  margin: 20px;
+  font-size: 1.2em;
+}
+.Story-Content-Container:nth-child(even):hover {
+  -webkit-transform: rotateZ(-1deg);
+  -ms-transform: rotateZ(-1deg);
+  transform: rotateZ(-1deg);
+}
+.Story-Content-Container:nth-child(odd):hover {
+  -webkit-transform: rotateZ(1deg);
+  -ms-transform: rotateZ(1deg);
+  transform: rotateZ(1deg);
+}
+.Story-Reward-Container:hover {
+  background-color: goldenrod;
+}
+.Story-Villian-Container:hover {
+  background-color: maroon;
+  color: yellow;
+}
+
+.Story-Content-Container h2 {
+  flex-shrink: 0;
+  text-align: left;
+  margin: 5px;
+}
+.Story-Content {
+  font-size: 1.2em;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .Story-Content {
+    padding-left: 20%;
+    text-align: right;
+  }
+
+  .Story-Content-Container {
+    flex-direction: row;
+  }
+}
+
+/*
+Background
+*/
+.Main-Content {
+  background-color: #938ec1;
+  overflow: hidden;
+}
+
+.cube {
+  z-index: 5;
+  position: absolute;
+  top: 80vh;
+  left: 85vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px lavender;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+  border-color: #e96a49;
+}
+
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 20vw;
+  top: 40vh;
+}
+
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 110vh;
+}
+
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 15vw;
+  top: 100vh;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}

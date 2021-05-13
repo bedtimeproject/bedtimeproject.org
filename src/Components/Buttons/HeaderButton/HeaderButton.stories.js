@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import HeaderButton from "./HeaderButton";
 
 export default {
-  title: "Components/Buttons/Header Button",
+  title: "Global/Buttons/Header Button",
   component: HeaderButton,
   argTypes: {},
 };

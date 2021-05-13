@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./Header";
 
 export default {
-  title: "Components/Header",
+  title: "Global/Header",
   component: Header,
   argTypes: {},
 };
