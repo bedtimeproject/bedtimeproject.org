@@ -1,0 +1,16 @@
+.HeaderButtonContainer {
+  text-decoration: none;
+  color: #000;
+}
+
+.HeaderButton {
+  border: #938ec1 1px solid;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 0 4px;
+}
+
+.HeaderButton:hover {
+  background-color: #938ec1;
+  cursor: pointer;
+}

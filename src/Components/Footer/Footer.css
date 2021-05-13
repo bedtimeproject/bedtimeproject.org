@@ -1,0 +1,10 @@
+.FooterContainer {
+  background-color: #e96a49;
+  overflow: hidden;
+}
+
+.CopyrightContainer {
+  text-align: center;
+  transform: rotate(-4deg);
+  margin: 20px;
+}

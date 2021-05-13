@@ -1,22 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import HeaderButton from "./HeaderButton";
+import Header from "./Header";
 
 export default {
-  title: "Components/Buttons/Header Button",
-  component: HeaderButton,
+  title: "Components/Header",
+  component: Header,
   argTypes: {},
 };
 
 const Template = (args) => (
   <Router>
-    <HeaderButton {...args} />
+    <Header {...args} />
   </Router>
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  children: "Hello, Header Button!",
-  link: "/",
-};
+Default.args = {};
