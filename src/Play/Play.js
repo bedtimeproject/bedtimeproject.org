@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import BlackJack from "./BlackJack/BlackJack";
 import Playground from "./Playground/Playground";
@@ -6,10 +6,12 @@ import Playground from "./Playground/Playground";
 export default function Play() {
   return (
     <div>
-      <div>Hello, Play!</div>
-      <Link to="/play/blackjack">BlackJack</Link>
-      <Link to="/play/playground">Playground</Link>
+      <div>Hello, Play!</div> (breadcrumbs)
       <Switch>
+        <Route exact path="/play">
+          <Link to="/play/blackjack">BlackJack</Link>
+          <Link to="/play/playground">Playground</Link>
+        </Route>
         <Route path="/play/blackjack">
           <BlackJack />
         </Route>
