@@ -1,5 +1,5 @@
-* {
-  box-sizing: border-box;
+.BlackJack-Container {
+  margin-bottom: 40px;
 }
 
 .Blackjack-Header {
@@ -7,11 +7,11 @@
   margin-bottom: 20px;
 }
 
-.Author {
+.BlackJack-Container .Author {
   font-size: 0.9em;
 }
 
-.Heart {
+.BlackJack-Container .Heart {
   width: 50px;
   height: 65px;
   background-color: whitesmoke;
@@ -28,7 +28,7 @@
   background-image: url("../../assets/images/heart.png");
 }
 
-.Diamond {
+.BlackJack-Container .Diamond {
   width: 50px;
   height: 65px;
   background-color: whitesmoke;
@@ -45,7 +45,7 @@
   background-image: url("../../assets/images/diamond.png");
 }
 
-.Spade {
+.BlackJack-Container .Spade {
   width: 50px;
   height: 65px;
   background-color: whitesmoke;
@@ -63,7 +63,7 @@
   color: white;
 }
 
-.Club {
+.BlackJack-Container .Club {
   width: 50px;
   height: 65px;
   background-color: whitesmoke;
@@ -81,29 +81,30 @@
   color: white;
 }
 
-.Flipped {
+.BlackJack-Container .Flipped {
   background-image: url("../../assets/images/diamond.png");
   background-repeat: repeat;
   background-size: 4px;
   color: black;
 }
-.Flipped span {
+.BlackJack-Container .Flipped span {
   display: none;
 }
-.Flipped::after {
+.BlackJack-Container .Flipped::after {
   content: "AB";
 }
 
-.Card-Table {
+.BlackJack-Container .Card-Table {
   width: 80%;
   background-color: green;
   border: solid 15px darkgreen;
   border-radius: 20px;
   margin: auto;
+  margin-top: 20px;
   padding: 10px;
 }
 
-.Hand {
+.BlackJack-Container .Hand {
   border: solid white 1px;
   border-radius: 6px;
   width: 400px;
@@ -115,13 +116,13 @@
   flex-grow: 1;
   position: relative;
 }
-.Hand-Container {
+.BlackJack-Container .Hand-Container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.Score {
+.BlackJack-Container .Score {
   position: absolute;
   top: 0;
   right: 0;
@@ -131,7 +132,7 @@
   font-size: 1.5em;
 }
 
-.Bust-Modal {
+.BlackJack-Container .Bust-Modal {
   display: none;
   position: fixed;
   top: 0;
@@ -140,7 +141,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.Bust-Modal-Text {
+.BlackJack-Container .Bust-Modal-Text {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
@@ -150,11 +151,11 @@
   margin: auto;
   margin-top: 200px;
 }
-.Bust-Modal-Active {
+.BlackJack-Container .Bust-Modal-Active {
   display: block;
 }
 
-.Blackjack-Modal {
+.BlackJack-Container .Blackjack-Modal {
   display: none;
   position: fixed;
   top: 0;
@@ -163,17 +164,17 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.Blackjack-Modal-Active {
+.BlackJack-Container .Blackjack-Modal-Active {
   display: block;
 }
 
-.Button-Container {
+.BlackJack-Container .Button-Container {
   width: 50%;
   margin: auto;
   margin-top: 10px;
   text-align: center;
 }
-.Button-Container button {
+.BlackJack-Container .Button-Container button {
   font-size: 1.5em;
   padding: 10px;
   border-radius: 6px;

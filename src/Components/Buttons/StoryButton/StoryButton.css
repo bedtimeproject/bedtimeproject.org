@@ -1,0 +1,28 @@
+.ButtonContainer {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #f3ebe8;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1.2em;
+  border: solid #938ec1 1px;
+  border-radius: 12px;
+  font-family: "Indie Flower", sans-serif;
+}
+.ButtonContainer:hover,
+.ButtonContainer:focus {
+  background: #efced8;
+}
+.ButtonContainer:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+.ButtonContainer:active {
+  transform: scale(0.99);
+}

@@ -1,0 +1,14 @@
+.PageTitle {
+  text-align: center;
+  margin: 0;
+  transition-duration: 0.5s;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.PageTitle:hover {
+  color: #3d3968;
+  font-size: 1.01 em;
+  -webkit-transform: rotateZ(1deg);
+  -ms-transform: rotateZ(1deg);
+  transform: rotateZ(1deg);
+}

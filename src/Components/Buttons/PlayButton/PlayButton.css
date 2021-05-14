@@ -1,0 +1,37 @@
+.PlayButton-Container {
+  text-decoration: none;
+  padding: 20px;
+}
+
+.PlayButton {
+  background-color: #fff1c5;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 75px;
+  width: 175px;
+  font-size: 1.6rem;
+  color: black;
+  cursor: pointer;
+
+  transform: translate3d(-15px, -15px, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.3s;
+  color: #d20404;
+  border: 3px solid #d20404;
+
+  box-shadow: 15px 15px 5px 0px black;
+}
+
+.PlayButton:hover {
+  transform: translate3d(-10px, -10px, 0);
+  box-shadow: 10px 10px 2.5px 0px black;
+}
+
+.PlayButton:active {
+  transform: translate3d(-5px, -5px, 0);
+  box-shadow: 5px 5px 0px 0px black;
+}

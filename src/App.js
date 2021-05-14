@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Structural/Header/Header";
+import Footer from "./Components/Structural/Footer/Footer";
 
 import Play from "./Play/Play";
 import About from "./About/About";

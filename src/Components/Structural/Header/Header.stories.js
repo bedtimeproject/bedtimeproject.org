@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import RotatingCubes from "./RotatingCubes";
+import Header from "./Header";
 
 export default {
-  title: "Background/Rotating Cubes",
-  component: RotatingCubes,
+  title: "Structural/Header",
+  component: Header,
+  argTypes: {},
 };
 
 const Template = (args) => (
   <Router>
-    <RotatingCubes {...args} />
+    <Header {...args} />
   </Router>
 );
 

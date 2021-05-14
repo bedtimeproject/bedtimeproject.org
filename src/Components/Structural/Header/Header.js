@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import HeaderButton from "../Buttons/HeaderButton/HeaderButton";
+import HeaderButton from "../../Buttons/HeaderButton/HeaderButton";
 
-import logo from "../../assets/images/logo.png";
+import logo from "../../../assets/images/logo.png";
 
 import "./Header.css";
 

@@ -1,0 +1,8 @@
+.Play-Links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}

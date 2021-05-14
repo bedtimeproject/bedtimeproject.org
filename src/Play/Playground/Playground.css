@@ -1,26 +1,20 @@
 .Playground-Container {
   position: relative;
+  padding: 40px 0;
 }
 
-.Main-Content {
+.Playground-Container .Main-Content {
   font-family: "Indie Flower", cursive;
   max-width: 100%;
 }
 
-.Main-Button-Container {
+.Playground-Main-Button-Container {
   text-align: center;
-}
-.Main-Button {
-  font-size: 1.2em;
   margin-top: 20px;
-  border: solid #938ec1 1px;
-  border-radius: 12px;
-
-  font-family: "Indie Flower", cursive;
 }
 
 /* Story */
-.Story-Container {
+.Playground-Container .Story-Container {
   font-family: "Indie Flower", cursive;
   background-color: #bee3c0;
   border: solid #a7d7af 1px;
@@ -31,7 +25,7 @@
   margin-top: 30px;
   z-index: 10;
 }
-.Story-Content-Container {
+.Playground-Container .Story-Content-Container {
   transition-duration: 0.3s;
   display: flex;
   flex-direction: column;
@@ -43,40 +37,40 @@
   margin: 20px;
   font-size: 1.2em;
 }
-.Story-Content-Container:nth-child(even):hover {
+.Playground-Container .Story-Content-Container:nth-child(even):hover {
   -webkit-transform: rotateZ(-1deg);
   -ms-transform: rotateZ(-1deg);
   transform: rotateZ(-1deg);
 }
-.Story-Content-Container:nth-child(odd):hover {
+.Playground-Container .Story-Content-Container:nth-child(odd):hover {
   -webkit-transform: rotateZ(1deg);
   -ms-transform: rotateZ(1deg);
   transform: rotateZ(1deg);
 }
-.Story-Reward-Container:hover {
+.Playground-Container .Story-Reward-Container:hover {
   background-color: goldenrod;
 }
-.Story-Villian-Container:hover {
+.Playground-Container .Story-Villian-Container:hover {
   background-color: maroon;
   color: yellow;
 }
 
-.Story-Content-Container h2 {
+.Playground-Container .Story-Content-Container h2 {
   flex-shrink: 0;
   text-align: left;
   margin: 5px;
 }
-.Story-Content {
+.Playground-Container .Story-Content {
   font-size: 1.2em;
   text-align: center;
 }
 @media (min-width: 700px) {
-  .Story-Content {
+  .Playground-Container .Story-Content {
     padding-left: 20%;
     text-align: right;
   }
 
-  .Story-Content-Container {
+  .Playground-Container .Story-Content-Container {
     flex-direction: row;
   }
 }
@@ -84,7 +78,7 @@
 /*
 Background
 */
-.Playground-Background-Color {
+.Playground-Container .Playground-Background-Color {
   background-color: #938ec1;
   position: absolute;
   z-index: -5;

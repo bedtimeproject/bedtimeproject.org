@@ -1,6 +1,7 @@
 .FooterContainer {
   background-color: #e96a49;
   overflow: hidden;
+  min-height: 58px;
 }
 
 .CopyrightContainer {

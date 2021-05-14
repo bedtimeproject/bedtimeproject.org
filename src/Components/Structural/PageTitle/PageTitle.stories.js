@@ -1,19 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import Header from "./Header";
+import PageTitle from "./PageTitle";
 
 export default {
-  title: "Global/Header",
-  component: Header,
+  title: "Structural/Page Title",
+  component: PageTitle,
   argTypes: {},
 };
 
 const Template = (args) => (
   <Router>
-    <Header {...args} />
+    <PageTitle {...args} />
   </Router>
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  children: "Hello, Page Heading!",
+  link: "/",
+};

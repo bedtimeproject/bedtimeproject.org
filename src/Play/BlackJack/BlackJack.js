@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import "./BlackJack.css";
 
+import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+
 export default function BlackJack() {
   useEffect(() => {
     /**
@@ -245,7 +247,7 @@ export default function BlackJack() {
 
       for (index = 0; index < cards.length; index++) {
         let currentValue = cards[index].rank;
-        if (currentValue != "A") {
+        if (currentValue !== "A") {
           userScore += scores[currentValue];
         } else {
           hasAce = true;
@@ -261,7 +263,7 @@ export default function BlackJack() {
 
         // If the user had two aces, the hand will only sum 11 at this point, and
         // need one extra point for the other ace.
-        if (userScore == 11) {
+        if (userScore === 11) {
           userScore += 1;
         }
       }
@@ -273,10 +275,11 @@ export default function BlackJack() {
      * @description Calculates the scores of both players and updates the display.
      */
     function updateScores() {
-      let userScore, computerScore;
+      let userScore;
+      // let computerScore;
 
       userScore = calculateScore(userCards);
-      computerScore = calculateScore(computerCards);
+      // computerScore = calculateScore(computerCards);
 
       userScoreContainer.innerText = userScore;
       checkScore(userScore);
@@ -286,7 +289,7 @@ export default function BlackJack() {
      * @description Checks to make sure the user's score isn't over 21. Shows Bust modal if over.
      */
     function checkScore(userScore) {
-      if (userScore == 21) {
+      if (userScore === 21) {
         blackjack("Nice one.");
       } else if (userScore > 21) {
         bust("Better luck next time.");
@@ -326,8 +329,6 @@ export default function BlackJack() {
      * @description discards computer and user cards, and deals more cards.
      */
     function resetGame() {
-      let index;
-
       // Clear Modals
       if (bustModal.classList.contains("Bust-Modal-Active")) {
         bustModal.classList.remove("Bust-Modal-Active");
@@ -358,6 +359,7 @@ export default function BlackJack() {
     /**
      * @description Displays the entire deck of cards to the screen. Used for testing purposes.
      */
+    // eslint-disable-next-line no-unused-vars
     function printDeck() {
       let index;
 
@@ -369,7 +371,8 @@ export default function BlackJack() {
     }
   }, []);
   return (
-    <main>
+    <main className="BlackJack-Container">
+      <PageTitle>BlackJack</PageTitle>
       <div className="Card-Table">
         <div className="Hand-Container">
           <div className="Hand Hand-User">

@@ -4,8 +4,8 @@ import "./PlayButton.css";
 
 export default function PlayButton({ children, link }) {
   return (
-    <Link to={link}>
-      <div>{children}</div>
+    <Link to={link} className="PlayButton-Container">
+      <div className="PlayButton">{children}</div>
     </Link>
   );
 }

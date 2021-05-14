@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import RotatingCubes from "../../Components/Background/RotatingCubes/RotatingCubes";
+import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
+import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 
 import "./Playground.css";
 import { json } from "./playgroundData";
@@ -117,15 +119,17 @@ export default function Playground() {
         <div className="Playground-Background-Color" />
         <RotatingCubes />
 
-        <div className="Main-Button-Container">
-          <button className="Main-Button">Get a new story</button>
+        <PageTitle>Playground</PageTitle>
+
+        <div className="Playground-Main-Button-Container">
+          <StoryButton className="Main-Button">Get a new story</StoryButton>
         </div>
 
         <div className="Story-Container">
           <div className="Story-Content-Container">
             <h2>Your Character</h2>
             <div className="Story-Content">
-              <span id="js-name"></span> the <span id="js-description"></span>
+              <span id="js-name"></span> the <span id="js-description"></span>{" "}
               <span id="js-main-character"></span>
             </div>
           </div>
