@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/the-bedtime-project/static/css/main.c689c05a.chunk.css",
+    "main.js": "/the-bedtime-project/static/js/main.2e4e3e9e.chunk.js",
+    "main.js.map": "/the-bedtime-project/static/js/main.2e4e3e9e.chunk.js.map",
+    "runtime-main.js": "/the-bedtime-project/static/js/runtime-main.0edc0cd7.js",
+    "runtime-main.js.map": "/the-bedtime-project/static/js/runtime-main.0edc0cd7.js.map",
+    "static/js/2.24e14c72.chunk.js": "/the-bedtime-project/static/js/2.24e14c72.chunk.js",
+    "static/js/2.24e14c72.chunk.js.map": "/the-bedtime-project/static/js/2.24e14c72.chunk.js.map",
+    "index.html": "/the-bedtime-project/index.html",
+    "static/css/main.c689c05a.chunk.css.map": "/the-bedtime-project/static/css/main.c689c05a.chunk.css.map",
+    "static/js/2.24e14c72.chunk.js.LICENSE.txt": "/the-bedtime-project/static/js/2.24e14c72.chunk.js.LICENSE.txt",
+    "static/media/BlackJack.css": "/the-bedtime-project/static/media/spade.5f655d9b.png",
+    "static/media/logo.ab36dd44.png": "/the-bedtime-project/static/media/logo.ab36dd44.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0edc0cd7.js",
+    "static/js/2.24e14c72.chunk.js",
+    "static/css/main.c689c05a.chunk.css",
+    "static/js/main.2e4e3e9e.chunk.js"
+  ]
+}
