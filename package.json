@@ -1,8 +1,11 @@
 {
   "name": "the-bedtime-project",
+  "homepage": "https://aburdiss.github.io/the-bedtime-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^3.1.0",
+    "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -12,6 +15,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",

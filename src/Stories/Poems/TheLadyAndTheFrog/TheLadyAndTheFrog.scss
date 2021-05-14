@@ -1,0 +1,106 @@
+.TheLadyAndTheFrogWrapper {
+  main {
+    background: url("../../../assets/images/yellowFlowers.jpg");
+    background-size: contain;
+    height: 98vh;
+    overflow: hidden;
+  }
+
+  .Story {
+    display: flex;
+  }
+
+  .Card {
+    height: 90vh;
+    padding: 20px 5vw;
+    align-self: center;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+    }
+
+    &:last-child {
+      margin-right: 50px;
+      h2 {
+        padding: 100px 0px;
+        border: 12px double #3ea42f;
+        border-radius: 40px 40px 0px 0px;
+      }
+    }
+  }
+
+  .Title {
+    text-align: center;
+    font-family: "Parisienne", cursive;
+    width: 90vw;
+    & h1 {
+      position: relative;
+      font-size: 3.5em;
+    }
+  }
+
+  .Text {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.5em;
+    text-align: center;
+    width: 30vw;
+
+    @media (max-width: 800px) {
+      width: 85vw;
+    }
+  }
+
+  // Image Frames Styles
+  img {
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
+    max-height: 100%;
+  }
+  .frame {
+    background-color: #ddc;
+    border: solid 5vmin #eee;
+    border-bottom-color: #fff;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+      0 5px 10px 5px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    display: inline-block;
+
+    height: 60vh;
+    padding: 8vmin;
+    position: relative;
+    text-align: center;
+
+    &:before {
+      border-radius: 2px;
+      bottom: -2vmin;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+      content: "";
+      left: -2vmin;
+      position: absolute;
+      right: -2vmin;
+      top: -2vmin;
+    }
+    &:after {
+      border-radius: 2px;
+      bottom: -2.5vmin;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+      content: "";
+      left: -2.5vmin;
+      position: absolute;
+      right: -2.5vmin;
+      top: -2.5vmin;
+    }
+  }
+}
