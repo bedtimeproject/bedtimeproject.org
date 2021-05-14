@@ -21,7 +21,7 @@ export default function TheLadyAndTheFrog() {
       windowWidth += $(this).outerWidth(true);
     });
 
-    $(".TheLadyAndTheFrogWrapper main").css("width", `${windowWidth}px`);
+    $(".TheLadyAndTheFrogWrapper main").css("width", `${windowWidth + 2000}px`);
 
     //refresh page on browser resize
     $(window).bind("resize", function (e) {

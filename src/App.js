@@ -13,6 +13,7 @@ import FourOhFour from "./404/404";
 
 // Stories without Header and Footer
 import TheLadyAndTheFrog from "./Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";
+import MrsBlueSky from "./Stories/Poems/MrsBlueSky/MrsBlueSky";
 
 export default function App() {
   return (
@@ -22,6 +23,9 @@ export default function App() {
           {/* Use the outer switch for pages that don't need the header and footer */}
           <Route path="/stories/poems/the-lady-and-the-frog">
             <TheLadyAndTheFrog />
+          </Route>
+          <Route path="/stories/poems/mrs-blue-sky">
+            <MrsBlueSky />
           </Route>
           <Route path="*">
             <Header />
