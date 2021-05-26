@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/the-bedtime-project/static/css/main.06d6499f.chunk.css",
-    "main.js": "/the-bedtime-project/static/js/main.0fb0a71a.chunk.js",
-    "main.js.map": "/the-bedtime-project/static/js/main.0fb0a71a.chunk.js.map",
+    "main.css": "/the-bedtime-project/static/css/main.16bf5b75.chunk.css",
+    "main.js": "/the-bedtime-project/static/js/main.fa622dce.chunk.js",
+    "main.js.map": "/the-bedtime-project/static/js/main.fa622dce.chunk.js.map",
     "runtime-main.js": "/the-bedtime-project/static/js/runtime-main.0edc0cd7.js",
     "runtime-main.js.map": "/the-bedtime-project/static/js/runtime-main.0edc0cd7.js.map",
     "static/js/2.75ddbce9.chunk.js": "/the-bedtime-project/static/js/2.75ddbce9.chunk.js",
     "static/js/2.75ddbce9.chunk.js.map": "/the-bedtime-project/static/js/2.75ddbce9.chunk.js.map",
     "index.html": "/the-bedtime-project/index.html",
-    "static/css/main.06d6499f.chunk.css.map": "/the-bedtime-project/static/css/main.06d6499f.chunk.css.map",
+    "static/css/main.16bf5b75.chunk.css.map": "/the-bedtime-project/static/css/main.16bf5b75.chunk.css.map",
     "static/js/2.75ddbce9.chunk.js.LICENSE.txt": "/the-bedtime-project/static/js/2.75ddbce9.chunk.js.LICENSE.txt",
     "static/media/IMG-3646.26cf4519.jpg": "/the-bedtime-project/static/media/IMG-3646.26cf4519.jpg",
     "static/media/IMG_3642.42873119.jpg": "/the-bedtime-project/static/media/IMG_3642.42873119.jpg",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.0edc0cd7.js",
     "static/js/2.75ddbce9.chunk.js",
-    "static/css/main.06d6499f.chunk.css",
-    "static/js/main.0fb0a71a.chunk.js"
+    "static/css/main.16bf5b75.chunk.css",
+    "static/js/main.fa622dce.chunk.js"
   ]
 }
