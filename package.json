@@ -17,10 +17,12 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "deployall": "npm run deploy && npm run chromatic",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=6c0dc9e53bb7"
   },
   "eslintConfig": {
     "extends": [
@@ -66,6 +68,7 @@
     "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3"
+    "@testing-library/user-event": "^12.8.3",
+    "chromatic": "^5.8.3"
   }
 }
