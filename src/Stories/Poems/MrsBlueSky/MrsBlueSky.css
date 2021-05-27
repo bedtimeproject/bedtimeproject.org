@@ -1,3 +1,7 @@
+body {
+  min-height: 2000vh;
+}
+
 .MrsBlueSkyContainer * {
   box-sizing: border-box;
   font-family: "Gloria Hallelujah", cursive;
@@ -836,7 +840,8 @@
     background-color: #133061;
   }
 }
-.MrsBlueSkyContainer :root * {
+
+:root * {
   /* Pause the animation */
   animation-play-state: paused;
   /* Bind the animation to scroll */
