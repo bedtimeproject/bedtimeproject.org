@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 //=================================================================
 //  Variables
 //=================================================================
@@ -112,16 +113,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    fill: #808080;
-    & path {
-      fill: #808080;
-    }
-
     z-index: 50;
   }
 
   .Header-Cloud-2 {
-    fill: $Cloud-2-Color;
     position: fixed;
     top: -100px;
     z-index: 45;
@@ -352,9 +347,6 @@ body {
     animation-timing-function: ease-in-out;
 
     & path {
-      fill-opacity: 0.6;
-      fill: #959595;
-
       animation-name: Sunset-Cloud-Path;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -372,9 +364,6 @@ body {
     animation-timing-function: ease-in-out;
 
     & path {
-      fill-opacity: 0.6;
-      fill: #959595;
-
       animation-name: Sunset-Cloud-Path;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
@@ -434,104 +423,6 @@ body {
       opacity: 0;
       left: -50vw;
     }
-  }
-  .st0 {
-    fill: #7a6d6b;
-    stroke: #7a6d6b;
-  }
-  .st1 {
-    fill: #5c514f;
-    stroke: #5c514f;
-  }
-  .st2 {
-    fill: #8a7e7b;
-    stroke: #8a7e7b;
-  }
-  .st3 {
-    fill: #514846;
-    stroke: #514846;
-  }
-  .st4 {
-    opacity: 0.29;
-    fill: #3a3938;
-    stroke: #3a3938;
-    enable-background: new;
-  }
-  .st5 {
-    opacity: 0.41;
-    fill: #4d4a49;
-    stroke: #4d4a49;
-    enable-background: new;
-  }
-  .st6 {
-    fill: #514745;
-    stroke: #514745;
-  }
-  .st7 {
-    fill: #aa9f9d;
-    stroke: #aa9f9d;
-  }
-  .st8 {
-    fill: #564c4a;
-    stroke: #564c4a;
-  }
-  .st9 {
-    fill: #6a5f5c;
-    stroke: #6a5f5c;
-  }
-  .st10 {
-    fill: #4c4341;
-    stroke: #4c4341;
-  }
-  .st11 {
-    opacity: 0.3;
-    fill: #3d3b3b;
-    stroke: #3d3b3b;
-    enable-background: new;
-  }
-  .st12 {
-    fill: #605553;
-    stroke: #605553;
-  }
-  .st13 {
-    fill: #554b49;
-    stroke: #554b49;
-  }
-  .st14 {
-    opacity: 0.58;
-    fill: #554f4d;
-    stroke: #554f4d;
-    enable-background: new;
-  }
-  .st15 {
-    opacity: 0.62;
-    fill: #564f4e;
-    stroke: #564f4e;
-    enable-background: new;
-  }
-  .st16 {
-    opacity: 0.61;
-    fill: #554f4e;
-    stroke: #554f4e;
-    enable-background: new;
-  }
-  .st17 {
-    opacity: 0.6;
-    fill: #524b4a;
-    stroke: #524b4a;
-    enable-background: new;
-  }
-  .st18 {
-    opacity: 0.59;
-    fill: #524b4a;
-    stroke: #524b4a;
-    enable-background: new;
-  }
-  .st19 {
-    opacity: 0.36;
-    fill: #454241;
-    stroke: #454241;
-    enable-background: new;
   }
 
   // Stanza 4
@@ -898,49 +789,49 @@ body {
       top: -100vh;
     }
   }
+}
 
-  //=================================================================
-  //  Global
-  //=================================================================
+//=================================================================
+//  Global
+//=================================================================
 
-  body {
-    padding: 0;
-    margin: 0;
-    min-height: 2000vh;
-    background-color: $Sky-Dark;
-    animation: body 1s linear;
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 2000vh;
+  background-color: $Sky-Dark;
+  animation: body 1s linear;
+}
+@keyframes body {
+  3% {
+    background-color: $Sky-Blue;
   }
-  @keyframes body {
-    3% {
-      background-color: $Sky-Blue;
-    }
-    25% {
-      background-color: $Sky-Blue;
-    }
-    32% {
-      background-color: $Sunset-Color;
-    }
-    37% {
-      background-color: $Sunset-Color-2;
-    }
-    39% {
-      background-color: $Sky-Blue;
-    }
-    83% {
-      background-color: $Sky-Blue;
-    }
-    86% {
-      background-color: $Sky-Dark;
-    }
-    86.2% {
-      background-color: $White;
-    }
-    86.4% {
-      background-color: $Sky-Dark;
-    }
-    100% {
-      background-color: $Sky-Dark;
-    }
+  25% {
+    background-color: $Sky-Blue;
+  }
+  32% {
+    background-color: $Sunset-Color;
+  }
+  37% {
+    background-color: $Sunset-Color-2;
+  }
+  39% {
+    background-color: $Sky-Blue;
+  }
+  83% {
+    background-color: $Sky-Blue;
+  }
+  86% {
+    background-color: $Sky-Dark;
+  }
+  86.2% {
+    background-color: $White;
+  }
+  86.4% {
+    background-color: $Sky-Dark;
+  }
+  100% {
+    background-color: $Sky-Dark;
   }
 }
 

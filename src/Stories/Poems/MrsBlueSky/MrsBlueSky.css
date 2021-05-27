@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 body {
   min-height: 2000vh;
 }
@@ -81,14 +82,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  fill: #808080;
   z-index: 50;
 }
-.MrsBlueSkyContainer .Header-Cloud path {
-  fill: #808080;
-}
 .MrsBlueSkyContainer .Header-Cloud-2 {
-  fill: #d3d3d3;
   position: fixed;
   top: -100px;
   z-index: 45;
@@ -295,8 +291,6 @@ body {
   animation-timing-function: ease-in-out;
 }
 .MrsBlueSkyContainer .Sunset-Cloud path {
-  fill-opacity: 0.6;
-  fill: #959595;
   animation-name: Sunset-Cloud-Path;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -312,8 +306,6 @@ body {
   animation-timing-function: ease-in-out;
 }
 .MrsBlueSkyContainer .Sunset-Cloud-2 path {
-  fill-opacity: 0.6;
-  fill: #959595;
   animation-name: Sunset-Cloud-Path;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -370,104 +362,6 @@ body {
     opacity: 0;
     left: -50vw;
   }
-}
-.MrsBlueSkyContainer .st0 {
-  fill: #7a6d6b;
-  stroke: #7a6d6b;
-}
-.MrsBlueSkyContainer .st1 {
-  fill: #5c514f;
-  stroke: #5c514f;
-}
-.MrsBlueSkyContainer .st2 {
-  fill: #8a7e7b;
-  stroke: #8a7e7b;
-}
-.MrsBlueSkyContainer .st3 {
-  fill: #514846;
-  stroke: #514846;
-}
-.MrsBlueSkyContainer .st4 {
-  opacity: 0.29;
-  fill: #3a3938;
-  stroke: #3a3938;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st5 {
-  opacity: 0.41;
-  fill: #4d4a49;
-  stroke: #4d4a49;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st6 {
-  fill: #514745;
-  stroke: #514745;
-}
-.MrsBlueSkyContainer .st7 {
-  fill: #aa9f9d;
-  stroke: #aa9f9d;
-}
-.MrsBlueSkyContainer .st8 {
-  fill: #564c4a;
-  stroke: #564c4a;
-}
-.MrsBlueSkyContainer .st9 {
-  fill: #6a5f5c;
-  stroke: #6a5f5c;
-}
-.MrsBlueSkyContainer .st10 {
-  fill: #4c4341;
-  stroke: #4c4341;
-}
-.MrsBlueSkyContainer .st11 {
-  opacity: 0.3;
-  fill: #3d3b3b;
-  stroke: #3d3b3b;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st12 {
-  fill: #605553;
-  stroke: #605553;
-}
-.MrsBlueSkyContainer .st13 {
-  fill: #554b49;
-  stroke: #554b49;
-}
-.MrsBlueSkyContainer .st14 {
-  opacity: 0.58;
-  fill: #554f4d;
-  stroke: #554f4d;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st15 {
-  opacity: 0.62;
-  fill: #564f4e;
-  stroke: #564f4e;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st16 {
-  opacity: 0.61;
-  fill: #554f4e;
-  stroke: #554f4e;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st17 {
-  opacity: 0.6;
-  fill: #524b4a;
-  stroke: #524b4a;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st18 {
-  opacity: 0.59;
-  fill: #524b4a;
-  stroke: #524b4a;
-  enable-background: new;
-}
-.MrsBlueSkyContainer .st19 {
-  opacity: 0.36;
-  fill: #454241;
-  stroke: #454241;
-  enable-background: new;
 }
 .MrsBlueSkyContainer .Wind-Cloud {
   position: fixed;
@@ -801,13 +695,15 @@ body {
     top: -100vh;
   }
 }
-.MrsBlueSkyContainer body {
+
+body {
   padding: 0;
   margin: 0;
   min-height: 2000vh;
   background-color: #133061;
   animation: body 1s linear;
 }
+
 @keyframes body {
   3% {
     background-color: #8bc9e4;
@@ -840,7 +736,6 @@ body {
     background-color: #133061;
   }
 }
-
 :root * {
   /* Pause the animation */
   animation-play-state: paused;
