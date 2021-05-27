@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.402a89dd.chunk.css",
-    "main.js": "/static/js/main.fa622dce.chunk.js",
-    "main.js.map": "/static/js/main.fa622dce.chunk.js.map",
+    "main.css": "/static/css/main.bf5acad1.chunk.css",
+    "main.js": "/static/js/main.dd5639a1.chunk.js",
+    "main.js.map": "/static/js/main.dd5639a1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.75ddbce9.chunk.js": "/static/js/2.75ddbce9.chunk.js",
     "static/js/2.75ddbce9.chunk.js.map": "/static/js/2.75ddbce9.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.402a89dd.chunk.css.map": "/static/css/main.402a89dd.chunk.css.map",
+    "static/css/main.bf5acad1.chunk.css.map": "/static/css/main.bf5acad1.chunk.css.map",
     "static/js/2.75ddbce9.chunk.js.LICENSE.txt": "/static/js/2.75ddbce9.chunk.js.LICENSE.txt",
+    "static/media/BoyFrisbee.209b3597.svg": "/static/media/BoyFrisbee.209b3597.svg",
+    "static/media/ComicPow.f723f235.svg": "/static/media/ComicPow.f723f235.svg",
+    "static/media/Cow.7d66b4d3.svg": "/static/media/Cow.7d66b4d3.svg",
+    "static/media/Dragon.a68cdfc4.svg": "/static/media/Dragon.a68cdfc4.svg",
+    "static/media/Frisbee.25bb72bf.svg": "/static/media/Frisbee.25bb72bf.svg",
+    "static/media/HeaderCloud.0d9e1e54.svg": "/static/media/HeaderCloud.0d9e1e54.svg",
+    "static/media/HeaderCloud2.f12f4a32.svg": "/static/media/HeaderCloud2.f12f4a32.svg",
+    "static/media/HighDog.04d232c0.svg": "/static/media/HighDog.04d232c0.svg",
     "static/media/IMG-3646.26cf4519.jpg": "/static/media/IMG-3646.26cf4519.jpg",
     "static/media/IMG_3642.42873119.jpg": "/static/media/IMG_3642.42873119.jpg",
     "static/media/IMG_3643.74d87f69.jpg": "/static/media/IMG_3643.74d87f69.jpg",
@@ -19,6 +27,15 @@
     "static/media/IMG_3651.c1dc3485.jpg": "/static/media/IMG_3651.c1dc3485.jpg",
     "static/media/IMG_3654.3bb1f3f1.jpg": "/static/media/IMG_3654.3bb1f3f1.jpg",
     "static/media/IMG_3800.3e073372.jpg": "/static/media/IMG_3800.3e073372.jpg",
+    "static/media/Lightning.421a67ed.svg": "/static/media/Lightning.421a67ed.svg",
+    "static/media/Moon.cc7c0183.svg": "/static/media/Moon.cc7c0183.svg",
+    "static/media/Mountain.a566c062.svg": "/static/media/Mountain.a566c062.svg",
+    "static/media/PaperAirplane.df2dc29d.svg": "/static/media/PaperAirplane.df2dc29d.svg",
+    "static/media/SadDogImage.5ea205ab.svg": "/static/media/SadDogImage.5ea205ab.svg",
+    "static/media/Sun.fa9d6a9c.svg": "/static/media/Sun.fa9d6a9c.svg",
+    "static/media/SunsetCloud.fa6f942b.svg": "/static/media/SunsetCloud.fa6f942b.svg",
+    "static/media/SunsetCloud2.a656c6ea.svg": "/static/media/SunsetCloud2.a656c6ea.svg",
+    "static/media/WindCloud.cefcf42c.svg": "/static/media/WindCloud.cefcf42c.svg",
     "static/media/BlackJack.css": "/static/media/spade.5f655d9b.png",
     "static/media/logo.ab36dd44.png": "/static/media/logo.ab36dd44.png",
     "static/media/TheLadyAndTheFrog.css": "/static/media/yellowFlowers.3f442f01.jpg"
@@ -26,7 +43,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.75ddbce9.chunk.js",
-    "static/css/main.402a89dd.chunk.css",
-    "static/js/main.fa622dce.chunk.js"
+    "static/css/main.bf5acad1.chunk.css",
+    "static/js/main.dd5639a1.chunk.js"
   ]
 }
