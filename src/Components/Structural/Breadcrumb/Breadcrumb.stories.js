@@ -1,21 +1,22 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import PlayButton from "./PlayButton";
+import Breadcrumb from "./Breadcrumb";
 
 export default {
-  title: "Buttons/Play Button",
-  component: PlayButton,
+  title: "Structural/Breadcrumb",
+  component: Breadcrumb,
   argTypes: {},
 };
 
 const Template = (args) => (
   <Router>
-    <PlayButton {...args} link="/" />
+    <Breadcrumb {...args} />
   </Router>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "Hello, Play Button!",
+  children: "Hello, Breadcrumb",
+  link: "/",
 };

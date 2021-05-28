@@ -1,0 +1,9 @@
+.Breadcrumb-Container {
+  padding: 5px;
+  text-decoration: none;
+}
+
+.Breadcrumb-Container::after {
+  content: ">";
+  margin-left: 7px;
+}

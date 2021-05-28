@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router";
 import LimerickDisplay from "./LimerickDisplay/LimerickDisplay";
 import LimerickButton from "../../Components/Buttons/LimerickButton/LimerickButton";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import allLimericks from "./assets/_registry";
 import { getTitleFromMarkdown } from "../../util/getTitleFromMarkdown/getTitleFromMarkdown";
 import { getDateFromMarkdown } from "../../util/getDateFromMarkdown/getDateFromMarkdown";
@@ -33,6 +34,24 @@ export default function Limericks() {
     fetchLimericks();
   }, []);
 
+  function getLatestLimerick(allLimericks) {
+    let latestLimerick = allLimericks[0];
+    let latestLimerickDate = undefined;
+
+    for (let limerick of allLimericks) {
+      const limerickDate = new Date(getDateFromMarkdown(limerick));
+      if (
+        limerickDate < new Date() &&
+        (!latestLimerickDate || latestLimerickDate < limerickDate)
+      ) {
+        latestLimerickDate = limerickDate;
+        latestLimerick = limerick;
+      }
+    }
+    console.log(latestLimerick);
+    return latestLimerick;
+  }
+
   return (
     <Switch>
       <Route exact path="/stories/limericks">
@@ -52,10 +71,16 @@ export default function Limericks() {
         })}
       </Route>
 
+      <Route path="/stories/limericks/latest">
+        <Breadcrumb link="/stories/limericks/">Limericks</Breadcrumb>
+        <LimerickDisplay limerick={getLatestLimerick(limericks)} />
+      </Route>
+
       {limericks.map((limerick, index) => {
         const title = getTitleFromMarkdown(limerick);
         return (
           <Route key={index} path={`/stories/limericks/${title}`}>
+            <Breadcrumb link="/stories/limericks/">Limericks</Breadcrumb>
             <LimerickDisplay limerick={limerick} />
           </Route>
         );

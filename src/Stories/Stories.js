@@ -9,7 +9,7 @@ import Breadcrumb from "../Components/Structural/Breadcrumb/Breadcrumb";
 
 export default function Stories() {
   return (
-    <div>
+    <div className="Stories-Container">
       <Switch>
         <Route exact path="/stories">
           <PageTitle>Stories</PageTitle>

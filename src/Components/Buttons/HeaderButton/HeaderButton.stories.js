@@ -11,12 +11,11 @@ export default {
 
 const Template = (args) => (
   <Router>
-    <HeaderButton {...args} />
+    <HeaderButton {...args} link="/" />
   </Router>
 );
 
 export const Default = Template.bind({});
 Default.args = {
   children: "Hello, Header Button!",
-  link: "/",
 };
