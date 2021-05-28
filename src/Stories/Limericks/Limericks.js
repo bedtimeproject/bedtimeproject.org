@@ -9,31 +9,62 @@ import allLimericks from "./assets/_registry";
 import { getTitleFromMarkdown } from "../../util/getTitleFromMarkdown/getTitleFromMarkdown";
 import { getDateFromMarkdown } from "../../util/getDateFromMarkdown/getDateFromMarkdown";
 
+/**
+ * @function Limericks
+ * @description The main parent component for all of the screens and components
+ * that are in the Limerick tab.
+ * @author Alexander Burdiss
+ * @since 5/27/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <Limericks />
+ * ```
+ */
 export default function Limericks() {
   const [limericks, setLimericks] = useState([]);
 
-  useEffect(function getLimericks() {
+  useEffect(
     /**
-     * @async
-     * @function Limericks~useEffect~getLimericks~fetchLimericks
-     * @description Fetches All of the limericks from the registry and adds
-     * them to the state variable in this component.
-     * @author Alexander Burdiss
-     * @since 5/27/21
-     * @version 1.0.0
+     * @function Limericks~useEffect~getLimericks
+     * @description A synchronous wrapper for fetchLimericks()
      */
-    async function fetchLimericks() {
-      let limerickArray = [];
-      for (let limerick of allLimericks) {
-        let resp = await fetch(limerick);
-        let text = await resp.text();
-        limerickArray.push(text);
+    function getLimericks() {
+      /**
+       * @async
+       * @function Limericks~useEffect~getLimericks~fetchLimericks
+       * @description Fetches All of the limericks from the registry and adds
+       * them to the state variable in this component.
+       * @author Alexander Burdiss
+       * @since 5/27/21
+       * @version 1.0.0
+       */
+      async function fetchLimericks() {
+        let limerickArray = [];
+        for (let limerick of allLimericks) {
+          let resp = await fetch(limerick);
+          let text = await resp.text();
+          limerickArray.push(text);
+        }
+        setLimericks(limerickArray);
       }
-      setLimericks(limerickArray);
-    }
-    fetchLimericks();
-  }, []);
+      fetchLimericks();
+    },
+    []
+  );
 
+  /**
+   * @function Limericks~getLatestLimerick
+   * @description Returns the latest limerick as long as its date is not later
+   * than the current date.
+   * @param {String[]} allLimericks An array of all of the limericks, in
+   * markdown form
+   * @returns The latest limerick out of all of the limericks.
+   * @author Alexander Burdiss
+   * @since 5/27/21
+   * @version 1.0.0
+   */
   function getLatestLimerick(allLimericks) {
     let latestLimerick = allLimericks[0];
     let latestLimerickDate = undefined;
@@ -48,7 +79,7 @@ export default function Limericks() {
         latestLimerick = limerick;
       }
     }
-    console.log(latestLimerick);
+
     return latestLimerick;
   }
 
