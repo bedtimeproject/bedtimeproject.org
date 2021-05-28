@@ -16,11 +16,12 @@ $White: #ffffff;
 //  Global Styles
 //=================================================================
 
-body {
-  min-height: 2000vh;
-}
-
 .MrsBlueSkyContainer {
+  padding: 0;
+  margin: 0;
+  min-height: 2000vh;
+  background-color: $Sky-Dark;
+  animation: body 1s linear;
   * {
     box-sizing: border-box;
     font-family: "Gloria Hallelujah", cursive;
@@ -795,13 +796,6 @@ body {
 //  Global
 //=================================================================
 
-body {
-  padding: 0;
-  margin: 0;
-  min-height: 2000vh;
-  background-color: $Sky-Dark;
-  animation: body 1s linear;
-}
 @keyframes body {
   3% {
     background-color: $Sky-Blue;
@@ -833,14 +827,4 @@ body {
   100% {
     background-color: $Sky-Dark;
   }
-}
-
-:root * {
-  /* Pause the animation */
-  animation-play-state: paused;
-  /* Bind the animation to scroll */
-  animation-delay: calc(var(--scroll) * -1s);
-  /* These last 2 properites clean up overshoot weirdness */
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
 }

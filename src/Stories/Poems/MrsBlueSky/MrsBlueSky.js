@@ -24,6 +24,7 @@ import "./MrsBlueSky.css";
 
 export default function MrsBlueSky() {
   useEffect(() => {
+    document.body.style.minHeight = "2000vh";
     function handleScroll() {
       document.body.style.setProperty(
         "--scroll",
@@ -34,10 +35,24 @@ export default function MrsBlueSky() {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.minHeight = "";
+      document.body.style.removeProperty("--scroll");
     };
   }, []);
   return (
     <div className="MrsBlueSkyContainer">
+      {/* Styles for the global object, just on this page */}
+      <style>{`
+        :root * {
+          /* Pause the animation */
+          animation-play-state: paused;
+          /* Bind the animation to scroll */
+          animation-delay: calc(var(--scroll) * -1s);
+          /* These last 2 properites clean up overshoot weirdness */
+          animation-iteration-count: 1;
+          animation-fill-mode: both;
+        }
+      `}</style>
       <main className="Poem">
         <div className="Poem-Meta-Info">
           <img src={HeaderCloud2} className="Header-Cloud-2" />

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 
 export default function Poems() {
   return (
     <div>
-      <div>Hello, Poems!</div>
+      <PageTitle>Poems</PageTitle>
       <Link to="/stories/poems/the-lady-and-the-frog">
         The Lady And The Frog
       </Link>
