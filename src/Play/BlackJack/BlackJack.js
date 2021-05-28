@@ -3,24 +3,20 @@ import "./BlackJack.css";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 
+/**
+ * @function BlackJack
+ * @description Manages all the logic for the game Blackjack.
+ * @author Alexander Burdiss
+ * @since 7/31/20
+ * @component
+ * @example
+ * ```jsx
+ * <BlackJack />
+ * ```
+ */
 export default function BlackJack() {
-  useEffect(() => {
-    /**
-     * @file Manages all the logic for the game Blackjack.
-     *
-     * @author Alexander Burdiss
-     * @since 7/31/20
-     */
-
-    // Global Variables
-
-    /**
-     * The suites of cards
-     */
+  useEffect(function createGame() {
     const suites = ["Spade", "Heart", "Diamond", "Club"];
-    /**
-     * The ranks of cards
-     */
     const ranks = [
       "A",
       "2",
@@ -36,9 +32,6 @@ export default function BlackJack() {
       "Q",
       "K",
     ];
-    /**
-     * @description The scores of all the cards
-     */
     const scores = {
       2: 2,
       3: 3,
@@ -54,25 +47,12 @@ export default function BlackJack() {
       K: 10,
     };
 
-    /**
-     * @description The deck of cards in play
-     */
     let cards = [];
-    /**
-     * @description The cards in the user's hand
-     */
     let userCards = [];
-    /**
-     * @description The cards in the computer's 'hand'
-     */
     let computerCards = [];
-    /**
-     * @description The used cards no longer in play
-     */
     let discards = [];
 
     // DOM elements
-
     const table = document.querySelector(".Card-Table");
     const userHand = document.querySelector(".Hand-User-Cards");
     const computerHand = document.querySelector(".Hand-Computer-Cards");
@@ -94,7 +74,6 @@ export default function BlackJack() {
     );
 
     // Add Event listeners to buttons
-
     hitButton.addEventListener("click", dealToUser);
     stayButton.addEventListener("click", stay);
 
@@ -102,7 +81,6 @@ export default function BlackJack() {
     blackjackModal.addEventListener("click", resetGame);
 
     // Beginning the game
-
     initializeDeck();
 
     dealToUser();
@@ -152,7 +130,6 @@ export default function BlackJack() {
 
     /**
      * @description Creates a card element that is renderable to the screen.
-     *
      * @param {card} card The card to create
      * @param {boolean} flipped The flipped state of the card.
      */
@@ -167,7 +144,8 @@ export default function BlackJack() {
     }
 
     /**
-     * @description Removes one card from the deck, and adds it to the player's hand.
+     * @description Removes one card from the deck, and adds it to the player's
+     * hand.
      */
     function dealToUser() {
       if (cards.length === 0) {
@@ -186,7 +164,8 @@ export default function BlackJack() {
     }
 
     /**
-     * @description The logic for determining whether a computer will stay or hit.
+     * @description The logic for determining whether a computer will stay or
+     * hit.
      */
     function playComputerTurn() {
       let randomLimit, computerScore;
@@ -200,7 +179,8 @@ export default function BlackJack() {
     }
 
     /**
-     * @description Removes one card from the deck, and adds it to the computer's hand.
+     * @description Removes one card from the deck, and adds it to the
+     * computer's hand.
      */
     function dealToComputer() {
       if (cards.length === 0) {
@@ -213,6 +193,9 @@ export default function BlackJack() {
       computerHand.appendChild(createPrintCard(card, true));
     }
 
+    /**
+     * @description
+     */
     function stay() {
       playComputerTurn();
       playComputerTurn();
@@ -235,9 +218,7 @@ export default function BlackJack() {
 
     /**
      * @description Calculates the score of one hand.
-     *
      * @param {card[]} cards The deck to calculate score
-     *
      * @returns the score of the hand passed in
      */
     function calculateScore(cards) {
@@ -261,8 +242,8 @@ export default function BlackJack() {
           userScore += 1;
         }
 
-        // If the user had two aces, the hand will only sum 11 at this point, and
-        // need one extra point for the other ace.
+        // If the user had two aces, the hand will only sum 11 at this point,
+        // and need one extra point for the other ace.
         if (userScore === 11) {
           userScore += 1;
         }
@@ -272,7 +253,8 @@ export default function BlackJack() {
     }
 
     /**
-     * @description Calculates the scores of both players and updates the display.
+     * @description Calculates the scores of both players and updates the
+     * display.
      */
     function updateScores() {
       let userScore;
@@ -286,7 +268,8 @@ export default function BlackJack() {
     }
 
     /**
-     * @description Checks to make sure the user's score isn't over 21. Shows Bust modal if over.
+     * @description Checks to make sure the user's score isn't over 21. Shows
+     * Bust modal if over.
      */
     function checkScore(userScore) {
       if (userScore === 21) {
@@ -357,7 +340,8 @@ export default function BlackJack() {
     }
 
     /**
-     * @description Displays the entire deck of cards to the screen. Used for testing purposes.
+     * @description Displays the entire deck of cards to the screen. Used for
+     * testing purposes.
      */
     // eslint-disable-next-line no-unused-vars
     function printDeck() {
@@ -370,6 +354,7 @@ export default function BlackJack() {
       }
     }
   }, []);
+
   return (
     <main className="BlackJack-Container">
       <PageTitle>BlackJack</PageTitle>

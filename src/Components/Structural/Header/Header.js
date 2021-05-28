@@ -5,6 +5,18 @@ import logo from "../../../assets/images/logo.png";
 
 import "./Header.css";
 
+/**
+ * @function Header
+ * @description The header for the site.
+ * @author Alexander Burdiss
+ * @since 5/13/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <Header />
+ * ```
+ */
 export default function Header() {
   return (
     <div className={"HeaderContainer"}>
