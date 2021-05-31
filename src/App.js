@@ -15,6 +15,19 @@ import FourOhFour from "./404/404";
 import TheLadyAndTheFrog from "./Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";
 import MrsBlueSky from "./Stories/Poems/MrsBlueSky/MrsBlueSky";
 
+/**
+ * @function App
+ * @description The root of this React application. This component mostly
+ * handles the navigation of the application.
+ * @author Alexander Burdiss
+ * @since 5/12/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <App />
+ * ```
+ */
 export default function App() {
   return (
     <div className="AppWrapper">

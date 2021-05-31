@@ -13,6 +13,21 @@ import image7 from "./images/IMG_3643.jpg";
 import image8 from "./images/IMG_3649.jpg";
 import image9 from "./images/IMG_3648.jpg";
 
+/**
+ * @todo Create this so that id doesn't use jQuery
+ *
+ * @function TheLadyAndTheFrog
+ * @description A horizontal scroll animation. This was originally created using
+ * HTML and jQuery so it does not follow React best practices.
+ * @author Alexander Burdiss
+ * @since 5/14/21
+ * @version 2.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <TheLadyAndTheFrog />
+ * ```
+ */
 export default function TheLadyAndTheFrog() {
   useEffect(() => {
     // Set window width based on width of content
@@ -30,6 +45,7 @@ export default function TheLadyAndTheFrog() {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [image1, image2, image3, image4, image5, image6, image7, image8, image9]);
+
   return (
     <div className="TheLadyAndTheFrogWrapper">
       <main>

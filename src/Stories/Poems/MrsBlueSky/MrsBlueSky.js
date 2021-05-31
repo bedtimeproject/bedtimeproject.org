@@ -22,6 +22,19 @@ import Lightning from "./images/Lightning.svg";
 
 import "./MrsBlueSky.css";
 
+/**
+ * @function MrsBlueSky
+ * @description A scroll-animated poem. This was originally built using HTML, so
+ * it does not currently follow React best practices.
+ * @version 2.0.0
+ * @author Alexander Burdiss
+ * @since 5/14/21
+ * @component
+ * @example
+ * ```jsx
+ * <MrsBlueSky />
+ * ```
+ */
 export default function MrsBlueSky() {
   useEffect(() => {
     document.body.style.minHeight = "2000vh";
@@ -39,6 +52,7 @@ export default function MrsBlueSky() {
       document.body.style.removeProperty("--scroll");
     };
   }, []);
+
   return (
     <div className="MrsBlueSkyContainer">
       {/* Styles for the global object, just on this page */}
