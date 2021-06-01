@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5ee644a.chunk.css",
-    "main.js": "/static/js/main.d8eef77e.chunk.js",
-    "main.js.map": "/static/js/main.d8eef77e.chunk.js.map",
+    "main.css": "/static/css/main.507c8c0d.chunk.css",
+    "main.js": "/static/js/main.975d527a.chunk.js",
+    "main.js.map": "/static/js/main.975d527a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.56715fb7.chunk.js": "/static/js/2.56715fb7.chunk.js",
     "static/js/2.56715fb7.chunk.js.map": "/static/js/2.56715fb7.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d5ee644a.chunk.css.map": "/static/css/main.d5ee644a.chunk.css.map",
+    "static/css/main.507c8c0d.chunk.css.map": "/static/css/main.507c8c0d.chunk.css.map",
     "static/js/2.56715fb7.chunk.js.LICENSE.txt": "/static/js/2.56715fb7.chunk.js.LICENSE.txt",
     "static/media/BoyFrisbee.209b3597.svg": "/static/media/BoyFrisbee.209b3597.svg",
+    "static/media/ClimbersDelight.1f3b7535.md": "/static/media/ClimbersDelight.1f3b7535.md",
     "static/media/ComicPow.f723f235.svg": "/static/media/ComicPow.f723f235.svg",
     "static/media/Cow.7d66b4d3.svg": "/static/media/Cow.7d66b4d3.svg",
     "static/media/Dragon.a68cdfc4.svg": "/static/media/Dragon.a68cdfc4.svg",
+    "static/media/FalseAdvertising.8df0789a.md": "/static/media/FalseAdvertising.8df0789a.md",
     "static/media/FlatulentMay.e1948ebf.md": "/static/media/FlatulentMay.e1948ebf.md",
     "static/media/FortyTwoRatsAndABird.5555bf37.md": "/static/media/FortyTwoRatsAndABird.5555bf37.md",
     "static/media/Frisbee.25bb72bf.svg": "/static/media/Frisbee.25bb72bf.svg",
+    "static/media/HappyDresserHappyLife.281151a4.md": "/static/media/HappyDresserHappyLife.281151a4.md",
     "static/media/HeaderCloud.c32dbbd6.svg": "/static/media/HeaderCloud.c32dbbd6.svg",
     "static/media/HeaderCloud2.ee94cec5.svg": "/static/media/HeaderCloud2.ee94cec5.svg",
     "static/media/HighDog.04d232c0.svg": "/static/media/HighDog.04d232c0.svg",
@@ -35,9 +38,11 @@
     "static/media/Newspaper.d18084ae.svg": "/static/media/Newspaper.d18084ae.svg",
     "static/media/PaperAirplane.df2dc29d.svg": "/static/media/PaperAirplane.df2dc29d.svg",
     "static/media/SadDogImage.5ea205ab.svg": "/static/media/SadDogImage.5ea205ab.svg",
+    "static/media/SmallProceedings.f8504bfb.md": "/static/media/SmallProceedings.f8504bfb.md",
     "static/media/Sun.fa9d6a9c.svg": "/static/media/Sun.fa9d6a9c.svg",
     "static/media/SunsetCloud.adc7f2f9.svg": "/static/media/SunsetCloud.adc7f2f9.svg",
     "static/media/SunsetCloud2.638ec3b1.svg": "/static/media/SunsetCloud2.638ec3b1.svg",
+    "static/media/Turboat.9867a2be.md": "/static/media/Turboat.9867a2be.md",
     "static/media/WindCloud.cefcf42c.svg": "/static/media/WindCloud.cefcf42c.svg",
     "static/media/BlackJack.css": "/static/media/spade.5f655d9b.png",
     "static/media/Home.css": "/static/media/home_background.d98dd192.jpg",
@@ -47,7 +52,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.56715fb7.chunk.js",
-    "static/css/main.d5ee644a.chunk.css",
-    "static/js/main.d8eef77e.chunk.js"
+    "static/css/main.507c8c0d.chunk.css",
+    "static/js/main.975d527a.chunk.js"
   ]
 }
