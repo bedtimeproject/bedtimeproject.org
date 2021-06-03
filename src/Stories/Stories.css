@@ -1,3 +1,11 @@
 .Stories-Container {
   padding: 10px;
 }
+
+.Stories-Buttons-Container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 
 /**
@@ -17,10 +18,14 @@ export default function Poems() {
   return (
     <div>
       <PageTitle>Poems</PageTitle>
-      <Link to="/stories/poems/the-lady-and-the-frog">
-        The Lady And The Frog
-      </Link>
-      <Link to="/stories/poems/mrs-blue-sky">Mrs. Blue Sky</Link>
+      <div className="Poems-Button-Container">
+        <StoryButton link="/stories/poems/the-lady-and-the-frog">
+          The Lady And The Frog
+        </StoryButton>
+        <StoryButton link="/stories/poems/mrs-blue-sky">
+          Mrs. Blue Sky
+        </StoryButton>
+      </div>
     </div>
   );
 }

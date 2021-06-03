@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
-import ReactPaginate from "react-paginate";
 
 import "./Limericks.css";
 
 import LimerickDisplay from "./LimerickDisplay/LimerickDisplay";
 import LimerickButton from "../../Components/Buttons/LimerickButton/LimerickButton";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import Pagination from "../../Components/Structural/Pagination/Pagination";
 import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import allLimericks from "./assets/_registry";
 import { getTitleFromMarkdown } from "../../util/getTitleFromMarkdown/getTitleFromMarkdown";
@@ -18,7 +18,7 @@ import { getDateFromMarkdown } from "../../util/getDateFromMarkdown/getDateFromM
  * that are in the Limerick tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -30,7 +30,7 @@ export default function Limericks() {
   const [currentLimericks, setCurrentLimericks] = useState([]);
   const [displayingLimericks, setDisplayingLimericks] = useState([]);
 
-  const MAX_LIMERICKS_PER_PAGE = 2;
+  const MAX_LIMERICKS_PER_PAGE = 20;
 
   useEffect(
     /**
@@ -62,8 +62,13 @@ export default function Limericks() {
     []
   );
 
+  /**
+   *
+   * @param {*} limerickArray
+   */
   function getCurrentLimericks(limerickArray) {
     const tempArray = [];
+    // eslint-disable-next-line array-callback-return
     limerickArray.map((limerick) => {
       const date = getDateFromMarkdown(limerick);
       // If the limerick is dated later than today, don't show a link
@@ -110,6 +115,9 @@ export default function Limericks() {
    * limericks that are displaying
    * @param {Object} data The data provided by React Pagination
    * @param {Number} data.selected The index of the page to paginate to.
+   * @author Alexander Burdiss
+   * @since 6/2/21
+   * @version 1.0.0
    */
   function updateLimericksDisplaying(data) {
     const startIndex = data.selected * MAX_LIMERICKS_PER_PAGE;
@@ -135,22 +143,12 @@ export default function Limericks() {
           })}
         </div>
         {currentLimericks.length > MAX_LIMERICKS_PER_PAGE && (
-          <div className="Limerick-Pagination">
-            <ReactPaginate
-              previousLabel={"< previous"}
-              nextLabel={"next >"}
-              breakLabel={"..."}
-              breakClassName={"break-me"}
-              pageCount={Math.ceil(
-                currentLimericks.length / MAX_LIMERICKS_PER_PAGE
-              )}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={5}
-              onPageChange={updateLimericksDisplaying}
-              containerClassName={"pagination"}
-              activeClassName={"active"}
-            />
-          </div>
+          <Pagination
+            pageCount={Math.ceil(
+              currentLimericks.length / MAX_LIMERICKS_PER_PAGE
+            )}
+            onPageChange={updateLimericksDisplaying}
+          />
         )}
       </Route>
 

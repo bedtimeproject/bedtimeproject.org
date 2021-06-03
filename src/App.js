@@ -34,10 +34,10 @@ export default function App() {
       <Router>
         <Switch>
           {/* Use the outer switch for pages that don't need the header and footer */}
-          <Route path="/stories/poems/the-lady-and-the-frog">
+          <Route exact path="/stories/poems/the-lady-and-the-frog">
             <TheLadyAndTheFrog />
           </Route>
-          <Route path="/stories/poems/mrs-blue-sky">
+          <Route exact path="/stories/poems/mrs-blue-sky">
             <MrsBlueSky />
           </Route>
           <Route path="*">
@@ -50,10 +50,10 @@ export default function App() {
                 <Route path="/play">
                   <Play />
                 </Route>
-                <Route path="/stories">
+                <Route exact path="/stories">
                   <Stories />
                 </Route>
-                <Route path="/about">
+                <Route exact path="/about">
                   <About />
                 </Route>
                 <Route path="*">

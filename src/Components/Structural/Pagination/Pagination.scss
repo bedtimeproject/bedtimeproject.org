@@ -1,0 +1,27 @@
+.Pagination-Container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+
+  .pagination {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination li {
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &.active {
+      font-weight: bold;
+    }
+
+    &.disabled {
+      color: gray;
+      cursor: default;
+    }
+  }
+}

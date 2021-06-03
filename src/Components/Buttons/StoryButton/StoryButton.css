@@ -14,6 +14,7 @@
   border: solid #938ec1 1px;
   border-radius: 12px;
   font-family: "Indie Flower", sans-serif;
+  margin: 10px;
 }
 .ButtonContainer:hover,
 .ButtonContainer:focus {

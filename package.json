@@ -1,7 +1,7 @@
 {
   "name": "the-bedtime-project",
   "homepage": "https://bedtimeproject.org",
-  "version": "0.1.0",
+  "version": "5.0.0",
   "private": true,
   "dependencies": {
     "gh-pages": "^3.1.0",
@@ -22,7 +22,7 @@
     "deployall": "npm run deploy && npm run chromatic",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/Stories/Poems/MrsBlueSky/MrsBlueSky.scss:src/Stories/Poems/MrsBlueSky/MrsBlueSky.css src/Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog.scss:src/Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog.css src/Home/Home.scss:src/Home/Home.css",
+    "sass": "sass --watch src/master.scss:src/master.css --style compressed",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=6c0dc9e53bb7"
