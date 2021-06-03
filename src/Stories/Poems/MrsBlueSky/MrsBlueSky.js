@@ -20,8 +20,6 @@ import Frisbee from "./images/Frisbee.svg";
 import HighDog from "./images/HighDog.svg";
 import Lightning from "./images/Lightning.svg";
 
-import "./MrsBlueSky.css";
-
 /**
  * @function MrsBlueSky
  * @description A scroll-animated poem. This was originally built using HTML, so

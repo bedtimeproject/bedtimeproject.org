@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./LimerickButton.css";
-
 /**
  * @function LimerickButton
  * @description A styled button that takes you to a limerick.

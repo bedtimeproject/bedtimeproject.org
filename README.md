@@ -20,7 +20,7 @@ This project's Storybook is published using chromatic: https://www.chromatic.com
 
 ## Sass
 
-This project also uses Sass in a couple places. Each Sass file is compiled in the same directory and the corresponding CSS file is imported into the JS component.
+This project also uses Sass in a couple places. Each Sass file is compiled in the same directory and imported into the master.scss file in the src/ directory.
 
 ## Contributing
 

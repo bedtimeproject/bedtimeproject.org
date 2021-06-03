@@ -1,0 +1,36 @@
+.Limerick-Display-Container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.Limerick-Pagination {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.Limerick-Pagination .pagination {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.Limerick-Pagination .pagination li {
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.Limerick-Pagination .pagination li.active {
+  font-weight: bold;
+}
+
+.Limerick-Pagination .pagination li.disabled {
+  color: gray;
+  cursor: default;
+}

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
+import ReactPaginate from "react-paginate";
+
+import "./Limericks.css";
 
 import LimerickDisplay from "./LimerickDisplay/LimerickDisplay";
 import LimerickButton from "../../Components/Buttons/LimerickButton/LimerickButton";
@@ -24,6 +27,10 @@ import { getDateFromMarkdown } from "../../util/getDateFromMarkdown/getDateFromM
  */
 export default function Limericks() {
   const [limericks, setLimericks] = useState([]);
+  const [currentLimericks, setCurrentLimericks] = useState([]);
+  const [displayingLimericks, setDisplayingLimericks] = useState([]);
+
+  const MAX_LIMERICKS_PER_PAGE = 2;
 
   useEffect(
     /**
@@ -48,11 +55,25 @@ export default function Limericks() {
           limerickArray.push(text);
         }
         setLimericks(limerickArray);
+        getCurrentLimericks(limerickArray);
       }
       fetchLimericks();
     },
     []
   );
+
+  function getCurrentLimericks(limerickArray) {
+    const tempArray = [];
+    limerickArray.map((limerick) => {
+      const date = getDateFromMarkdown(limerick);
+      // If the limerick is dated later than today, don't show a link
+      if (new Date(date) < new Date()) {
+        tempArray.push(limerick);
+      }
+    });
+    setCurrentLimericks(tempArray);
+    setDisplayingLimericks(tempArray.slice(0, MAX_LIMERICKS_PER_PAGE));
+  }
 
   /**
    * @function Limericks~getLatestLimerick
@@ -83,26 +104,57 @@ export default function Limericks() {
     return latestLimerick;
   }
 
+  /**
+   * @function Limericks~updateLimericksDisplaying
+   * @description A function to handle the pagination click, and update the
+   * limericks that are displaying
+   * @param {Object} data The data provided by React Pagination
+   * @param {Number} data.selected The index of the page to paginate to.
+   */
+  function updateLimericksDisplaying(data) {
+    const startIndex = data.selected * MAX_LIMERICKS_PER_PAGE;
+    const nextLimericks = currentLimericks.slice(
+      startIndex,
+      startIndex + MAX_LIMERICKS_PER_PAGE
+    );
+    setDisplayingLimericks(nextLimericks);
+  }
+
   return (
     <Switch>
       <Route exact path="/stories/limericks">
         <PageTitle>Limericks</PageTitle>
-        {limericks.map((limerick, index) => {
-          const date = getDateFromMarkdown(limerick);
-          // If the limerick is dated later than today, don't show a link
-          if (new Date(date) > new Date()) {
-            return null;
-          }
-          const title = getTitleFromMarkdown(limerick);
-          return (
-            <LimerickButton key={index} link={`/stories/limericks/${title}`}>
-              {title}
-            </LimerickButton>
-          );
-        })}
+        <div className="Limerick-Display-Container">
+          {displayingLimericks.map((limerick, index) => {
+            const title = getTitleFromMarkdown(limerick);
+            return (
+              <LimerickButton key={index} link={`/stories/limericks/${title}`}>
+                {title}
+              </LimerickButton>
+            );
+          })}
+        </div>
+        {currentLimericks.length > MAX_LIMERICKS_PER_PAGE && (
+          <div className="Limerick-Pagination">
+            <ReactPaginate
+              previousLabel={"< previous"}
+              nextLabel={"next >"}
+              breakLabel={"..."}
+              breakClassName={"break-me"}
+              pageCount={Math.ceil(
+                currentLimericks.length / MAX_LIMERICKS_PER_PAGE
+              )}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={5}
+              onPageChange={updateLimericksDisplaying}
+              containerClassName={"pagination"}
+              activeClassName={"active"}
+            />
+          </div>
+        )}
       </Route>
 
-      <Route path="/stories/limericks/latest">
+      <Route exact path="/stories/limericks/latest">
         <Breadcrumb link="/stories/limericks/">Limericks</Breadcrumb>
         <LimerickDisplay limerick={getLatestLimerick(limericks)} />
       </Route>
@@ -110,7 +162,7 @@ export default function Limericks() {
       {limericks.map((limerick, index) => {
         const title = getTitleFromMarkdown(limerick);
         return (
-          <Route key={index} path={`/stories/limericks/${title}`}>
+          <Route key={index} exact path={`/stories/limericks/${title}`}>
             <Breadcrumb link="/stories/limericks/">Limericks</Breadcrumb>
             <LimerickDisplay limerick={limerick} />
           </Route>

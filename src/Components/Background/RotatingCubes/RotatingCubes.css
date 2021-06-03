@@ -30,7 +30,7 @@
 .RotatingCubes .cube:nth-child(4) {
   animation-delay: 6s;
   left: 90vw;
-  top: 110vh;
+  top: 60vh;
 }
 
 .RotatingCubes .cube:nth-child(5) {
@@ -42,7 +42,7 @@
 .RotatingCubes .cube:nth-child(6) {
   animation-delay: 10s;
   left: 15vw;
-  top: 100vh;
+  top: 70vh;
 }
 
 @keyframes cube {

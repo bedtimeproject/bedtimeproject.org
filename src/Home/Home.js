@@ -1,7 +1,6 @@
 import React from "react";
 import DailyLimerickButton from "../Components/Buttons/DailyLimerickButton/DailyLimerickButton";
 import PageTitle from "../Components/Structural/PageTitle/PageTitle";
-import "./Home.css";
 
 /**
  * @function Home

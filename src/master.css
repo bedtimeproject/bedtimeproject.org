@@ -1,4 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+.LimerickButton-Container {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  font-weight: bold;
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 0.5s;
+  background-color: #7e98f9;
+  box-shadow: none;
+}
+
+.LimerickButton-Container:hover {
+  /* background-color: darken($color: #7e98f9, $amount: 20%); */
+  box-shadow: 0px 0px 7px 7px #7e98f9;
+}
+
+.LimerickButton-Container:active {
+  /* background-color: darken($color: #7e98f9, $amount: 50%); */
+  transform: scale(0.9);
+  box-shadow: 0px 0px 30px 30px #1d4af4;
+}
+
+.Home-Container {
+  background-image: url("/src/assets/images/home_background.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  padding: 20px;
+}
+.Home-Tagline {
+  text-align: center;
+}
+
 .MrsBlueSkyContainer {
   padding: 0;
   margin: 0;
@@ -731,5 +774,99 @@
     background-color: #133061;
   }
 }
+.TheLadyAndTheFrogWrapper main {
+  background: url("/src/assets/images/yellowFlowers.jpg");
+  background-size: contain;
+  height: 98vh;
+  overflow: hidden;
+}
+.TheLadyAndTheFrogWrapper .Story {
+  display: flex;
+}
+.TheLadyAndTheFrogWrapper .Card {
+  height: 90vh;
+  padding: 20px 5vw;
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+.TheLadyAndTheFrogWrapper .Card:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.TheLadyAndTheFrogWrapper .Card:last-child {
+  margin-right: 50px;
+}
+.TheLadyAndTheFrogWrapper .Card:last-child h2 {
+  padding: 100px 0px;
+  border: 12px double #3ea42f;
+  border-radius: 40px 40px 0px 0px;
+}
+.TheLadyAndTheFrogWrapper .Title {
+  text-align: center;
+  font-family: "Parisienne", cursive;
+  width: 90vw;
+}
+.TheLadyAndTheFrogWrapper .Title h1 {
+  position: relative;
+  font-size: 3.5em;
+}
+.TheLadyAndTheFrogWrapper .Text {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5em;
+  text-align: center;
+  width: 30vw;
+}
+@media (max-width: 800px) {
+  .TheLadyAndTheFrogWrapper .Text {
+    width: 85vw;
+  }
+}
+.TheLadyAndTheFrogWrapper img {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-height: 100%;
+}
+.TheLadyAndTheFrogWrapper .frame {
+  background-color: #ddc;
+  border: solid 5vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: 2px;
+  border-right-color: #eee;
+  border-top-color: #ddd;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  height: 60vh;
+  padding: 8vmin;
+  position: relative;
+  text-align: center;
+}
+.TheLadyAndTheFrogWrapper .frame:before {
+  border-radius: 2px;
+  bottom: -2vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+  content: "";
+  left: -2vmin;
+  position: absolute;
+  right: -2vmin;
+  top: -2vmin;
+}
+.TheLadyAndTheFrogWrapper .frame:after {
+  border-radius: 2px;
+  bottom: -2.5vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  content: "";
+  left: -2.5vmin;
+  position: absolute;
+  right: -2.5vmin;
+  top: -2.5vmin;
+}
 
-/*# sourceMappingURL=MrsBlueSky.css.map */
+/*# sourceMappingURL=master.css.map */

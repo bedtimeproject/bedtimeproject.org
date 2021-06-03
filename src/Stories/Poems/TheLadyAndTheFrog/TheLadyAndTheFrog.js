@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import $ from "jquery";
 
-import "./TheLadyAndTheFrog.css";
-
 import image1 from "./images/IMG_3651.jpg";
 import image2 from "./images/IMG-3646.jpg";
 import image3 from "./images/IMG_3645.jpg";
