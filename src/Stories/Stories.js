@@ -32,11 +32,11 @@ export default function Stories() {
             <StoryButton link="/stories/limericks">Limericks</StoryButton>
           </div>
         </Route>
-        <Route exact path="/stories/poems">
+        <Route path="/stories/poems">
           <Breadcrumb link="/stories">Stories</Breadcrumb>
           <Poems />
         </Route>
-        <Route exact path="/stories/limericks">
+        <Route path="/stories/limericks">
           <Breadcrumb link="/stories">Stories</Breadcrumb>
           <Limericks />
         </Route>

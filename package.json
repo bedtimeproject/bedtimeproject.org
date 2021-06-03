@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "deployall": "npm run deploy && npm run chromatic",
+    "deployall": "npm run build && npm run deploy && npm run chromatic",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/master.scss:src/master.css --style compressed",

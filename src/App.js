@@ -50,10 +50,10 @@ export default function App() {
                 <Route path="/play">
                   <Play />
                 </Route>
-                <Route exact path="/stories">
+                <Route path="/stories">
                   <Stories />
                 </Route>
-                <Route exact path="/about">
+                <Route path="/about">
                   <About />
                 </Route>
                 <Route path="*">
