@@ -1,6 +1,8 @@
 @import "./App.scss";
 
 // Animations
+@import "./Animations/Slide/Slide.scss";
+@import "./Animations/Spin/Spin.scss";
 
 // Components
 @import "./Components/Background/RotatingCubes/RotatingCubes.scss";
@@ -9,6 +11,9 @@
 @import "./Components/Buttons/LimerickButton/LimerickButton.scss";
 @import "./Components/Buttons/PlayButton/PlayButton.scss";
 @import "./Components/Buttons/StoryButton/StoryButton.scss";
+@import "./Components/ScrollAnimation/Attribution/Attribution.scss";
+@import "./Components/ScrollAnimation/Stanza/Stanza.scss";
+@import "./Components/ScrollAnimation/Title/Title.scss";
 @import "./Components/Structural/Breadcrumb/Breadcrumb.scss";
 @import "./Components/Structural/Footer/Footer.scss";
 @import "./Components/Structural/Header/Header.scss";
@@ -29,4 +34,5 @@
 @import "./Pages/Stories/Limericks/LimerickDisplay/LimerickDisplay.scss";
 @import "./Pages/Stories/Poems/Poems.scss";
 @import "./Pages/Stories/Poems/MrsBlueSky/MrsBlueSky.scss";
+@import "./Pages/Stories/Poems/TheGuideToSunset/TheGuideToSunset.scss";
 @import "./Pages/Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog.scss";

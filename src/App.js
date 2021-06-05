@@ -13,6 +13,7 @@ import FourOhFour from "./Pages/404/404";
 // Stories without Header and Footer
 import TheLadyAndTheFrog from "./Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";
 import MrsBlueSky from "./Stories/Poems/MrsBlueSky/MrsBlueSky";
+import TheGuideToSunset from "./Pages/Stories/Poems/TheGuideToSunset/TheGuideToSunset";
 
 /**
  * @function App
@@ -38,6 +39,9 @@ export default function App() {
           </Route>
           <Route exact path="/stories/poems/mrs-blue-sky">
             <MrsBlueSky />
+          </Route>
+          <Route exact path="/stories/poems/the-guide-to-sunset">
+            <TheGuideToSunset />
           </Route>
           <Route path="*">
             <Header />
