@@ -5,11 +5,11 @@ import Header from "./Components/Structural/Header/Header";
 import Footer from "./Components/Structural/Footer/Footer";
 
 // Root components
-import Play from "./Play/Play";
-import About from "./About/About";
-import Home from "./Home/Home";
-import Stories from "./Stories/Stories";
-import FourOhFour from "./404/404";
+import Play from "./Pages/Play/Play";
+import About from "./Pages/About/About";
+import Home from "./Pages/Home/Home";
+import Stories from "./Pages/Stories/Stories";
+import FourOhFour from "./Pages/404/404";
 
 // Stories without Header and Footer
 import TheLadyAndTheFrog from "./Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";

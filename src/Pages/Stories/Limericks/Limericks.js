@@ -4,13 +4,13 @@ import { Route, Switch } from "react-router";
 import "./Limericks.css";
 
 import LimerickDisplay from "./LimerickDisplay/LimerickDisplay";
-import LimerickButton from "../../Components/Buttons/LimerickButton/LimerickButton";
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
-import Pagination from "../../Components/Structural/Pagination/Pagination";
-import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
+import LimerickButton from "../../../Components/Buttons/LimerickButton/LimerickButton";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import Pagination from "../../../Components/Structural/Pagination/Pagination";
+import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
 import allLimericks from "./assets/_registry";
-import { getTitleFromMarkdown } from "../../util/getTitleFromMarkdown/getTitleFromMarkdown";
-import { getDateFromMarkdown } from "../../util/getDateFromMarkdown/getDateFromMarkdown";
+import { getTitleFromMarkdown } from "../../../util/getTitleFromMarkdown/getTitleFromMarkdown";
+import { getDateFromMarkdown } from "../../../util/getDateFromMarkdown/getDateFromMarkdown";
 
 /**
  * @function Limericks

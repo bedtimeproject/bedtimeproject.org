@@ -1,5 +1,5 @@
-import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import PlayButton from "../../../Components/Buttons/PlayButton/PlayButton";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./PlayScreen.css";
 

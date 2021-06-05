@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./BlackJack.css";
 
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 /**
  * @function BlackJack

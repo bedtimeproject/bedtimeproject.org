@@ -3,9 +3,9 @@ import "./Stories.css";
 
 import Poems from "./Poems/Poems";
 import Limericks from "./Limericks/Limericks";
-import PageTitle from "../Components/Structural/PageTitle/PageTitle";
-import Breadcrumb from "../Components/Structural/Breadcrumb/Breadcrumb";
-import StoryButton from "../Components/Buttons/StoryButton/StoryButton";
+import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
+import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 
 /**
  * @function Stories

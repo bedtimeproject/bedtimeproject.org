@@ -1,6 +1,6 @@
 import React from "react";
-import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 /**
  * @function Poems

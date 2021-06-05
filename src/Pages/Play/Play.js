@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import Breadcrumb from "../Components/Structural/Breadcrumb/Breadcrumb";
+import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 
 import BlackJack from "./BlackJack/BlackJack";
 import LightsOut from "./LightsOut/LightsOut";

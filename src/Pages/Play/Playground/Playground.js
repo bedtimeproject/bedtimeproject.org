@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import RotatingCubes from "../../Components/Background/RotatingCubes/RotatingCubes";
-import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import RotatingCubes from "../../../Components/Background/RotatingCubes/RotatingCubes";
+import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Playground.css";
 import { json } from "./playgroundData";

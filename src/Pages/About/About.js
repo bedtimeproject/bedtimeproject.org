@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 
-import PageTitle from "../Components/Structural/PageTitle/PageTitle";
+import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 
 export default function About() {
   return (
