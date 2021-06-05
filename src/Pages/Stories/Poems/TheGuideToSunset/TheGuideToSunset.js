@@ -9,7 +9,7 @@ import Title from "../../../../Components/ScrollAnimation/Title/Title";
  * @description A scroll animation built in React. This is the first scroll
  * animation of this project built using React.
  * @author Alexander Burdiss
- * @since 4/4/21
+ * @since 6/4/21
  * @version 1.0.0
  * @component
  * @example

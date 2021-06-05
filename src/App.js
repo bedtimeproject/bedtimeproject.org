@@ -11,8 +11,8 @@ import Stories from "./Pages/Stories/Stories";
 import FourOhFour from "./Pages/404/404";
 
 // Stories without Header and Footer
-import TheLadyAndTheFrog from "./Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";
-import MrsBlueSky from "./Stories/Poems/MrsBlueSky/MrsBlueSky";
+import TheLadyAndTheFrog from "./Pages/Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";
+import MrsBlueSky from "./Pages/Stories/Poems/MrsBlueSky/MrsBlueSky";
 import TheGuideToSunset from "./Pages/Stories/Poems/TheGuideToSunset/TheGuideToSunset";
 
 /**

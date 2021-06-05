@@ -1,11 +1,13 @@
 import React from "react";
 
 /**
+ * @todo Process the background color and dynamically choose black or white text
+ *
  * @function Title
  * @description The title component for a scroll animation. Styled similarly to
  * a stanza
  * @author Alexander Burdiss
- * @since 4/4/21
+ * @since 6/4/21
  * @param props The JSX props passed to this React component
  * @param {String} props.children The title of the scroll animation to render
  * @param {String} props.background The color of the background for this title
