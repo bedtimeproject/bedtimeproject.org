@@ -1,8 +1,7 @@
 import React from "react";
+import { getContrast } from "../../../util/getContrast/getContrast";
 
 /**
- * @todo Process the background color and dynamically choose black or white text
- *
  * @function Stanza
  * @description One stanza of text in a scroll animation story.
  * @param props The JSX props passed to this React component
@@ -10,7 +9,7 @@ import React from "react";
  * component
  * @author Alexander Burdiss
  * @since 6/4/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -25,6 +24,7 @@ export default function Stanza({ children, background }) {
       className="ScrollAnimation-Stanza-Container"
       style={{
         backgroundColor: background,
+        color: getContrast(background),
       }}
     >
       {children}
