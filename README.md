@@ -16,7 +16,7 @@ This project uses `@testing-library/react` and `jest` for unit tests. Run tests 
 
 This project also uses Storybook as a component library. Run it using `npm run storybook`
 
-This project's Storybook is published using chromatic: https://www.chromatic.com/setup?appId=60aeea53da1d8b00395c505f
+This project's Storybook is published using chromatic: https://www.chromatic.com/builds?appId=60aeea53da1d8b00395c505f
 
 ## Sass
 
