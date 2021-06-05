@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-import "./PlayButton.css";
-
 /**
  * @function PlayButton
  * @description A button that is used on the Play site to take users to the

@@ -1,4 +1,4 @@
-import "./PageTitle.css";
+import React from "react";
 
 /**
  * @function PageTitle

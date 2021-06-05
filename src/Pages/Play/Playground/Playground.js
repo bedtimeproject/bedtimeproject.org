@@ -3,7 +3,6 @@ import RotatingCubes from "../../../Components/Background/RotatingCubes/Rotating
 import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
-import "./Playground.css";
 import { json } from "./playgroundData";
 
 /**

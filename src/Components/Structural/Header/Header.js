@@ -3,8 +3,6 @@ import HeaderButton from "../../Buttons/HeaderButton/HeaderButton";
 
 import logo from "../../../assets/images/logo.png";
 
-import "./Header.css";
-
 /**
  * @function Header
  * @description The header for the site.

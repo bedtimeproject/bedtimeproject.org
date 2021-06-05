@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 
-import "./Limericks.css";
-
 import LimerickDisplay from "./LimerickDisplay/LimerickDisplay";
 import LimerickButton from "../../../Components/Buttons/LimerickButton/LimerickButton";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";

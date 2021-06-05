@@ -1,5 +1,4 @@
 import React from "react";
-import "./About.css";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 

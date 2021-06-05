@@ -1,8 +1,6 @@
 import PlayButton from "../../../Components/Buttons/PlayButton/PlayButton";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
-import "./PlayScreen.css";
-
 /**
  * @function PlayScreen
  * @description The Main View for the Play stack.

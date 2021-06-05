@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-import "./LightsOut.css";
-
 /**
  * @description A simple game of Lights Out.
  * @author Alexander Burdiss

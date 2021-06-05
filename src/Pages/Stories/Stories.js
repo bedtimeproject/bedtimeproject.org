@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router";
-import "./Stories.css";
 
 import Poems from "./Poems/Poems";
 import Limericks from "./Limericks/Limericks";

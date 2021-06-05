@@ -1,5 +1,3 @@
-import "./404.css";
-
 export default function FourOhFour() {
   return (
     <div>
