@@ -1,0 +1,16 @@
+.FourOhFour {
+  &-Container {
+    position: relative;
+    font-family: "Indie Flower", cursive;
+  }
+  &-Scroll {
+    width: 80%;
+    margin: 40px 10%;
+    &-Text-Container {
+      position: absolute;
+      top: 0;
+      margin: 20% 20% 20% 30%;
+      width: 50%;
+    }
+  }
+}
