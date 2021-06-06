@@ -19,6 +19,7 @@ import BoyFrisbee from "./images/BoyFrisbee.svg";
 import Frisbee from "./images/Frisbee.svg";
 import HighDog from "./images/HighDog.svg";
 import Lightning from "./images/Lightning.svg";
+import { Link } from "react-router-dom";
 
 /**
  * @function MrsBlueSky
@@ -155,6 +156,9 @@ export default function MrsBlueSky() {
       <div className="Poem-Credits">
         <p>Written by Daniel Stigmon</p>
         <p>Animated by Alexander Burdiss</p>
+        <Link to="/stories/poems" className="Back-Button">
+          Back to site
+        </Link>
       </div>
     </div>
   );

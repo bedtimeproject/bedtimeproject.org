@@ -64,13 +64,29 @@ $White: #ffffff;
       border-radius: 20px 50px;
       background-color: $Cloud-2-Color;
       line-height: 1em;
-      top: 35vh;
-      z-index: 100;
-      right: -150vw;
+      top: 30vh;
+      z-index: 200;
+      right: -200vw;
 
       animation-name: Poem-Credits;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
+
+      @media (max-width: 600px) {
+        max-width: 80%;
+      }
+
+      .Back-Button {
+        font-size: 0.5em;
+        border: 1px solid $Sky-Dark;
+        padding: 5px;
+        border-radius: 10px;
+        color: $Sky-Dark;
+        text-decoration: none;
+        &:hover {
+          background-color: $Sky-Blue;
+        }
+      }
     }
   }
   @keyframes Poem-Title {
@@ -99,10 +115,20 @@ $White: #ffffff;
   }
   @keyframes Poem-Credits {
     90% {
-      right: -150vw;
+      right: -200vw;
     }
     100% {
       right: 45vw;
+    }
+  }
+  @media (max-width: 800px) {
+    @keyframes Poem-Credits {
+      90% {
+        right: -200vw;
+      }
+      100% {
+        right: 5vw;
+      }
     }
   }
 
