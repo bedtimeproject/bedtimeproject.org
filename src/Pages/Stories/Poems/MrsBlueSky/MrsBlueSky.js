@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/style-prop-object */
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 import HeaderCloud2 from "./images/HeaderCloud2.svg";
 import HeaderCloud from "./images/HeaderCloud.svg";
