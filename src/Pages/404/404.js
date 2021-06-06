@@ -27,7 +27,7 @@ export default function FourOhFour() {
       <div className="FourOhFour-Scroll-Text-Container">
         <h1>404 Error</h1>
         <p>Whoops oops unfortunately this page was not found.</p>
-        <p>{getRandomOneLiner()}</p>
+        <p className="FourOhFour-One-Liner-Container">{getRandomOneLiner()}</p>
         <p>Sincerely, Fostywally</p>
       </div>
     </div>
