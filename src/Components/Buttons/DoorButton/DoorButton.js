@@ -1,6 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * @function DoorButton
+ * @description A Button that is also a door.
+ * @param props The JSX props passed to this React component
+ * @param {String} props.image The src for the door image
+ * @param {String} props.link The path to navigate to when this door is
+ * clicked
+ * @param {String} props.label The text to render under this door.
+ * @see Home
+ * @author Alexander Burdiss
+ * @since 6/8/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <DoorButton image={Stories} link="/stories" label="Stories" />
+ * ```
+ */
 export default function DoorButton({ image, link, label }) {
   return (
     <div className="Door-Button-Container">

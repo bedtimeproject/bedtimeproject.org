@@ -13,7 +13,7 @@ import Fireflies from "../../Components/Background/Fireflies/Fireflies";
  * @description The contents to render on the front page of the website.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.0.0
+ * @version 2.0.0
  * @component
  * @example
  * ```jsx

@@ -1,7 +1,22 @@
 import React, { useEffect, useRef } from "react";
 
+/**
+ * @function Fireflies
+ * @description A react component that renders animated fireflies to the
+ * screen.
+ * @author Alexander Burdiss
+ * @see https://codepen.io/Mertl/pen/GexapP
+ * @since 6/8/21
+ * @version 1.0.0
+ * @component
+ * @example
+ * ```jsx
+ * <Fireflies />
+ * ```
+ */
 export default function Fireflies() {
   const canvasRef = useRef(null);
+
   useEffect(() => {
     var canvas = canvasRef.current;
     let c = canvas.getContext("2d"),
@@ -93,6 +108,7 @@ export default function Fireflies() {
     loop();
     setInterval(loop, 1000 / 60);
   }, []);
+
   return (
     <div className="Fireflies-Container">
       <canvas ref={canvasRef}></canvas>

@@ -13,7 +13,7 @@ export default function PlayScreen() {
     <div className="PlayScreen-Container">
       <PageTitle>Play</PageTitle>
       <div className="Play-Links">
-        <PlayButton link="/play/blackjack">BlackJack</PlayButton>
+        {/* <PlayButton link="/play/blackjack">BlackJack</PlayButton> */}
         <PlayButton link="/play/playground">Playground</PlayButton>
         <PlayButton link="/play/lightsout">Lights Out</PlayButton>
       </div>
