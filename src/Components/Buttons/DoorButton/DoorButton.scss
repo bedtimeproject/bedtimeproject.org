@@ -1,0 +1,30 @@
+.Door-Button {
+  &-Container {
+    width: 300px;
+    padding: 10px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &-Label {
+    background-color: #f4d5a1;
+    text-align: center;
+    margin-top: -6px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 8px;
+  }
+
+  &-Door {
+    transition-duration: 0.5s;
+    &:hover {
+      -webkit-filter: drop-shadow(0 0 5px #e98a81) drop-shadow(0 0 5px #e98a81);
+      filter: drop-shadow(0 0 5px #e98a81) drop-shadow(0 0 5px #e98a81);
+
+      transform: scale(0.98);
+    }
+  }
+}

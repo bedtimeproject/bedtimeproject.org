@@ -1,6 +1,12 @@
 import React from "react";
+
 import DailyLimerickButton from "../../Components/Buttons/DailyLimerickButton/DailyLimerickButton";
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
+
+import StoriesImage from "./doors/Stories.svg";
+import AboutUsImage from "./doors/AboutUs.svg";
+import PlaygroundImage from "./doors/Playground.svg";
+import Fireflies from "../../Components/Background/Fireflies/Fireflies";
 
 /**
  * @function Home
@@ -17,8 +23,12 @@ import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 export default function Home() {
   return (
     <div className="Home-Container">
-      <PageTitle>The Bedtime Project</PageTitle>
-      <div className="Home-Tagline">A fun and engaging way to hit the hay</div>
+      <Fireflies />
+      <div className="Home-Door-Container">
+        <DoorButton label="Stories" image={StoriesImage} link="/stories" />
+        <DoorButton label="Play" image={PlaygroundImage} link="/play" />
+        <DoorButton label="About Us" image={AboutUsImage} link="/about" />
+      </div>
       <DailyLimerickButton />
     </div>
   );

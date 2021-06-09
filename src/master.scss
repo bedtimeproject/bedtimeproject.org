@@ -5,9 +5,11 @@
 @import "./Animations/Spin/Spin.scss";
 
 // Components
+@import "./Components/Background/Fireflies/Fireflies.scss";
 @import "./Components/Background/ForestMountains/ForestMountains.scss";
 @import "./Components/Background/RotatingCubes/RotatingCubes.scss";
 @import "./Components/Buttons/DailyLimerickButton/DailyLimerickButton.scss";
+@import "./Components/Buttons/DoorButton/DoorButton.scss";
 @import "./Components/Buttons/HeaderButton/HeaderButton.scss";
 @import "./Components/Buttons/LimerickButton/LimerickButton.scss";
 @import "./Components/Buttons/PlayButton/PlayButton.scss";
