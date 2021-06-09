@@ -1,8 +1,12 @@
 .HeaderContainer {
-  background-color: #ebe0de;
+  background-color: #625ace;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .HeaderLogoContainer {
@@ -25,6 +29,7 @@
 .HeaderTitle {
   font-size: x-large;
   margin: 10px;
+  color: white;
 }
 
 @media screen and (max-width: 700px) {
