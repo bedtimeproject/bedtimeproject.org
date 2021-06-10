@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 /**
  * @function Contributor
@@ -17,7 +18,7 @@ export default function Contributor({ name, bio, image }) {
     <div className="Contributor-Container">
       <img src={image} alt={name} className="Contributor-Image" />
       <div>{name}</div>
-      <div>{bio}</div>
+      <ReactMarkdown>{bio}</ReactMarkdown>
     </div>
   );
 }

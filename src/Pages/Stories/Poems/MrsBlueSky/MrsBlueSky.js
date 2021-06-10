@@ -70,7 +70,7 @@ export default function MrsBlueSky() {
           <img src={HeaderCloud2} className="Header-Cloud-2" />
           <img src={HeaderCloud} className="Header-Cloud" />
           <h1 className="Poem-Title">Mrs. Blue Sky</h1>
-          <h2 className="Poem-Author">Daniel Stigmon</h2>
+          <h2 className="Poem-Author">FostyWally</h2>
           <img src={PaperAirplane} className="Paper-Airplane" />
           <img src={Moon} className="Moon" />
         </div>
@@ -153,8 +153,8 @@ export default function MrsBlueSky() {
         </div>
       </main>
       <div className="Poem-Credits">
-        <p>Written by Daniel Stigmon</p>
-        <p>Animated by Alexander Burdiss</p>
+        <p>Written by FostyWally</p>
+        <p>Animated by Captain Code</p>
         <Link to="/stories/poems" className="Back-Button">
           Back to site
         </Link>
