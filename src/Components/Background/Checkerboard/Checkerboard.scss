@@ -1,0 +1,23 @@
+.Checkerboard-Container {
+  z-index: -1;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  right: -100px;
+  bottom: -100px;
+  overflow: hidden;
+  opacity: 0.25;
+  transform: rotate(5deg);
+}
+
+.Checkerboard {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: calc(100% + 240px);
+
+  div {
+    width: 240px;
+    height: 240px;
+  }
+}

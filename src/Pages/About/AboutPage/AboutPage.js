@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../Contributor/Contributor";
+import Checkerboard from "../../../Components/Background/Checkerboard/Checkerboard";
 
 import AlexBio from "../bios/Alex.md";
 import DanielBio from "../bios/Daniel.md";
@@ -61,6 +62,7 @@ export default function AboutPage() {
 
   return (
     <div className="AboutPage-Container">
+      <Checkerboard primaryColor="red" secondaryColor="black" />
       <PageTitle>About</PageTitle>
       <div>
         The Bedtime Project aims at helping you get to sleep, or just have a fun
@@ -68,8 +70,16 @@ export default function AboutPage() {
       </div>
       <div>Here are the people who make this site possible:</div>
       <div className="All-Contributors-Container">
-        <Contributor name="Captain Code" bio={bios["Alex"]} image={user} />
-        <Contributor name="FostyWally" bio={bios["Daniel"]} image={user} />
+        <Contributor
+          name="Captain Code (Alexander Burdiss)"
+          bio={bios["Alex"]}
+          image={user}
+        />
+        <Contributor
+          name="FostyWally (Daniel Stigmon)"
+          bio={bios["Daniel"]}
+          image={user}
+        />
       </div>
       <Link to="/about/acknowledgements">Acknowledgements</Link>
       <Link to="./about/licenses">Licenses</Link>
