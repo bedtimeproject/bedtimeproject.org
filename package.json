@@ -13,11 +13,12 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "underscore": "^1.13.1",
+    "underscore.string": "^3.3.5",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run licenses && react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "deployall": "npm run build && npm run deploy && npm run chromatic",
@@ -26,7 +27,8 @@
     "sass": "sass --watch src/master.scss:src/master.css --style compressed",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=6c0dc9e53bb7"
+    "chromatic": "npx chromatic --project-token=6c0dc9e53bb7",
+    "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/About/Licenses/licenses.json"
   },
   "eslintConfig": {
     "extends": [

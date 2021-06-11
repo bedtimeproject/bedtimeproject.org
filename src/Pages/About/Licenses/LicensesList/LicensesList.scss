@@ -1,0 +1,51 @@
+.LicensesList-Container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  .LicensesListItem {
+    max-width: 600px;
+    margin: auto;
+
+    .card {
+      display: flex;
+      overflow: hidden;
+      flex-direction: row;
+      background-color: white;
+      align-items: center;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .item {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-right: 12px;
+      margin-left: 12px;
+      margin-right: 12px;
+      flex: 1;
+      justify-content: space-between;
+      flex-direction: row;
+      max-width: 100%;
+      flex-wrap: wrap;
+      border-bottom: 1px solid gray;
+    }
+
+    .name {
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .image {
+      aspect-ratio: 1;
+      width: 58px;
+      border-radius: 29px;
+      background-color: white;
+    }
+
+    .text {
+      color: gray;
+      margin-top: 3px;
+    }
+  }
+}

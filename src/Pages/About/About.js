@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
-import Contributor from "./Contributor/Contributor";
-
-import AlexBio from "./bios/Alex.md";
-import DanielBio from "./bios/Daniel.md";
-import user from "./user.svg";
+import AboutPage from "./AboutPage/AboutPage";
+import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
+import Acknowledgements from "./Acknowledgements/Acknowledgements";
+import Licenses from "./Licenses/Licenses";
 
 /**
  * @function About
@@ -13,7 +12,7 @@ import user from "./user.svg";
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -21,55 +20,21 @@ import user from "./user.svg";
  * ```
  */
 export default function About() {
-  const [bios, setBios] = useState({});
-  useEffect(
-    /**
-     * @function About~useEffect~getBio
-     * @description Collects the bios from the Markdown, and displays them in
-     * the component.
-     * @author Alexander Burdiss
-     * @since 6/6/21
-     * @version 1.0.0
-     */
-    function getBio() {
-      /**
-       * @function About~useEffect~getBio~fetchBios
-       * @description An async function that handles parsing the markdown from
-       * the bios files.
-       * @author Alexander Burdiss
-       * @since 6/6/21
-       * @version 1.0.0
-       */
-      async function fetchBios() {
-        let bios = {};
-        let resp = await fetch(AlexBio);
-        let text = await resp.text();
-        bios["Alex"] = text;
-
-        resp = await fetch(DanielBio);
-        text = await resp.text();
-        bios["Daniel"] = text;
-
-        setBios(bios);
-      }
-
-      fetchBios();
-    },
-    []
-  );
-
   return (
     <div>
-      <PageTitle>About</PageTitle>
-      <div>
-        The Bedtime Project aims at helping you get to sleep, or just have a fun
-        evening with stories and games.
-      </div>
-      <div>Here are the people who make this site possible:</div>
-      <div className="All-Contributors-Container">
-        <Contributor name="Captain Code" bio={bios["Alex"]} image={user} />
-        <Contributor name="FostyWally" bio={bios["Daniel"]} image={user} />
-      </div>
+      <Switch>
+        <Route exact path="/about">
+          <AboutPage />
+        </Route>
+        <Route exact path="/about/acknowledgements">
+          <Breadcrumb link="/about">About</Breadcrumb>
+          <Acknowledgements />
+        </Route>
+        <Route exact path="/about/licenses">
+          <Breadcrumb link="/about">About</Breadcrumb>
+          <Licenses />
+        </Route>
+      </Switch>
     </div>
   );
 }

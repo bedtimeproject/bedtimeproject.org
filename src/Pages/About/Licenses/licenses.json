@@ -1,0 +1,68 @@
+{
+    "gh-pages@3.1.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/tschaub/gh-pages",
+        "licenseUrl": "https://github.com/tschaub/gh-pages/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "jquery@3.6.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/jquery/jquery",
+        "licenseUrl": "https://github.com/jquery/jquery/raw/master/LICENSE.txt",
+        "parents": "the-bedtime-project"
+    },
+    "react-dom@17.0.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/facebook/react",
+        "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "react-markdown@6.0.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/remarkjs/react-markdown",
+        "licenseUrl": "https://github.com/remarkjs/react-markdown/raw/master/license",
+        "parents": "the-bedtime-project"
+    },
+    "react-paginate@7.1.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/AdeleD/react-paginate",
+        "licenseUrl": "https://github.com/AdeleD/react-paginate/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "react-router-dom@5.2.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/ReactTraining/react-router",
+        "licenseUrl": "https://github.com/ReactTraining/react-router/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "react-scripts@4.0.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/facebook/create-react-app",
+        "licenseUrl": "https://github.com/facebook/create-react-app/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "react@17.0.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/facebook/react",
+        "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "underscore.string@3.3.5": {
+        "licenses": "MIT",
+        "repository": "https://github.com/epeli/underscore.string",
+        "licenseUrl": "https://github.com/epeli/underscore.string",
+        "parents": "the-bedtime-project"
+    },
+    "underscore@1.13.1": {
+        "licenses": "MIT",
+        "repository": "https://github.com/jashkenas/underscore",
+        "licenseUrl": "https://github.com/jashkenas/underscore/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "web-vitals@1.1.2": {
+        "licenses": "Apache-2.0",
+        "repository": "https://github.com/GoogleChrome/web-vitals",
+        "licenseUrl": "https://github.com/GoogleChrome/web-vitals/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    }
+}
