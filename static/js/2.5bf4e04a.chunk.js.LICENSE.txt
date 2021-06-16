@@ -46,8 +46,6 @@ object-assign
  * Date: 2021-03-02T17:08Z
  */
 
-/*! https://mths.be/punycode v1.4.1 by @mathias */
-
 /** @license React v0.20.2
  * scheduler.production.min.js
  *
