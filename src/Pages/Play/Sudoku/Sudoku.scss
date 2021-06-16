@@ -1,0 +1,32 @@
+.Sudoku-Container {
+  .Game-Container {
+    width: calc(40px * 9);
+    margin: 20px auto;
+
+    .Board {
+      display: grid;
+      grid-template-columns: repeat(9, 40px);
+      grid-template-rows: repeat(9, 40px);
+
+      div {
+        display: inline-block;
+
+        background-color: peachpuff;
+        border: 0.5px solid gray;
+        text-align: center;
+        padding: 8px;
+        font-size: large;
+
+        &.focused {
+          background-color: peru;
+        }
+      }
+    }
+  }
+
+  .NumberContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
