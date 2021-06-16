@@ -8,12 +8,13 @@ import Play from "./Pages/Play/Play";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Stories from "./Pages/Stories/Stories";
+import Poems from "./Pages/Poems/Poems";
 import FourOhFour from "./Pages/404/404";
 
 // Stories without Header and Footer
-import TheLadyAndTheFrog from "./Pages/Stories/Poems/TheLadyAndTheFrog/TheLadyAndTheFrog";
-import MrsBlueSky from "./Pages/Stories/Poems/MrsBlueSky/MrsBlueSky";
-import TheGuideToSunset from "./Pages/Stories/Poems/TheGuideToSunset/TheGuideToSunset";
+import TheLadyAndTheFrog from "./Pages/Poems/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
+import MrsBlueSky from "./Pages/Poems/Tales/MrsBlueSky/MrsBlueSky";
+import TheGuideToSunset from "./Pages/Poems/Tales/TheGuideToSunset/TheGuideToSunset";
 
 /**
  * @function App
@@ -34,13 +35,13 @@ export default function App() {
       <Router>
         <Switch>
           {/* Use the outer switch for pages that don't need the header and footer */}
-          <Route exact path="/stories/poems/the-lady-and-the-frog">
+          <Route exact path="/poems/tales/the-lady-and-the-frog">
             <TheLadyAndTheFrog />
           </Route>
-          <Route exact path="/stories/poems/mrs-blue-sky">
+          <Route exact path="/poems/tales/mrs-blue-sky">
             <MrsBlueSky />
           </Route>
-          <Route exact path="/stories/poems/the-guide-to-sunset">
+          <Route exact path="/poems/tales/the-guide-to-sunset">
             <TheGuideToSunset />
           </Route>
           <Route path="*">
@@ -55,6 +56,9 @@ export default function App() {
                 </Route>
                 <Route path="/stories">
                   <Stories />
+                </Route>
+                <Route path="/poems">
+                  <Poems />
                 </Route>
                 <Route path="/about">
                   <About />

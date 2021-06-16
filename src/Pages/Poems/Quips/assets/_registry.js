@@ -1,5 +1,5 @@
-import ClimbersDelight from './ClimbersDelight.md';
-import FalseAdvertising from './FalseAdvertising.md';
+import ClimbersDelight from "./ClimbersDelight.md";
+import FalseAdvertising from "./FalseAdvertising.md";
 import FlatulentMay from "./FlatulentMay.md";
 import FortyTwoRatsAndABird from "./FortyTwoRatsAndABird.md";
 import HappyDresserHappyLife from "./HappyDresserHappyLife.md";

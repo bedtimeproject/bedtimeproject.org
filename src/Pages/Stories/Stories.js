@@ -1,10 +1,6 @@
 import { Route, Switch } from "react-router";
 
-import Poems from "./Poems/Poems";
-import Limericks from "./Limericks/Limericks";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
-import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
-import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 
 /**
  * @function Stories
@@ -26,18 +22,7 @@ export default function Stories() {
       <Switch>
         <Route exact path="/stories">
           <PageTitle>Stories</PageTitle>
-          <div className="Stories-Buttons-Container">
-            <StoryButton link="/stories/poems">Poems</StoryButton>
-            <StoryButton link="/stories/limericks">Limericks</StoryButton>
-          </div>
-        </Route>
-        <Route path="/stories/poems">
-          <Breadcrumb link="/stories">Stories</Breadcrumb>
-          <Poems />
-        </Route>
-        <Route path="/stories/limericks">
-          <Breadcrumb link="/stories">Stories</Breadcrumb>
-          <Limericks />
+          <div className="Stories-Buttons-Container">Coming Soon!</div>
         </Route>
       </Switch>
     </div>

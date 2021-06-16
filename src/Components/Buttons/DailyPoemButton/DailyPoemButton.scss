@@ -1,0 +1,22 @@
+.DailyPoemButton {
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  text-decoration: none;
+  z-index: 10;
+
+  &-Image {
+    width: 100px;
+  }
+
+  &-Text {
+    transform: rotate(-15deg);
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    bottom: 7px;
+    left: -7px;
+    background-color: #fff;
+    padding: 2px;
+  }
+}

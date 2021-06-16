@@ -1,21 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import LimerickButton from "./LimerickButton";
+import QuipButton from "./QuipButton";
 
 export default {
-  title: "Buttons/Limerick Button",
-  component: LimerickButton,
+  title: "Buttons/Quip Button",
+  component: QuipButton,
   argTypes: {},
 };
 
 const Template = (args) => (
   <Router>
-    <LimerickButton {...args} link="/" />
+    <QuipButton {...args} link="/" />
   </Router>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  children: "Hello, Limerick Button!",
+  children: "Hello, Quip Button!",
 };

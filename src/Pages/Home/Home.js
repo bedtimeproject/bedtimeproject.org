@@ -1,6 +1,6 @@
 import React from "react";
 
-import DailyLimerickButton from "../../Components/Buttons/DailyLimerickButton/DailyLimerickButton";
+import DailyLimerickButton from "../../Components/Buttons/DailyPoemButton/DailyPoemButton";
 import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
 
 import StoriesImage from "./doors/Stories.svg";

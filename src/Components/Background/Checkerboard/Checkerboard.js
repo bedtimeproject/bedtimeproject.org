@@ -1,5 +1,4 @@
 import React from "react";
-import { ROOT_RELATIVE } from "relateurl";
 
 /**
  * @function Checkerboard

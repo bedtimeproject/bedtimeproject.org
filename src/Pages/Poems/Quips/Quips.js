@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 
-import LimerickDisplay from "./LimerickDisplay/LimerickDisplay";
-import LimerickButton from "../../../Components/Buttons/LimerickButton/LimerickButton";
+import LimerickDisplay from "./QuipsDisplay/QuipsDisplay";
+import LimerickButton from "../../../Components/Buttons/QuipButton/QuipButton";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import Pagination from "../../../Components/Structural/Pagination/Pagination";
 import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
@@ -23,7 +23,7 @@ import { getDateFromMarkdown } from "../../../util/getDateFromMarkdown/getDateFr
  * <Limericks />
  * ```
  */
-export default function Limericks() {
+export default function Quips() {
   const [limericks, setLimericks] = useState([]);
   const [currentLimericks, setCurrentLimericks] = useState([]);
   const [displayingLimericks, setDisplayingLimericks] = useState([]);
@@ -128,13 +128,13 @@ export default function Limericks() {
 
   return (
     <Switch>
-      <Route exact path="/stories/limericks">
-        <PageTitle>Limericks</PageTitle>
+      <Route exact path="/poems/quips">
+        <PageTitle>Quips</PageTitle>
         <div className="Limerick-Display-Container">
           {displayingLimericks.map((limerick, index) => {
             const title = getTitleFromMarkdown(limerick);
             return (
-              <LimerickButton key={index} link={`/stories/limericks/${title}`}>
+              <LimerickButton key={index} link={`/poems/quips/${title}`}>
                 {title}
               </LimerickButton>
             );
@@ -150,16 +150,16 @@ export default function Limericks() {
         )}
       </Route>
 
-      <Route exact path="/stories/limericks/latest">
-        <Breadcrumb link="/stories/limericks/">Limericks</Breadcrumb>
+      <Route exact path="/poems/quips/latest">
+        <Breadcrumb link="/poems/quips/">Quips</Breadcrumb>
         <LimerickDisplay limerick={getLatestLimerick(limericks)} />
       </Route>
 
       {limericks.map((limerick, index) => {
         const title = getTitleFromMarkdown(limerick);
         return (
-          <Route key={index} exact path={`/stories/limericks/${title}`}>
-            <Breadcrumb link="/stories/limericks/">Limericks</Breadcrumb>
+          <Route key={index} path={`/poems/quips/${title}`}>
+            <Breadcrumb link="/poems/quips/">Quips</Breadcrumb>
             <LimerickDisplay limerick={limerick} />
           </Route>
         );

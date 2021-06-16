@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import LimerickButton from "./LimerickButton";
+import DailyPoemButton from "./DailyPoemButton";
 
-test("renders LimerickButton", () => {
+test("renders DailyPoemButton", () => {
   render(
     <Router>
-      <LimerickButton link="/">Limerick</LimerickButton>
+      <DailyPoemButton />
     </Router>
   );
-  const buttonText = screen.queryByText(/Limerick/);
+  const buttonText = screen.queryByText(/Daily Poem/);
   expect(buttonText).not.toBeNull();
 });
