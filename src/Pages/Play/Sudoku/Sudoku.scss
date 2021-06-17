@@ -1,12 +1,16 @@
 .Sudoku-Container {
   .Game-Container {
-    width: calc(40px * 9);
+    width: calc(35px * 9);
     margin: 20px auto;
 
     .Board {
       display: grid;
-      grid-template-columns: repeat(9, 40px);
-      grid-template-rows: repeat(9, 40px);
+      grid-template-columns: repeat(9, 35px);
+      grid-template-rows: repeat(9, 35px);
+
+      :hover {
+        cursor: pointer;
+      }
 
       div {
         display: inline-block;
@@ -17,8 +21,47 @@
         padding: 8px;
         font-size: large;
 
+        &#D1,
+        &#E1,
+        &#F1,
+        &#D2,
+        &#E2,
+        &#F2,
+        &#D3,
+        &#E3,
+        &#F3,
+        &#A4,
+        &#B4,
+        &#C4,
+        &#G4,
+        &#H4,
+        &#I4,
+        &#A5,
+        &#B5,
+        &#C5,
+        &#G5,
+        &#H5,
+        &#I5,
+        &#A6,
+        &#B6,
+        &#C6,
+        &#G6,
+        &#H6,
+        &#I6,
+        &#D7,
+        &#E7,
+        &#F7,
+        &#D8,
+        &#E8,
+        &#F8,
+        &#D9,
+        &#E9,
+        &#F9 {
+          background-color: lighten(peachpuff, 5);
+        }
+
         &.focused {
-          background-color: peru;
+          background-color: darken(peachpuff, 10) !important;
         }
       }
     }
@@ -28,5 +71,17 @@
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
+
+    button {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: 1px solid darken(peachpuff, 10);
+      cursor: pointer;
+
+      &.active {
+        background-color: peachpuff;
+      }
+    }
   }
 }

@@ -1,23 +1,128 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+
+import { games } from "./games";
 
 /**
  * @todo Add keyboard support
+ *
+ * @function Sudoku
+ * @author Alexander Burdiss
  */
 export default function Sudoku() {
-  const [focusedSquare, setFocusedSquare] = useState(null);
-  function handleBoxClick(event) {
-    const previousFocusedElement = document.querySelector(".focused");
-    if (previousFocusedElement) {
-      previousFocusedElement.classList.remove("focused");
-    }
-    setFocusedSquare(event.target);
-    event.target.classList.add("focused");
+  const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  const [focusedNumber, setFocusedNumber] = useState(1);
+
+  useEffect(function setupComponent() {
+    const board = getRandomBoard();
+    setupBoard(board);
+  }, []);
+
+  /**
+   * @todo get Random board from boards
+   */
+  function getRandomBoard() {
+    return games.easy[0];
   }
 
-  function addNumber(number) {
-    focusedSquare.innerText = number;
+  /**
+   * @function Sudoku~setupBoard
+   * @param {*} board
+   */
+  function setupBoard(board) {
+    let letterIndex = 0;
+
+    for (let row of board) {
+      let counter = 0;
+      for (let number of row) {
+        const currentElement = document.getElementById(
+          `${letters[letterIndex]}${counter + 1}`
+        );
+        if (number != 0) {
+          currentElement.innerText = number;
+          currentElement.classList.add("locked");
+        }
+        counter++;
+      }
+      letterIndex++;
+    }
   }
+
+  /**
+   * @function Sudoku~handleBoxClick
+   * @param {Event} event
+   */
+  function handleBoxClick(event) {
+    if (!event.target.classList.contains("locked")) {
+      const previousFocusedElement = document.querySelector(".focused");
+      if (previousFocusedElement) {
+        previousFocusedElement.classList.remove("focused");
+      }
+      addNumber(event);
+      event.target.classList.add("focused");
+    }
+  }
+
+  function handleNumberClick(number, event) {
+    setFocusedNumber(number);
+    const previousFocusedElement = document.querySelector(".active");
+    if (previousFocusedElement) {
+      previousFocusedElement.classList.remove("active");
+    }
+    event.target.classList.add("active");
+  }
+
+  /**
+   * @function Sudoku~addNumber
+   * @param {Number} event
+   */
+  function addNumber(event) {
+    event.target.innerText = focusedNumber;
+    validateBoard();
+  }
+
+  /**
+   * @function Sudoku~validateBoard
+   */
+  function validateBoard() {
+    validateRows();
+    validateColumns();
+    validateSquares();
+  }
+
+  function validateRows() {
+    for (let number of numbers) {
+      const usedLetters = [];
+
+      for (let letter of letters) {
+        const boardNumber = document.getElementById(`${letter}${number}`)
+          .innerText;
+        if (boardNumber && usedLetters.includes(boardNumber)) {
+          console.log("Row dupe", boardNumber);
+        }
+        usedLetters.push(boardNumber);
+      }
+    }
+  }
+
+  function validateColumns() {
+    for (let letter of letters) {
+      const usedLetters = [];
+      for (let number of numbers) {
+        const boardNumber = document.getElementById(`${letter}${number}`)
+          .innerText;
+        if (boardNumber && usedLetters.includes(boardNumber)) {
+          console.log("Col dupe", boardNumber);
+        }
+        usedLetters.push(boardNumber);
+      }
+    }
+  }
+
+  function validateSquares() {}
+
   return (
     <div className="Sudoku-Container">
       <PageTitle>Sudoku</PageTitle>
@@ -133,15 +238,20 @@ export default function Sudoku() {
         </div>
 
         <div className="NumberContainer">
-          <button onClick={() => addNumber(1)}>1</button>
-          <button onClick={() => addNumber(2)}>2</button>
-          <button onClick={() => addNumber(3)}>3</button>
-          <button onClick={() => addNumber(4)}>4</button>
-          <button onClick={() => addNumber(5)}>5</button>
-          <button onClick={() => addNumber(6)}>6</button>
-          <button onClick={() => addNumber(7)}>7</button>
-          <button onClick={() => addNumber(8)}>8</button>
-          <button onClick={() => addNumber(9)}>9</button>
+          <button
+            onClick={(event) => handleNumberClick(1, event)}
+            className="active"
+          >
+            1
+          </button>
+          <button onClick={(event) => handleNumberClick(2, event)}>2</button>
+          <button onClick={(event) => handleNumberClick(3, event)}>3</button>
+          <button onClick={(event) => handleNumberClick(4, event)}>4</button>
+          <button onClick={(event) => handleNumberClick(5, event)}>5</button>
+          <button onClick={(event) => handleNumberClick(6, event)}>6</button>
+          <button onClick={(event) => handleNumberClick(7, event)}>7</button>
+          <button onClick={(event) => handleNumberClick(8, event)}>8</button>
+          <button onClick={(event) => handleNumberClick(9, event)}>9</button>
         </div>
       </div>
     </div>
