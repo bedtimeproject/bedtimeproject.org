@@ -13,6 +13,22 @@ export default function Sudoku() {
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+  const rowErrorClass = "rowError";
+  const colErrorClass = "colError";
+  const squareErrorClass = "squareError";
+
+  const boxes = [
+    ["A1", "B1", "C1", "A2", "B2", "C2", "A3", "B3", "C3"],
+    ["D1", "E1", "F1", "D2", "E2", "F2", "D3", "E3", "F3"],
+    ["G1", "H1", "I1", "G2", "H2", "I2", "G3", "H3", "I3"],
+    ["A4", "B4", "C4", "A5", "B5", "C5", "A6", "B6", "C6"],
+    ["D4", "E4", "F4", "D5", "E5", "F5", "D6", "E6", "F6"],
+    ["G4", "H4", "I4", "G5", "H5", "I5", "G6", "H6", "I6"],
+    ["A7", "B7", "C7", "A8", "B8", "C8", "A9", "B9", "C9"],
+    ["D7", "E7", "F7", "D8", "E8", "F8", "D9", "E9", "F9"],
+    ["G7", "H7", "I7", "G8", "H8", "I8", "G9", "H9", "I9"],
+  ];
+
   const [focusedNumber, setFocusedNumber] = useState(1);
 
   useEffect(function setupComponent() {
@@ -56,12 +72,17 @@ export default function Sudoku() {
    */
   function handleBoxClick(event) {
     if (!event.target.classList.contains("locked")) {
-      const previousFocusedElement = document.querySelector(".focused");
-      if (previousFocusedElement) {
-        previousFocusedElement.classList.remove("focused");
+      if (event.target.innerText == focusedNumber) {
+        event.target.innerText = "";
+        validateBoard();
+      } else {
+        const previousFocusedElement = document.querySelector(".focused");
+        if (previousFocusedElement) {
+          previousFocusedElement.classList.remove("focused");
+        }
+        addNumber(event);
+        event.target.classList.add("focused");
       }
-      addNumber(event);
-      event.target.classList.add("focused");
     }
   }
 
@@ -90,38 +111,117 @@ export default function Sudoku() {
     validateRows();
     validateColumns();
     validateSquares();
+    const win = checkForWin();
+    if (win) {
+      alert("Congratulations!");
+    }
   }
 
   function validateRows() {
+    document.querySelectorAll(`.${rowErrorClass}`).forEach((node) => {
+      node.classList.remove(rowErrorClass);
+    });
+
     for (let number of numbers) {
       const usedLetters = [];
 
       for (let letter of letters) {
-        const boardNumber = document.getElementById(`${letter}${number}`)
-          .innerText;
-        if (boardNumber && usedLetters.includes(boardNumber)) {
-          console.log("Row dupe", boardNumber);
+        const boardNumber = document.querySelector(`#${letter}${number}`);
+        for (let usedLetter of usedLetters) {
+          if (
+            usedLetter.innerText &&
+            usedLetter.innerText == boardNumber.innerText
+          ) {
+            usedLetter.classList.add(rowErrorClass);
+            boardNumber.classList.add(rowErrorClass);
+          }
         }
-        usedLetters.push(boardNumber);
+
+        if (boardNumber.innerText) {
+          usedLetters.push(boardNumber);
+        }
       }
     }
   }
 
   function validateColumns() {
+    document.querySelectorAll(`.${colErrorClass}`).forEach((node) => {
+      node.classList.remove(colErrorClass);
+    });
+
     for (let letter of letters) {
-      const usedLetters = [];
+      const usedNumbers = [];
+
       for (let number of numbers) {
-        const boardNumber = document.getElementById(`${letter}${number}`)
-          .innerText;
-        if (boardNumber && usedLetters.includes(boardNumber)) {
-          console.log("Col dupe", boardNumber);
+        const boardNumber = document.querySelector(`#${letter}${number}`);
+        for (let usedNumber of usedNumbers) {
+          if (
+            usedNumber.innerText &&
+            usedNumber.innerText == boardNumber.innerText
+          ) {
+            usedNumber.classList.add(colErrorClass);
+            boardNumber.classList.add(colErrorClass);
+          }
         }
-        usedLetters.push(boardNumber);
+
+        if (boardNumber.innerText) {
+          usedNumbers.push(boardNumber);
+        }
       }
     }
   }
 
-  function validateSquares() {}
+  function validateSquares() {
+    document.querySelectorAll(`.${squareErrorClass}`).forEach((node) => {
+      node.classList.remove(squareErrorClass);
+    });
+
+    for (let box of boxes) {
+      const usedNumbers = [];
+      for (let square of box) {
+        const boardNumber = document.querySelector(`#${square}`);
+        for (let usedNumber of usedNumbers) {
+          if (
+            usedNumber.innerText &&
+            usedNumber.innerText == boardNumber.innerText
+          ) {
+            usedNumber.classList.add(squareErrorClass);
+            boardNumber.classList.add(squareErrorClass);
+          }
+        }
+
+        if (boardNumber.innerText) {
+          usedNumbers.push(boardNumber);
+        }
+      }
+    }
+  }
+
+  function checkForWin() {
+    for (let letter of letters) {
+      for (let number of numbers) {
+        const element = document.querySelector(`#${letter}${number}`);
+        if (!element.innerText) {
+          return false;
+        }
+      }
+    }
+
+    const rowErrors = document.querySelectorAll(`.${rowErrorClass}`);
+    if (rowErrors.length) {
+      return false;
+    }
+    const colErrors = document.querySelectorAll(`.${colErrorClass}`);
+    if (colErrors.length) {
+      return false;
+    }
+    const squareErrors = document.querySelectorAll(`.${squareErrorClass}`);
+    if (squareErrors.length) {
+      return false;
+    }
+
+    return true;
+  }
 
   return (
     <div className="Sudoku-Container">

@@ -63,6 +63,12 @@
         &.focused {
           background-color: darken(peachpuff, 10) !important;
         }
+
+        &.rowError,
+        &.colError,
+        &.squareError {
+          background-color: palevioletred !important;
+        }
       }
     }
   }
