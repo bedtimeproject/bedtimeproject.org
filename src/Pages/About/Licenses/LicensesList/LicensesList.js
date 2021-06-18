@@ -1,4 +1,5 @@
 import React from "react";
+import "./LicensesList.scss";
 
 /**
  * @function LicensesList
@@ -15,16 +16,19 @@ export default function LicensesList({ licenses }) {
   return (
     <div className="LicensesList-Container">
       {licenses.map(
-        ({
-          image,
-          userUrl,
-          username,
-          name,
-          version,
-          licenses,
-          repository,
-          licenseUrl,
-        }) => {
+        (
+          {
+            image,
+            userUrl,
+            username,
+            name,
+            version,
+            licenses,
+            repository,
+            licenseUrl,
+          },
+          index
+        ) => {
           let title = name;
           if (username) {
             if (title.toLowerCase() != username.toLowerCase()) {
@@ -32,7 +36,7 @@ export default function LicensesList({ licenses }) {
             }
           }
           return (
-            <div className="LicensesListItem">
+            <div className="LicensesListItem" key={index}>
               <div className="cardShadow">
                 <div className="card">
                   {image && (

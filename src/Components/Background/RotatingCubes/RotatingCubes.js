@@ -1,4 +1,5 @@
 import React from "react";
+import "./RotatingCubes.scss";
 
 /**
  * @description Six rotating cubes that make a good background to an element

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
+import "./Quips.scss";
 
 import LimerickDisplay from "./QuipsDisplay/QuipsDisplay";
 import LimerickButton from "../../../Components/Buttons/QuipButton/QuipButton";

@@ -1,5 +1,7 @@
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
+import "./App.scss";
+
 import Header from "./Components/Structural/Header/Header";
 import Footer from "./Components/Structural/Footer/Footer";
 

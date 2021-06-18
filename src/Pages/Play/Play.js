@@ -1,6 +1,7 @@
 import { Switch, Route } from "react-router-dom";
-import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
+import "./Play.scss";
 
+import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import Sudoku from "./Sudoku/Sudoku";

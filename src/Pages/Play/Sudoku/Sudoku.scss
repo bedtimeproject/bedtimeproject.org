@@ -104,8 +104,10 @@
     }
   }
 
-  .WinModal {
+  .WinModal-Container {
     padding: 20px;
+  }
+  .WinModal {
     @media (max-width: $GameBreak) {
       position: absolute;
       top: 0px;

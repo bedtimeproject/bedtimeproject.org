@@ -1,4 +1,5 @@
 import React from "react";
+import "./ForestMountains.scss";
 
 /**
  * @function ForestMountains

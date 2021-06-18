@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import "./Sudoku.scss";
 import { shuffle } from "underscore";
+
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import { games } from "./games";
 
@@ -465,14 +467,16 @@ export default function Sudoku() {
             <button onClick={(event) => handleNumberClick(9, event)}>9</button>
           </div>
         </div>
-        <div className="WinModal">
+        <div className="WinModal-Container">
           <button onClick={setupNewBoard} className="Difficulty-Button">
             New Game
           </button>
           {modalIsShowing && (
-            <div className="WinModal-Box">
-              <h2>Congratulations!</h2>
-              <button onClick={playAgain}>Play Again</button>
+            <div className="WinModal">
+              <div className="WinModal-Box">
+                <h2>Congratulations!</h2>
+                <button onClick={playAgain}>Play Again</button>
+              </div>
             </div>
           )}
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { shuffle } from "underscore";
+import "./404.scss";
 
 import ForestMountains from "../../Components/Background/ForestMountains/ForestMountains";
 

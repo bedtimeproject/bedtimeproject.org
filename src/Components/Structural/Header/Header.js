@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Header.scss";
 import HeaderButton from "../../Buttons/HeaderButton/HeaderButton";
 
 import logo from "../../../assets/images/logo.png";

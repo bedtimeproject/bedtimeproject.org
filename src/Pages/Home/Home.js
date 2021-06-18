@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.scss";
 
 import DailyLimerickButton from "../../Components/Buttons/DailyPoemButton/DailyPoemButton";
 import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";

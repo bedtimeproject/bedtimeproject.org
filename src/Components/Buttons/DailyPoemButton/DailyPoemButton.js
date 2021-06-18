@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./DailyPoemButton.scss";
 
 import newspaper from "./Newspaper.svg";
 

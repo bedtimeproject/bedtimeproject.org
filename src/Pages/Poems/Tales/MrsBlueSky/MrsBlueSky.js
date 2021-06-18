@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from "react";
+import "./MrsBlueSky.scss";
 
 import HeaderCloud2 from "./images/HeaderCloud2.svg";
 import HeaderCloud from "./images/HeaderCloud.svg";

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./AboutPage.scss";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../Contributor/Contributor";

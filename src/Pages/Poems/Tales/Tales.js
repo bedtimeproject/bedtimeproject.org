@@ -1,4 +1,6 @@
 import React from "react";
+import "./Tales.scss";
+
 import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 

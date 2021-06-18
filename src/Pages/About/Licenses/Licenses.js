@@ -9,11 +9,13 @@ Run this command to get the data
 */
 
 import React from "react";
+import { capitalize } from "underscore.string";
+import "./Licenses.scss";
+
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import LicensesList from "./LicensesList/LicensesList";
 
 import Data from "./licenses.json";
-import { capitalize } from "underscore.string";
 
 /**
  * @function extractNameFromGithubUrl

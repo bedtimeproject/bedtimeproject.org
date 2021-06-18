@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router";
+import "./Stories.scss";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 

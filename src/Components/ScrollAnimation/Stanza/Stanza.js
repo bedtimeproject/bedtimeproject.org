@@ -1,4 +1,5 @@
 import React from "react";
+import "./Stanza.scss";
 import { getContrast } from "../../../util/getContrast/getContrast";
 
 /**

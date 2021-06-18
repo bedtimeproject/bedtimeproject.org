@@ -1,4 +1,5 @@
 import React from "react";
+import "./Acknowledgements.scss";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import "./About.scss";
 
 import AboutPage from "./AboutPage/AboutPage";
 import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";

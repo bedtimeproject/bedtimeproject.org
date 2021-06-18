@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import "./LightsOut.scss";
 
 /**
  * @description A simple game of Lights Out.

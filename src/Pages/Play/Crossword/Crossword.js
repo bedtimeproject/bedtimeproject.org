@@ -1,4 +1,6 @@
 import React from "react";
+import "./Crossword.scss";
+
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 export default function Crossword() {

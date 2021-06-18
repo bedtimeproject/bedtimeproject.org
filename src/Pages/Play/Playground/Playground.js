@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import "./Playground.scss";
+
 import RotatingCubes from "../../../Components/Background/RotatingCubes/RotatingCubes";
 import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
