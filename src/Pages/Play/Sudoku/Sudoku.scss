@@ -1,12 +1,25 @@
 .Sudoku-Container {
+  $GameBreak: 600px;
+  position: relative;
   .Game-Container {
-    width: calc(35px * 9);
-    margin: 20px auto;
+    @media (min-width: $GameBreak) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    & > div {
+      flex: 1;
+    }
 
     .Board {
       display: grid;
       grid-template-columns: repeat(9, 35px);
       grid-template-rows: repeat(9, 35px);
+      width: calc(35px * 9);
+      margin: 20px auto;
+
+      &.win div {
+        background-color: lightgreen !important;
+      }
 
       :hover {
         cursor: pointer;
@@ -88,6 +101,46 @@
       &.active {
         background-color: peachpuff;
       }
+    }
+  }
+
+  .WinModal {
+    padding: 20px;
+    @media (max-width: $GameBreak) {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    &-Box {
+      background-color: white;
+      margin: 100px auto;
+      text-align: center;
+      @media (max-width: $GameBreak) {
+        padding: 20px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .Difficulty-Buttons {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .Difficulty-Button {
+    width: 120px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px darken(peachpuff, 10) solid;
+    border-radius: 4px;
+    cursor: pointer;
+    &.highlighted {
+      background-color: peachpuff;
     }
   }
 }
