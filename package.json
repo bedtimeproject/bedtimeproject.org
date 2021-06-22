@@ -25,7 +25,6 @@
     "deployall": "npm run build && npm run deploy && npm run chromatic",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/master.scss:src/master.css --style compressed",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=6c0dc9e53bb7",

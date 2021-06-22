@@ -110,15 +110,15 @@
   .WinModal {
     @media (max-width: $GameBreak) {
       position: absolute;
-      top: 0px;
-      left: 0;
+      top: -39px;
+      left: 0px;
+      right: 0px;
       height: 100%;
-      right: 0;
       background-color: rgba(0, 0, 0, 0.5);
     }
     &-Box {
       background-color: white;
-      margin: 100px auto;
+      margin: 100px 20px;
       text-align: center;
       @media (max-width: $GameBreak) {
         padding: 20px;
@@ -130,8 +130,11 @@
   .Difficulty-Buttons {
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    @media (min-width: $GameBreak) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 
   .Difficulty-Button {

@@ -1,16 +1,25 @@
-import React, { useEffect, useState } from "react";
-import "./Sudoku.scss";
 import { shuffle } from "underscore";
-
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import React, { useEffect, useState } from "react";
 
 import { games } from "./games";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+
+import "./Sudoku.scss";
 
 /**
  * @todo Add keyboard support
  *
  * @function Sudoku
  * @author Alexander Burdiss
+ * @since 6/15/21
+ * @version 1.0.0
+ * @description A game of sudoku that handles validation, and allows user input
+ * with the mouse or on a touch device.
+ * @component
+ * @example
+ * ```jsx
+ * <Sudoku />
+ * ```
  */
 export default function Sudoku() {
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
@@ -37,6 +46,15 @@ export default function Sudoku() {
   const [difficulty, setDifficulty] = useState("easy");
 
   useEffect(function setupComponent() {
+    /**
+     * @function Sudoku~useEffect~setupComponent~window.win
+     * @description A function that attaches to the window on mount, that allows
+     * a developer to win the game instantly, only if the first board in the
+     * easy collection is used. Used for testing purposes!
+     * @author Alexander Burdiss
+     * @since 6/18/21
+     * @version 1.0.0
+     */
     window.win = () => {
       function setText(id, number) {
         document.querySelector(`#${id}`).innerText = number;
@@ -95,23 +113,107 @@ export default function Sudoku() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /**
+   * @function Sudoku~setupNewBoard
+   * @description Sets up a new board with the current difficulty taken into
+   * account, handles validation, and resetting the board to a new state.
+   * @author Alexander Burdiss
+   * @since 6/22/21
+   * @version 1.0.0
+   */
   function setupNewBoard() {
+    removeAllLockedSquares();
+    removeFocus();
     const board = getNewBoard();
     setupBoard(board);
+    validateBoard();
   }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(setupNewBoard, [difficulty]);
 
+  /**
+   * @function Sudoku~removeAllLockedSquares
+   * @description Removes all locked squares. This is used when changing the
+   * board to a new board, so that valid squares can be played.
+   * @author Alexander Burdiss
+   * @since 6/22/21
+   * @version 1.0.0
+   */
+  function removeAllLockedSquares() {
+    document
+      .querySelectorAll(".locked")
+      .forEach((node) => node.classList.remove("locked"));
+  }
+
+  /**
+   * @function Sudoku~removeFocus
+   * @description Removes the focus from the currently selected square.
+   * @author Alexander Burdiss
+   * @since 6/22/21
+   * @version 1.0.0
+   */
+  function removeFocus() {
+    document.querySelector(".focused")?.classList.remove("focused");
+  }
+
+  /**
+   * @function Sudoku~getNewBoard
+   * @description Gets a new board with the currently selected difficulty,
+   * if there is a new board to get
+   * @author Alexander Burdiss
+   * @since 6/22/21
+   * @version 1.0.0
+   * @returns {Array[]} A two dimensional array of Numbers, to be used as a
+   * new board for Sudoku.
+   */
   function getNewBoard() {
     let boards = games[difficulty];
-    boards = shuffle(boards);
+    let currentBoardFirstFour = "";
+
+    const currentBoardFirst = document.querySelector("#A1").innerText;
+    currentBoardFirstFour = currentBoardFirst == "" ? "0" : currentBoardFirst;
+
+    const currentBoardSecond = document.querySelector("#A2").innerText;
+    currentBoardFirstFour =
+      currentBoardFirstFour +
+      (currentBoardSecond == "" ? "0" : currentBoardSecond);
+
+    const currentBoardThird = document.querySelector("#A3").innerText;
+    currentBoardFirstFour =
+      currentBoardFirstFour +
+      (currentBoardThird == "" ? "0" : currentBoardThird);
+
+    const currentBoardFourth = document.querySelector("#A4").innerText;
+    currentBoardFirstFour =
+      currentBoardFirstFour +
+      (currentBoardFourth == "" ? "0" : currentBoardFourth);
+
+    let newFirstFour;
+    if (boards.length > 1) {
+      do {
+        boards = shuffle(boards);
+        console.log(boards);
+        let newFirstRow = boards[0][0];
+        newFirstFour =
+          newFirstRow[0].toString() +
+          newFirstRow[1].toString() +
+          newFirstRow[2].toString() +
+          newFirstRow[3].toString();
+      } while (newFirstFour == currentBoardFirstFour);
+    }
     return boards[0];
   }
 
   /**
    * @function Sudoku~setupBoard
-   * @param {*} board
+   * @param {Array[]} board A two dimensional array of integers that represent
+   * the starting configuration for a board.
+   * @description Adds all of the numbers from one board to the DOM, in the
+   * correct placement.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
    */
   function setupBoard(board) {
     let letterIndex = 0;
@@ -136,7 +238,15 @@ export default function Sudoku() {
 
   /**
    * @function Sudoku~handleBoxClick
-   * @param {Event} event
+   * @param {Event} event The event that is triggered when a box on the game
+   * board is clicked
+   * @description Adds the current focused state to the board, and adds the
+   * correct number that is selected to the sqare that is clicked. This will
+   * this will also remove a number if the same one exists in the unlocked
+   * box that is clicked.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
    */
   function handleBoxClick(event) {
     if (!event.target.classList.contains("locked")) {
@@ -154,6 +264,16 @@ export default function Sudoku() {
     }
   }
 
+  /**
+   * @function Sudoku~handleNumberClick
+   * @description Changes the currently selected number to the one that the
+   * user clicked.
+   * @param {Number} number The new number that was clicked by the user.
+   * @param {Event} event The event that triggered the new number change.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
+   */
   function handleNumberClick(number, event) {
     setFocusedNumber(number);
     const previousFocusedElement = document.querySelector(".active");
@@ -165,7 +285,13 @@ export default function Sudoku() {
 
   /**
    * @function Sudoku~addNumber
-   * @param {Number} event
+   * @description Adds the focused number to the target of the event that
+   * triggered a new number.
+   * @param {Event} event The event that triggered the number to be added to
+   * the board
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
    */
   function addNumber(event) {
     event.target.innerText = focusedNumber;
@@ -174,6 +300,13 @@ export default function Sudoku() {
 
   /**
    * @function Sudoku~validateBoard
+   * @description Handles checking all of the different validation methods for
+   * the board, and puts error classes on all conflicting numbers on the board.
+   * This function will also trigger the win, if all of the numbers are filled
+   * in and there are no errors.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
    */
   function validateBoard() {
     validateRows();
@@ -186,6 +319,14 @@ export default function Sudoku() {
     }
   }
 
+  /**
+   * @function Sudoku~validateRows
+   * @description Validates all of the rows on the board, and adds the
+   * appropriate error classes to the board.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
+   */
   function validateRows() {
     document.querySelectorAll(`.${rowErrorClass}`).forEach((node) => {
       node.classList.remove(rowErrorClass);
@@ -213,6 +354,14 @@ export default function Sudoku() {
     }
   }
 
+  /**
+   * @function Sudoku~validateColumns
+   * @description Validates all of the columns on the board, and adds the
+   * appropriate error classes to the board.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
+   */
   function validateColumns() {
     document.querySelectorAll(`.${colErrorClass}`).forEach((node) => {
       node.classList.remove(colErrorClass);
@@ -240,6 +389,14 @@ export default function Sudoku() {
     }
   }
 
+  /**
+   * @function Sudoku~validateSquares
+   * @description Validates all of the squares on the board, and adds the
+   * appropriate error classes to the board.
+   * @author Alexander Burdiss
+   * @since 6/16/21
+   * @version 1.0.0
+   */
   function validateSquares() {
     document.querySelectorAll(`.${squareErrorClass}`).forEach((node) => {
       node.classList.remove(squareErrorClass);
@@ -266,6 +423,15 @@ export default function Sudoku() {
     }
   }
 
+  /**
+   * @function Sudoku~checkForWin
+   * @description Checks the board for meeting the winning conditions: no
+   * errors and all squares filled out.
+   * @returns {Boolean} Whether the user has won, or not.
+   * @author Alexander Burdiss
+   * @since 6/17/21
+   * @version 1.0.0
+   */
   function checkForWin() {
     for (let letter of letters) {
       for (let number of numbers) {
@@ -294,6 +460,11 @@ export default function Sudoku() {
 
   /**
    * @function Sudoku~playAgain
+   * @description Handles the button "Play Again" that renders after a user
+   * wins the game once.
+   * @author Alexander Burdiss
+   * @since 6/18/21
+   * @version 1.0.0
    */
   function playAgain() {
     document.querySelector(".win").classList.remove("win");
