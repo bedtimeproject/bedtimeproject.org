@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import closeCentralIcon from "../../../svgs/close.svg";
 import { cellsForClue, getAnagramClueData } from "../helpers";
 import shuffle from "lodash/shuffle";
 import { ClueInput } from "./clue-input";
@@ -99,9 +98,6 @@ class AnagramHelper extends Component {
   }
 
   render() {
-    const closeIcon = {
-      __html: closeCentralIcon,
-    };
     const clue = getAnagramClueData(
       this.props.entries,
       this.props.focussedEntry
@@ -127,9 +123,13 @@ class AnagramHelper extends Component {
         <button
           className="button button--large button--tertiary crossword__anagram-helper-close"
           onClick={this.props.close.bind(this.props.crossword)}
-          dangerouslySetInnerHTML={closeIcon}
           data-link-name="Close"
-        />
+        >
+          <svg width="30" height="30">
+            <title>Close</title>
+            <path d="M21 9.8l-.8-.8-5.2 4.8-5.2-4.8-.8.8 4.8 5.2-4.8 5.2.8.8 5.2-4.8 5.2 4.8.8-.8-4.8-5.2 4.8-5.2" />
+          </svg>
+        </button>
         <button
           className={`button button--large ${
             !this.state.clueInput ? "button--tertiary" : ""

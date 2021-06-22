@@ -8,7 +8,6 @@ import { scrollTo } from "../lib/scroller";
 
 class Clue extends Component {
   onClick(e) {
-    e.preventDefault();
     this.props.setReturnPosition();
     this.props.focusFirstCellInClueById(this.props.id);
   }
@@ -17,7 +16,7 @@ class Clue extends Component {
     return (
       <li>
         <a
-          href={`#${this.props.id}`}
+          href={`/#/play/crossword#${this.props.id}`}
           onClick={this.onClick.bind(this)}
           className={classNames({
             crossword__clue: true,

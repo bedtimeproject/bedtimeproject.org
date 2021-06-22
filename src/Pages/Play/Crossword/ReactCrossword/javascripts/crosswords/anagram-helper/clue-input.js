@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
+import React, { Component } from "react";
 
 class ClueInput extends Component {
+  constructor(props) {
+    super(props);
+    this.ref = React.createRef();
+  }
   componentDidMount() {
-    const el = findDOMNode(this);
+    const el = this.ref.current;
 
     if (el) {
       el.focus();
@@ -11,10 +14,10 @@ class ClueInput extends Component {
   }
 
   componentDidUpdate() {
-    const el = findDOMNode(this);
+    const el = this.ref.current;
 
     // focus on reset
-    if (this.props.value === '' && el) {
+    if (this.props.value === "" && el) {
       el.focus();
     }
   }
@@ -27,7 +30,7 @@ class ClueInput extends Component {
   }
 
   onKeyDown(e) {
-    const el = findDOMNode(this);
+    const el = this.ref.current;
 
     if (e.keyCode === 13 && el) {
       el.blur();
@@ -38,6 +41,7 @@ class ClueInput extends Component {
   render() {
     return (
       <input
+        ref={this.ref}
         type="text"
         className="crossword__anagram-helper__clue-input"
         placeholder="Enter letters"

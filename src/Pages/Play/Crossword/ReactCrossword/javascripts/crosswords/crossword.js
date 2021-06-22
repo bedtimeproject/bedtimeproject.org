@@ -170,6 +170,7 @@ class Crossword extends Component {
 
       this.focusClue(x, y, this.state.directionOfEntry);
     } else {
+      // eslint-disable-next-line react/no-direct-mutation-state
       this.state.cellInFocus = {
         x,
         y,
@@ -579,7 +580,11 @@ class Crossword extends Component {
       });
 
       // Side effect
-      window.history.replaceState(undefined, document.title, `#${clue.id}`);
+      window.history.replaceState(
+        undefined,
+        document.title,
+        `/#/play/crossword#${clue.id}`
+      );
 
       this.props.onFocusClue({ x, y, clueId: clue.id });
     }
@@ -591,7 +596,10 @@ class Crossword extends Component {
   }
 
   focusFirstCellInClueById(clueId) {
-    const newEntry = this.props.data.entries.find((val) => val.id === clueId);
+    const newClueID = clueId.replace("/play/crossword#", "");
+    const newEntry = this.props.data.entries.find(
+      (val) => val.id === newClueID
+    );
     if (newEntry) {
       this.focusFirstCellInClue(newEntry);
     }
