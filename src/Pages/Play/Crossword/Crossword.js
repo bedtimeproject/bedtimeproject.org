@@ -11,6 +11,7 @@ export default function Crossword() {
       <PageTitle>Crossword</PageTitle>
       <div className="Game-Container">
         <ReactCrossword data={games[0]} />
+        <div>Gail Grabowski, edited by Stanley Newman</div>
       </div>
     </div>
   );

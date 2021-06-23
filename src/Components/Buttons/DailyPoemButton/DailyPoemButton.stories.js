@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import DailyLimerickButton from "./DailyLimerickButton";
+import DailyPoemButton from "./DailyPoemButton";
 
 export default {
-  title: "Buttons/Daily Limerick Button",
-  component: DailyLimerickButton,
+  title: "Buttons/Daily Poem Button",
+  component: DailyPoemButton,
   argTypes: {},
 };
 
@@ -18,7 +18,7 @@ const Template = (args) => (
         height: 150,
       }}
     >
-      <DailyLimerickButton {...args} link="/" />
+      <DailyPoemButton {...args} link="/" />
     </div>
   </Router>
 );

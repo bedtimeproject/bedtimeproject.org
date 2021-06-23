@@ -42,13 +42,14 @@ class Clue extends Component {
 class Clues extends Component {
   constructor(props) {
     super(props);
+    this.ref = React.createRef();
     this.state = {
       showGradient: true,
     };
   }
 
   componentDidMount() {
-    this.$cluesNode = findDOMNode(this.clues);
+    this.$cluesNode = this.ref.current;
 
     const height = this.$cluesNode.scrollHeight - this.$cluesNode.clientHeight;
 
@@ -75,7 +76,7 @@ class Clues extends Component {
       this.props.focussed &&
       (!prev.focussed || prev.focussed.id !== this.props.focussed.id)
     ) {
-      fastdom.read(() => {
+      fastdom.measure(() => {
         this.scrollIntoView(this.props.focussed);
       });
     }
@@ -84,6 +85,7 @@ class Clues extends Component {
   scrollIntoView(clue) {
     const buffer = 100;
     const node = findDOMNode(this[clue.id]);
+
     const visible =
       node.offsetTop - buffer > this.$cluesNode.scrollTop &&
       node.offsetTop + buffer <
@@ -121,6 +123,7 @@ class Clues extends Component {
 
     return (
       <div
+        ref={this.ref}
         className={`crossword__clues--wrapper ${
           this.state.showGradient ? "" : "hide-gradient"
         }`}
