@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.2611e11d.chunk.css",
-    "main.js": "/static/js/main.10158ed8.chunk.js",
-    "main.js.map": "/static/js/main.10158ed8.chunk.js.map",
+    "main.css": "/static/css/main.dd4bc10a.chunk.css",
+    "main.js": "/static/js/main.a5b8bc44.chunk.js",
+    "main.js.map": "/static/js/main.a5b8bc44.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
-    "static/js/2.2e378aa9.chunk.js": "/static/js/2.2e378aa9.chunk.js",
-    "static/js/2.2e378aa9.chunk.js.map": "/static/js/2.2e378aa9.chunk.js.map",
+    "static/js/2.8f46d925.chunk.js": "/static/js/2.8f46d925.chunk.js",
+    "static/js/2.8f46d925.chunk.js.map": "/static/js/2.8f46d925.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.2611e11d.chunk.css.map": "/static/css/main.2611e11d.chunk.css.map",
-    "static/js/2.2e378aa9.chunk.js.LICENSE.txt": "/static/js/2.2e378aa9.chunk.js.LICENSE.txt",
+    "static/css/main.dd4bc10a.chunk.css.map": "/static/css/main.dd4bc10a.chunk.css.map",
+    "static/js/2.8f46d925.chunk.js.LICENSE.txt": "/static/js/2.8f46d925.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/Alex.580fc672.md": "/static/media/Alex.580fc672.md",
     "static/media/BoyFrisbee.209b3597.svg": "/static/media/BoyFrisbee.209b3597.svg",
@@ -49,15 +49,17 @@
     "static/media/SunsetCloud2.638ec3b1.svg": "/static/media/SunsetCloud2.638ec3b1.svg",
     "static/media/Turboat.9867a2be.md": "/static/media/Turboat.9867a2be.md",
     "static/media/WindCloud.cefcf42c.svg": "/static/media/WindCloud.cefcf42c.svg",
-    "static/media/master.css": "/static/media/yellowFlowers.3f442f01.jpg",
+    "static/media/BlackJack.scss": "/static/media/spade.5f655d9b.png",
     "static/media/logo.ab36dd44.png": "/static/media/logo.ab36dd44.png",
     "static/media/scroll.76d0a694.svg": "/static/media/scroll.76d0a694.svg",
-    "static/media/user.ab3a9f80.svg": "/static/media/user.ab3a9f80.svg"
+    "static/media/Home.scss": "/static/media/sunset-beach.8ca7f506.jpg",
+    "static/media/user.ab3a9f80.svg": "/static/media/user.ab3a9f80.svg",
+    "static/media/TheLadyAndTheFrog.scss": "/static/media/yellowFlowers.3f442f01.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
-    "static/js/2.2e378aa9.chunk.js",
-    "static/css/main.2611e11d.chunk.css",
-    "static/js/main.10158ed8.chunk.js"
+    "static/js/2.8f46d925.chunk.js",
+    "static/css/main.dd4bc10a.chunk.css",
+    "static/js/main.a5b8bc44.chunk.js"
   ]
 }
