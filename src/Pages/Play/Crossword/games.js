@@ -143,7 +143,7 @@ export const games = [
         humanNumber: "23",
         clue: "Acquire molars and canines",
         direction: "across",
-        length: 5,
+        length: 6,
         group: ["23-across"],
         position: { x: 0, y: 4 },
         separatorLocations: {},
