@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Route, Switch } from "react-router";
-import "./Quips.scss";
+import React, { useEffect, useState } from "react";
 
-import LimerickDisplay from "./QuipsDisplay/QuipsDisplay";
+import { getDateFromMarkdown } from "../../../util/getDateFromMarkdown/getDateFromMarkdown";
+import { getTitleFromMarkdown } from "../../../util/getTitleFromMarkdown/getTitleFromMarkdown";
+import allLimericks from "./assets/_registry";
+import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
 import LimerickButton from "../../../Components/Buttons/QuipButton/QuipButton";
+import LimerickDisplay from "./QuipsDisplay/QuipsDisplay";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import Pagination from "../../../Components/Structural/Pagination/Pagination";
-import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
-import allLimericks from "./assets/_registry";
-import { getTitleFromMarkdown } from "../../../util/getTitleFromMarkdown/getTitleFromMarkdown";
-import { getDateFromMarkdown } from "../../../util/getDateFromMarkdown/getDateFromMarkdown";
+
+import "./Quips.scss";
 
 /**
  * @function Limericks
@@ -17,7 +19,7 @@ import { getDateFromMarkdown } from "../../../util/getDateFromMarkdown/getDateFr
  * that are in the Limerick tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * ```jsx
@@ -130,6 +132,9 @@ export default function Quips() {
   return (
     <Switch>
       <Route exact path="/poems/quips">
+        <Helmet>
+          <title>Quips | The Bedtime Project</title>
+        </Helmet>
         <PageTitle>Quips</PageTitle>
         <div className="Limerick-Display-Container">
           {displayingLimericks.map((limerick, index) => {
@@ -152,6 +157,9 @@ export default function Quips() {
       </Route>
 
       <Route exact path="/poems/quips/latest">
+        <Helmet>
+          <title>Latest Quip | The Bedtime Project</title>
+        </Helmet>
         <Breadcrumb link="/poems/quips/">Quips</Breadcrumb>
         <LimerickDisplay limerick={getLatestLimerick(limericks)} />
       </Route>
@@ -160,6 +168,11 @@ export default function Quips() {
         const title = getTitleFromMarkdown(limerick);
         return (
           <Route key={index} path={`/poems/quips/${title}`}>
+            <Helmet>
+              <title>
+                {getTitleFromMarkdown(limerick)} | The Bedtime Project
+              </title>
+            </Helmet>
             <Breadcrumb link="/poems/quips/">Quips</Breadcrumb>
             <LimerickDisplay limerick={limerick} />
           </Route>

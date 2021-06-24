@@ -1,16 +1,18 @@
+import { Helmet } from "react-helmet";
 import React, { useState } from "react";
-import "./Crossword.scss";
+
+import { GrowingGreen } from "./GrowingGreenCW";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import ReactCrossword from "./ReactCrossword/javascripts/crosswords/crossword";
 
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
-import { GrowingGreen } from "./GrowingGreenCW";
+import "./Crossword.scss";
 
 /**
  * @function Crossword
  * @description A component that handles playing crossword games
  * @author Alexander Burdiss
  * @since 6/23/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -22,6 +24,9 @@ export default function Crossword() {
   const [currentCrossword, setCurrentCrossword] = useState(GrowingGreen);
   return (
     <div className="Crossword-Container">
+      <Helmet>
+        <title>Crossword - {currentCrossword.name} | The Bedtime Project</title>
+      </Helmet>
       <PageTitle>Crossword - {currentCrossword.name}</PageTitle>
       <div className="Game-Container">
         <ReactCrossword data={currentCrossword} />

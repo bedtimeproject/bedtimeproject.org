@@ -1,7 +1,8 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import $ from "jquery";
-import "./TheLadyAndTheFrog.scss";
 
+import "./TheLadyAndTheFrog.scss";
 import image1 from "./images/IMG_3651.jpg";
 import image2 from "./images/IMG-3646.jpg";
 import image3 from "./images/IMG_3645.jpg";
@@ -20,7 +21,7 @@ import image9 from "./images/IMG_3648.jpg";
  * HTML and jQuery so it does not follow React best practices.
  * @author Alexander Burdiss
  * @since 5/14/21
- * @version 2.0.0
+ * @version 2.1.0
  * @component
  * @example
  * ```jsx
@@ -47,6 +48,9 @@ export default function TheLadyAndTheFrog() {
 
   return (
     <div className="TheLadyAndTheFrogWrapper">
+      <Helmet>
+        <title>The Lady and the Frog | The Bedtime Project</title>
+      </Helmet>
       <main>
         <div className="Story">
           <div className="Card">

@@ -1,7 +1,9 @@
+import { Helmet } from "react-helmet";
 import React from "react";
-import "./Acknowledgements.scss";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+
+import "./Acknowledgements.scss";
 
 /**
  * @function Acknowledgements
@@ -9,7 +11,7 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
  * we used to help out in this project.
  * @author Alexander Burdiss
  * @since 6/10/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -19,6 +21,9 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 export default function Acknowledgements() {
   return (
     <div className="Acknowledgements-Container">
+      <Helmet>
+        <title>Acknowledgements | The Bedtime Project</title>
+      </Helmet>
       <PageTitle>Acknowledgements</PageTitle>
       <div>Hello, Acknowledgements!</div>
     </div>

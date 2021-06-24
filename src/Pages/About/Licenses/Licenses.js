@@ -8,13 +8,15 @@ Run this command to get the data
 
 */
 
+import { Helmet } from "react-helmet";
 import React from "react";
+
 import { capitalize } from "underscore.string";
-import "./Licenses.scss";
 
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import LicensesList from "./LicensesList/LicensesList";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
+import "./Licenses.scss";
 import Data from "./licenses.json";
 
 /**
@@ -23,7 +25,7 @@ import Data from "./licenses.json";
  * the author of the software.
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
- * @version 1.0.1
+ * @version 1.1.0
  * @since 12/17/20
  * @param {String} url The GitHub url of a piece of software.
  * @returns {String} The GitHub username
@@ -105,6 +107,9 @@ sortDataByKey(licenses, "username");
 export default function Licenses() {
   return (
     <div className="LicensesContainer">
+      <Helmet>
+        <title>Licenses | The Bedtime Project</title>
+      </Helmet>
       <PageTitle>Licenses</PageTitle>
       <div className="LicensesContainer-Description">
         This project is made possible by these great open-source developers:

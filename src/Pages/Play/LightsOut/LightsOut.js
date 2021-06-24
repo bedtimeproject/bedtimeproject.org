@@ -1,11 +1,13 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
+
 import "./LightsOut.scss";
 
 /**
  * @description A simple game of Lights Out.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -179,6 +181,9 @@ export default function LightsOut() {
   }, []);
   return (
     <div className="LightsOutContainer">
+      <Helmet>
+        <title>Lights Out | The Bedtime Project</title>
+      </Helmet>
       <header className="Lights-Out-Header">
         <h1>Lights Out</h1>
         <p>

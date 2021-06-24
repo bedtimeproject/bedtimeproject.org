@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { shuffle } from "underscore";
 import React, { useEffect, useState } from "react";
 
@@ -12,7 +13,7 @@ import "./Sudoku.scss";
  * @function Sudoku
  * @author Alexander Burdiss
  * @since 6/15/21
- * @version 1.0.0
+ * @version 1.1.0
  * @description A game of sudoku that handles validation, and allows user input
  * with the mouse or on a touch device.
  * @component
@@ -476,6 +477,9 @@ export default function Sudoku() {
 
   return (
     <div className="Sudoku-Container">
+      <Helmet>
+        <title>Sudoku | The Bedtime Project</title>
+      </Helmet>
       <PageTitle>Sudoku</PageTitle>
       <div className="Game-Container">
         <div className="Difficulty-Buttons">

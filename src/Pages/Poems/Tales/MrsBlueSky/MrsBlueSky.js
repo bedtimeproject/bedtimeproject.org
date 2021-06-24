@@ -1,31 +1,32 @@
 /* eslint-disable jsx-a11y/alt-text */
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
-import "./MrsBlueSky.scss";
 
-import HeaderCloud2 from "./images/HeaderCloud2.svg";
-import HeaderCloud from "./images/HeaderCloud.svg";
-import PaperAirplane from "./images/PaperAirplane.svg";
-import Moon from "./images/Moon.svg";
-import SadDogImage from "./images/SadDogImage.svg";
-import Dragon from "./images/Dragon.svg";
-import Cow from "./images/Cow.svg";
+import "./MrsBlueSky.scss";
+import BoyFrisbee from "./images/BoyFrisbee.svg";
 import ComicPow from "./images/ComicPow.svg";
+import Cow from "./images/Cow.svg";
+import Dragon from "./images/Dragon.svg";
+import Frisbee from "./images/Frisbee.svg";
+import HeaderCloud from "./images/HeaderCloud.svg";
+import HeaderCloud2 from "./images/HeaderCloud2.svg";
+import HighDog from "./images/HighDog.svg";
+import Lightning from "./images/Lightning.svg";
+import Moon from "./images/Moon.svg";
+import Mountain from "./images/Mountain.svg";
+import PaperAirplane from "./images/PaperAirplane.svg";
+import SadDogImage from "./images/SadDogImage.svg";
 import Sun from "./images/Sun.svg";
 import SunsetCloud from "./images/SunsetCloud.svg";
 import SunsetCloud2 from "./images/SunsetCloud2.svg";
-import Mountain from "./images/Mountain.svg";
 import WindCloud from "./images/WindCloud.svg";
-import BoyFrisbee from "./images/BoyFrisbee.svg";
-import Frisbee from "./images/Frisbee.svg";
-import HighDog from "./images/HighDog.svg";
-import Lightning from "./images/Lightning.svg";
-import { Link } from "react-router-dom";
 
 /**
  * @function MrsBlueSky
  * @description A scroll-animated poem. This was originally built using HTML, so
  * it does not currently follow React best practices.
- * @version 2.0.0
+ * @version 2.1.0
  * @author Alexander Burdiss
  * @since 5/14/21
  * @component
@@ -54,6 +55,9 @@ export default function MrsBlueSky() {
 
   return (
     <div className="MrsBlueSkyContainer">
+      <Helmet>
+        <title>Mrs. Blue Sky | The Bedtime Project</title>
+      </Helmet>
       {/* Styles for the global object, just on this page */}
       <style>{`
         :root * {

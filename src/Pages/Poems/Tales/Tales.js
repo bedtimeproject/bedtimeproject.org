@@ -1,12 +1,29 @@
+import { Helmet } from "react-helmet";
 import React from "react";
+
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
+
 import "./Tales.scss";
 
-import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
-
+/**
+ * @function Tales
+ * @description A collection of longer poems on the site
+ * @author Alexander Burdiss
+ * @since 6/15/21
+ * @version 1.1.0
+ * @component
+ * @example
+ * ```jsx
+ * <Tales />
+ * ```
+ */
 export default function Tales() {
   return (
     <div>
+      <Helmet>
+        <title>Tales | The Bedtime Project</title>
+      </Helmet>
       <PageTitle>Tales</PageTitle>
       <div className="Tales-Button-Container">
         <StoryButton link="/poems/tales/the-lady-and-the-frog">

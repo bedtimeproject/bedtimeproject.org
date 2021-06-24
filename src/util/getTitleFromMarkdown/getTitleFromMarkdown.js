@@ -7,11 +7,15 @@
  * beginning
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 export function getTitleFromMarkdown(markdown) {
-  const titleMatch = /#.*/;
-  let title = markdown.match(titleMatch)[0];
-  title = title.slice(2);
-  return title;
+  if (markdown) {
+    const titleMatch = /#.*/;
+    let title = markdown.match(titleMatch)[0];
+    title = title.slice(2);
+    return title;
+  } else {
+    return "";
+  }
 }

@@ -1,11 +1,13 @@
-import React from "react";
+import { Helmet } from "react-helmet";
 import { Switch, Route } from "react-router-dom";
-import "./About.scss";
+import React from "react";
 
 import AboutPage from "./AboutPage/AboutPage";
-import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import Acknowledgements from "./Acknowledgements/Acknowledgements";
+import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import Licenses from "./Licenses/Licenses";
+
+import "./About.scss";
 
 /**
  * @function About
@@ -13,7 +15,7 @@ import Licenses from "./Licenses/Licenses";
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * ```jsx
@@ -23,6 +25,9 @@ import Licenses from "./Licenses/Licenses";
 export default function About() {
   return (
     <div>
+      <Helmet>
+        <title>About | The Bedtime Project</title>
+      </Helmet>
       <Switch>
         <Route exact path="/about">
           <AboutPage />

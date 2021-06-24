@@ -1,20 +1,21 @@
+import { Helmet } from "react-helmet";
 import React from "react";
-import "./Home.scss";
 
 import DailyLimerickButton from "../../Components/Buttons/DailyPoemButton/DailyPoemButton";
 import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
+import Fireflies from "../../Components/Background/Fireflies/Fireflies";
 
-import StoriesImage from "./doors/Stories.svg";
+import "./Home.scss";
 import AboutUsImage from "./doors/AboutUs.svg";
 import PlaygroundImage from "./doors/Playground.svg";
-import Fireflies from "../../Components/Background/Fireflies/Fireflies";
+import StoriesImage from "./doors/Stories.svg";
 
 /**
  * @function Home
  * @description The contents to render on the front page of the website.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 2.0.0
+ * @version 2.1.0
  * @component
  * @example
  * ```jsx
@@ -24,6 +25,9 @@ import Fireflies from "../../Components/Background/Fireflies/Fireflies";
 export default function Home() {
   return (
     <div className="Home-Container">
+      <Helmet>
+        <title>The Bedtime Project</title>
+      </Helmet>
       <Fireflies />
       <div className="Home-Door-Container">
         <DoorButton label="Stories" image={StoriesImage} link="/stories" />

@@ -1,11 +1,12 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
-import "./Playground.scss";
-
-import RotatingCubes from "../../../Components/Background/RotatingCubes/RotatingCubes";
-import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import { json } from "./playgroundData";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import RotatingCubes from "../../../Components/Background/RotatingCubes/RotatingCubes";
+import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
+
+import "./Playground.scss";
 
 /**
  * @description A story generator that generates a new story each time the
@@ -116,6 +117,9 @@ export default function Playground() {
   }, []);
   return (
     <article about="/play/playground">
+      <Helmet>
+        <title>Playground | The Bedtime Project</title>
+      </Helmet>
       <div className="Playground-Container">
         <div className="Playground-Background-Color" />
         <RotatingCubes />

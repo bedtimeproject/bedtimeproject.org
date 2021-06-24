@@ -1,9 +1,11 @@
+import { Helmet } from "react-helmet";
 import React from "react";
-import "./TheGuideToSunset.scss";
 
 import Attribution from "../../../../Components/ScrollAnimation/Attribution/Attribution";
 import Stanza from "../../../../Components/ScrollAnimation/Stanza/Stanza";
 import Title from "../../../../Components/ScrollAnimation/Title/Title";
+
+import "./TheGuideToSunset.scss";
 
 /**
  * @function TheGuideToSunset
@@ -11,7 +13,7 @@ import Title from "../../../../Components/ScrollAnimation/Title/Title";
  * animation of this project built using React.
  * @author Alexander Burdiss
  * @since 6/4/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -22,6 +24,9 @@ export default function TheGuideToSunset() {
   const stanzaBackgroundColor = "#8bc9e4";
   return (
     <div className="TheGuideToSunset-Container">
+      <Helmet>
+        <title>The Guide to Sunset | The Bedtime Project</title>
+      </Helmet>
       <Title background={stanzaBackgroundColor} author="Daniel Stigmon">
         The Guide to Sunset
       </Title>

@@ -1,15 +1,17 @@
+import { Helmet } from "react-helmet";
 import { Switch, Route } from "react-router-dom";
-import "./Play.scss";
 
+import BlackJack from "./BlackJack/BlackJack";
 import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
-import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
+import Crossword from "./Crossword/Crossword";
+import LightsOut from "./LightsOut/LightsOut";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
+import Playground from "./Playground/Playground";
 import Sudoku from "./Sudoku/Sudoku";
 import WordHunt from "./WordHunt/WordHunt";
-import Crossword from "./Crossword/Crossword";
-import BlackJack from "./BlackJack/BlackJack";
-import LightsOut from "./LightsOut/LightsOut";
-import Playground from "./Playground/Playground";
+
+import "./Play.scss";
 
 /**
  * @function Play
@@ -17,7 +19,7 @@ import Playground from "./Playground/Playground";
  * the games on this stack.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
  * ```jsx
@@ -27,6 +29,9 @@ import Playground from "./Playground/Playground";
 export default function Play() {
   return (
     <div>
+      <Helmet>
+        <title>Play | The Bedtime Project</title>
+      </Helmet>
       <Switch>
         <Route exact path="/play">
           <PageTitle>Play</PageTitle>
