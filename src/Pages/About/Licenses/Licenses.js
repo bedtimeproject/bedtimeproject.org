@@ -62,8 +62,19 @@ function sortDataByKey(data, key) {
   return data;
 }
 
-let licenses = Object.keys(Data).map((key) => {
-  let { licenses, ...license } = Data[key];
+// Add license for library I downloaded directly and use
+const allData = Data;
+allData["react-crossword@0.2.3"] = {
+  licenses: "Apache-2.0",
+  repository: "https://github.com/guardian/react-crossword",
+  licenseUrl:
+    "https://raw.githubusercontent.com/guardian/react-crossword/master/LICENSE",
+  parents: "the-bedtime-project",
+};
+console.log(allData);
+
+let licenses = Object.keys(allData).map((key) => {
+  let { licenses, ...license } = allData[key];
   let [name, version] = key.split("@");
 
   let username =
