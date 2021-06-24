@@ -41,6 +41,12 @@
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
+    "react-helmet@6.1.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/nfl/react-helmet",
+        "licenseUrl": "https://github.com/nfl/react-helmet/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
     "react-markdown@6.0.2": {
         "licenses": "MIT",
         "repository": "https://github.com/remarkjs/react-markdown",
