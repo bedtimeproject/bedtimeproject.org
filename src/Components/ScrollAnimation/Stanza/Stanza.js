@@ -1,6 +1,8 @@
 import React from "react";
-import "./Stanza.scss";
+
 import { getContrast } from "../../../util/getContrast/getContrast";
+
+import "./Stanza.scss";
 
 /**
  * @function Stanza
@@ -8,9 +10,14 @@ import { getContrast } from "../../../util/getContrast/getContrast";
  * @param props The JSX props passed to this React component
  * @param {React.Component} props.children The paragraphs to render in this
  * component
+ * @param {string} props.background The background color to render on this
+ * slide
+ * @param {number} props.index The index of this stanza, to calculate the scroll
+ * linked positioning of the element
+ * @param {number} props.stanzaCount The total number of stanzas in this story
  * @author Alexander Burdiss
  * @since 6/4/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * ```jsx
@@ -19,16 +26,53 @@ import { getContrast } from "../../../util/getContrast/getContrast";
  * </Stanza>
  * ```
  */
-export default function Stanza({ children, background }) {
+export default function Stanza({ children, background, index, stanzaCount }) {
+  const oneIndexPercent = 100 / (stanzaCount + 2);
+  console.log(oneIndexPercent);
   return (
-    <div
-      className="ScrollAnimation-Stanza-Container"
-      style={{
-        backgroundColor: background,
-        color: getContrast(background),
-      }}
-    >
-      {children}
+    <div>
+      <style>{`
+        #stanza${index} {
+          animation-name: stanza${index};
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes stanza${index} {
+          0% {
+            top: 100vh;
+          }
+          ${
+            index > 0
+              ? `${(index - 0.5) * oneIndexPercent}% {
+              top: 100vh;
+            }`
+              : ""
+          }
+          ${index * oneIndexPercent}% {
+            top: 25vh;
+          }
+          ${(index + 0.5) * oneIndexPercent}% {
+            top: 25vh;
+          }
+          ${(index + 1) * oneIndexPercent}% {
+            top: -100vh;
+          }
+          100% {
+            top: -100%;
+          }
+        }
+      `}</style>
+      <div
+        id={"stanza" + index}
+        className="ScrollAnimation-Stanza-Container"
+        style={{
+          backgroundColor: background,
+          color: getContrast(background),
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
