@@ -3,8 +3,6 @@ import React from "react";
 import Contributor from "./Contributor";
 
 import user from "../user.svg";
-import alexBio from "../bios/Alex.md";
-import danielBio from "../bios/Daniel.md";
 
 export default {
   title: "Pages/Contributor",

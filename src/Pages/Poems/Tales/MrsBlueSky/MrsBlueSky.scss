@@ -229,15 +229,12 @@ $White: #ffffff;
     }
     7% {
       opacity: 1;
-      tranform: scale(1);
     }
     10% {
       opacity: 0.2;
-      transform: scale(0.8);
     }
     12% {
       opacity: 0;
-      transform: rotate(45deg) scale(0.6);
     }
   }
 
