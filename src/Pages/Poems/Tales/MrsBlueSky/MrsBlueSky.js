@@ -14,7 +14,7 @@ import HeaderCloud2 from "./images/HeaderCloud2.svg";
 import HighDog from "./images/HighDog.svg";
 import Lightning from "./images/Lightning.svg";
 import Moon from "./images/Moon.svg";
-import Mountain from "./images/Mountain.svg";
+import Mountain from "../../../../assets/images/Mountain.svg";
 import PaperAirplane from "./images/PaperAirplane.svg";
 import SadDogImage from "./images/SadDogImage.svg";
 import Sun from "./images/Sun.svg";
