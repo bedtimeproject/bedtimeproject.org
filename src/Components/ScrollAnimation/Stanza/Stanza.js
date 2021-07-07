@@ -28,7 +28,7 @@ import "./Stanza.scss";
  */
 export default function Stanza({ children, background, index, stanzaCount }) {
   const oneIndexPercent = 100 / (stanzaCount + 2);
-  console.log(oneIndexPercent);
+
   return (
     <div>
       <style>{`

@@ -4,205 +4,297 @@ import React from "react";
 import ScrollAnimation from "../../../../Components/ScrollAnimation/ScrollAnimation";
 import Attribution from "../../../../Components/ScrollAnimation/Attribution/Attribution";
 import Stanza from "../../../../Components/ScrollAnimation/Stanza/Stanza";
+import StanzaImage from "../../../../Components/ScrollAnimation/StanzaImage/StanzaImage";
 import Title from "../../../../Components/ScrollAnimation/Title/Title";
+
+import CherryPie from "./images/CherryPie.svg";
+import Kite from "./images/BlueKite.svg";
+import Ramen from "./images/Ramen.svg";
+import Town from "./images/Town.svg";
+import Treasure from "./images/Treasure.svg";
 
 import "./TheGuideToSunset.scss";
 
 const Stanzas = [
-  <div>
-    <p>It's that time of day, it's the time we sit down</p>
-    <p>And watch the sun fall on our small mountain town</p>
-  </div>,
+  [
+    <div>
+      <p>It's that time of day, it's the time we sit down</p>
+      <p>And watch the sun fall on our small mountain town</p>
+    </div>,
+    <img src={Town} alt={"Town"} />,
+  ],
 
-  <div>
-    <p>No ones in bed, the lights barely around</p>
-    <p>In this time of day there are secrets to be found.</p>
-  </div>,
+  [
+    <div>
+      <p>No ones in bed, the lights barely around</p>
+      <p>In this time of day there are secrets to be found.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>You might walk up Mt. Snark where the blue pongos grow</p>
-    <p>And find an old lion with a hat made of snow</p>
-  </div>,
+  [
+    <div>
+      <p>You might walk up Mt. Snark where the blue pongos grow</p>
+      <p>And find an old lion with a hat made of snow</p>
+    </div>,
+  ],
 
-  <div>
-    <p>And if you ask him real nicely he might let you through</p>
-    <p>And then Into the ancient old cave of Mardue</p>
-  </div>,
+  [
+    <div>
+      <p>And if you ask him real nicely he might let you through</p>
+      <p>And then Into the ancient old cave of Mardue</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Where a gentle wind guides you, you might have to run,</p>
-    <p>To a secret gold room, that shows only in sun. </p>
-  </div>,
+  [
+    <div>
+      <p>Where a gentle wind guides you, you might have to run,</p>
+      <p>To a secret gold room, that shows only in sun. </p>
+    </div>,
+  ],
 
-  <div>
-    <p>For a minute a day the door will glow bright</p>
-    <p>For a minute a day, all that gold is in sight. </p>
-  </div>,
+  [
+    <div>
+      <p>For a minute a day the door will glow bright</p>
+      <p>For a minute a day, all that gold is in sight. </p>
+    </div>,
+  ],
 
-  <div>
-    <p>Or if you like water instead of hard gold</p>
-    <p>There's a lake right below it, called Carrigans Hold.</p>
-  </div>,
+  [
+    <div>
+      <p>Or if you like water instead of hard gold</p>
+      <p>There's a lake right below it, called Carrigans Hold.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Where the water is clear as a piece of cut glass</p>
-    <p>where the fish will sing songs to you, carp and the bass</p>
-  </div>,
+  [
+    <div>
+      <p>Where the water is clear as a piece of cut glass</p>
+      <p>where the fish will sing songs to you, carp and the bass</p>
+    </div>,
+  ],
 
-  <div>
-    <p>saying “Hi there young traveller what is your name?</p>
-    <p>What is your secret, your dream and your game”</p>
-  </div>,
+  [
+    <div>
+      <p>saying “Hi there young traveller what is your name?</p>
+      <p>What is your secret, your dream and your game”</p>
+    </div>,
+  ],
 
-  <div>
-    <p>And from these three things they’ll write such a tune</p>
-    <p>For you and you only, or… you and the moon. </p>
-  </div>,
+  [
+    <div>
+      <p>And from these three things they’ll write such a tune</p>
+      <p>For you and you only, or… you and the moon. </p>
+    </div>,
+  ],
 
-  <div>
-    <p>Or</p>
-  </div>,
+  [
+    <div>
+      <p>Or</p>
+    </div>,
+  ],
 
-  <div>
-    <p>If you don’t like the dark, and would rather more playtime</p>
-    <p>There's a crooked old ladder that goes straight up to daytime.</p>
-  </div>,
+  [
+    <div>
+      <p>If you don’t like the dark, and would rather more playtime</p>
+      <p>There's a crooked old ladder that goes straight up to daytime.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>The higher you climb, the higher the chances</p>
-    <p>Of seeing the rarest of thunder cloud dances.</p>
-  </div>,
+  [
+    <div>
+      <p>The higher you climb, the higher the chances</p>
+      <p>Of seeing the rarest of thunder cloud dances.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>They call it the Stratus, it comes once a storm</p>
-    <p>And the lighting, it causes the air to be warm</p>
-  </div>,
+  [
+    <div>
+      <p>They call it the Stratus, it comes once a storm</p>
+      <p>And the lighting, it causes the air to be warm</p>
+    </div>,
+  ],
 
-  <div>
-    <p>The dancing at first may not be what it seems</p>
-    <p>But to see two clouds dancing is a sight from a dream</p>
-  </div>,
+  [
+    <div>
+      <p>The dancing at first may not be what it seems</p>
+      <p>But to see two clouds dancing is a sight from a dream</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Don’t get too close though, not even by dare</p>
-    <p>For too close will put quite a frizz in your hair.</p>
-  </div>,
+  [
+    <div>
+      <p>Don’t get too close though, not even by dare</p>
+      <p>For too close will put quite a frizz in your hair.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Three more clouds up from those thunderstorm dancers</p>
-    <p>Is cloud 85 where one always finds answers</p>
-  </div>,
+  [
+    <div>
+      <p>Three more clouds up from those thunderstorm dancers</p>
+      <p>Is cloud 85 where one always finds answers</p>
+    </div>,
+  ],
 
-  <div>
-    <p>For on this cloud sits the great Faelyn the wise</p>
-    <p>The wisest and slyest of all in the skies.</p>
-  </div>,
+  [
+    <div>
+      <p>For on this cloud sits the great Faelyn the wise</p>
+      <p>The wisest and slyest of all in the skies.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>“You’ll ask, where should i go, and oh what should I do?”</p>
-    <p>“She’ll say, that answer is one that belongs only to you.”</p>
-  </div>,
+  [
+    <div>
+      <p>“You’ll ask, where should i go, and oh what should I do?”</p>
+      <p>“She’ll say, that answer is one that belongs only to you.”</p>
+    </div>,
+  ],
 
-  <div>
-    <p>“But i can recommend a good place to get pie</p>
-    <p>Theres a cloud right above you called “ Pie in the Sky”</p>
-  </div>,
+  [
+    <div>
+      <p>“But i can recommend a good place to get pie</p>
+      <p>Theres a cloud right above you called “ Pie in the Sky”</p>
+    </div>,
+    <img src={CherryPie} alt={"Cherry Pie"} />,
+  ],
 
-  <div>
-    <p>But pie is not best to have right before bed. </p>
-    <p>So save it and have it for breakfast instead</p>
-  </div>,
+  [
+    <div>
+      <p>But pie is not best to have right before bed. </p>
+      <p>So save it and have it for breakfast instead</p>
+    </div>,
+  ],
 
-  <div>
-    <p>If you want to climb higher above the pie place</p>
-  </div>,
+  [
+    <div>
+      <p>If you want to climb higher above the pie place</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Be careful…</p>
-  </div>,
+  [
+    <div>
+      <p>Be careful…</p>
+    </div>,
+  ],
 
-  <div>
-    <p>For too high you might spend the night up in space.</p>
-  </div>,
+  [
+    <div>
+      <p>For too high you might spend the night up in space.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Now, back down on earth there is lots more to find</p>
-    <p>Like Mrs. Cronkilver, whose so very kind</p>
-  </div>,
+  [
+    <div>
+      <p>Now, back down on earth there is lots more to find</p>
+      <p>Like Mrs. Cronkilver, whose so very kind</p>
+    </div>,
+  ],
 
-  <div>
-    <p>She’ll give you a penny for nothing at all</p>
-    <p>Saying this is for luck and to help you walk tall.</p>
-  </div>,
+  [
+    <div>
+      <p>She’ll give you a penny for nothing at all</p>
+      <p>Saying this is for luck and to help you walk tall.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>And Mr. Cronkilver, in dark lost his kite</p>
-    <p>He’ll ask, “Please could you go ask the sun for more light?”</p>
-  </div>,
+  [
+    <div>
+      <p>And Mr. Cronkilver, in dark lost his kite</p>
+      <p>He’ll ask, “Please could you go ask the sun for more light?”</p>
+    </div>,
+    <img src={Kite} alt={"Kite"} />,
+  ],
 
-  <div>
-    <p>But...</p>
-  </div>,
+  [
+    <div>
+      <p>But...</p>
+    </div>,
+  ],
 
-  <div>
-    <p>The suns nearly gone now, the world has gone blue,</p>
-    <p>There is light though, and so there is still much to do. </p>
-  </div>,
+  [
+    <div>
+      <p>The suns nearly gone now, the world has gone blue,</p>
+      <p>There is light though, and so there is still much to do. </p>
+    </div>,
+  ],
 
-  <div>
-    <p>You can try to be quick, try to find the first star</p>
-    <p>at this time of night, no one knows where they are.</p>
-  </div>,
+  [
+    <div>
+      <p>You can try to be quick, try to find the first star</p>
+      <p>at this time of night, no one knows where they are.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>They pop one by one from the haze of the sky</p>
-    <p>This can be slow, good thing you have pie!</p>
-  </div>,
+  [
+    <div>
+      <p>They pop one by one from the haze of the sky</p>
+      <p>This can be slow, good thing you have pie!</p>
+    </div>,
+  ],
 
-  <div>
-    <p>If you find the first one, oh, then what celebration</p>
-    <p>You might get your very own star constellation.</p>
-  </div>,
+  [
+    <div>
+      <p>If you find the first one, oh, then what celebration</p>
+      <p>You might get your very own star constellation.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>And now the wind blows just as gently as ever</p>
-    <p>It’s Cooling off flowers that think they are clever</p>
-  </div>,
+  [
+    <div>
+      <p>And now the wind blows just as gently as ever</p>
+      <p>It’s Cooling off flowers that think they are clever</p>
+    </div>,
+  ],
 
-  <div>
-    <p>It’s Cooling off poodles, and freshly baked strudels</p>
-    <p>And Cooling down noodles and brown labradoodles</p>
-  </div>,
+  [
+    <div>
+      <p>It’s Cooling off poodles, and freshly baked strudels</p>
+      <p>And Cooling down noodles and brown labradoodles</p>
+    </div>,
+    <img src={Ramen} alt={"Ramen"} />,
+  ],
 
-  <div>
-    <p>It’s Cooling the world ‘till just it's just about cold</p>
-    <p>And Cooling the trees and the room full of gold</p>
-  </div>,
+  [
+    <div>
+      <p>It’s Cooling the world ‘till just it's just about cold</p>
+      <p>And Cooling the trees and the room full of gold</p>
+    </div>,
+    <img src={Treasure} alt={"Treasure"} />,
+  ],
 
-  <div>
-    <p>Then Cooling the fish at old carrigans hold</p>
-    <p>And Cooling the rungs of the ladder you hold</p>
-  </div>,
+  [
+    <div>
+      <p>Then Cooling the fish at old carrigans hold</p>
+      <p>And Cooling the rungs of the ladder you hold</p>
+    </div>,
+  ],
 
-  <div>
-    <p>You can taste the last bit of the sun as it goes</p>
-    <p>They say all the red makes it taste like a rose. </p>
-    <p>See if you smell it someday with your nose.</p>
-  </div>,
+  [
+    <div>
+      <p>You can taste the last bit of the sun as it goes</p>
+      <p>They say all the red makes it taste like a rose. </p>
+      <p>See if you smell it someday with your nose.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>The world is cold now, but one place is warm</p>
-    <p>In Here far away from that big dancing storm.</p>
-  </div>,
+  [
+    <div>
+      <p>The world is cold now, but one place is warm</p>
+      <p>In Here far away from that big dancing storm.</p>
+    </div>,
+  ],
 
-  <div>
-    <p>And Under your blanket, you’ve trapped some sunlight</p>
-    <p>New adventures at sunrise, but for now</p>
-  </div>,
+  [
+    <div>
+      <p>And Under your blanket, you’ve trapped some sunlight</p>
+      <p>New adventures at sunrise, but for now</p>
+    </div>,
+  ],
 
-  <div>
-    <p>Goodnight</p>
-  </div>,
+  [
+    <div>
+      <p>Goodnight</p>
+    </div>,
+  ],
 ];
 
 /**
@@ -231,13 +323,18 @@ export default function TheGuideToSunset() {
         </Title>
         {Stanzas.map((stanza, index) => {
           return (
-            <Stanza
-              index={index + 1}
-              background={stanzaBackgroundColor}
-              stanzaCount={Stanzas.length}
-            >
-              {stanza}
-            </Stanza>
+            <React.Fragment>
+              <Stanza
+                index={index + 1}
+                background={stanzaBackgroundColor}
+                stanzaCount={Stanzas.length}
+              >
+                {stanza[0]}
+              </Stanza>
+              <StanzaImage index={index + 1} stanzaCount={Stanzas.length}>
+                {stanza[1]}
+              </StanzaImage>
+            </React.Fragment>
           );
         })}
         <Attribution
