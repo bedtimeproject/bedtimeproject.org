@@ -71,7 +71,6 @@ allData["react-crossword@0.2.3"] = {
     "https://raw.githubusercontent.com/guardian/react-crossword/master/LICENSE",
   parents: "the-bedtime-project",
 };
-console.log(allData);
 
 let licenses = Object.keys(allData).map((key) => {
   let { licenses, ...license } = allData[key];

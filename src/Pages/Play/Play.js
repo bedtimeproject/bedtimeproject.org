@@ -19,7 +19,7 @@ import "./Play.scss";
  * the games on this stack.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -40,7 +40,7 @@ export default function Play() {
             <PlayButton link="/play/playground">Playground</PlayButton>
             <PlayButton link="/play/lights-out">Lights Out</PlayButton>
             <PlayButton link="/play/sudoku">Sudoku</PlayButton>
-            <PlayButton link="/play/word-hunt">Word Hunt</PlayButton>
+            {/* <PlayButton link="/play/word-hunt">Word Hunt</PlayButton> */}
             <PlayButton link="/play/crossword">Crossword</PlayButton>
           </div>
         </Route>

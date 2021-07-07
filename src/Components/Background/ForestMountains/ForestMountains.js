@@ -8,7 +8,7 @@ import "./ForestMountains.scss";
  * @author Paul Grant
  * @author Alexander Burdiss
  * @since 6/5/21
- * @version 1.0.0
+ * @version 1.0.1
  * @param props The JSX props passed to this React component
  * @param {String} [props.timeOfDay] An optional prop that will force the
  * background to render either day or night.
@@ -36,7 +36,6 @@ export default function ForestMountains({ timeOfDay }) {
     } else {
       let currentDate = new Date();
       let time = currentDate.getHours();
-      console.log(time);
       if (time > 7 && time < 19) {
         return "image-light";
       } else {
@@ -55,9 +54,9 @@ export default function ForestMountains({ timeOfDay }) {
               id="gradient-sky"
               gradientTransform="rotate(90)"
             >
-              <stop offset="0%" stop-color="var(--sky-top)" />
-              <stop offset="40%" stop-color="var(--sky-mid)" />
-              <stop offset="100%" stop-color="var(--sky-bottom)" />
+              <stop offset="0%" stopColor="var(--sky-top)" />
+              <stop offset="40%" stopColor="var(--sky-mid)" />
+              <stop offset="100%" stopColor="var(--sky-bottom)" />
             </linearGradient>
 
             <linearGradient
@@ -65,8 +64,8 @@ export default function ForestMountains({ timeOfDay }) {
               id="gradient-fog"
               gradientTransform="rotate(90)"
             >
-              <stop offset="5%" stop-color="#000000" />
-              <stop offset="90%" stop-color="var(--fog)" />
+              <stop offset="5%" stopColor="#000000" />
+              <stop offset="90%" stopColor="var(--fog)" />
             </linearGradient>
 
             <linearGradient
@@ -74,8 +73,8 @@ export default function ForestMountains({ timeOfDay }) {
               id="gradient-sun"
               gradientTransform="rotate(90)"
             >
-              <stop offset="5%" stop-color="#000000" />
-              <stop offset="90%" stop-color="var(--sun)" />
+              <stop offset="5%" stopColor="#000000" />
+              <stop offset="90%" stopColor="var(--sun)" />
             </linearGradient>
           </defs>
           <rect height="100%" width="100%" fill="url(#gradient-sky)" />
