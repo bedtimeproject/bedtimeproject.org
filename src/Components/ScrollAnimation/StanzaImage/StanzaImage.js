@@ -9,6 +9,7 @@ import "./StanzaImage.scss";
  */
 export default function StanzaImage({ children, index, stanzaCount }) {
   const oneIndexPercent = 100 / (stanzaCount + 2);
+  console.log(children);
 
   return (
     <div>

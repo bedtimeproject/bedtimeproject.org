@@ -15,6 +15,8 @@ import "./Stanza.scss";
  * @param {number} props.index The index of this stanza, to calculate the scroll
  * linked positioning of the element
  * @param {number} props.stanzaCount The total number of stanzas in this story
+ * @param {string} props.bodyBackground The background color of the entire
+ * screen for the duration this stanza is visible.
  * @author Alexander Burdiss
  * @since 6/4/21
  * @version 1.2.0
@@ -26,7 +28,13 @@ import "./Stanza.scss";
  * </Stanza>
  * ```
  */
-export default function Stanza({ children, background, index, stanzaCount }) {
+export default function Stanza({
+  children,
+  background,
+  index,
+  stanzaCount,
+  bodyBackground,
+}) {
   const oneIndexPercent = 100 / (stanzaCount + 2);
 
   return (
@@ -36,6 +44,10 @@ export default function Stanza({ children, background, index, stanzaCount }) {
           animation-name: stanza${index};
           animation-duration: 1s;
           animation-timing-function: ease-in-out;
+        }
+
+        body {
+          background-color: ${bodyBackground}
         }
 
         @keyframes stanza${index} {
