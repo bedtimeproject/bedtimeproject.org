@@ -81,6 +81,7 @@ export default function Body({
               return (
                 <StanzaImage
                   index={index + 1}
+                  imageIndex={imageIndex}
                   stanzaCount={stanzas.length}
                   key={"" + index + imageIndex}
                   animation={imageObject.animation}

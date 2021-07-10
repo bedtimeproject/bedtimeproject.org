@@ -6,7 +6,10 @@ import Attribution from "../../../../Components/ScrollAnimation/DefaultAttributi
 import Body from "../../../../Components/ScrollAnimation/Body/Body";
 import Title from "../../../../Components/ScrollAnimation/DefaultTitle/DefaultTitle";
 
+import BlueFlowers from "./images/BlueFlowers.svg";
+import CaveEntrance from "./images/CaveEntrance.svg";
 import CherryPie from "./images/CherryPie.svg";
+import Constellation1 from "./images/Constellation1.svg";
 import Kite from "./images/BlueKite.svg";
 import Ramen from "./images/Ramen.svg";
 import Town from "./images/Town.svg";
@@ -29,7 +32,7 @@ const Stanzas = [
         component: <img src={Sun} alt={"Sun"} />,
         positionX: "right",
         positionY: "top",
-        animation: "fade",
+        animation: "slidedown",
         stanzaCount: 1,
       },
       {
@@ -37,7 +40,7 @@ const Stanzas = [
         positionX: "center",
         positionY: "center",
         animation: "fade",
-        stanzaCount: 1,
+        stanzaCount: 2,
       },
       {
         component: <img src={Town} alt={"Town"} />,
@@ -57,10 +60,10 @@ const Stanzas = [
         positionX: "left",
         positionY: "bottom",
         animation: "fade",
-        stanzaCount: 1,
+        stanzaCount: 4,
       },
     ],
-    background: "skyblue",
+    background: "#8bc9e4",
   },
 
   {
@@ -70,8 +73,31 @@ const Stanzas = [
         <p>In this time of day there are secrets to be found.</p>
       </div>
     ),
-    images: [],
-    background: "green",
+    images: [
+      {
+        component: <img src={Constellation1} alt={"Constellation"} />,
+        positionX: "left",
+        positionY: "top",
+        animation: "slideupleft",
+        stanzaCount: 1,
+      },
+      {
+        component: (
+          <img
+            src={BlueFlowers}
+            alt={"Blue Flowers"}
+            style={{
+              transform: "scale(-0.4)  translateX(55%) translateY(-55%)",
+            }}
+          />
+        ),
+        positionX: "left",
+        positionY: "bottom",
+        animation: "fade",
+        stanzaCount: 2,
+      },
+    ],
+    background: "#41a6d3",
   },
 
   {
@@ -82,7 +108,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    background: "blue",
+    background: "#c5e4f1",
   },
 
   {
@@ -92,8 +118,16 @@ const Stanzas = [
         <p>And then Into the ancient old cave of Mardue</p>
       </div>
     ),
-    images: [],
-    background: "red",
+    images: [
+      {
+        component: <img src={CaveEntrance} alt={"Cave Entrance"} />,
+        positionX: "center",
+        positionY: "bottom",
+        animation: "fade",
+        stanzaCount: 1,
+      },
+    ],
+    background: "#c5e4f1",
   },
 
   {
@@ -104,7 +138,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    background: "gold",
+    background: "#ffef99",
   },
 
   {
@@ -275,7 +309,7 @@ const Stanzas = [
         component: <img src={CherryPie} alt={"Cherry Pie"} />,
         positionX: "center",
         positionY: "center",
-        animation: "",
+        animation: "fade",
         stanzaCount: 1,
       },
     ],
@@ -357,7 +391,7 @@ const Stanzas = [
         component: <img src={Kite} alt={"Kite"} />,
         positionX: "center",
         positionY: "center",
-        animation: "",
+        animation: "fade",
         stanzaCount: 1,
       },
     ],
@@ -441,7 +475,7 @@ const Stanzas = [
         component: <img src={Ramen} alt={"Ramen"} />,
         positionX: "left",
         positionY: "top",
-        animation: "",
+        animation: "fade",
         stanzaCount: 1,
       },
     ],
@@ -460,7 +494,7 @@ const Stanzas = [
         component: <img src={Treasure} alt={"Treasure"} />,
         positionX: "right",
         positionY: "bottom",
-        animation: "",
+        animation: "fade",
         stanzaCount: 1,
       },
     ],

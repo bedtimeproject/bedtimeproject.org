@@ -1,17 +1,51 @@
 import React from "react";
+
 import "./StanzaImage.scss";
+import {
+  fade,
+  slidedown,
+  slidedownleft,
+  slidedownright,
+  slideleft,
+  slideright,
+  slideup,
+  slideupleft,
+  slideupright,
+} from "./StanzaImageUtils";
 
 /**
  * @function stanzaImage
  * @description Displays One image for the stanza.
- * @param {*} param0
- * @returns
+ * @param props The JSX props passed to this React component
+ * @param {React.Component} props.children The image to render inside this
+ * stanza.
+ * @param {number} props.index The stanza index that this image is being
+ * rendered with
+ * @param {number} props.imageIndex The image index for the given stanza
+ * @param {number} props.stanzaCount The number of Stanzas in this total
+ * animation
+ * @param {string} [props.animation='fade'] The animation type that will be
+ * displayed on this component. Available animations are:
+ * 'fade', 'slidedown', 'slideup', 'slideleft', 'slideright', 'slidedownleft',
+ * 'slidedownright', 'slideupleft', 'slideupright'
+ * @param {string} props.positionX The horizontal position of the image
+ * relative to the rest of the scroll animation. Available positions are:
+ * 'left', 'center', 'right'
+ * @param {string} props.positionY The vertical position of the image relative
+ * to the rest of the scroll animation. Available positions are:
+ * 'top', 'center', 'bottom'
+ * @param {number} props.stanzaDuration The number of stanzas that this image
+ * should remain onscreen.
+ * @author Alexander Burdiss
+ * @since 7/10/21
+ * @version 1.0.0
  */
 export default function StanzaImage({
   children,
   index,
+  imageIndex,
   stanzaCount,
-  animation,
+  animation = "fade",
   positionX,
   positionY,
   stanzaDuration,
@@ -21,43 +55,72 @@ export default function StanzaImage({
   return (
     <div>
       <style>{`
-        #stanzaImage${index} {
-          animation-name: stanza${animation ? animation : "fade"}${index};
+        #stanza${index}Image${imageIndex} {
+          animation-name: stanza${index}${animation}${imageIndex};
           animation-duration: 1s;
           animation-timing-function: ease-in-out;
         }
 
-        #stanzaImage${index} img {
+        #stanza${index}Image${imageIndex} img {
           height: 250px;
         }
 
-        @keyframes stanzafade${index} {
-          0% {
-            opacity: 0;
-          }
-          ${
-            index > 0
-              ? `${(index - 0.5) * oneIndexPercent}% {
-              opacity: 0;
-            }`
-              : ""
-          }
-          ${index * oneIndexPercent}% {
-            opacity: 1;
-          }
-          ${(index + 0.5) * oneIndexPercent}% {
-            opacity: 1;
-          }
-          ${(index + 1) * oneIndexPercent}% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 0;
-          }
+        ${
+          animation === "fade"
+            ? fade(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slidedown"
+            ? slidedown(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slideup"
+            ? slideup(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slideleft"
+            ? slideleft(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slideright"
+            ? slideright(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slidedownleft"
+            ? slidedownleft(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slidedownright"
+            ? slidedownright(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slideupleft"
+            ? slideupleft(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
+        }
+
+        ${
+          animation === "slideupright"
+            ? slideupright(index, imageIndex, stanzaDuration, oneIndexPercent)
+            : ""
         }
       `}</style>
       <div
-        id={`stanzaImage${index}`}
+        id={`stanza${index}Image${imageIndex}`}
         className="ScrollAnimation-StanzaImage-Container"
         style={{
           right: { left: "45%", center: "25%", right: "5%" }[positionX],
