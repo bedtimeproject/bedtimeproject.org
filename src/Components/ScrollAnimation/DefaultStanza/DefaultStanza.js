@@ -2,7 +2,7 @@ import React from "react";
 
 import { getContrast } from "../../../util/getContrast/getContrast";
 
-import "./Stanza.scss";
+import "./DefaultStanza.scss";
 
 /**
  * @function Stanza
@@ -52,10 +52,10 @@ export default function Stanza({ children, background, index, stanzaCount }) {
               : ""
           }
           ${index * oneIndexPercent}% {
-            top: 25vh;
+            top: 34vh;
           }
           ${(index + 0.5) * oneIndexPercent}% {
-            top: 25vh;
+            top: 34vh;
           }
           ${(index + 1) * oneIndexPercent}% {
             top: -100vh;

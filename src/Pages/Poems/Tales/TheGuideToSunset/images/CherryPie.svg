@@ -173,12 +173,7 @@
       <feGaussianBlur id="feGaussianBlur3930" stdDeviation="2.7507474" />
     </filter>
   </defs>
-  <g
-    id="layer1"
-    inkscape:label="Layer 1"
-    inkscape:groupmode="layer"
-    transform="translate(-129.35 -379.32)"
-  >
+  <g id="layer1" transform="translate(-129.35 -379.32)">
     <g id="g4045">
       <g id="g3976" transform="matrix(.5 0 0 .5 139.02 237.09)">
         <path

@@ -1,9 +1,10 @@
 import React from "react";
 
-import Attribution from "./Attribution";
+import Attribution from "./DefaultAttribution";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default {
-  title: "Scroll Animation/Attribution",
+  title: "Scroll Animation/Default Attribution",
   component: Attribution,
   argTypes: {
     firstLine: {
@@ -28,15 +29,17 @@ export default {
 };
 
 const Template = (args) => (
-  <Attribution background={args.background}>
-    <p>{args.firstLine}</p>
-    <p>{args.secondLine}</p>
-  </Attribution>
+  <Router>
+    <Attribution background={args.background} linkback={"/poems/tales/"}>
+      <p>{args.firstLine}</p>
+      <p>{args.secondLine}</p>
+    </Attribution>
+  </Router>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  firstLine: "Written by Daniel Stigmon",
-  secondLine: "Animated by Alexander Burdiss",
+  firstLine: "Written by FostyWally",
+  secondLine: "Animated by Captain Code",
   background: "#8bc9e4",
 };

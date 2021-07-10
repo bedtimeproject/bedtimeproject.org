@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Attribution.scss";
+import "./DefaultAttribution.scss";
 
 import { getContrast } from "../../../util/getContrast/getContrast";
 
 /**
- * @function Attribution
+ * @namespace DefaultAttribution
+ * @function DefaultAttribution
  * @description The final slide of text on a scroll animation
  * @author Alexander Burdiss
  * @since 6/5/21
@@ -16,7 +17,7 @@ import { getContrast } from "../../../util/getContrast/getContrast";
  * @param {number} props.stanzaCount The number of Stanzas that are in the
  * current scroll animation poem.
  */
-export default function Attribution({
+export default function DefaultAttribution({
   children,
   background,
   stanzaCount,

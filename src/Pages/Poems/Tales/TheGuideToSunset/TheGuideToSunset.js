@@ -2,15 +2,17 @@ import { Helmet } from "react-helmet";
 import React from "react";
 
 import ScrollAnimation from "../../../../Components/ScrollAnimation/ScrollAnimation";
-import Attribution from "../../../../Components/ScrollAnimation/Attribution/Attribution";
+import Attribution from "../../../../Components/ScrollAnimation/DefaultAttribution/DefaultAttribution";
 import Body from "../../../../Components/ScrollAnimation/Body/Body";
-import Title from "../../../../Components/ScrollAnimation/Title/Title";
+import Title from "../../../../Components/ScrollAnimation/DefaultTitle/DefaultTitle";
 
 import CherryPie from "./images/CherryPie.svg";
 import Kite from "./images/BlueKite.svg";
 import Ramen from "./images/Ramen.svg";
 import Town from "./images/Town.svg";
 import Treasure from "./images/Treasure.svg";
+import Mountain from "../../../../assets/images/Mountain.svg";
+import Sun from "../../../../assets/images/Sun.svg";
 
 import "./TheGuideToSunset.scss";
 
@@ -24,14 +26,41 @@ const Stanzas = [
     ),
     images: [
       {
+        component: <img src={Sun} alt={"Sun"} />,
+        positionX: "right",
+        positionY: "top",
+        animation: "fade",
+        stanzaCount: 1,
+      },
+      {
+        component: <img src={Mountain} alt={"Mountain"} />,
+        positionX: "center",
+        positionY: "center",
+        animation: "fade",
+        stanzaCount: 1,
+      },
+      {
         component: <img src={Town} alt={"Town"} />,
         positionX: "center",
         positionY: "center",
-        animation: "",
+        animation: "fade",
+        stanzaCount: 1,
+      },
+      {
+        component: (
+          <img
+            src={Mountain}
+            alt={"Mountain"}
+            style={{ transform: "scaleX(-1)" }}
+          />
+        ),
+        positionX: "left",
+        positionY: "bottom",
+        animation: "fade",
         stanzaCount: 1,
       },
     ],
-    backgroundColor: "red",
+    background: "skyblue",
   },
 
   {
@@ -42,7 +71,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "green",
+    background: "green",
   },
 
   {
@@ -53,7 +82,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "blue",
+    background: "blue",
   },
 
   {
@@ -64,7 +93,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "red",
+    background: "red",
   },
 
   {
@@ -75,7 +104,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "gold",
+    background: "gold",
   },
 
   {
@@ -86,7 +115,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -97,7 +126,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -108,7 +137,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -119,7 +148,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -130,7 +159,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -140,7 +169,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -151,7 +180,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -165,7 +194,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -176,7 +205,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -187,7 +216,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -198,7 +227,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -209,7 +238,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -220,7 +249,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -231,7 +260,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -250,7 +279,7 @@ const Stanzas = [
         stanzaCount: 1,
       },
     ],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -261,7 +290,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -271,7 +300,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -281,7 +310,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -291,7 +320,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -302,7 +331,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -313,7 +342,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -332,7 +361,7 @@ const Stanzas = [
         stanzaCount: 1,
       },
     ],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -342,7 +371,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -353,7 +382,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -364,7 +393,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -375,7 +404,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -386,7 +415,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -397,7 +426,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -410,13 +439,13 @@ const Stanzas = [
     images: [
       {
         component: <img src={Ramen} alt={"Ramen"} />,
-        positionX: "center",
-        positionY: "center",
+        positionX: "left",
+        positionY: "top",
         animation: "",
         stanzaCount: 1,
       },
     ],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -429,13 +458,13 @@ const Stanzas = [
     images: [
       {
         component: <img src={Treasure} alt={"Treasure"} />,
-        positionX: "center",
-        positionY: "center",
+        positionX: "right",
+        positionY: "bottom",
         animation: "",
         stanzaCount: 1,
       },
     ],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -446,7 +475,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -458,7 +487,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -469,7 +498,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -480,7 +509,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 
   {
@@ -490,7 +519,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    background: "",
   },
 ];
 
@@ -509,7 +538,7 @@ const Stanzas = [
  */
 export default function TheGuideToSunset() {
   const stanzaBackgroundColor = "#8bc9e4";
-  const backgroundColor = "#EEEEEE";
+  const background = "#EEEEEE";
 
   return (
     <div className="TheGuideToSunset-Container">
@@ -517,21 +546,22 @@ export default function TheGuideToSunset() {
         <title>The Guide to Sunset | The Bedtime Project</title>
       </Helmet>
       <ScrollAnimation bodyStyleMinHeight={`${Stanzas.length * 100}vh`}>
-        <Title background={stanzaBackgroundColor} author="Daniel Stigmon">
+        <Title background={stanzaBackgroundColor} author="FostyWally">
           The Guide to Sunset
         </Title>
         <Body
           stanzas={Stanzas}
           stanzaBackgroundColor={stanzaBackgroundColor}
-          defaultBackgroundColor={backgroundColor}
+          defaultBackgroundColor={background}
+          stanzaType="default"
         />
         <Attribution
           background={stanzaBackgroundColor}
           stanzaCount={Stanzas.length}
           backlink={"/poems/tales/"}
         >
-          <p>Written by Daniel Stigmon</p>
-          <p>Animated by Alexander Burdiss</p>
+          <p>Written by FostyWally</p>
+          <p>Animated by Captain Code</p>
         </Attribution>
       </ScrollAnimation>
     </div>

@@ -1,9 +1,10 @@
 import React from "react";
-import "./Title.scss";
+import "./DefaultTitle.scss";
+
 import { getContrast } from "../../../util/getContrast/getContrast";
 
 /**
- * @function Title
+ * @function DefaultTitle
  * @description The title component for a scroll animation. Styled similarly to
  * a stanza
  * @author Alexander Burdiss
@@ -15,7 +16,7 @@ import { getContrast } from "../../../util/getContrast/getContrast";
  * component
  * @param {String} props.author The author of the poem
  */
-export default function Title({ children, background, author }) {
+export default function DefaultTitle({ children, background, author }) {
   return (
     <div
       className="ScrollAnimation-Title-Container"

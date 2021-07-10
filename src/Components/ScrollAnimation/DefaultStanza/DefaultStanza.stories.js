@@ -1,9 +1,9 @@
 import React from "react";
 
-import Stanza from "./Stanza";
+import Stanza from "./DefaultStanza";
 
 export default {
-  title: "Scroll Animation/Stanza",
+  title: "Scroll Animation/Default Stanza",
   component: Stanza,
   argTypes: {
     firstLine: {

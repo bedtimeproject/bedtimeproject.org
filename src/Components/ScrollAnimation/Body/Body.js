@@ -1,5 +1,5 @@
 import React from "react";
-import Stanza from "../Stanza/Stanza";
+import Stanza from "../DefaultStanza/DefaultStanza";
 import StanzaImage from "../StanzaImage/StanzaImage";
 
 /**
@@ -21,6 +21,7 @@ export default function Body({
   stanzaBackgroundColor,
   stanzas,
   defaultBackgroundColor,
+  stanzaType = "default",
 }) {
   const oneIndexPercent = 100 / (stanzas.length + 2);
 
@@ -28,22 +29,17 @@ export default function Body({
     let bodyAnimationString = "";
     stanzas.forEach((stanza, index) => {
       bodyAnimationString += `${(index + 1) * oneIndexPercent}% {
-          background-color: ${
-            stanza.backgroundColor
-              ? stanza.backgroundColor
-              : defaultBackgroundColor
+          background: ${
+            stanza.background ? stanza.background : defaultBackgroundColor
           }
         }
         ${(index + 1.5) * oneIndexPercent}% {
-          background-color: ${
-            stanza.backgroundColor
-              ? stanza.backgroundColor
-              : defaultBackgroundColor
+          background: ${
+            stanza.background ? stanza.background : defaultBackgroundColor
           }
         }
         `;
     });
-    console.log(bodyAnimationString);
     return bodyAnimationString;
   }
 
@@ -63,24 +59,34 @@ export default function Body({
       {stanzas.map((stanza, index) => {
         return (
           <div key={index}>
-            <Stanza
-              index={index + 1}
-              background={stanzaBackgroundColor}
-              stanzaCount={stanzas.length}
-              bodyBackground={
-                stanza.backgroundColor
-                  ? stanza.backgroundColor
-                  : defaultBackgroundColor
-              }
-            >
-              {stanza.stanza}
-            </Stanza>
+            {
+              {
+                default: (
+                  <Stanza
+                    index={index + 1}
+                    background={stanzaBackgroundColor}
+                    stanzaCount={stanzas.length}
+                    bodyBackground={
+                      stanza.background
+                        ? stanza.background
+                        : defaultBackgroundColor
+                    }
+                  >
+                    {stanza.stanza}
+                  </Stanza>
+                ),
+              }[stanzaType]
+            }
             {stanza.images?.map((imageObject, imageIndex) => {
               return (
                 <StanzaImage
                   index={index + 1}
                   stanzaCount={stanzas.length}
                   key={"" + index + imageIndex}
+                  animation={imageObject.animation}
+                  positionX={imageObject.positionX}
+                  positionY={imageObject.positionY}
+                  stanzaDuration={imageObject.stanzaCount}
                 >
                   {imageObject.component}
                 </StanzaImage>

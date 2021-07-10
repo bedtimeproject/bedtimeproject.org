@@ -17,7 +17,7 @@ import Moon from "./images/Moon.svg";
 import Mountain from "../../../../assets/images/Mountain.svg";
 import PaperAirplane from "./images/PaperAirplane.svg";
 import SadDogImage from "./images/SadDogImage.svg";
-import Sun from "./images/Sun.svg";
+import Sun from "../../../../assets/images/Sun.svg";
 import SunsetCloud from "./images/SunsetCloud.svg";
 import SunsetCloud2 from "./images/SunsetCloud2.svg";
 import WindCloud from "./images/WindCloud.svg";
