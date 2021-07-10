@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Attribution.scss";
+
 import { getContrast } from "../../../util/getContrast/getContrast";
 
 /**
@@ -14,7 +16,12 @@ import { getContrast } from "../../../util/getContrast/getContrast";
  * @param {number} props.stanzaCount The number of Stanzas that are in the
  * current scroll animation poem.
  */
-export default function Attribution({ children, background, stanzaCount }) {
+export default function Attribution({
+  children,
+  background,
+  stanzaCount,
+  backlink,
+}) {
   const oneIndexPercent = 100 / (stanzaCount + 2);
   return (
     <div>
@@ -49,6 +56,9 @@ export default function Attribution({ children, background, stanzaCount }) {
           }}
         >
           {children}
+          <Link to={backlink} className="Back-Button">
+            Back to site
+          </Link>
         </div>
       </div>
     </div>

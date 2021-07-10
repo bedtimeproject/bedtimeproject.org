@@ -28,13 +28,7 @@ import "./Stanza.scss";
  * </Stanza>
  * ```
  */
-export default function Stanza({
-  children,
-  background,
-  index,
-  stanzaCount,
-  bodyBackground,
-}) {
+export default function Stanza({ children, background, index, stanzaCount }) {
   const oneIndexPercent = 100 / (stanzaCount + 2);
 
   return (
@@ -44,10 +38,6 @@ export default function Stanza({
           animation-name: stanza${index};
           animation-duration: 1s;
           animation-timing-function: ease-in-out;
-        }
-
-        body {
-          background-color: ${bodyBackground}
         }
 
         @keyframes stanza${index} {

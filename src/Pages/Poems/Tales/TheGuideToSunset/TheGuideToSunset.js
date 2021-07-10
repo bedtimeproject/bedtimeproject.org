@@ -42,7 +42,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    backgroundColor: "green",
   },
 
   {
@@ -53,7 +53,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    backgroundColor: "blue",
   },
 
   {
@@ -64,7 +64,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    backgroundColor: "red",
   },
 
   {
@@ -75,7 +75,7 @@ const Stanzas = [
       </div>
     ),
     images: [],
-    backgroundColor: "",
+    backgroundColor: "gold",
   },
 
   {
@@ -528,6 +528,7 @@ export default function TheGuideToSunset() {
         <Attribution
           background={stanzaBackgroundColor}
           stanzaCount={Stanzas.length}
+          backlink={"/poems/tales/"}
         >
           <p>Written by Daniel Stigmon</p>
           <p>Animated by Alexander Burdiss</p>

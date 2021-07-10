@@ -22,33 +22,73 @@ export default function Body({
   stanzas,
   defaultBackgroundColor,
 }) {
-  return stanzas.map((stanza, index) => {
-    return (
-      <div key={index}>
-        <Stanza
-          index={index + 1}
-          background={stanzaBackgroundColor}
-          stanzaCount={stanzas.length}
-          bodyBackground={
+  const oneIndexPercent = 100 / (stanzas.length + 2);
+
+  function getBodyAnimation() {
+    let bodyAnimationString = "";
+    stanzas.forEach((stanza, index) => {
+      bodyAnimationString += `${(index + 1) * oneIndexPercent}% {
+          background-color: ${
             stanza.backgroundColor
               ? stanza.backgroundColor
               : defaultBackgroundColor
           }
-        >
-          {stanza.stanza}
-        </Stanza>
-        {stanza.images?.map((imageObject, imageIndex) => {
-          return (
-            <StanzaImage
+        }
+        ${(index + 1.5) * oneIndexPercent}% {
+          background-color: ${
+            stanza.backgroundColor
+              ? stanza.backgroundColor
+              : defaultBackgroundColor
+          }
+        }
+        `;
+    });
+    console.log(bodyAnimationString);
+    return bodyAnimationString;
+  }
+
+  return (
+    <div>
+      <style>{`
+        body {
+          animation-name: scrollBody;
+          animation-duration: 1s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes scrollBody {
+          ${getBodyAnimation()}
+        }
+      `}</style>
+      {stanzas.map((stanza, index) => {
+        return (
+          <div key={index}>
+            <Stanza
               index={index + 1}
+              background={stanzaBackgroundColor}
               stanzaCount={stanzas.length}
-              key={"" + index + imageIndex}
+              bodyBackground={
+                stanza.backgroundColor
+                  ? stanza.backgroundColor
+                  : defaultBackgroundColor
+              }
             >
-              {imageObject.component}
-            </StanzaImage>
-          );
-        })}
-      </div>
-    );
-  });
+              {stanza.stanza}
+            </Stanza>
+            {stanza.images?.map((imageObject, imageIndex) => {
+              return (
+                <StanzaImage
+                  index={index + 1}
+                  stanzaCount={stanzas.length}
+                  key={"" + index + imageIndex}
+                >
+                  {imageObject.component}
+                </StanzaImage>
+              );
+            })}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
