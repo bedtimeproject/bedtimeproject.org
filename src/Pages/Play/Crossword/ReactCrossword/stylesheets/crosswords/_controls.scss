@@ -1,6 +1,8 @@
+@use 'sass:math';
+
 .crossword__controls {
   display: block;
-  margin-bottom: $gs-baseline / 2;
+  margin-bottom: math.div($gs-baseline, 2);
 
   .button {
     @include fs-textSans(4);
