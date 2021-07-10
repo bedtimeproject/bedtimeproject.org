@@ -128,13 +128,13 @@
 .crossword__clues--across {
   @include mq(desktop) {
     display: table-cell;
-    padding-right: calc($gs-gutter / 2) a;
+    padding-right: $gs-gutter / 2;
   }
 }
 
 .crossword__clues--down {
   @include mq(desktop) {
     display: table-cell;
-    padding-left: calc($gs-gutter / 2);
+    padding-left: $gs-gutter / 2;
   }
 }

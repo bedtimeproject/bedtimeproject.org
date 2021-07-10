@@ -40,7 +40,7 @@ ol.crossword__clues-list {
   font-weight: bold;
   -webkit-font-smoothing: initial;
   width: $gs-gutter;
-  padding-right: calc($gs-gutter / 2);
+  padding-right: $gs-gutter / 2;
 
   .has-grouped-clues & {
     width: $gs-gutter * 2;
