@@ -10,6 +10,7 @@ import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
 import Playground from "./Playground/Playground";
 import Sudoku from "./Sudoku/Sudoku";
 import WordHunt from "./WordHunt/WordHunt";
+import Waves from "../../Components/Background/Waves/Waves";
 
 import "./Play.scss";
 
@@ -34,6 +35,7 @@ export default function Play() {
       </Helmet>
       <Switch>
         <Route exact path="/play">
+          <Waves />
           <PageTitle>Play</PageTitle>
           <div className="Play-Links">
             {/* <PlayButton link="/play/blackjack">BlackJack</PlayButton> */}
@@ -45,6 +47,7 @@ export default function Play() {
           </div>
         </Route>
         <Route path="/play/blackjack">
+          <Waves />
           <Breadcrumb link="/play">Play</Breadcrumb>
           <BlackJack />
         </Route>
@@ -57,6 +60,7 @@ export default function Play() {
           <LightsOut />
         </Route>
         <Route path="/play/sudoku">
+          <Waves />
           <Breadcrumb link="/play">Play</Breadcrumb>
           <Sudoku />
         </Route>
@@ -65,6 +69,7 @@ export default function Play() {
           <WordHunt />
         </Route>
         <Route path="/play/crossword">
+          <Waves />
           <Breadcrumb link="/play">Play</Breadcrumb>
           <Crossword />
         </Route>
