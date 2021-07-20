@@ -131,7 +131,7 @@ export default function Quips() {
 
   return (
     <Switch>
-      <Route exact path="/poems/quips">
+      <Route exact path="/read/quips">
         <Helmet>
           <title>Quips | The Bedtime Project</title>
         </Helmet>
@@ -140,7 +140,7 @@ export default function Quips() {
           {displayingLimericks.map((limerick, index) => {
             const title = getTitleFromMarkdown(limerick);
             return (
-              <LimerickButton key={index} link={`/poems/quips/${title}`}>
+              <LimerickButton key={index} link={`/read/quips/${title}`}>
                 {title}
               </LimerickButton>
             );
@@ -156,24 +156,24 @@ export default function Quips() {
         )}
       </Route>
 
-      <Route exact path="/poems/quips/latest">
+      <Route exact path="/read/quips/latest">
         <Helmet>
           <title>Latest Quip | The Bedtime Project</title>
         </Helmet>
-        <Breadcrumb link="/poems/quips/">Quips</Breadcrumb>
+        <Breadcrumb link="/read/quips/">Quips</Breadcrumb>
         <LimerickDisplay limerick={getLatestLimerick(limericks)} />
       </Route>
 
       {limericks.map((limerick, index) => {
         const title = getTitleFromMarkdown(limerick);
         return (
-          <Route key={index} path={`/poems/quips/${title}`}>
+          <Route key={index} path={`/read/quips/${title}`}>
             <Helmet>
               <title>
                 {getTitleFromMarkdown(limerick)} | The Bedtime Project
               </title>
             </Helmet>
-            <Breadcrumb link="/poems/quips/">Quips</Breadcrumb>
+            <Breadcrumb link="/read/quips/">Quips</Breadcrumb>
             <LimerickDisplay limerick={limerick} />
           </Route>
         );

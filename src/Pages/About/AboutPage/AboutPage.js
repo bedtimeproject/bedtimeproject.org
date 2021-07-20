@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./AboutPage.scss";
 
@@ -6,10 +6,13 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../Contributor/Contributor";
 import Checkerboard from "../../../Components/Background/Checkerboard/Checkerboard";
 
-import AlexBio from "../bios/Alex.md";
-import DanielBio from "../bios/Daniel.md";
 import FostyWally from "../../../assets/images/chess/FostyWally.png";
 import CaptainCode from "../../../assets/images/chess/CaptainCode.png";
+
+const AlexBio =
+  "Captain Code spends his days working a pretty normal office job, but at night he spends his hours fighting digital crime on the internet. He listens to really cool music, and sometimes plays music of his own. Captain Code also has a lot of fun making websites, and animations.";
+const DanielBio =
+  "FostyWally spends the bulk of his days sailing the virtual seas, exploring the different nooks and crannies that have never been explored, and talking to interesting people all over the world. He is searching for _the_ story, a story so majestic it would make a rhino do a backflip. He has yet to find this story, but one day he will find it, and share it with all the world through the Bedtime Project.";
 
 /**
  * @function AboutPage
@@ -20,48 +23,9 @@ import CaptainCode from "../../../assets/images/chess/CaptainCode.png";
  * @version 1.0.0
  * @component
  * @example
- * ```jsx
  * <AboutPage />
- * ```
  */
 export default function AboutPage() {
-  const [bios, setBios] = useState({});
-  useEffect(
-    /**
-     * @function AboutPage~useEffect~getBio
-     * @description Collects the bios from the Markdown, and displays them in
-     * the component.
-     * @author Alexander Burdiss
-     * @since 6/6/21
-     * @version 1.1.0
-     */
-    function getBio() {
-      /**
-       * @function AboutPage~useEffect~getBio~fetchBios
-       * @description An async function that handles parsing the markdown from
-       * the bios files.
-       * @author Alexander Burdiss
-       * @since 6/6/21
-       * @version 1.1.0
-       */
-      async function fetchBios() {
-        let bios = {};
-        let resp = await fetch(AlexBio);
-        let text = await resp.text();
-        bios["Alex"] = text;
-
-        resp = await fetch(DanielBio);
-        text = await resp.text();
-        bios["Daniel"] = text;
-
-        setBios(bios);
-      }
-
-      fetchBios();
-    },
-    []
-  );
-
   return (
     <div className="AboutPage-Container">
       <Checkerboard primaryColor="red" secondaryColor="black" />
@@ -74,12 +38,12 @@ export default function AboutPage() {
       <div className="All-Contributors-Container">
         <Contributor
           name="Captain Code (Alexander Burdiss)"
-          bio={bios["Alex"]}
+          bio={AlexBio}
           image={CaptainCode}
         />
         <Contributor
           name="FostyWally (Daniel Stigmon)"
-          bio={bios["Daniel"]}
+          bio={DanielBio}
           image={FostyWally}
         />
       </div>

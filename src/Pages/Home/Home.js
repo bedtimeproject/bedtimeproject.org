@@ -15,12 +15,10 @@ import StoriesImage from "./doors/Stories.svg";
  * @description The contents to render on the front page of the website.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 2.1.0
+ * @version 2.1.1
  * @component
  * @example
- * ```jsx
  * <Home />
- * ```
  */
 export default function Home() {
   return (
@@ -30,7 +28,7 @@ export default function Home() {
       </Helmet>
       <Fireflies />
       <div className="Home-Door-Container">
-        <DoorButton label="Stories" image={StoriesImage} link="/stories" />
+        <DoorButton label="Read" image={StoriesImage} link="/read" />
         <DoorButton label="Play" image={PlaygroundImage} link="/play" />
         <DoorButton label="About Us" image={AboutUsImage} link="/about" />
       </div>

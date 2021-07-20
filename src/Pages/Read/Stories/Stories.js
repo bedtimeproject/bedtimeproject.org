@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import { Route, Switch } from "react-router";
 
-import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Stories.scss";
 
@@ -12,12 +12,10 @@ import "./Stories.scss";
  * on this stack only
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
- * ```jsx
  * <Stories />
- * ```
  */
 export default function Stories() {
   return (
@@ -26,7 +24,7 @@ export default function Stories() {
         <title>Stories | The Bedtime Project</title>
       </Helmet>
       <Switch>
-        <Route exact path="/stories">
+        <Route exact path="/read/stories">
           <PageTitle>Stories</PageTitle>
           <div className="Stories-Buttons-Container">Coming Soon!</div>
         </Route>

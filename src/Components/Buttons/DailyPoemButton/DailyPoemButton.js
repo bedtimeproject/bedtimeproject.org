@@ -11,17 +11,19 @@ import newspaper from "./Newspaper.svg";
  * front page so that users can easily access the daily limerick!
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 export default function DailyPoemButton() {
   return (
-    <Link to="/poems/quips/latest" className="DailyPoemButton">
-      <img
-        className="DailyPoemButton-Image"
-        src={newspaper}
-        alt={"Latest Limerick"}
-      />
-      <div className="DailyPoemButton-Text">Daily&nbsp;Poem!</div>
-    </Link>
+    <div className="DailyPoemButton">
+      <Link to="/read/quips/latest">
+        <img
+          className="DailyPoemButton-Image"
+          src={newspaper}
+          alt={"Latest Limerick"}
+        />
+        <div className="DailyPoemButton-Text">Daily&nbsp;Poem!</div>
+      </Link>
+    </div>
   );
 }

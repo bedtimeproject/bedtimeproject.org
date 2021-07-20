@@ -9,14 +9,13 @@ import Footer from "./Components/Structural/Footer/Footer";
 import Play from "./Pages/Play/Play";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
-import Stories from "./Pages/Stories/Stories";
-import Poems from "./Pages/Poems/Poems";
+import Read from "./Pages/Read/Read";
 import FourOhFour from "./Pages/404/404";
 
 // Stories without Header and Footer
-import TheLadyAndTheFrog from "./Pages/Poems/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
-import MrsBlueSky from "./Pages/Poems/Tales/MrsBlueSky/MrsBlueSky";
-import TheGuideToSunset from "./Pages/Poems/Tales/TheGuideToSunset/TheGuideToSunset";
+import TheLadyAndTheFrog from "./Pages/Read/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
+import MrsBlueSky from "./Pages/Read/Tales/MrsBlueSky/MrsBlueSky";
+import TheGuideToSunset from "./Pages/Read/Tales/TheGuideToSunset/TheGuideToSunset";
 
 /**
  * @function App
@@ -24,12 +23,10 @@ import TheGuideToSunset from "./Pages/Poems/Tales/TheGuideToSunset/TheGuideToSun
  * handles the navigation of the application.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
- * ```jsx
  * <App />
- * ```
  */
 export default function App() {
   return (
@@ -37,13 +34,13 @@ export default function App() {
       <Router>
         <Switch>
           {/* Use the outer switch for pages that don't need the header and footer */}
-          <Route exact path="/poems/tales/the-lady-and-the-frog">
+          <Route exact path="/read/tales/the-lady-and-the-frog">
             <TheLadyAndTheFrog />
           </Route>
-          <Route exact path="/poems/tales/mrs-blue-sky">
+          <Route exact path="/read/tales/mrs-blue-sky">
             <MrsBlueSky />
           </Route>
-          <Route exact path="/poems/tales/the-guide-to-sunset">
+          <Route exact path="/read/tales/the-guide-to-sunset">
             <TheGuideToSunset />
           </Route>
           <Route path="*">
@@ -56,11 +53,8 @@ export default function App() {
                 <Route path="/play">
                   <Play />
                 </Route>
-                <Route path="/stories">
-                  <Stories />
-                </Route>
-                <Route path="/poems">
-                  <Poems />
+                <Route path="/read">
+                  <Read />
                 </Route>
                 <Route path="/about">
                   <About />

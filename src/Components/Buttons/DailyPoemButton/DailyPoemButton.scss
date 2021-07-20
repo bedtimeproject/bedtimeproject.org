@@ -1,9 +1,13 @@
 .DailyPoemButton {
-  position: absolute;
-  bottom: 70px;
-  right: 20px;
   text-decoration: none;
-  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+
+  & a {
+    position: relative;
+    padding: 8px;
+    z-index: 5;
+  }
 
   &-Image {
     width: 100px;
@@ -14,8 +18,8 @@
     font-weight: bold;
     color: #000;
     position: absolute;
-    bottom: 7px;
-    left: -7px;
+    bottom: 20px;
+    left: 10px;
     background-color: #fff;
     padding: 2px;
   }

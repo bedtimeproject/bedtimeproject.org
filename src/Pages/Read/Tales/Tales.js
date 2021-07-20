@@ -26,13 +26,11 @@ export default function Tales() {
       </Helmet>
       <PageTitle>Tales</PageTitle>
       <div className="Tales-Button-Container">
-        <StoryButton link="/poems/tales/the-lady-and-the-frog">
+        <StoryButton link="/read/tales/the-lady-and-the-frog">
           The Lady and the Frog
         </StoryButton>
-        <StoryButton link="/poems/tales/mrs-blue-sky">
-          Mrs. Blue Sky
-        </StoryButton>
-        <StoryButton link="/poems/tales/the-guide-to-sunset">
+        <StoryButton link="/read/tales/mrs-blue-sky">Mrs. Blue Sky</StoryButton>
+        <StoryButton link="/read/tales/the-guide-to-sunset">
           The Guide to Sunset
         </StoryButton>
       </div>

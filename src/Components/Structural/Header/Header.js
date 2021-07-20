@@ -9,12 +9,10 @@ import logo from "../../../assets/images/logo.png";
  * @description The header for the site.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
- * ```jsx
  * <Header />
- * ```
  */
 export default function Header() {
   return (
@@ -31,13 +29,10 @@ export default function Header() {
             <HeaderButton link={"/"}>Home</HeaderButton>
           </li>
           <li>
+            <HeaderButton link="/read">Read</HeaderButton>
+          </li>
+          <li>
             <HeaderButton link="/play">Play</HeaderButton>
-          </li>
-          <li>
-            <HeaderButton link="/stories">Stories</HeaderButton>
-          </li>
-          <li>
-            <HeaderButton link="/poems">Poems</HeaderButton>
           </li>
           <li>
             <HeaderButton link="/about">About</HeaderButton>
