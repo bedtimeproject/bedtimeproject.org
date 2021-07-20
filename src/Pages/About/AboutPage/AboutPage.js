@@ -8,7 +8,8 @@ import Checkerboard from "../../../Components/Background/Checkerboard/Checkerboa
 
 import AlexBio from "../bios/Alex.md";
 import DanielBio from "../bios/Daniel.md";
-import user from "../user.svg";
+import FostyWally from "../../../assets/images/chess/FostyWally.png";
+import CaptainCode from "../../../assets/images/chess/CaptainCode.png";
 
 /**
  * @function AboutPage
@@ -74,12 +75,12 @@ export default function AboutPage() {
         <Contributor
           name="Captain Code (Alexander Burdiss)"
           bio={bios["Alex"]}
-          image={user}
+          image={CaptainCode}
         />
         <Contributor
           name="FostyWally (Daniel Stigmon)"
           bio={bios["Daniel"]}
-          image={user}
+          image={FostyWally}
         />
       </div>
       <Link to="/about/acknowledgements">Acknowledgements</Link>
