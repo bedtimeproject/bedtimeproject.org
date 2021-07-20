@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0d728684.chunk.css",
-    "main.js": "/static/js/main.ece7d238.chunk.js",
-    "main.js.map": "/static/js/main.ece7d238.chunk.js.map",
+    "main.js": "/static/js/main.570e1081.chunk.js",
+    "main.js.map": "/static/js/main.570e1081.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.8915656a.chunk.js": "/static/js/2.8915656a.chunk.js",
@@ -15,6 +15,7 @@
     "static/media/BlueFlowers.835c7e42.svg": "/static/media/BlueFlowers.835c7e42.svg",
     "static/media/BlueKite.7fc7089e.svg": "/static/media/BlueKite.7fc7089e.svg",
     "static/media/BoyFrisbee.209b3597.svg": "/static/media/BoyFrisbee.209b3597.svg",
+    "static/media/CaptainCode.99c99079.png": "/static/media/CaptainCode.99c99079.png",
     "static/media/CaveEntrance.79821ad1.svg": "/static/media/CaveEntrance.79821ad1.svg",
     "static/media/CherryPie.5cb58bd8.svg": "/static/media/CherryPie.5cb58bd8.svg",
     "static/media/ClimbersDelight.1f3b7535.md": "/static/media/ClimbersDelight.1f3b7535.md",
@@ -26,6 +27,7 @@
     "static/media/FalseAdvertising.8df0789a.md": "/static/media/FalseAdvertising.8df0789a.md",
     "static/media/FlatulentMay.e1948ebf.md": "/static/media/FlatulentMay.e1948ebf.md",
     "static/media/FortyTwoRatsAndABird.5555bf37.md": "/static/media/FortyTwoRatsAndABird.5555bf37.md",
+    "static/media/FostyWally.6fca2efa.png": "/static/media/FostyWally.6fca2efa.png",
     "static/media/Frisbee.25bb72bf.svg": "/static/media/Frisbee.25bb72bf.svg",
     "static/media/HappyDresserHappyLife.281151a4.md": "/static/media/HappyDresserHappyLife.281151a4.md",
     "static/media/HeaderCloud.c32dbbd6.svg": "/static/media/HeaderCloud.c32dbbd6.svg",
@@ -61,13 +63,12 @@
     "static/media/logo.ab36dd44.png": "/static/media/logo.ab36dd44.png",
     "static/media/scroll.76d0a694.svg": "/static/media/scroll.76d0a694.svg",
     "static/media/Home.scss": "/static/media/sunset-beach.8ca7f506.jpg",
-    "static/media/user.ab3a9f80.svg": "/static/media/user.ab3a9f80.svg",
     "static/media/TheLadyAndTheFrog.scss": "/static/media/yellowFlowers.3f442f01.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.8915656a.chunk.js",
     "static/css/main.0d728684.chunk.css",
-    "static/js/main.ece7d238.chunk.js"
+    "static/js/main.570e1081.chunk.js"
   ]
 }
