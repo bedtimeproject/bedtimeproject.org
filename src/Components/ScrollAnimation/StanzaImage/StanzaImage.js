@@ -1,17 +1,17 @@
 import React from "react";
 
 import "./StanzaImage.scss";
-import {
-  fade,
-  slidedown,
-  slidedownleft,
-  slidedownright,
-  slideleft,
-  slideright,
-  slideup,
-  slideupleft,
-  slideupright,
-} from "./StanzaImageUtils";
+
+// Animations
+import { fade } from "./animations/fade/fade";
+import { slidedown } from "./animations/slidedown/slidedown";
+import { slideup } from "./animations/slideup/slideup";
+import { slideleft } from "./animations/slideleft/slideleft";
+import { slideright } from "./animations/slideright/slideright";
+import { slidedownleft } from "./animations/slidedownleft/slidedownleft";
+import { slidedownright } from "./animations/slidedownright/slidedownright";
+import { slideupleft } from "./animations/slideupleft/slideupleft";
+import { slideupright } from "./animations/slideupright/slideupright";
 
 /**
  * @function stanzaImage
