@@ -32,7 +32,7 @@ export function slidedown(index, imageIndex, stanzaDuration, oneIndexPercent) {
     }
     ${(index + 0.5 * stanzaDuration) * oneIndexPercent}% {
       opacity: 1;
-      transform: translateY(150px);
+      transform: translateY(125px);
     }
     ${(index + 1 * stanzaDuration) * oneIndexPercent}% {
       opacity: 0;

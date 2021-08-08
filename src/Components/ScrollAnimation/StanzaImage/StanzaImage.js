@@ -58,7 +58,7 @@ export default function StanzaImage({
         #stanza${index}Image${imageIndex} {
           animation-name: stanza${index}${animation}${imageIndex};
           animation-duration: 1s;
-          animation-timing-function: ease-in-out;
+          animation-timing-function: linear;
         }
 
         #stanza${index}Image${imageIndex} img {

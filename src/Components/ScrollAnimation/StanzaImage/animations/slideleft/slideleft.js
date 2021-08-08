@@ -32,7 +32,7 @@ export function slideleft(index, imageIndex, stanzaDuration, oneIndexPercent) {
     }
     ${(index + 0.5 * stanzaDuration) * oneIndexPercent}% {
       opacity: 1;
-      transform: translateX(-150px);
+      transform: translateX(-125px);
     }
     ${(index + 1 * stanzaDuration) * oneIndexPercent}% {
       opacity: 0;
