@@ -57,6 +57,7 @@ export default function TheLadyAndTheFrog() {
             <div className="Title">
               <h1>The Lady and the Frog</h1>
               <h2>By Daniel Stigmon</h2>
+              <h3>Illustrated by AJ Maniglia</h3>
             </div>
             <div>
               <div className="frame">
