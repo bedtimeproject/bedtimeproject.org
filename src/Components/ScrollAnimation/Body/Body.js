@@ -8,35 +8,26 @@ import StanzaImage from "../StanzaImage/StanzaImage";
  * together for easier implementation of an animated story.
  * @author Alexander Burdiss
  * @since 7/8/21
- * @version 1.0.0
+ * @version 2.0.0
  * @param props The JSX props passed to this React component
- * @param {string} props.defaultBackgroundColor The default background color
- * for the body to be used when none is present on a stanza.
- * @param {string} props.stanzaBackgroundColor The default color of the stanzas
- * to be used throughout the animation.
- * @param {Object[]} props.stanzas An array of stanzas, to be iterated through
- * in the body of an animated story.
+ * @param {Object[]} props.story The story object with all of the config baked
+ * in.
  */
-export default function Body({
-  stanzaBackgroundColor,
-  stanzas,
-  defaultBackgroundColor,
-  stanzaType = "default",
-}) {
-  const oneIndexPercent = 100 / (stanzas.length + 2);
+export default function Body({ story }) {
+  const oneIndexPercent = 100 / (story.body.length + 2);
 
   function getBodyAnimation() {
     let bodyAnimationString = "";
-    stanzas.forEach((stanza, index) => {
+    story.body.forEach((stanza, index) => {
       bodyAnimationString += `${(index + 1) * oneIndexPercent}% {
           background: ${
-            stanza.background ? stanza.background : defaultBackgroundColor
-          }
+            stanza.background ? stanza.background : story.defaultBackgroundColor
+          };
         }
         ${(index + 1.5) * oneIndexPercent}% {
           background: ${
-            stanza.background ? stanza.background : defaultBackgroundColor
-          }
+            stanza.background ? stanza.background : story.defaultBackgroundColor
+          };
         }
         `;
     });
@@ -56,7 +47,7 @@ export default function Body({
           ${getBodyAnimation()}
         }
       `}</style>
-      {stanzas.map((stanza, index) => {
+      {story.body.map((stanza, index) => {
         return (
           <div key={index}>
             {
@@ -64,30 +55,31 @@ export default function Body({
                 default: (
                   <Stanza
                     index={index + 1}
-                    background={stanzaBackgroundColor}
-                    stanzaCount={stanzas.length}
+                    background={story.stanzaBackgroundColor}
+                    stanzaCount={story.body.length}
                     bodyBackground={
                       stanza.background
                         ? stanza.background
-                        : defaultBackgroundColor
+                        : story.defaultBackgroundColor
                     }
                   >
                     {stanza.stanza}
                   </Stanza>
                 ),
-              }[stanzaType]
+              }[story.stanzaCard]
             }
             {stanza.images?.map((imageObject, imageIndex) => {
               return (
                 <StanzaImage
                   index={index + 1}
                   imageIndex={imageIndex}
-                  stanzaCount={stanzas.length}
+                  stanzaCount={story.body.length}
                   key={"" + index + imageIndex}
                   animation={imageObject.animation}
                   positionX={imageObject.positionX}
                   positionY={imageObject.positionY}
                   stanzaDuration={imageObject.stanzaCount}
+                  animationOverlap={story.animationOverlap}
                 >
                   {imageObject.component}
                 </StanzaImage>

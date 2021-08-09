@@ -56,7 +56,7 @@ export default function DefaultAttribution({
             color: getContrast(background),
           }}
         >
-          {children}
+          <div>{children}</div>
           <Link to={backlink} className="Back-Button">
             Back to site
           </Link>

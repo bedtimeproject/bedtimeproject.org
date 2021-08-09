@@ -12,6 +12,8 @@ import { slidedownleft } from "./animations/slidedownleft/slidedownleft";
 import { slidedownright } from "./animations/slidedownright/slidedownright";
 import { slideupleft } from "./animations/slideupleft/slideupleft";
 import { slideupright } from "./animations/slideupright/slideupright";
+import { longslideleft } from "./animations/longslideleft/longslideleft";
+import { longslideright } from "./animations/longslideright/longslideright";
 
 /**
  * @function stanzaImage
@@ -49,6 +51,7 @@ export default function StanzaImage({
   positionX,
   positionY,
   stanzaDuration,
+  animationOverlap,
 }) {
   const oneIndexPercent = 100 / (stanzaCount + 2);
 
@@ -67,55 +70,133 @@ export default function StanzaImage({
 
         ${
           animation === "fade"
-            ? fade(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? fade(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slidedown"
-            ? slidedown(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slidedown(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slideup"
-            ? slideup(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slideup(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slideleft"
-            ? slideleft(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slideleft(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slideright"
-            ? slideright(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slideright(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slidedownleft"
-            ? slidedownleft(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slidedownleft(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slidedownright"
-            ? slidedownright(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slidedownright(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slideupleft"
-            ? slideupleft(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slideupleft(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
 
         ${
           animation === "slideupright"
-            ? slideupright(index, imageIndex, stanzaDuration, oneIndexPercent)
+            ? slideupright(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
+            : ""
+        }
+
+        ${
+          animation === "longslideleft"
+            ? longslideleft(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
+            : ""
+        }
+
+        ${
+          animation === "longslideright"
+            ? longslideright(
+                index,
+                imageIndex,
+                stanzaDuration,
+                oneIndexPercent,
+                animationOverlap
+              )
             : ""
         }
       `}</style>
