@@ -1,5 +1,5 @@
 import React from "react";
-import Stanza from "../DefaultStanza/DefaultStanza";
+import DefaultStanza from "../DefaultStanza/DefaultStanza";
 import StanzaImage from "../StanzaImage/StanzaImage";
 
 /**
@@ -53,7 +53,7 @@ export default function Body({ story }) {
             {
               {
                 default: (
-                  <Stanza
+                  <DefaultStanza
                     index={index + 1}
                     background={story.stanzaBackgroundColor}
                     stanzaCount={story.body.length}
@@ -64,7 +64,7 @@ export default function Body({ story }) {
                     }
                   >
                     {stanza.stanza}
-                  </Stanza>
+                  </DefaultStanza>
                 ),
               }[story.stanzaCard]
             }

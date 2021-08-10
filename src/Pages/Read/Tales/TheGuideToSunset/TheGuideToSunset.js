@@ -30,7 +30,11 @@ export default function TheGuideToSunset() {
         <title>{story.title} | The Bedtime Project</title>
       </Helmet>
       <ScrollAnimation bodyStyleMinHeight={`${story.body.length * 100}vh`}>
-        <Title background={story.stanzaBackgroundColor} author={story.author}>
+        <Title
+          background={story.stanzaBackgroundColor}
+          author={story.author}
+          stanzaCount={story.body.length}
+        >
           {story.title}
         </Title>
         <Body story={story} />
