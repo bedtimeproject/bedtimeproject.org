@@ -17,7 +17,10 @@ export default function Body({ story }) {
   const oneIndexPercent = 100 / (story.body.length + 2);
 
   function getBodyAnimation() {
-    let bodyAnimationString = "";
+    let bodyAnimationString = `0% {
+      background: ${story.titleBackground}
+    }
+    `;
     story.body.forEach((stanza, index) => {
       bodyAnimationString += `${(index + 1) * oneIndexPercent}% {
           background: ${
@@ -31,6 +34,9 @@ export default function Body({ story }) {
         }
         `;
     });
+    bodyAnimationString += `100% {
+      background: ${story.attributionBackground}
+    }`;
     return bodyAnimationString;
   }
 

@@ -12,7 +12,9 @@ import Sun from "../../../../assets/images/Sun.svg";
 export default {
   defaultBackgroundColor: "#EEEEEE",
   stanzaBackgroundColor: "#8bc9e4",
-  animationOverlap: "true",
+  titleBackground: "#0000FF",
+  attributionBackground: "#0000FF",
+  animationOverlap: "false",
   title: "The Guide to Sunset",
   author: "FostyWally",
   titleCard: "default",
