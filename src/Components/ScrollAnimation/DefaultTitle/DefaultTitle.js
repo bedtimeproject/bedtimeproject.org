@@ -17,51 +17,23 @@ import { getContrast } from "../../../util/getContrast/getContrast";
  * @param {String} props.author The author of the poem
  * @param {number} props.stanzaCount The number of stanzas in the body
  */
-export default function DefaultTitle({
-  children,
-  background,
-  author,
-  stanzaCount,
-}) {
-  const oneIndexPercent = 100 / (stanzaCount + 2);
-
+export default function DefaultTitle({ children, background, author }) {
   return (
-    <div>
-      <style>{`
-        #title {
-          animation-name: title;
-          animation-duration: 1s;
-          animation-timing-function: ease-in-out;
-        }
-
-        @keyframes title {
-          0% {
-            top: 34vh;
-          }
-          ${oneIndexPercent}% {
-            top: -100vh;
-          }
-          100% {
-            top: -100vh;
-          }
-        }
-      `}</style>
+    <div
+      className="ScrollAnimation-Title-Container"
+      style={{
+        backgroundColor: background,
+      }}
+      id="title"
+    >
       <div
-        className="ScrollAnimation-Title-Container"
+        className="ScrollAnimation-Title-Border"
         style={{
-          backgroundColor: background,
+          color: getContrast(background),
         }}
-        id="title"
       >
-        <div
-          className="ScrollAnimation-Title-Border"
-          style={{
-            color: getContrast(background),
-          }}
-        >
-          <h1>{children}</h1>
-          <h2>{author}</h2>
-        </div>
+        <h1>{children}</h1>
+        <h2>{author}</h2>
       </div>
     </div>
   );

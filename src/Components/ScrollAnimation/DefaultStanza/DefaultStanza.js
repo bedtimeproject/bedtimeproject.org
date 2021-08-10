@@ -28,53 +28,17 @@ import "./DefaultStanza.scss";
  * </Stanza>
  * ```
  */
-export default function Stanza({ children, background, index, stanzaCount }) {
-  const oneIndexPercent = 100 / (stanzaCount + 2);
-
+export default function DefaultStanza({ children, background, index }) {
   return (
-    <div>
-      <style>{`
-        #stanza${index} {
-          animation-name: stanza${index};
-          animation-duration: 1s;
-          animation-timing-function: ease-in-out;
-        }
-
-        @keyframes stanza${index} {
-          0% {
-            top: 100vh;
-          }
-          ${
-            index > 0
-              ? `${(index - 0.5) * oneIndexPercent}% {
-              top: 100vh;
-            }`
-              : ""
-          }
-          ${index * oneIndexPercent}% {
-            top: 34vh;
-          }
-          ${(index + 0.5) * oneIndexPercent}% {
-            top: 34vh;
-          }
-          ${(index + 1) * oneIndexPercent}% {
-            top: -100vh;
-          }
-          100% {
-            top: -100%;
-          }
-        }
-      `}</style>
-      <div
-        id={"stanza" + index}
-        className="ScrollAnimation-Stanza-Container"
-        style={{
-          backgroundColor: background,
-          color: getContrast(background),
-        }}
-      >
-        {children}
-      </div>
+    <div
+      id={"stanza" + index}
+      className="ScrollAnimation-Stanza-Container"
+      style={{
+        backgroundColor: background,
+        color: getContrast(background),
+      }}
+    >
+      {children}
     </div>
   );
 }
