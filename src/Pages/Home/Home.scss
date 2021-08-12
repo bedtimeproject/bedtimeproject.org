@@ -18,6 +18,7 @@
 
   @media (min-width: 800px) {
     &-Door-Container {
+      min-height: calc(100% - 80px);
       width: 100%;
       flex-direction: row;
       justify-content: space-evenly;

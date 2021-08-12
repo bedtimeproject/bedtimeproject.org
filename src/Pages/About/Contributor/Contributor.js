@@ -18,7 +18,7 @@ export default function Contributor({ name, bio, image }) {
   return (
     <div className="Contributor-Container">
       <img src={image} alt={name} className="Contributor-Image" />
-      <div>{name}</div>
+      <div className="Contributor-Name">{name}</div>
       <ReactMarkdown>{bio}</ReactMarkdown>
     </div>
   );
