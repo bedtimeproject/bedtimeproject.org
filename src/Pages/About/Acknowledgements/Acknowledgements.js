@@ -2,8 +2,10 @@ import { Helmet } from "react-helmet";
 import React from "react";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import acknowledgementsListData from "./acknowledgementsListData";
 
 import "./Acknowledgements.scss";
+import AcknowledgementListItem from "./AcknowledgementListItem/AcknowledgementListItem";
 
 /**
  * @function Acknowledgements
@@ -25,7 +27,16 @@ export default function Acknowledgements() {
         <title>Acknowledgements | The Bedtime Project</title>
       </Helmet>
       <PageTitle>Acknowledgements</PageTitle>
-      <div>Hello, Acknowledgements!</div>
+      <div className="Acknowledgements-List">
+        {acknowledgementsListData.map((item, key) => {
+          return (
+            <AcknowledgementListItem
+              name={item.name}
+              contribution={item.contribution}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

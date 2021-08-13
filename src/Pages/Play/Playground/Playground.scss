@@ -49,10 +49,12 @@
 }
 .Playground-Container .Story-Reward-Container:hover {
   background-color: goldenrod;
+  box-shadow: yellow 0 0 5px;
 }
 .Playground-Container .Story-Villian-Container:hover {
   background-color: maroon;
   color: yellow;
+  box-shadow: yellow 0 0 5px;
 }
 
 .Playground-Container .Story-Content-Container h2 {
