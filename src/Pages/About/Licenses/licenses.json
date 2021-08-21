@@ -23,12 +23,6 @@
         "licenseUrl": "https://github.com/tschaub/gh-pages/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "jquery@3.6.0": {
-        "licenses": "MIT",
-        "repository": "https://github.com/jquery/jquery",
-        "licenseUrl": "https://github.com/jquery/jquery/raw/master/LICENSE.txt",
-        "parents": "the-bedtime-project"
-    },
     "qwery@4.0.0": {
         "licenses": "UNKNOWN",
         "repository": "https://github.com/ded/qwery",

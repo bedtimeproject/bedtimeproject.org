@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
-import $ from "jquery";
 import { Link } from "react-router-dom";
 
 import "./TheLadyAndTheFrog.scss";
@@ -15,37 +14,38 @@ import image8 from "./images/IMG_3649.jpg";
 import image9 from "./images/IMG_3648.jpg";
 
 /**
- * @todo Create this so that id doesn't use jQuery
- *
+ * @namespace TheLadyAndTheFrog
  * @function TheLadyAndTheFrog
  * @description A horizontal scroll animation. This was originally created using
  * HTML and jQuery so it does not follow React best practices.
  * @author Alexander Burdiss
  * @since 5/14/21
- * @version 2.1.0
+ * @version 2.2.0
  * @component
  * @example
- * ```jsx
  * <TheLadyAndTheFrog />
- * ```
  */
 export default function TheLadyAndTheFrog() {
-  useEffect(() => {
-    // Set window width based on width of content
-    let windowWidth = 0;
-    $(".TheLadyAndTheFrogWrapper .Card").each(function () {
-      windowWidth += $(this).outerWidth(true);
-    });
+  useEffect(
+    function setupComponent() {
+      // Set window width based on width of content
+      let windowWidth = 0;
 
-    $(".TheLadyAndTheFrogWrapper main").css("width", `${windowWidth + 2000}px`);
+      let cards = document.querySelectorAll(".TheLadyAndTheFrogWrapper .Card");
+      cards.forEach((card) => {
+        windowWidth += card.offsetWidth;
+      });
 
-    //refresh page on browser resize
-    $(window).bind("resize", function (e) {
-      console.log("window resized..");
-      this.location.reload(false);
-    });
+      let main = document.querySelector(".TheLadyAndTheFrogWrapper main");
+      main.style.width = `${windowWidth + 2000}px`;
+
+      document.addEventListener("resize", function (e) {
+        this.location.reload(false);
+      });
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [image1, image2, image3, image4, image5, image6, image7, image8, image9]);
+    [image1, image2, image3, image4, image5, image6, image7, image8, image9]
+  );
 
   return (
     <div className="TheLadyAndTheFrogWrapper">
@@ -314,7 +314,7 @@ export default function TheLadyAndTheFrog() {
           <div className="Card">
             <div className="Text">
               <h2>The End</h2>
-              <Link to="/stories/poems" className="Back-Button">
+              <Link to="/read/tales" className="Back-Button">
                 Back to site
               </Link>
             </div>

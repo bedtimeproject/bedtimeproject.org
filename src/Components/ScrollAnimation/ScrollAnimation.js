@@ -113,7 +113,7 @@ export default function ScrollAnimation({ story }) {
           default: (
             <DefaultAttribution
               background={story.stanzaBackgroundColor}
-              backlink={"/poems/tales/"}
+              backlink={"/read/tales"}
             >
               {story.attribution}
             </DefaultAttribution>
