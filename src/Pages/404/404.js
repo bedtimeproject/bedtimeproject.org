@@ -14,9 +14,17 @@ import scroll from "./scroll.svg";
  * for doesn't exist on the site.
  * @author Alexander Burdiss
  * @since 6/5/21
- * @version 1.1.0
+ * @version 1.1.1
  */
 export default function FourOhFour() {
+  /**
+   * @function FourOhFour~getRandomOneLiner
+   * @description Gets one random one liner from the array of one liners.
+   * @author Alexander Burdiss
+   * @since 6/5/21
+   * @version 1.0.1
+   * @returns {string} A random one liner to display on this component
+   */
   function getRandomOneLiner() {
     const tempOneLiners = shuffle(oneLiners);
     return tempOneLiners[0];
@@ -31,7 +39,7 @@ export default function FourOhFour() {
       <img src={scroll} alt="" className="FourOhFour-Scroll" />
       <div className="FourOhFour-Scroll-Text-Container">
         <h1>404 Error</h1>
-        <p>Whoops oops unfortunately this page was not found.</p>
+        <p>Whoops! Unfortunately this page was not found.</p>
         <p className="FourOhFour-One-Liner-Container">{getRandomOneLiner()}</p>
         <p>Sincerely, Fostywally</p>
       </div>

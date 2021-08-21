@@ -18,6 +18,7 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Licenses.scss";
 import Data from "./licenses.json";
+import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 
 /**
  * @function extractNameFromGithubUrl
@@ -126,6 +127,11 @@ export default function Licenses() {
         <title>Licenses | The Bedtime Project</title>
       </Helmet>
       <PageTitle>Licenses</PageTitle>
+      <RepeatingRadialGradient
+        primaryColor={"#f3f6f6"}
+        secondaryColor={"#cccff1"}
+        tertiaryColor={"#4f68d0"}
+      />
       <div className="LicensesContainer-Description">
         This project is made possible by these great open-source developers:
       </div>

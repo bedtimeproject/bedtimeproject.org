@@ -160,7 +160,7 @@ export default function MrsBlueSky() {
       <div className="Poem-Credits">
         <p>Written by FostyWally</p>
         <p>Animated by Captain Code</p>
-        <Link to="/stories/poems" className="Back-Button">
+        <Link to="/read/tales" className="Back-Button">
           Back to site
         </Link>
       </div>

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import $ from "jquery";
+import { Link } from "react-router-dom";
 
 import "./TheLadyAndTheFrog.scss";
 import image1 from "./images/IMG_3651.jpg";
@@ -313,6 +314,9 @@ export default function TheLadyAndTheFrog() {
           <div className="Card">
             <div className="Text">
               <h2>The End</h2>
+              <Link to="/stories/poems" className="Back-Button">
+                Back to site
+              </Link>
             </div>
           </div>
         </div>

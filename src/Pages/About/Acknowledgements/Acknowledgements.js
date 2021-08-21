@@ -6,6 +6,7 @@ import acknowledgementsListData from "./acknowledgementsListData";
 
 import "./Acknowledgements.scss";
 import AcknowledgementListItem from "./AcknowledgementListItem/AcknowledgementListItem";
+import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 
 /**
  * @function Acknowledgements
@@ -13,7 +14,7 @@ import AcknowledgementListItem from "./AcknowledgementListItem/AcknowledgementLi
  * we used to help out in this project.
  * @author Alexander Burdiss
  * @since 6/10/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * ```jsx
@@ -26,13 +27,20 @@ export default function Acknowledgements() {
       <Helmet>
         <title>Acknowledgements | The Bedtime Project</title>
       </Helmet>
+      <RepeatingRadialGradient
+        primaryColor={"#f3f6f6"}
+        secondaryColor={"#c5ece3"}
+        tertiaryColor={"#56d1b3"}
+      />
       <PageTitle>Acknowledgements</PageTitle>
       <div className="Acknowledgements-List">
         {acknowledgementsListData.map((item, key) => {
           return (
             <AcknowledgementListItem
+              key={key}
               name={item.name}
               contribution={item.contribution}
+              link={item.link}
             />
           );
         })}
