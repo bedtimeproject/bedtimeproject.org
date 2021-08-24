@@ -519,7 +519,8 @@ let json = [
     Villain: "Snooze Bear",
     "Where You Travel": "a carnival on a pier",
     "How You Travel": "a hover car",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "an invisable wall appears anxd blocks your path",
     "Villain Weakness": "reading your favorite bedtime story",
     Prize: "",
   },
@@ -534,7 +535,8 @@ let json = [
     Villain: "Leopold the Ex-leopard",
     "Where You Travel": "a theater",
     "How You Travel": "the code in a video game",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "The sphinx tells you have to solve its riddle to continue forward",
     "Villain Weakness": "hitting metal spoons on butterscotch candies",
     Prize: "",
   },
@@ -550,7 +552,8 @@ let json = [
     Villain: "Clyde the Computer",
     "Where You Travel": "big red cliffs",
     "How You Travel": "a pizza delivery service disguised as a pizza",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "A mighty moouse ask you to unrick its antlers from a maple tree",
     "Villain Weakness": "compliments",
     Prize: "",
   },
@@ -565,7 +568,8 @@ let json = [
     Villain: "CC the Calculator",
     "Where You Travel": "a temple deep in the jungle",
     "How You Travel": "a teleportation song",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "you've been contacted about cars expired warranty",
     "Villain Weakness": "condiments",
     Prize: "",
   },
@@ -581,7 +585,8 @@ let json = [
     Villain: "Fiero the Green Flame",
     "Where You Travel": "a space station",
     "How You Travel": "a paper airplane",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "Some people living in a giant shoe need help tying the laces",
     "Villain Weakness": "late library books",
     Prize: "",
   },
@@ -596,7 +601,8 @@ let json = [
     Villain: "Ropety Rabbit",
     "Where You Travel": "the kingdom of the exhiled on pluto",
     "How You Travel": "a trash bag parachute",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      'No one can figure out which "there" to use',
     "Villain Weakness": "playing the violin really badly",
     Prize: "",
   },
@@ -611,7 +617,8 @@ let json = [
     Villain: "An out of control soccer ball",
     "Where You Travel": "a mountain named Kevin",
     "How You Travel": "only your hands",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "someone caught a really big fish and can't get it on the shore",
     "Villain Weakness": "pineapple on pizza",
     Prize: "",
   },
@@ -626,7 +633,8 @@ let json = [
     Villain: "Captain Tooth",
     "Where You Travel": "the ghost town in the clouds",
     "How You Travel": "miles and miles of monkey bars",
-    "Something that happens while you travel": "",
+    "Something that happens while you travel":
+      "a rock climber is fending off a bunch of angry rocks",
     "Villain Weakness": "trash",
     Prize: "",
   },
