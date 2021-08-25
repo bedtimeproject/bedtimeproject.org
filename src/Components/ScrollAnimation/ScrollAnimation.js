@@ -47,6 +47,10 @@ export default function ScrollAnimation({ story }) {
     <div className="ScrollAnimation-Container">
       {/* Styles for the global object, just on this page */}
       <style>{`
+        .ScrollAnimation-Container {
+          font-family: ${story.font}
+        }
+
         :root * {
           /* Pause the animation */
           animation-play-state: paused;
