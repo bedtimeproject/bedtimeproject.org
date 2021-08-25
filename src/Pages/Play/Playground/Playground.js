@@ -9,16 +9,15 @@ import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 import "./Playground.scss";
 
 /**
+ * @function Playground
  * @description A story generator that generates a new story each time the
  * button is clicked.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
- * ```jsx
  * <Playground />
- * ```
  */
 export default function Playground() {
   useEffect(function setupStoryGenerator() {
@@ -149,7 +148,7 @@ export default function Playground() {
           <div className="Story-Content-Container">
             <h2>Your Sidekick</h2>
             <div className="Story-Content">
-              <span id="js-second-character-name"></span>
+              <span id="js-second-character-name"></span>{" "}
               <span id="js-second-character"></span>
             </div>
           </div>
