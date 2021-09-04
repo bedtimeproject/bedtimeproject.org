@@ -5,7 +5,7 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import acknowledgementsListData from "./acknowledgementsListData";
 
 import "./Acknowledgements.scss";
-import AcknowledgementListItem from "./AcknowledgementListItem/AcknowledgementListItem";
+import AcknowledgementListItem from "../../../Components/General/AcknowledgementListItem/AcknowledgementListItem";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 
 /**

@@ -3,7 +3,7 @@ import React from "react";
 import AcknowledgementListItem from "./AcknowledgementListItem";
 
 export default {
-  title: "Pages/Acknowledgement List Item",
+  title: "General/Acknowledgement List Item",
   component: AcknowledgementListItem,
   argTypes: {
     name: {

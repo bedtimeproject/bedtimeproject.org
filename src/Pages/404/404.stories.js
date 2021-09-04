@@ -1,14 +1,14 @@
 import React from "react";
 
-import Fireflies from "./Fireflies";
+import FourOhFour from "./404";
 
 export default {
-  title: "Background/Fireflies",
-  component: Fireflies,
+  title: "Pages/404",
+  component: FourOhFour,
   argTypes: {},
 };
 
-const Template = (args) => <Fireflies {...args} />;
+const Template = (args) => <FourOhFour {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

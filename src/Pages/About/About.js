@@ -7,7 +7,7 @@ import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import Licenses from "./Licenses/Licenses";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
-import Contributor from "./Contributor/Contributor";
+import Contributor from "../../Components/General/Contributor/Contributor";
 import Checkerboard from "../../Components/Background/Checkerboard/Checkerboard";
 
 import FostyWally from "../../assets/images/chess/FostyWally.png";

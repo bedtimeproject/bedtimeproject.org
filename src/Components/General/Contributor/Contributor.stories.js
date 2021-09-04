@@ -2,12 +2,19 @@ import React from "react";
 
 import Contributor from "./Contributor";
 
-import user from "../user.svg";
+import CaptainCode from "../../../assets/images/chess/CaptainCode.png";
+import FostyWally from "../../../assets/images/chess/FostyWally.png";
 
 export default {
-  title: "Pages/Contributor",
+  title: "General/Contributor",
   component: Contributor,
   argTypes: {
+    image: {
+      options: [CaptainCode, FostyWally],
+      control: {
+        type: "select",
+      },
+    },
     name: {
       name: "Name",
       control: {
@@ -20,12 +27,6 @@ export default {
         type: "text",
       },
     },
-    image: {
-      options: [user],
-      control: {
-        type: "select",
-      },
-    },
   },
 };
 
@@ -36,5 +37,5 @@ Default.args = {
   name: "Captain Code",
   bio:
     "Captain Code spends his days working a pretty normal office job, but at night he spends his hours fighting digital crime on the internet. He listens to really cool music, and sometimes plays music of his own. Captain Code also has a lot of fun making websites, and animations.",
-  image: user,
+  image: CaptainCode,
 };

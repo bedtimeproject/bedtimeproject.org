@@ -1,14 +1,14 @@
 import React from "react";
 
-import Fireflies from "./Fireflies";
+import Acknowledgements from "./Acknowledgements";
 
 export default {
-  title: "Background/Fireflies",
-  component: Fireflies,
+  title: "Pages/Acknowledgements",
+  component: Acknowledgements,
   argTypes: {},
 };
 
-const Template = (args) => <Fireflies {...args} />;
+const Template = (args) => <Acknowledgements {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

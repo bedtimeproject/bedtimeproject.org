@@ -1,14 +1,14 @@
 import React from "react";
 
-import Fireflies from "./Fireflies";
+import Licenses from "./Licenses";
 
 export default {
-  title: "Background/Fireflies",
-  component: Fireflies,
+  title: "Pages/Licenses",
+  component: Licenses,
   argTypes: {},
 };
 
-const Template = (args) => <Fireflies {...args} />;
+const Template = (args) => <Licenses {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

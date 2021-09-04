@@ -44,15 +44,15 @@ export default function LicensesList({ licenses }) {
                       <img src={image} className="image" alt={title} />
                     </a>
                   )}
-                  <a href={repository} className="item">
-                    <div style={{ maxWidth: "90%" }}>
+                  <div style={{ maxWidth: "90%" }} className="item">
+                    <a href={repository}>
                       <div className="name">{title}</div>
-                      <a className="text" href={licenseUrl}>
-                        {licenses}
-                      </a>
                       <div className="text">{version}</div>
-                    </div>
-                  </a>
+                    </a>
+                    <a className="text" href={licenseUrl}>
+                      {licenses}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
