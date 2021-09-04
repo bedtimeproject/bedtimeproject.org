@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import DoorButton from "./DoorButton";
-import AboutUsImage from "../../../Pages/Home/doors/AboutUs.svg";
-import PlaygroundImage from "../../../Pages/Home/doors/Playground.svg";
-import StoriesImage from "../../../Pages/Home/doors/Stories.svg";
+import AboutUsImage from "../../../assets/images/doors/AboutUs.svg";
+import PlaygroundImage from "../../../assets/images/doors/Playground.svg";
+import StoriesImage from "../../../assets/images/doors/Stories.svg";
 
 export default {
   title: "Buttons/Door Button",
