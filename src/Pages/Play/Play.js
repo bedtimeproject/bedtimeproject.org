@@ -9,7 +9,6 @@ import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
 import Playground from "./Playground/Playground";
 import Sudoku from "./Sudoku/Sudoku";
-import WordHunt from "./WordHunt/WordHunt";
 import Waves from "../../Components/Background/Waves/Waves";
 
 import "./Play.scss";
@@ -42,7 +41,6 @@ export default function Play() {
             <PlayButton link="/play/playground">Playground</PlayButton>
             <PlayButton link="/play/lights-out">Lights Out</PlayButton>
             <PlayButton link="/play/sudoku">Sudoku</PlayButton>
-            {/* <PlayButton link="/play/word-hunt">Word Hunt</PlayButton> */}
             <PlayButton link="/play/crossword">Crossword</PlayButton>
           </div>
         </Route>
@@ -63,10 +61,6 @@ export default function Play() {
           <Waves />
           <Breadcrumb link="/play">Play</Breadcrumb>
           <Sudoku />
-        </Route>
-        <Route path="/play/word-hunt">
-          <Breadcrumb link="/play">Play</Breadcrumb>
-          <WordHunt />
         </Route>
         <Route path="/play/crossword">
           <Waves />

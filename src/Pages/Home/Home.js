@@ -6,9 +6,9 @@ import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
 import Fireflies from "../../Components/Background/Fireflies/Fireflies";
 
 import "./Home.scss";
-import AboutUsImage from "./doors/AboutUs.svg";
-import PlaygroundImage from "./doors/Playground.svg";
-import StoriesImage from "./doors/Stories.svg";
+import AboutUsImage from "../../assets/images/doors/AboutUs.svg";
+import PlaygroundImage from "../../assets/images/doors/Playground.svg";
+import StoriesImage from "../../assets/images/doors/Stories.svg";
 
 /**
  * @function Home

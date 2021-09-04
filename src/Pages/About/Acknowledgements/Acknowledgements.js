@@ -5,7 +5,7 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import acknowledgementsListData from "./acknowledgementsListData";
 
 import "./Acknowledgements.scss";
-import AcknowledgementListItem from "../../../Components/General/AcknowledgementListItem/AcknowledgementListItem";
+import HeaderDescription from "../../../Components/General/HeaderDescription/HeaderDescription";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 
 /**
@@ -36,7 +36,7 @@ export default function Acknowledgements() {
       <div className="Acknowledgements-List">
         {acknowledgementsListData.map((item, key) => {
           return (
-            <AcknowledgementListItem
+            <HeaderDescription
               key={key}
               name={item.name}
               contribution={item.contribution}

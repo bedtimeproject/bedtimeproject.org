@@ -1,21 +1,21 @@
 import { render, screen } from "@testing-library/react";
-import AcknowledgementListItem from "./AcknowledgementListItem";
+import HeaderDescription from "./HeaderDescription";
 
-test("renders AcknowledgementListItem", () => {
-  render(<AcknowledgementListItem />);
+test("renders HeaderDescription", () => {
+  render(<HeaderDescription />);
 });
 
-describe("renders AcknoweldgementListItem pieces", () => {
+describe("renders HeaderDescription pieces", () => {
   test("renders name", () => {
     const name = "John Doe";
-    render(<AcknowledgementListItem name={name} />);
+    render(<HeaderDescription name={name} />);
     const nameExists = screen.queryByText(name);
     expect(nameExists).toBeTruthy();
   });
 
   test("renders contribution", () => {
     const contribution = "Great cool things that this person did";
-    render(<AcknowledgementListItem contribution={contribution} />);
+    render(<HeaderDescription contribution={contribution} />);
     const contributionExists = screen.queryByText(contribution);
     expect(contributionExists).toBeTruthy();
   });

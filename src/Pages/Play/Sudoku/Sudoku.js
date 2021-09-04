@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import { shuffle } from "underscore";
 import React, { useEffect, useState } from "react";
 
-import { games } from "./games";
+import { puzzles } from "./puzzles";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Sudoku.scss";
@@ -169,7 +169,7 @@ export default function Sudoku() {
    * new board for Sudoku.
    */
   function getNewBoard() {
-    let boards = games[difficulty];
+    let boards = puzzles[difficulty];
     let currentBoardFirstFour = "";
 
     const currentBoardFirst = document.querySelector("#A1").innerText;
@@ -194,7 +194,6 @@ export default function Sudoku() {
     if (boards.length > 1) {
       do {
         boards = shuffle(boards);
-        console.log(boards);
         let newFirstRow = boards[0][0];
         newFirstFour =
           newFirstRow[0].toString() +

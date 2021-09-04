@@ -4,13 +4,14 @@ import Contributor from "./Contributor";
 
 import CaptainCode from "../../../assets/images/chess/CaptainCode.png";
 import FostyWally from "../../../assets/images/chess/FostyWally.png";
+import user from "../../../assets/images/user.svg";
 
 export default {
   title: "General/Contributor",
   component: Contributor,
   argTypes: {
     image: {
-      options: [CaptainCode, FostyWally],
+      options: [CaptainCode, FostyWally, user],
       control: {
         type: "select",
       },

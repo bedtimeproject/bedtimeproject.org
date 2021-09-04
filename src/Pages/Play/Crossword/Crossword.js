@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import React, { useState } from "react";
 
-import { GrowingGreen } from "./GrowingGreenCW";
+import { GrowingGreen } from "./puzzles/GrowingGreenCW";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import ReactCrossword from "./ReactCrossword/javascripts/crosswords/crossword";
 

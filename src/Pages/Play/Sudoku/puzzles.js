@@ -1,4 +1,4 @@
-export const games = {
+export const puzzles = {
   easy: [
     [
       // Use this board for testing, with win() function!

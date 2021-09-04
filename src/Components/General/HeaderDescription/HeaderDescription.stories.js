@@ -1,10 +1,10 @@
 import React from "react";
 
-import AcknowledgementListItem from "./AcknowledgementListItem";
+import HeaderDescription from "./HeaderDescription";
 
 export default {
-  title: "General/Acknowledgement List Item",
-  component: AcknowledgementListItem,
+  title: "General/Header Description",
+  component: HeaderDescription,
   argTypes: {
     name: {
       name: "Name",
@@ -28,7 +28,7 @@ export default {
 };
 
 const Template = (args) => (
-  <AcknowledgementListItem {...args} link={args.linked ? "/" : undefined} />
+  <HeaderDescription {...args} link={args.linked ? "/" : undefined} />
 );
 
 export const Default = Template.bind({});
