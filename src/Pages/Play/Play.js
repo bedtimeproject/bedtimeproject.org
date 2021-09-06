@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import BlackJack from "./BlackJack/BlackJack";
 import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
+import Chess from "./Chess/Chess";
 import Crossword from "./Crossword/Crossword";
 import LightsOut from "./LightsOut/LightsOut";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
@@ -19,12 +20,10 @@ import "./Play.scss";
  * the games on this stack.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.1.1
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <Play />
- * ```
  */
 export default function Play() {
   return (
@@ -39,6 +38,7 @@ export default function Play() {
           <div className="Play-Links">
             {/* <PlayButton link="/play/blackjack">BlackJack</PlayButton> */}
             <PlayButton link="/play/playground">Playground</PlayButton>
+            {/* <PlayButton link="/play/chess">Chess</PlayButton> */}
             <PlayButton link="/play/lights-out">Lights Out</PlayButton>
             <PlayButton link="/play/sudoku">Sudoku</PlayButton>
             <PlayButton link="/play/crossword">Crossword</PlayButton>
@@ -52,6 +52,10 @@ export default function Play() {
         <Route path="/play/playground">
           <Breadcrumb link="/play">Play</Breadcrumb>
           <Playground />
+        </Route>
+        <Route path="/play/chess">
+          <Breadcrumb link="/play">Play</Breadcrumb>
+          <Chess />
         </Route>
         <Route path="/play/lights-out">
           <Breadcrumb link="/play">Play</Breadcrumb>
