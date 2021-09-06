@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./DefaultAttribution.scss";
 
-import { getContrast } from "../../../util/getContrast/getContrast";
+import { getContrast } from "../../../utils/getContrast/getContrast";
 
 /**
  * @namespace DefaultAttribution

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getContrast } from "../../../util/getContrast/getContrast";
+import { getContrast } from "../../../utils/getContrast/getContrast";
 
 import "./DefaultStanza.scss";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./DefaultTitle.scss";
 
-import { getContrast } from "../../../util/getContrast/getContrast";
+import { getContrast } from "../../../utils/getContrast/getContrast";
 
 /**
  * @function DefaultTitle

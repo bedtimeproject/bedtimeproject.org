@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet";
 import { Route, Switch } from "react-router";
 import React, { useEffect, useState } from "react";
 
-import { getDateFromMarkdown } from "../../../util/getDateFromMarkdown/getDateFromMarkdown";
-import { getTitleFromMarkdown } from "../../../util/getTitleFromMarkdown/getTitleFromMarkdown";
+import { getDateFromMarkdown } from "../../../utils/getDateFromMarkdown/getDateFromMarkdown";
+import { getTitleFromMarkdown } from "../../../utils/getTitleFromMarkdown/getTitleFromMarkdown";
 import allLimericks from "./assets/_registry";
 import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
 import LimerickButton from "../../../Components/Buttons/QuipButton/QuipButton";
