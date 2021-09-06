@@ -1,4 +1,4 @@
-import { getRandomBetween } from "../../../../../../util/getRandomBetween/getRandomBetween";
+import { getRandomBetween } from "../../../../../../utils/getRandomBetween/getRandomBetween";
 import { easingFunctions, createEasing } from "./easing";
 
 jest.useRealTimers();

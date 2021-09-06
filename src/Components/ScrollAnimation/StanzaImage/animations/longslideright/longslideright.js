@@ -37,19 +37,19 @@ export function longslideright(
     }
     ${index * oneIndexPercent}% {
       opacity: 1;
-      transform: translateX(100px);
+      transform: translateX(300px);
     }
     ${(index + indexModifiers[0] * stanzaDuration) * oneIndexPercent}% {
       opacity: 1;
-      transform: translateX(300px);
+      transform: translateX(600px);
     }
     ${(index + indexModifiers[1] * stanzaDuration) * oneIndexPercent}% {
       opacity: 0;
-      transform: translateX(400px);
+      transform: translateX(900px);
     }
     100% {
       opacity: 0;
-      transform: translateX(400px);
+      transform: translateX(900px);
     }
   }`;
 }

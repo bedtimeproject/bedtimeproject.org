@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import DefaultTitle from "./DefaultTitle/DefaultTitle";
 import CenteredTitle from "./CenteredTitle/CenteredTitle";
 import DefaultAttribution from "./DefaultAttribution/DefaultAttribution";
+import CenteredAttribution from "./CenteredAttribution/CenteredAttribution";
 import Body from "./Body/Body";
 
 /**
@@ -26,22 +27,24 @@ export default function ScrollAnimation({ story }) {
   const oneIndexPercent = 100 / (story.body.length + 2);
 
   useEffect(() => {
-    const bodyStyleMinHeight = `${story.body.length * 100}vh`;
-
-    document.body.style.minHeight = bodyStyleMinHeight;
-    function handleScroll() {
-      document.body.style.setProperty(
-        "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-      );
+    if (document.querySelector("#page")) {
+      const bodyStyleMinHeight = `${story.body.length * 100}vh`;
+      document.querySelector("#page").style.minHeight = bodyStyleMinHeight;
+      function handleScroll() {
+        document.body.style.setProperty(
+          "--scroll",
+          window.pageYOffset /
+            (document.querySelector("#page").offsetHeight - window.innerHeight)
+        );
+      }
+      handleScroll();
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        document.querySelector("#page").style.minHeight = "";
+        document.body.style.removeProperty("--scroll");
+      };
     }
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.body.style.minHeight = "";
-      document.body.style.removeProperty("--scroll");
-    };
   }, [story.body.length]);
 
   return (
@@ -132,12 +135,12 @@ export default function ScrollAnimation({ story }) {
             </DefaultAttribution>
           ),
           centered: (
-            <CenteredTitle
+            <CenteredAttribution
               background={story.stanzaBackgroundColor}
               author={story.author}
             >
               {story.title}
-            </CenteredTitle>
+            </CenteredAttribution>
           ),
         }[story.attributionCard]
       }
