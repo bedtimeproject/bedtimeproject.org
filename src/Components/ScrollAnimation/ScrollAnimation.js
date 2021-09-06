@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import DefaultTitle from "./DefaultTitle/DefaultTitle";
+import CenteredTitle from "./CenteredTitle/CenteredTitle";
 import DefaultAttribution from "./DefaultAttribution/DefaultAttribution";
 import Body from "./Body/Body";
 
@@ -16,7 +17,7 @@ import Body from "./Body/Body";
  * preferrably in Viewport heights that will be attached to the body.
  * @author Alexander Burdiss
  * @since 6/26/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
  * <ScrollAnimation story={story}/>
@@ -90,6 +91,14 @@ export default function ScrollAnimation({ story }) {
               {story.title}
             </DefaultTitle>
           ),
+          centered: (
+            <CenteredTitle
+              background={story.stanzaBackgroundColor}
+              author={story.author}
+            >
+              {story.title}
+            </CenteredTitle>
+          ),
         }[story.titleCard]
       }
       <Body story={story} />
@@ -121,6 +130,14 @@ export default function ScrollAnimation({ story }) {
             >
               {story.attribution}
             </DefaultAttribution>
+          ),
+          centered: (
+            <CenteredTitle
+              background={story.stanzaBackgroundColor}
+              author={story.author}
+            >
+              {story.title}
+            </CenteredTitle>
           ),
         }[story.attributionCard]
       }
