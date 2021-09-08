@@ -48,7 +48,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=6c0dc9e53bb7",
-    "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/About/Licenses/licenses.json"
+    "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/About/Licenses/licenses.json",
+    "gen": "./generateComponent.sh"
   },
   "eslintConfig": {
     "extends": [
