@@ -4,7 +4,6 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
-    "@chrisoakman/chessboardjs": "^1.0.0",
     "bean": "^1.0.15",
     "bonzo": "^2.0.0",
     "chess.js": "^0.12.0",

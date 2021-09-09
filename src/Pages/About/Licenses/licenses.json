@@ -1,4 +1,10 @@
 {
+    "@chrisoakman/chessboardjs@1.0.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/oakmac/chessboardjs",
+        "licenseUrl": "https://github.com/oakmac/chessboardjs/raw/master/LICENSE.md",
+        "parents": "the-bedtime-project"
+    },
     "bean@1.0.15": {
         "licenses": "MIT*",
         "repository": "https://github.com/fat/bean",
@@ -9,6 +15,12 @@
         "licenses": "MIT*",
         "repository": "https://github.com/ded/bonzo",
         "licenseUrl": "https://github.com/ded/bonzo/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "chess.js@0.12.0": {
+        "licenses": "BSD-2-Clause",
+        "repository": "https://github.com/jhlywa/chess.js",
+        "licenseUrl": "https://github.com/jhlywa/chess.js/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
     "fastdom@1.0.10": {
