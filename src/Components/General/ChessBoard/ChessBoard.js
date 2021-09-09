@@ -1,5 +1,6 @@
 import React from "react";
 import "./ChessBoard.scss";
+import ChessBoardSquare from "./ChessBoardSquare/ChessBoardSquare";
 
 /**
  * @namespace ChessBoard
@@ -10,10 +11,28 @@ import "./ChessBoard.scss";
  * @since 9/6/21
  * @version 1.0.0
  */
-export default function ChessBoard() {
+export default function ChessBoard({ board }) {
   return (
     <div className="ChessBoard-Container">
-      <div>ChessBoard Works!</div>
+      {board.map((row, index) => {
+        return (
+          <div
+            key={index}
+            className={`ChessBoard-Row ${
+              index % 2 == 0 ? "Row-Even" : "Row-Odd"
+            }`}
+          >
+            {row.map((square, rowIndex) => {
+              return (
+                <ChessBoardSquare
+                  key={`${index}${rowIndex}`}
+                  squareData={square}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 }

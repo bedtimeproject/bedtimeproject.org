@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ChessBoard from "../../../Components/General/ChessBoard/ChessBoard";
+import ChessJs from "chess.js";
+
 import "./Chess.scss";
 
 /**
@@ -11,9 +14,14 @@ import "./Chess.scss";
  * @version 1.0.0
  */
 export default function Chess() {
+  const [board, setBoard] = useState([]);
+  useEffect(function setupBoard() {
+    const game = new ChessJs();
+    setBoard(game.board());
+  }, []);
   return (
     <div className="Chess-Container">
-      <div>Chess Works!</div>
+      <ChessBoard board={board} />
     </div>
   );
 }

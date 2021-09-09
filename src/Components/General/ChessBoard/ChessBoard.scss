@@ -1,0 +1,14 @@
+.ChessBoard {
+  &-Container {
+    width: 400px;
+    margin: auto;
+
+    * {
+      box-sizing: content-box;
+    }
+  }
+
+  &-Row {
+    height: 50px;
+  }
+}
