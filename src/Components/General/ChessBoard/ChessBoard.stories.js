@@ -1,4 +1,5 @@
 import React from "react";
+import Chess from "chess.js";
 
 import ChessBoard from "./ChessBoard";
 
@@ -8,7 +9,10 @@ export default {
   argTypes: {},
 };
 
-const Template = (args) => <ChessBoard {...args} />;
+const Template = (args) => {
+  const board = new Chess();
+  return <ChessBoard {...args} board={board.board()} />;
+};
 
 export const Default = Template.bind({});
 Default.args = {};

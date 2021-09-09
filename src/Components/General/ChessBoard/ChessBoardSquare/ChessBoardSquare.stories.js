@@ -2,7 +2,7 @@ import React from "react";
 import ChessBoardSquare from "./ChessBoardSquare";
 
 export default {
-  title: "Components/General/ChessBoard/ChessBoardSquare",
+  title: "General/ChessBoard/ChessBoardSquare",
   component: ChessBoardSquare,
   argTypes: {},
 };
