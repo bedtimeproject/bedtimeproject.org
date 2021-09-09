@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.7eb9b61a.chunk.css",
-    "main.js": "/static/js/main.6fd49bef.chunk.js",
-    "main.js.map": "/static/js/main.6fd49bef.chunk.js.map",
+    "main.css": "/static/css/main.ee4aecb3.chunk.css",
+    "main.js": "/static/js/main.6550bea6.chunk.js",
+    "main.js.map": "/static/js/main.6550bea6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
-    "static/js/2.a50d8977.chunk.js": "/static/js/2.a50d8977.chunk.js",
-    "static/js/2.a50d8977.chunk.js.map": "/static/js/2.a50d8977.chunk.js.map",
+    "static/js/2.ce0c441a.chunk.js": "/static/js/2.ce0c441a.chunk.js",
+    "static/js/2.ce0c441a.chunk.js.map": "/static/js/2.ce0c441a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.7eb9b61a.chunk.css.map": "/static/css/main.7eb9b61a.chunk.css.map",
-    "static/js/2.a50d8977.chunk.js.LICENSE.txt": "/static/js/2.a50d8977.chunk.js.LICENSE.txt",
+    "static/css/main.ee4aecb3.chunk.css.map": "/static/css/main.ee4aecb3.chunk.css.map",
+    "static/js/2.ce0c441a.chunk.js.LICENSE.txt": "/static/js/2.ce0c441a.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/BlueFlowers.835c7e42.svg": "/static/media/BlueFlowers.835c7e42.svg",
     "static/media/BlueKite.7fc7089e.svg": "/static/media/BlueKite.7fc7089e.svg",
     "static/media/BoyFrisbee.209b3597.svg": "/static/media/BoyFrisbee.209b3597.svg",
-    "static/media/CaptainCode.99c99079.png": "/static/media/CaptainCode.99c99079.png",
+    "static/media/ChessBoardSquare.scss": "/static/media/Pawn_Color.a6dbd484.png",
     "static/media/CaveEntrance.79821ad1.svg": "/static/media/CaveEntrance.79821ad1.svg",
     "static/media/CherryPie.5cb58bd8.svg": "/static/media/CherryPie.5cb58bd8.svg",
     "static/media/ClimbersDelight.1f3b7535.md": "/static/media/ClimbersDelight.1f3b7535.md",
@@ -25,7 +25,6 @@
     "static/media/FalseAdvertising.8df0789a.md": "/static/media/FalseAdvertising.8df0789a.md",
     "static/media/FlatulentMay.e1948ebf.md": "/static/media/FlatulentMay.e1948ebf.md",
     "static/media/FortyTwoRatsAndABird.5555bf37.md": "/static/media/FortyTwoRatsAndABird.5555bf37.md",
-    "static/media/FostyWally.6fca2efa.png": "/static/media/FostyWally.6fca2efa.png",
     "static/media/Frisbee.25bb72bf.svg": "/static/media/Frisbee.25bb72bf.svg",
     "static/media/HappyDresserHappyLife.281151a4.md": "/static/media/HappyDresserHappyLife.281151a4.md",
     "static/media/HeaderCloud.c32dbbd6.svg": "/static/media/HeaderCloud.c32dbbd6.svg",
@@ -65,8 +64,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
-    "static/js/2.a50d8977.chunk.js",
-    "static/css/main.7eb9b61a.chunk.css",
-    "static/js/main.6fd49bef.chunk.js"
+    "static/js/2.ce0c441a.chunk.js",
+    "static/css/main.ee4aecb3.chunk.css",
+    "static/js/main.6550bea6.chunk.js"
   ]
 }
