@@ -2,13 +2,34 @@
 # generateComponent.sh
 # Author: Alexander Burdiss
 # Since: 9/7/21
-# Version: 1.0.0
 # Description: Generates a React component and all the necessary files that go
 # along with it.
+version="1.0.1"
 
 path=$1
 component=$2
 date=`date +"%D"`
+
+echo
+echo "        ▄▄▄▄▄ ▄ .▄▄▄▄ .    ▄▄▄▄· ▄▄▄ .·▄▄▄▄  ▄▄▄▄▄▪  • ▌ ▄ ·. ▄▄▄ . "
+echo "        •██  ██▪▐█▀▄.▀·    ▐█ ▀█▪▀▄.▀·██▪ ██ •██  ██ ·██ ▐███▪▀▄.▀· "
+echo "         ▐█.▪██▀▐█▐▀▀▪▄    ▐█▀▀█▄▐▀▀▪▄▐█· ▐█▌ ▐█.▪▐█·▐█ ▌▐▌▐█·▐▀▀▪▄ "
+echo "         ▐█▌·██▌▐▀▐█▄▄▌    ██▄▪▐█▐█▄▄▌██. ██  ▐█▌·▐█▌██ ██▌▐█▌▐█▄▄▌ "
+echo "         ▀▀▀ ▀▀▀ · ▀▀▀     ·▀▀▀▀  ▀▀▀ ▀▀▀▀▀•  ▀▀▀ ▀▀▀▀▀  █▪▀▀▀ ▀▀▀  "
+echo "                     ▄▄▄·▄▄▄         ▐▄▄▄▄▄▄ . ▄▄· ▄▄▄▄▄            "
+echo "                    ▐█ ▄█▀▄ █·▪       ·██▀▄.▀·▐█ ▌▪•██              "
+echo "                     ██▀·▐▀▀▄  ▄█▀▄ ▪▄ ██▐▀▀▪▄██ ▄▄ ▐█.▪            "
+echo "                    ▐█▪·•▐█•█▌▐█▌.▐▌▐▌▐█▌▐█▄▄▌▐███▌ ▐█▌·            "
+echo "                    .▀   .▀  ▀ ▀█▄▀▪ ▀▀▀• ▀▀▀ ·▀▀▀  ▀▀▀             "
+echo "                        generateComponent.sh v$version              "
+echo
+
+if [[ ! $component ]]; then
+  echo
+  echo "Enter a Component and a Directory!"
+  echo
+  exit 1;
+fi
 
 if [[ ! -d "src/$path" ]]; then
   echo
