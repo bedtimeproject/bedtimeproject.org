@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import React from "react";
 
-import ScrollAnimation from "../../../../Components/ScrollAnimation/ScrollAnimation";
+import ScrollAnimation from "scroll-animation";
 
 import story from "./TheGuideToSunsetData";
 

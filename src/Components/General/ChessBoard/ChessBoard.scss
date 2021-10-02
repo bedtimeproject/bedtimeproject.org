@@ -1,7 +1,9 @@
 .ChessBoard {
   &-Container {
     width: 400px;
-    margin: auto;
+    margin: 20px auto;
+    border: 1px solid lightblue;
+    box-sizing: initial;
 
     * {
       box-sizing: content-box;
