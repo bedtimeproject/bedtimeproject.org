@@ -1,5 +1,5 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import { addDrupalUrlToImageTag } from "../../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 
 import "./QuipsDisplay.scss";
 
@@ -10,17 +10,18 @@ import "./QuipsDisplay.scss";
  * @param {String} props.limerick The limerick to display in this view.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 1.0.0
+ * @version 2.0.0
  * @component
  * @example
- * ```jsx
  * <LimerickDisplay limerick={limerick} />
- * ```
  */
 export default function LimerickDisplay({ limerick }) {
+  const image = addDrupalUrlToImageTag(limerick.field_main_image);
   return (
     <div>
-      <ReactMarkdown>{limerick}</ReactMarkdown>
+      <h1>{limerick.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: limerick.body }} />
+      {image && <div dangerouslySetInnerHTML={{ __html: image }} />}
     </div>
   );
 }
