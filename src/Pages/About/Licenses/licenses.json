@@ -1,10 +1,4 @@
 {
-    "@chrisoakman/chessboardjs@1.0.0": {
-        "licenses": "MIT",
-        "repository": "https://github.com/oakmac/chessboardjs",
-        "licenseUrl": "https://github.com/oakmac/chessboardjs/raw/master/LICENSE.md",
-        "parents": "the-bedtime-project"
-    },
     "bean@1.0.15": {
         "licenses": "MIT*",
         "repository": "https://github.com/fat/bean",
@@ -53,12 +47,6 @@
         "licenseUrl": "https://github.com/nfl/react-helmet/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "react-markdown@6.0.2": {
-        "licenses": "MIT",
-        "repository": "https://github.com/remarkjs/react-markdown",
-        "licenseUrl": "https://github.com/remarkjs/react-markdown/raw/master/license",
-        "parents": "the-bedtime-project"
-    },
     "react-paginate@7.1.3": {
         "licenses": "MIT",
         "repository": "https://github.com/AdeleD/react-paginate",
@@ -89,10 +77,14 @@
         "licenseUrl": "https://github.com/sass-mq/sass-mq/raw/master/LICENSE.md",
         "parents": "the-bedtime-project"
     },
-    "sass@1.35.1": {
+    "sass@1.42.1": {
         "licenses": "MIT",
         "repository": "https://github.com/sass/dart-sass",
         "licenseUrl": "https://github.com/sass/dart-sass/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
+    "scroll-animation@1.0.0": {
+        "licenses": "MIT",
         "parents": "the-bedtime-project"
     },
     "underscore.string@3.3.5": {
