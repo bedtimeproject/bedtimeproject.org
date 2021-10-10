@@ -1,0 +1,21 @@
+.Construction-Container {
+  .Text-Container {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    top: 20vh;
+    max-width: 300px;
+    left: 10px;
+    text-align: center;
+    opacity: 90%;
+    @media screen and (min-width: 400px) {
+      left: 10vw;
+    }
+    @media screen and (min-width: 800px) {
+      left: 50%;
+    }
+  }
+}

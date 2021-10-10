@@ -9,6 +9,7 @@ import Footer from "./Components/Structural/Footer/Footer";
 import Play from "./Pages/Play/Play";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
+import Construction from "./Pages/Construction/Construction";
 import Read from "./Pages/Read/Read";
 import FourOhFour from "./Pages/404/404";
 
@@ -43,11 +44,14 @@ export default function App() {
           <Route exact path="/read/tales/the-guide-to-sunset">
             <TheGuideToSunset />
           </Route>
+          <Route exact path="/">
+            <Construction />
+          </Route>
           <Route path="*">
             <Header />
             <main className="AppContentContainer">
               <Switch>
-                <Route exact path="/">
+                <Route path="/home">
                   <Home />
                 </Route>
                 <Route path="/play">
