@@ -31,7 +31,9 @@ export default {
   },
 };
 
-const Template = (args) => <Contributor {...args} />;
+const Template = (args) => (
+  <Contributor {...args} image={`<img src="${args.image}" />`} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
