@@ -3,9 +3,10 @@
     display: inline-block;
     text-align: center;
     padding: 20px;
-  }
-  &-Image {
-    width: 200px;
+    & img {
+      width: 200px;
+      height: auto;
+    }
   }
 
   &-Name {

@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import "./Contributor.scss";
 
 /**
@@ -17,9 +16,9 @@ import "./Contributor.scss";
 export default function Contributor({ name, bio, image }) {
   return (
     <div className="Contributor-Container">
-      <img src={image} alt={name} className="Contributor-Image" />
+      <div dangerouslySetInnerHTML={{ __html: image }} />
       <div className="Contributor-Name">{name}</div>
-      <ReactMarkdown>{bio}</ReactMarkdown>
+      <div dangerouslySetInnerHTML={{ __html: bio }} />
     </div>
   );
 }
