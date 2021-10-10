@@ -3,52 +3,53 @@ import { Route, Switch } from "react-router";
 import React, { useEffect, useState } from "react";
 
 import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
-import LimerickButton from "../../../Components/Buttons/QuipButton/QuipButton";
-import LimerickDisplay from "./QuipsDisplay/QuipsDisplay";
+import QuipButton from "../../../Components/Buttons/QuipButton/QuipButton";
+import QuipsDisplay from "./QuipsDisplay/QuipsDisplay";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Quips.scss";
 
 /**
- * @function Limericks
+ * @function Quips
  * @description The main parent component for all of the screens and components
- * that are in the Limerick tab.
+ * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
  * @version 2.0.0
  * @component
  * @example
- * <Limericks />
+ * <Quips />
  */
 export default function Quips() {
-  const [limericks, setLimericks] = useState([]);
+  const [quips, setQuips] = useState([]);
   const [latestQuip, setLatestQuip] = useState({});
 
   useEffect(
     /**
-     * @function Limericks~useEffect~getLimericks
-     * @description A synchronous wrapper for fetchLimericks()
+     * @function Quips~useEffect~getQuips
+     * @description A synchronous wrapper for fetchQuips and getLatestQuip()
      */
-    function getLimericks() {
-      /**
-       * @async
-       * @function Limericks~useEffect~getLimericks~fetchLimericks
-       * @description Fetches All of the limericks from the registry and adds
-       * them to the state variable in this component.
-       * @author Alexander Burdiss
-       * @since 5/27/21
-       * @version 1.0.0
-       */
-      function fetchLimericks() {
-        fetch("https://drupal.bedtimeproject.dev/rest/views/quips")
-          .then((resp) => resp.json())
-          .then((data) => setLimericks(data));
-      }
-      fetchLimericks();
+    function getQuips() {
+      fetchQuips();
       getLatestQuip();
     },
     []
   );
+
+  /**
+   * @async
+   * @function Quips~fetchQuips
+   * @description Fetches All of the quips from the drupal backend and adds
+   * them to the state variable in this component.
+   * @author Alexander Burdiss
+   * @since 5/27/21
+   * @version 1.1.0
+   */
+  function fetchQuips() {
+    fetch("https://drupal.bedtimeproject.dev/rest/views/quips")
+      .then((resp) => resp.json())
+      .then((data) => setQuips(data));
+  }
 
   function getLatestQuip() {
     fetch("https://drupal.bedtimeproject.dev/rest/views/quips/latest")
@@ -65,14 +66,11 @@ export default function Quips() {
         </Helmet>
         <PageTitle>Quips</PageTitle>
         <div className="Limerick-Display-Container">
-          {limericks.map((limerick, index) => {
+          {quips.map((quip, index) => {
             return (
-              <LimerickButton
-                key={index}
-                link={`/read/quips/${limerick.title}`}
-              >
-                {limerick.title}
-              </LimerickButton>
+              <QuipButton key={index} link={`/read/quips/${quip.title}`}>
+                {quip.title}
+              </QuipButton>
             );
           })}
         </div>
@@ -83,17 +81,17 @@ export default function Quips() {
           <title>Latest Quip | The Bedtime Project</title>
         </Helmet>
         <Breadcrumb link="/read/quips/">Quips</Breadcrumb>
-        <LimerickDisplay limerick={latestQuip} />
+        <QuipsDisplay quip={latestQuip} />
       </Route>
 
-      {limericks.map((limerick, index) => {
+      {quips.map((quip, index) => {
         return (
-          <Route key={index} path={`/read/quips/${limerick.title}`}>
+          <Route key={index} path={`/read/quips/${quip.title}`}>
             <Helmet>
-              <title>{limerick.title} | The Bedtime Project</title>
+              <title>{quip.title} | The Bedtime Project</title>
             </Helmet>
             <Breadcrumb link="/read/quips/">Quips</Breadcrumb>
-            <LimerickDisplay limerick={limerick} />
+            <QuipsDisplay quip={quip} />
           </Route>
         );
       })}
