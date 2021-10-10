@@ -51,9 +51,7 @@ export default function Quips() {
   );
 
   function getLatestQuip() {
-    fetch("https://drupal.bedtimeproject.dev/rest/views/quips/latest", {
-      mode: "cors",
-    })
+    fetch("https://drupal.bedtimeproject.dev/rest/views/quips/latest")
       .then((resp) => resp.json())
       .then((data) => setLatestQuip(data[0]))
       .catch(() => {});

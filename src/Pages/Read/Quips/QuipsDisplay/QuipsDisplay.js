@@ -18,10 +18,16 @@ import "./QuipsDisplay.scss";
 export default function LimerickDisplay({ limerick }) {
   const image = addDrupalUrlToImageTag(limerick.field_main_image);
   return (
-    <div>
-      <h1>{limerick.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: limerick.body }} />
-      {image && <div dangerouslySetInnerHTML={{ __html: image }} />}
+    <div className="QuipsDisplay-Container">
+      <div className="LeftBox">
+        <h1>{limerick.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: limerick.body }} />
+      </div>
+      {image && (
+        <div className="RightBox">
+          <div dangerouslySetInnerHTML={{ __html: image }} />
+        </div>
+      )}
     </div>
   );
 }

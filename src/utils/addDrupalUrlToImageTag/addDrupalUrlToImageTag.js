@@ -8,10 +8,10 @@
  * is needed to render the image correctly.
  * @author Alexander Burdiss
  * @since 10/2/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 export function addDrupalUrlToImageTag(input) {
-  if (input == "") {
+  if (input == "" || !input) {
     return undefined;
   }
 
