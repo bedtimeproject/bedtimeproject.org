@@ -2,7 +2,7 @@ import React from "react";
 import Lighthouse from "./Lighthouse";
 
 export default {
-  title: "Components/Background/Lighthouse",
+  title: "Background/Lighthouse",
   component: Lighthouse,
   argTypes: {},
 };
