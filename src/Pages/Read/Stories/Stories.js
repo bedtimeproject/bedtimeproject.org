@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet";
-import { Route, Switch } from "react-router";
-
+import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import SEO from "../../../Components/Structural/SEO/SEO";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 import "./Stories.scss";
 
@@ -19,16 +19,11 @@ import "./Stories.scss";
  */
 export default function Stories() {
   return (
-    <div className="Stories-Container">
-      <Helmet>
-        <title>Stories | The Bedtime Project</title>
-      </Helmet>
-      <Switch>
-        <Route exact path="/read/stories">
-          <PageTitle>Stories</PageTitle>
-          <div className="Stories-Buttons-Container">Coming Soon!</div>
-        </Route>
-      </Switch>
-    </div>
+    <StandardWrapper>
+      <div className="Stories-Container">
+        <SEO title="Stories" />
+        <PageTitle>Stories</PageTitle>
+      </div>
+    </StandardWrapper>
   );
 }

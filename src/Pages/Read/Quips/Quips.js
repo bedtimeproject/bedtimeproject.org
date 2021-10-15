@@ -8,6 +8,7 @@ import QuipsDisplay from "./QuipsDisplay/QuipsDisplay";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Quips.scss";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @function Quips
@@ -59,42 +60,45 @@ export default function Quips() {
   }
 
   return (
-    <Switch>
-      <Route exact path="/read/quips">
-        <Helmet>
-          <title>Quips | The Bedtime Project</title>
-        </Helmet>
-        <PageTitle>Quips</PageTitle>
-        <div className="Limerick-Display-Container">
-          {quips.map((quip, index) => {
-            return (
-              <QuipButton key={index} link={`/read/quips/${quip.title}`}>
-                {quip.title}
-              </QuipButton>
-            );
-          })}
-        </div>
-      </Route>
+    <StandardWrapper>
+      <Switch>
+        <Route exact path="/read/quips">
+          <Helmet>
+            <title>Quips | The Bedtime Project</title>
+          </Helmet>
+          <Breadcrumb path="read" />
+          <PageTitle>Quips</PageTitle>
+          <div className="Limerick-Display-Container">
+            {quips.map((quip, index) => {
+              return (
+                <QuipButton key={index} link={`/read/quips/${quip.title}`}>
+                  {quip.title}
+                </QuipButton>
+              );
+            })}
+          </div>
+        </Route>
 
-      <Route exact path="/read/quips/latest">
-        <Helmet>
-          <title>Latest Quip | The Bedtime Project</title>
-        </Helmet>
-        <Breadcrumb link="/read/quips/">Quips</Breadcrumb>
-        <QuipsDisplay quip={latestQuip} />
-      </Route>
+        <Route exact path="/read/quips/latest">
+          <Helmet>
+            <title>Latest Quip | The Bedtime Project</title>
+          </Helmet>
+          <Breadcrumb path="read/quips" />
+          <QuipsDisplay quip={latestQuip} />
+        </Route>
 
-      {quips.map((quip, index) => {
-        return (
-          <Route key={index} path={`/read/quips/${quip.title}`}>
-            <Helmet>
-              <title>{quip.title} | The Bedtime Project</title>
-            </Helmet>
-            <Breadcrumb link="/read/quips/">Quips</Breadcrumb>
-            <QuipsDisplay quip={quip} />
-          </Route>
-        );
-      })}
-    </Switch>
+        {quips.map((quip, index) => {
+          return (
+            <Route key={index} path={`/read/quips/${quip.title}`}>
+              <Helmet>
+                <title>{quip.title} | The Bedtime Project</title>
+              </Helmet>
+              <Breadcrumb path="read/quips" />
+              <QuipsDisplay quip={quip} />
+            </Route>
+          );
+        })}
+      </Switch>
+    </StandardWrapper>
   );
 }

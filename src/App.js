@@ -2,15 +2,21 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
-import Header from "./Components/Structural/Header/Header";
-import Footer from "./Components/Structural/Footer/Footer";
-
 // Root components
 import Play from "./Pages/Play/Play";
+import BlackJack from "./Pages/Play/BlackJack/BlackJack";
+import Playground from "./Pages/Play/Playground/Playground";
+import Chess from "./Pages/Play/Chess/Chess";
+import LightsOut from "./Pages/Play/LightsOut/LightsOut";
+import Sudoku from "./Pages/Play/Sudoku/Sudoku";
+import Crossword from "./Pages/Play/Crossword/Crossword";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Construction from "./Pages/Construction/Construction";
 import Read from "./Pages/Read/Read";
+import Stories from "./Pages/Read/Stories/Stories";
+import Tales from "./Pages/Read/Tales/Tales";
+import Quips from "./Pages/Read/Quips/Quips";
 import FourOhFour from "./Pages/404/404";
 
 // Stories without Header and Footer
@@ -47,28 +53,57 @@ export default function App() {
           <Route exact path="/">
             <Construction />
           </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/play">
+            <Switch>
+              <Route exact path="/play">
+                <Play />
+              </Route>
+              <Route path="/play/blackjack">
+                <BlackJack />
+              </Route>
+              <Route path="/play/playground">
+                <Playground />
+              </Route>
+              <Route path="/play/chess">
+                <Chess />
+              </Route>
+              <Route path="/play/lights-out">
+                <LightsOut />
+              </Route>
+              <Route path="/play/sudoku">
+                <Sudoku />
+              </Route>
+              <Route path="/play/crossword">
+                <Crossword />
+              </Route>
+            </Switch>
+          </Route>
+          <Route path="/read">
+            <Switch>
+              <Route exact path="/read">
+                <Read />{" "}
+              </Route>
+              <Route path="/read/stories">
+                <Route exact path="/read/stories">
+                  <Stories />
+                </Route>
+              </Route>
+              <Route path="/read/tales">
+                <Tales />
+              </Route>
+              <Route path="/read/quips">
+                <Quips />
+              </Route>
+            </Switch>
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
           <Route path="*">
-            <Header />
-            <main className="AppContentContainer">
-              <Switch>
-                <Route path="/home">
-                  <Home />
-                </Route>
-                <Route path="/play">
-                  <Play />
-                </Route>
-                <Route path="/read">
-                  <Read />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="*">
-                  <FourOhFour />
-                </Route>
-              </Switch>
-            </main>
-            <Footer />
+            <FourOhFour />
           </Route>
         </Switch>
       </Router>

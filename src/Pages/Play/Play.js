@@ -1,8 +1,6 @@
-import { Helmet } from "react-helmet";
 import { Switch, Route } from "react-router-dom";
 
 import BlackJack from "./BlackJack/BlackJack";
-import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
 import Chess from "./Chess/Chess";
 import Crossword from "./Crossword/Crossword";
 import LightsOut from "./LightsOut/LightsOut";
@@ -11,8 +9,10 @@ import PlayButton from "../../Components/Buttons/PlayButton/PlayButton";
 import Playground from "./Playground/Playground";
 import Sudoku from "./Sudoku/Sudoku";
 import Waves from "../../Components/Background/Waves/Waves";
+import SEO from "../../Components/Structural/SEO/SEO";
 
 import "./Play.scss";
+import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @function Play
@@ -27,16 +27,13 @@ import "./Play.scss";
  */
 export default function Play() {
   return (
-    <div>
-      <Helmet>
-        <title>Play | The Bedtime Project</title>
-      </Helmet>
+    <StandardWrapper>
+      <SEO title="Play" />
       <Switch>
         <Route exact path="/play">
           <Waves />
           <PageTitle>Play</PageTitle>
           <div className="Play-Links">
-            {/* <PlayButton link="/play/blackjack">BlackJack</PlayButton> */}
             <PlayButton link="/play/playground">Playground</PlayButton>
             {/* <PlayButton link="/play/chess">Chess</PlayButton> */}
             <PlayButton link="/play/lights-out">Lights Out</PlayButton>
@@ -46,32 +43,26 @@ export default function Play() {
         </Route>
         <Route path="/play/blackjack">
           <Waves />
-          <Breadcrumb link="/play">Play</Breadcrumb>
           <BlackJack />
         </Route>
         <Route path="/play/playground">
-          <Breadcrumb link="/play">Play</Breadcrumb>
           <Playground />
         </Route>
         <Route path="/play/chess">
-          <Breadcrumb link="/play">Play</Breadcrumb>
           <Chess />
         </Route>
         <Route path="/play/lights-out">
-          <Breadcrumb link="/play">Play</Breadcrumb>
           <LightsOut />
         </Route>
         <Route path="/play/sudoku">
           <Waves />
-          <Breadcrumb link="/play">Play</Breadcrumb>
           <Sudoku />
         </Route>
         <Route path="/play/crossword">
           <Waves />
-          <Breadcrumb link="/play">Play</Breadcrumb>
           <Crossword />
         </Route>
       </Switch>
-    </div>
+    </StandardWrapper>
   );
 }

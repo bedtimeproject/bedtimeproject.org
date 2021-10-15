@@ -9,6 +9,7 @@ import "./Home.scss";
 import AboutUsImage from "../../assets/images/doors/AboutUs.svg";
 import PlaygroundImage from "../../assets/images/doors/Playground.svg";
 import StoriesImage from "../../assets/images/doors/Stories.svg";
+import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @function Home
@@ -22,17 +23,19 @@ import StoriesImage from "../../assets/images/doors/Stories.svg";
  */
 export default function Home() {
   return (
-    <div className="Home-Container">
-      <Helmet>
-        <title>The Bedtime Project</title>
-      </Helmet>
-      <Fireflies />
-      <div className="Home-Door-Container">
-        <DoorButton label="Read" image={StoriesImage} link="/read" />
-        <DoorButton label="Play" image={PlaygroundImage} link="/play" />
-        <DoorButton label="About Us" image={AboutUsImage} link="/about" />
+    <StandardWrapper>
+      <div className="Home-Container">
+        <Helmet>
+          <title>The Bedtime Project</title>
+        </Helmet>
+        <Fireflies />
+        <div className="Home-Door-Container">
+          <DoorButton label="Read" image={StoriesImage} link="/read" />
+          <DoorButton label="Play" image={PlaygroundImage} link="/play" />
+          <DoorButton label="About Us" image={AboutUsImage} link="/about" />
+        </div>
+        <DailyLimerickButton />
       </div>
-      <DailyLimerickButton />
-    </div>
+    </StandardWrapper>
   );
 }

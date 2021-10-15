@@ -3,6 +3,7 @@ import React from "react";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 import "./Tales.scss";
 
@@ -14,13 +15,11 @@ import "./Tales.scss";
  * @version 1.1.0
  * @component
  * @example
- * ```jsx
  * <Tales />
- * ```
  */
 export default function Tales() {
   return (
-    <div>
+    <StandardWrapper>
       <Helmet>
         <title>Tales | The Bedtime Project</title>
       </Helmet>
@@ -34,6 +33,6 @@ export default function Tales() {
           The Guide to Sunset
         </StoryButton>
       </div>
-    </div>
+    </StandardWrapper>
   );
 }

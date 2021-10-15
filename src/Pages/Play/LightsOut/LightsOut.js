@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 import "./LightsOut.scss";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @description A simple game of Lights Out.
@@ -180,60 +181,62 @@ export default function LightsOut() {
     main();
   }, []);
   return (
-    <div className="LightsOutContainer">
-      <Helmet>
-        <title>Lights Out | The Bedtime Project</title>
-      </Helmet>
-      <header className="Lights-Out-Header">
-        <h1>Lights Out</h1>
-        <p>
-          There is one objective: <i>turn all the lights out</i>.
-        </p>
-        <p>
-          A white square indicates that the light is on, and a dark square
-          indicates that the light is off.
-        </p>
-        <button type="button" name="reset-game">
-          Reset
-        </button>
-        <div id="stats-box">
-          <div id="move-counter">
-            <p>Moves:</p>
-            <p id="js-moves">0</p>
+    <StandardWrapper>
+      <div className="LightsOutContainer">
+        <Helmet>
+          <title>Lights Out | The Bedtime Project</title>
+        </Helmet>
+        <header className="Lights-Out-Header">
+          <h1>Lights Out</h1>
+          <p>
+            There is one objective: <i>turn all the lights out</i>.
+          </p>
+          <p>
+            A white square indicates that the light is on, and a dark square
+            indicates that the light is off.
+          </p>
+          <button type="button" name="reset-game">
+            Reset
+          </button>
+          <div id="stats-box">
+            <div id="move-counter">
+              <p>Moves:</p>
+              <p id="js-moves">0</p>
+            </div>
+            <div id="best-moves">
+              <p>Best:</p>
+              <p id="js-best">0</p>
+            </div>
           </div>
-          <div id="best-moves">
-            <p>Best:</p>
-            <p id="js-best">0</p>
-          </div>
+        </header>
+        <div id="the-game">
+          <div id="a1" className="out"></div>
+          <div id="a2" className="out"></div>
+          <div id="a3" className="out"></div>
+          <div id="a4" className="out"></div>
+          <div id="a5" className="out"></div>
+          <div id="a6" className="out"></div>
+          <div id="a7" className="out"></div>
+          <div id="a8" className="out"></div>
+          <div id="a9" className="out"></div>
+          <div id="a10" className="out"></div>
+          <div id="a11" className="out"></div>
+          <div id="a12" className="out"></div>
+          <div id="a13" className="out"></div>
+          <div id="a14" className="out"></div>
+          <div id="a15" className="out"></div>
+          <div id="a16" className="out"></div>
+          <div id="a17" className="out"></div>
+          <div id="a18" className="out"></div>
+          <div id="a19" className="out"></div>
+          <div id="a20" className="out"></div>
+          <div id="a21" className="out"></div>
+          <div id="a22" className="out"></div>
+          <div id="a23" className="out"></div>
+          <div id="a24" className="out"></div>
+          <div id="a25" className="out"></div>
         </div>
-      </header>
-      <div id="the-game">
-        <div id="a1" className="out"></div>
-        <div id="a2" className="out"></div>
-        <div id="a3" className="out"></div>
-        <div id="a4" className="out"></div>
-        <div id="a5" className="out"></div>
-        <div id="a6" className="out"></div>
-        <div id="a7" className="out"></div>
-        <div id="a8" className="out"></div>
-        <div id="a9" className="out"></div>
-        <div id="a10" className="out"></div>
-        <div id="a11" className="out"></div>
-        <div id="a12" className="out"></div>
-        <div id="a13" className="out"></div>
-        <div id="a14" className="out"></div>
-        <div id="a15" className="out"></div>
-        <div id="a16" className="out"></div>
-        <div id="a17" className="out"></div>
-        <div id="a18" className="out"></div>
-        <div id="a19" className="out"></div>
-        <div id="a20" className="out"></div>
-        <div id="a21" className="out"></div>
-        <div id="a22" className="out"></div>
-        <div id="a23" className="out"></div>
-        <div id="a24" className="out"></div>
-        <div id="a25" className="out"></div>
       </div>
-    </div>
+    </StandardWrapper>
   );
 }

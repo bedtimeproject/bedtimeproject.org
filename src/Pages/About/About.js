@@ -9,9 +9,10 @@ import Licenses from "./Licenses/Licenses";
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../../Components/General/Contributor/Contributor";
 import Checkerboard from "../../Components/Background/Checkerboard/Checkerboard";
+import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
+import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 
 import "./About.scss";
-import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 
 /**
@@ -23,9 +24,7 @@ import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDr
  * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <About />
- * ```
  */
 export default function About() {
   const [contributors, setContributors] = useState();
@@ -39,8 +38,9 @@ export default function About() {
     }
     fetchData();
   }, []);
+
   return (
-    <div>
+    <StandardWrapper>
       <Helmet>
         <title>About | The Bedtime Project</title>
       </Helmet>
@@ -88,6 +88,6 @@ export default function About() {
           <Licenses />
         </Route>
       </Switch>
-    </div>
+    </StandardWrapper>
   );
 }
