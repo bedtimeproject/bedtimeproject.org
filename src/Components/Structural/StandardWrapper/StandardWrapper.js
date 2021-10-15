@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import MainContent from "../MainContent/MainContent";
 import SkipLink from "../SkipLink/SkipLink";
 import "./StandardWrapper.scss";
 
@@ -18,10 +19,10 @@ export default function StandardWrapper({ children, breadcrumb = true }) {
     <div>
       <SkipLink />
       <Header />
-      <main className="AppContentContainer">
+      <MainContent>
         {breadcrumb && <Breadcrumb />}
         {children}
-      </main>
+      </MainContent>
       <Footer />
     </div>
   );
