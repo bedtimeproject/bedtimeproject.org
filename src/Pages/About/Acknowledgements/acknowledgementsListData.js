@@ -1,5 +1,10 @@
 export default [
   {
+    name: "agathaco (@@agathaco)",
+    contribution: "Lighthouse on Construction Page",
+    link: "https://codepen.io/agathaco",
+  },
+  {
     name: "Evan Bacon",
     contribution: "Code for Licenses Page",
   },
