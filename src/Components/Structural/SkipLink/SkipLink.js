@@ -10,9 +10,14 @@ import "./SkipLink.scss";
  * @component
  */
 export default function SkipLink() {
+  function sendFocusToMainContent() {
+    const mainContentId = "#mainContent";
+    const main = document.querySelector(mainContentId);
+    main.focus();
+  }
   return (
-    <div className="SkipLink-Container">
-      <div>SkipLink Works!</div>
-    </div>
+    <button className="SkipLink-Container" onClick={sendFocusToMainContent}>
+      Skip to main content
+    </button>
   );
 }

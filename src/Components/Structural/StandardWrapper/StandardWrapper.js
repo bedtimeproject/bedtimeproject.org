@@ -16,7 +16,7 @@ import "./StandardWrapper.scss";
  */
 export default function StandardWrapper({ children, breadcrumb = true }) {
   return (
-    <div>
+    <div className="Standard-Wrapper">
       <SkipLink />
       <Header />
       <MainContent>

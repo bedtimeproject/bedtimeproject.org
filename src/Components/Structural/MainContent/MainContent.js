@@ -10,5 +10,9 @@ import "./MainContent.scss";
  * @component
  */
 export default function MainContent({ children }) {
-  return <main className="AppContentContainer">{children}</main>;
+  return (
+    <main className="AppContentContainer" id="mainContent" tabIndex="0">
+      {children}
+    </main>
+  );
 }
