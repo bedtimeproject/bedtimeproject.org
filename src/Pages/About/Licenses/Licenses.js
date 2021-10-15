@@ -11,7 +11,7 @@ Run this command to get the data
 import { Helmet } from "react-helmet";
 import React from "react";
 
-import { capitalize } from "underscore.string";
+import { capitalize } from "../../../utils/capitalize/capitalize";
 
 import LicensesList from "./LicensesList/LicensesList";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";

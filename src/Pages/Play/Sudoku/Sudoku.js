@@ -1,6 +1,6 @@
-import { shuffle } from "underscore";
 import React, { useEffect, useState } from "react";
 
+import { shuffle } from "../../../utils/shuffle/shuffle";
 import { puzzles } from "./puzzles";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 

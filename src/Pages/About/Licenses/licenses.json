@@ -87,18 +87,6 @@
         "licenses": "MIT",
         "parents": "the-bedtime-project"
     },
-    "underscore.string@3.3.5": {
-        "licenses": "MIT",
-        "repository": "https://github.com/epeli/underscore.string",
-        "licenseUrl": "https://github.com/epeli/underscore.string",
-        "parents": "the-bedtime-project"
-    },
-    "underscore@1.13.1": {
-        "licenses": "MIT",
-        "repository": "https://github.com/jashkenas/underscore",
-        "licenseUrl": "https://github.com/jashkenas/underscore/raw/master/LICENSE",
-        "parents": "the-bedtime-project"
-    },
     "web-vitals@1.1.2": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/GoogleChrome/web-vitals",

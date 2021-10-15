@@ -1,12 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { Route, Switch } from "react-router";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
-import Tales from "./Tales/Tales";
-import Quips from "./Quips/Quips";
-import Stories from "./Stories/Stories";
 
 import "./Read.scss";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";

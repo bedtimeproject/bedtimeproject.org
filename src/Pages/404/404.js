@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { shuffle } from "underscore";
+import { shuffle } from "../../utils/shuffle/shuffle";
 import React from "react";
 
 import ForestMountains from "../../Components/Background/ForestMountains/ForestMountains";

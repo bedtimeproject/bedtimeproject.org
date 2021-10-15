@@ -19,8 +19,6 @@
     "sass": "^1.35.1",
     "sass-mq": "^5.0.1",
     "scroll-animation": "github:bedtimeproject/scroll-animation",
-    "underscore": "^1.13.1",
-    "underscore.string": "^3.3.5",
     "web-vitals": "^1.1.2",
     "wolfy87-eventemitter": "^5.2.9"
   },
