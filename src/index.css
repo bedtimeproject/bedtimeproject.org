@@ -5,6 +5,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
+@font-face {
+  font-family: "SecretCode";
+  src: url("./assets/fonts/Code-Regular.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -25,4 +32,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.SecretCode {
+  font-family: "SecretCode", serif;
+  font-size: larger;
+  font-weight: bold;
 }
