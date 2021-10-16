@@ -66,7 +66,6 @@ export default function Quips() {
           <Helmet>
             <title>Quips | The Bedtime Project</title>
           </Helmet>
-          <Breadcrumb path="read" />
           <PageTitle>Quips</PageTitle>
           <div className="Limerick-Display-Container">
             {quips.map((quip, index) => {
@@ -83,7 +82,6 @@ export default function Quips() {
           <Helmet>
             <title>Latest Quip | The Bedtime Project</title>
           </Helmet>
-          <Breadcrumb path="read/quips" />
           <QuipsDisplay quip={latestQuip} />
         </Route>
 
@@ -93,7 +91,6 @@ export default function Quips() {
               <Helmet>
                 <title>{quip.title} | The Bedtime Project</title>
               </Helmet>
-              <Breadcrumb path="read/quips" />
               <QuipsDisplay quip={quip} />
             </Route>
           );

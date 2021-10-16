@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { capitalize } from "../../../utils/capitalize/capitalize";
 import "./Breadcrumb.scss";
 
@@ -10,21 +12,38 @@ import "./Breadcrumb.scss";
  * @param props The JSX props passed to this React component
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 2.0.0
+ * @version 2.1.0
  * @component
  * @example
  * <Breadcrumb />
  */
 export default function Breadcrumb() {
-  const currentURL = window.location.href;
-  let currentPath = currentURL.split("#/")[1];
-  // Remove trailing /
-  if (currentPath[currentPath.length - 1] == "/") {
-    currentPath = currentPath.slice(0, currentPath.length - 1);
-  }
-  const pathParts = currentPath.split("/");
-  // Remove current path from breadcrumbs
-  pathParts.pop();
+  const [pathParts, setPathParts] = useState("");
+  const location = useLocation();
+
+  useEffect(
+    function getCurrentUrl() {
+      console.log(location);
+      if (location.pathname) {
+        let currentPath = location.pathname;
+        // Remove leading /
+        if (currentPath[0] == "/") {
+          currentPath = currentPath.slice(1);
+        }
+        // Remove trailing /
+        if (currentPath[currentPath.length - 1] == "/") {
+          currentPath = currentPath.slice(0, currentPath.length - 1);
+        }
+
+        const tempPathParts = currentPath.split("/");
+        // Remove current path from breadcrumbs
+        tempPathParts.pop();
+
+        setPathParts(tempPathParts);
+      }
+    },
+    [location]
+  );
 
   return (
     <div className="Breadcrumb-Container">
