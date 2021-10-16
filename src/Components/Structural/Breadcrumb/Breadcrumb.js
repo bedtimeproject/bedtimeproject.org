@@ -12,13 +12,13 @@ import "./Breadcrumb.scss";
  * @param props The JSX props passed to this React component
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 2.1.1
+ * @version 2.2.0
  * @component
  * @example
  * <Breadcrumb />
  */
 export default function Breadcrumb() {
-  const [pathParts, setPathParts] = useState("");
+  const [pathParts, setPathParts] = useState([]);
   const location = useLocation();
 
   useEffect(
@@ -43,28 +43,26 @@ export default function Breadcrumb() {
     },
     [location]
   );
-
-  return (
+  return pathParts && pathParts.length ? (
     <div className="Breadcrumb-Container">
-      {pathParts &&
-        pathParts.map((crumb, index) => {
-          if (!crumb) {
-            return null;
-          }
+      {pathParts.map((crumb, index) => {
+        if (!crumb) {
+          return null;
+        }
 
-          let path = "";
-          for (let i = 0; i <= index; i++) {
-            path += "/" + pathParts[i];
-          }
+        let path = "";
+        for (let i = 0; i <= index; i++) {
+          path += "/" + pathParts[i];
+        }
 
-          return (
-            <span className="Breadcrumb" key={index}>
-              <Link to={path}>
-                <span>{capitalize(crumb)}</span>
-              </Link>
-            </span>
-          );
-        })}
+        return (
+          <span className="Breadcrumb" key={index}>
+            <Link to={path}>
+              <span>{capitalize(crumb)}</span>
+            </Link>
+          </span>
+        );
+      })}
     </div>
-  );
+  ) : null;
 }

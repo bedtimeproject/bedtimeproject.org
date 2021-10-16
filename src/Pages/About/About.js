@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../../Components/General/Contributor/Contributor";
-import Checkerboard from "../../Components/Background/Checkerboard/Checkerboard";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 import SEO from "../../Components/Structural/SEO/SEO";
@@ -38,14 +37,15 @@ export default function About() {
     <StandardWrapper>
       <SEO title="About" />
       <div className="AboutPage-Container">
-        <Checkerboard primaryColor="red" secondaryColor="black" />
-        <PageTitle>About</PageTitle>
-        <div className="Description-Contianer">
-          <div>
-            The Bedtime Project aims at helping you get to sleep, or just have a
-            fun evening with stories and games.
+        <div className="Header-Container">
+          <PageTitle>About</PageTitle>
+          <div className="Description-Contianer">
+            <div>
+              The Bedtime Project aims at helping you get to sleep, or just have
+              a fun evening with stories and games.
+            </div>
+            <div>Here are the people who make this site possible:</div>
           </div>
-          <div>Here are the people who make this site possible:</div>
         </div>
         <div className="All-Contributors-Container">
           {contributors &&

@@ -52,8 +52,10 @@ export default function Story({ story }) {
     <div className="Story-Container">
       {/* Styles for the Breadcrumbs */}
       <style>{`
-        .Breadcrumb-Container {
-          left: 90px
+        @media screen and (min-width: 800px) {
+          .Breadcrumb-Container {
+            left: 90px
+          }
         }
       `}</style>
       <div className="Paper-Container">
