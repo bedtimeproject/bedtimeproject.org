@@ -18,6 +18,8 @@ import Stories from "./Pages/Read/Stories/Stories";
 import Tales from "./Pages/Read/Tales/Tales";
 import Quips from "./Pages/Read/Quips/Quips";
 import FourOhFour from "./Pages/404/404";
+import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
+import Licenses from "./Pages/About/Licenses/Licenses";
 
 // Stories without Header and Footer
 import TheLadyAndTheFrog from "./Pages/Read/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
@@ -100,7 +102,15 @@ export default function App() {
             </Switch>
           </Route>
           <Route path="/about">
-            <About />
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/about/acknowledgements">
+              <Acknowledgements />
+            </Route>
+            <Route exact path="/about/licenses">
+              <Licenses />
+            </Route>
           </Route>
           <Route path="*">
             <FourOhFour />

@@ -21,7 +21,7 @@ import SEO from "../../Components/Structural/SEO/SEO";
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.2.0
+ * @version 1.3.0
  * @component
  * @example
  * <About />
@@ -42,50 +42,36 @@ export default function About() {
   return (
     <StandardWrapper>
       <SEO title="About" />
-      <Switch>
-        <Route exact path="/about">
-          <div className="AboutPage-Container">
-            <Checkerboard primaryColor="red" secondaryColor="black" />
-            <PageTitle>About</PageTitle>
-            <div className="Description-Contianer">
-              <div>
-                The Bedtime Project aims at helping you get to sleep, or just
-                have a fun evening with stories and games.
-              </div>
-              <div>Here are the people who make this site possible:</div>
-            </div>
-            <div className="All-Contributors-Container">
-              {contributors &&
-                contributors.map((contributor, index) => {
-                  return (
-                    <Contributor
-                      key={index}
-                      name={contributor.title}
-                      bio={contributor.body}
-                      image={addDrupalUrlToImageTag(
-                        contributor.field_main_image
-                      )}
-                    />
-                  );
-                })}
-            </div>
-            <div className="Link-Container">
-              <StoryButton link="/about/acknowledgements">
-                Acknowledgements
-              </StoryButton>
-              <StoryButton link="./about/licenses">Licenses</StoryButton>
-            </div>
+      <div className="AboutPage-Container">
+        <Checkerboard primaryColor="red" secondaryColor="black" />
+        <PageTitle>About</PageTitle>
+        <div className="Description-Contianer">
+          <div>
+            The Bedtime Project aims at helping you get to sleep, or just have a
+            fun evening with stories and games.
           </div>
-        </Route>
-        <Route exact path="/about/acknowledgements">
-          <Breadcrumb link="/about">About</Breadcrumb>
-          <Acknowledgements />
-        </Route>
-        <Route exact path="/about/licenses">
-          <Breadcrumb link="/about">About</Breadcrumb>
-          <Licenses />
-        </Route>
-      </Switch>
+          <div>Here are the people who make this site possible:</div>
+        </div>
+        <div className="All-Contributors-Container">
+          {contributors &&
+            contributors.map((contributor, index) => {
+              return (
+                <Contributor
+                  key={index}
+                  name={contributor.title}
+                  bio={contributor.body}
+                  image={addDrupalUrlToImageTag(contributor.field_main_image)}
+                />
+              );
+            })}
+        </div>
+        <div className="Link-Container">
+          <StoryButton link="/about/acknowledgements">
+            Acknowledgements
+          </StoryButton>
+          <StoryButton link="./about/licenses">Licenses</StoryButton>
+        </div>
+      </div>
     </StandardWrapper>
   );
 }
