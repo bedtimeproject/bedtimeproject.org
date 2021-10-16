@@ -9,7 +9,7 @@ import "./Story.scss";
  * @function Story
  * @author Alexander Burdiss
  * @since 10/14/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  */
 export default function Story({ story }) {
@@ -48,6 +48,8 @@ export default function Story({ story }) {
       });
   }
 
+  console.log(storyData);
+
   return (
     <div className="Story-Container">
       {/* Styles for the Breadcrumbs */}
@@ -70,7 +72,7 @@ export default function Story({ story }) {
             />
           )}
         </div>
-        {storyData.field_more_content_coming_soon && (
+        {storyData.field_more_content_coming_soon == "True" && (
           <MoreContentSoon
             backLink="/read/stories"
             backLinkText="Back to Stories"
