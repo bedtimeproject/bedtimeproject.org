@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.3bb5530a.chunk.css",
-    "main.js": "/static/js/main.73d00630.chunk.js",
-    "main.js.map": "/static/js/main.73d00630.chunk.js.map",
+    "main.css": "/static/css/main.19b7b911.chunk.css",
+    "main.js": "/static/js/main.f0d159a0.chunk.js",
+    "main.js.map": "/static/js/main.f0d159a0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.fdcb0a27.chunk.js": "/static/js/2.fdcb0a27.chunk.js",
     "static/js/2.fdcb0a27.chunk.js.map": "/static/js/2.fdcb0a27.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3bb5530a.chunk.css.map": "/static/css/main.3bb5530a.chunk.css.map",
+    "static/css/main.19b7b911.chunk.css.map": "/static/css/main.19b7b911.chunk.css.map",
     "static/js/2.fdcb0a27.chunk.js.LICENSE.txt": "/static/js/2.fdcb0a27.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/BlueFlowers.835c7e42.svg": "/static/media/BlueFlowers.835c7e42.svg",
@@ -60,7 +60,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.fdcb0a27.chunk.js",
-    "static/css/main.3bb5530a.chunk.css",
-    "static/js/main.73d00630.chunk.js"
+    "static/css/main.19b7b911.chunk.css",
+    "static/js/main.f0d159a0.chunk.js"
   ]
 }
