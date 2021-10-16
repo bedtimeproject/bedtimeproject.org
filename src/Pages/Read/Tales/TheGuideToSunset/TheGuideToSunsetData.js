@@ -16,11 +16,11 @@ export default {
   attributionBackground: "#0000FF",
   animationOverlap: "false",
   title: "The Guide to Sunset",
-  author: "FostyWally",
+  author: "C.A. Moonbloom",
   titleCard: "default",
   attributionCard: "default",
   stanzaCard: "default",
-  attribution: "Written by FostyWally\nAnimated by Captain Code",
+  attribution: "Written by C.A. Moonbloom\nAnimated by Captain Code",
   body: [
     {
       stanza: (

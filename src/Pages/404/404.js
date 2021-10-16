@@ -43,7 +43,7 @@ export default function FourOhFour() {
           <p className="FourOhFour-One-Liner-Container">
             {getRandomOneLiner()}
           </p>
-          <p>Sincerely, Fostywally</p>
+          <p>Sincerely, C.A. Moonbloom</p>
         </div>
       </div>
     </StandardWrapper>
