@@ -1,7 +1,9 @@
-.Stories-Buttons-Container {
+.BooksContainer {
   display: flex;
+  max-width: 600px;
+  margin: auto;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
+  background-color: brown;
+  height: 1000px;
 }

@@ -8,6 +8,7 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import "./Quips.scss";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import SEO from "../../../Components/Structural/SEO/SEO";
+import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
 
 /**
  * @function Quips
@@ -15,7 +16,7 @@ import SEO from "../../../Components/Structural/SEO/SEO";
  * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 2.0.0
+ * @version 2.0.1
  * @component
  * @example
  * <Quips />
@@ -66,8 +67,9 @@ export default function Quips() {
           <PageTitle>Quips</PageTitle>
           <div className="Limerick-Display-Container">
             {quips.map((quip, index) => {
+              const link = formatUrlString(quip.title);
               return (
-                <QuipButton key={index} link={`/read/quips/${quip.title}`}>
+                <QuipButton key={index} link={`/read/quips/${link}`}>
                   {quip.title}
                 </QuipButton>
               );
@@ -81,9 +83,9 @@ export default function Quips() {
         </Route>
 
         {quips.map((quip, index) => {
+          const link = formatUrlString(quip.title);
           return (
-            <Route key={index} path={`/read/quips/${quip.title}`}>
-              <SEO title={quip.title} />
+            <Route key={index} exact path={`/read/quips/${link}`}>
               <QuipsDisplay quip={quip} />
             </Route>
           );

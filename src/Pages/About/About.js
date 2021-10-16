@@ -1,19 +1,14 @@
-import { Switch, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-
-import Acknowledgements from "./Acknowledgements/Acknowledgements";
-import Breadcrumb from "../../Components/Structural/Breadcrumb/Breadcrumb";
-import Licenses from "./Licenses/Licenses";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../../Components/General/Contributor/Contributor";
 import Checkerboard from "../../Components/Background/Checkerboard/Checkerboard";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
+import SEO from "../../Components/Structural/SEO/SEO";
 
 import "./About.scss";
 import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
-import SEO from "../../Components/Structural/SEO/SEO";
 
 /**
  * @function About

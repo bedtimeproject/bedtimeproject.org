@@ -8,17 +8,17 @@
  * is needed to render the image correctly.
  * @author Alexander Burdiss
  * @since 10/2/21
- * @version 1.0.1
+ * @version 1.1.0
  */
 export function addDrupalUrlToImageTag(input) {
   if (input == "" || !input) {
     return undefined;
   }
 
-  const splitInput = input.split("/sites/default/files/");
-  const withCorrectUrl = splitInput.join(
-    "https://drupal.bedtimeproject.dev/sites/default/files/"
+  const correctedUrl = input.replaceAll(
+    '<img src="/sites/default/files',
+    '<img src="https://drupal.bedtimeproject.dev/sites/default/files'
   );
 
-  return withCorrectUrl;
+  return correctedUrl;
 }

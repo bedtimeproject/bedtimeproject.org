@@ -25,9 +25,9 @@ export default function Read() {
 
       <PageTitle>Read</PageTitle>
       <div className="Read-Button-Container">
-        <StoryButton link="/read/stories/">Stories</StoryButton>
-        <StoryButton link="/read/tales/">Tales</StoryButton>
-        <StoryButton link="/read/quips/">Quips</StoryButton>
+        <StoryButton link="/read/stories">Stories</StoryButton>
+        <StoryButton link="/read/tales">Tales</StoryButton>
+        <StoryButton link="/read/quips">Quips</StoryButton>
       </div>
     </StandardWrapper>
   );

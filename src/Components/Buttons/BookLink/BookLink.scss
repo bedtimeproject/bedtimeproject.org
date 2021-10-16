@@ -1,0 +1,15 @@
+.BookLink-Container {
+  display: inline-block;
+  width: 120px;
+  height: 160px;
+  background-color: green;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+
+  .TitleContainer {
+    padding-bottom: 8px;
+  }
+}

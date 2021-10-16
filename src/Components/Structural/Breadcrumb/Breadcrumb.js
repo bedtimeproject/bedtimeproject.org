@@ -12,7 +12,7 @@ import "./Breadcrumb.scss";
  * @param props The JSX props passed to this React component
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 2.1.0
+ * @version 2.1.1
  * @component
  * @example
  * <Breadcrumb />
@@ -23,7 +23,6 @@ export default function Breadcrumb() {
 
   useEffect(
     function getCurrentUrl() {
-      console.log(location);
       if (location.pathname) {
         let currentPath = location.pathname;
         // Remove leading /

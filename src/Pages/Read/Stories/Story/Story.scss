@@ -1,0 +1,41 @@
+@import "../../../../Variables.scss";
+
+.Story-Container {
+  background-color: $SlateBlue;
+  overflow: auto;
+
+  .Paper-Container {
+    background-color: white;
+    background-image: url("../../../../assets/images/tiledBackgrounds/tiledPaperWhite.jpg");
+    margin: 0 auto 40px auto;
+    overflow: auto;
+    padding: 0 30px;
+    max-width: 600px;
+  }
+  .Heading-Information {
+    text-align: center;
+    margin: 20px;
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .Chapters {
+    line-height: 1.5;
+    .field--name-field-image {
+      max-width: 300px;
+      margin: auto;
+      height: auto;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .field--name-field-chapter-title {
+      font-size: large;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}

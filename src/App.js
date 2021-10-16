@@ -42,16 +42,6 @@ export default function App() {
     <div className="AppWrapper">
       <Router>
         <Switch>
-          {/* Use the outer switch for pages that don't need the header and footer */}
-          <Route exact path="/read/tales/the-lady-and-the-frog">
-            <TheLadyAndTheFrog />
-          </Route>
-          <Route exact path="/read/tales/mrs-blue-sky">
-            <MrsBlueSky />
-          </Route>
-          <Route exact path="/read/tales/the-guide-to-sunset">
-            <TheGuideToSunset />
-          </Route>
           <Route exact path="/">
             <Construction />
           </Route>
@@ -81,23 +71,36 @@ export default function App() {
               <Route path="/play/crossword">
                 <Crossword />
               </Route>
+              <Route path="/play/*">
+                <FourOhFour />
+              </Route>
             </Switch>
           </Route>
           <Route path="/read">
             <Switch>
               <Route exact path="/read">
-                <Read />{" "}
+                <Read />
               </Route>
               <Route path="/read/stories">
-                <Route exact path="/read/stories">
-                  <Stories />
-                </Route>
+                <Stories />
+              </Route>
+              <Route exact path="/read/tales/the-lady-and-the-frog">
+                <TheLadyAndTheFrog />
+              </Route>
+              <Route exact path="/read/tales/mrs-blue-sky">
+                <MrsBlueSky />
+              </Route>
+              <Route exact path="/read/tales/the-guide-to-sunset">
+                <TheGuideToSunset />
+              </Route>
+              <Route path="/read/quips">
+                <Quips />
               </Route>
               <Route path="/read/tales">
                 <Tales />
               </Route>
-              <Route path="/read/quips">
-                <Quips />
+              <Route path="/read/*">
+                <FourOhFour />
               </Route>
             </Switch>
           </Route>
@@ -110,6 +113,9 @@ export default function App() {
             </Route>
             <Route exact path="/about/licenses">
               <Licenses />
+            </Route>
+            <Route path="/about/*">
+              <FourOhFour />
             </Route>
           </Route>
           <Route path="*">

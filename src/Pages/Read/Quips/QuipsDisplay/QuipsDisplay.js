@@ -1,5 +1,6 @@
 import React from "react";
 import { addDrupalUrlToImageTag } from "../../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
+import SEO from "../../../../Components/Structural/SEO/SEO";
 
 import "./QuipsDisplay.scss";
 
@@ -19,6 +20,7 @@ export default function QuipsDisplay({ quip }) {
   const image = addDrupalUrlToImageTag(quip.field_main_image);
   return (
     <div className="QuipsDisplay-Container">
+      <SEO title={quip.title} />
       <div className="LeftBox">
         <h1>{quip.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: quip.body }} />
