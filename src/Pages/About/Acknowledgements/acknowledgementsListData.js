@@ -34,6 +34,11 @@ export default [
     link: "https://codepen.io/cssinate",
   },
   {
+    name: "Shane Murphy (@shanomurphy)",
+    contribution: "Fancy Border on 'More Coming Soon' box",
+    link: "https://codepen.io/shanomurphy",
+  },
+  {
     name: "Tutul (@TutulDevs)",
     contribution: "Background Pattern on Acknowledgements Page",
     link: "https://codepen.io/TutulDevs",
