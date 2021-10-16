@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7655e38.chunk.css",
-    "main.js": "/static/js/main.b5cf20d3.chunk.js",
-    "main.js.map": "/static/js/main.b5cf20d3.chunk.js.map",
+    "main.css": "/static/css/main.2c70f19b.chunk.css",
+    "main.js": "/static/js/main.5b9c0f17.chunk.js",
+    "main.js.map": "/static/js/main.5b9c0f17.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
-    "static/js/2.e876db36.chunk.js": "/static/js/2.e876db36.chunk.js",
-    "static/js/2.e876db36.chunk.js.map": "/static/js/2.e876db36.chunk.js.map",
+    "static/js/2.a345cbc7.chunk.js": "/static/js/2.a345cbc7.chunk.js",
+    "static/js/2.a345cbc7.chunk.js.map": "/static/js/2.a345cbc7.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.d7655e38.chunk.css.map": "/static/css/main.d7655e38.chunk.css.map",
-    "static/js/2.e876db36.chunk.js.LICENSE.txt": "/static/js/2.e876db36.chunk.js.LICENSE.txt",
+    "static/css/main.2c70f19b.chunk.css.map": "/static/css/main.2c70f19b.chunk.css.map",
+    "static/js/2.a345cbc7.chunk.js.LICENSE.txt": "/static/js/2.a345cbc7.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/BlueFlowers.835c7e42.svg": "/static/media/BlueFlowers.835c7e42.svg",
     "static/media/BlueKite.7fc7089e.svg": "/static/media/BlueKite.7fc7089e.svg",
@@ -50,15 +50,15 @@
     "static/media/Treasure.14ad7938.svg": "/static/media/Treasure.14ad7938.svg",
     "static/media/WindCloud.cefcf42c.svg": "/static/media/WindCloud.cefcf42c.svg",
     "static/media/BlackJack.scss": "/static/media/spade.5f655d9b.png",
-    "static/media/logo.ab36dd44.png": "/static/media/logo.ab36dd44.png",
+    "static/media/logo.def79c06.png": "/static/media/logo.def79c06.png",
     "static/media/scroll.76d0a694.svg": "/static/media/scroll.76d0a694.svg",
     "static/media/Home.scss": "/static/media/sunset-beach.8ca7f506.jpg",
     "static/media/TheLadyAndTheFrog.scss": "/static/media/yellowFlowers.3f442f01.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
-    "static/js/2.e876db36.chunk.js",
-    "static/css/main.d7655e38.chunk.css",
-    "static/js/main.b5cf20d3.chunk.js"
+    "static/js/2.a345cbc7.chunk.js",
+    "static/css/main.2c70f19b.chunk.css",
+    "static/js/main.5b9c0f17.chunk.js"
   ]
 }
