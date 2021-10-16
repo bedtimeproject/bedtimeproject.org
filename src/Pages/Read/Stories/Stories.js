@@ -60,6 +60,7 @@ export default function Stories() {
           const link = formatUrlString(story.title);
           return (
             <Route key={index} exact path={`/read/stories/${link}`}>
+              <SEO title={story.title} />
               <Story story={story} />
             </Route>
           );
