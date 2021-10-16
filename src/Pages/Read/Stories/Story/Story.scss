@@ -14,12 +14,14 @@
     box-shadow: 0px -2px 16px 10px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px -2px 16px 10px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -2px 16px 10px rgba(0, 0, 0, 0.75);
+    font-family: "Libre Baskerville", serif;
   }
   .Heading-Information {
     text-align: center;
-    margin: 20px;
+    margin: 25px;
     h1 {
       margin: 0;
+      margin-bottom: 15px;
     }
   }
 
@@ -36,9 +38,10 @@
     }
 
     .field--name-field-chapter-title {
-      font-size: large;
+      font-size: larger;
       font-weight: bold;
       text-align: center;
+      margin-bottom: 10px;
     }
   }
 }
