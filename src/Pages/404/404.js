@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { shuffle } from "../../utils/shuffle/shuffle";
 import React from "react";
 
@@ -8,6 +7,7 @@ import oneLiners from "./404OneLiners";
 import "./404.scss";
 import scroll from "./scroll.svg";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
+import SEO from "../../Components/Structural/SEO/SEO";
 
 /**
  * @function FourOhFour
@@ -34,9 +34,7 @@ export default function FourOhFour() {
   return (
     <StandardWrapper>
       <div className="FourOhFour-Container">
-        <Helmet>
-          <title>404 - Page not found | The Bedtime Project</title>
-        </Helmet>
+        <SEO title="404 - Page not found" />
         <ForestMountains />
         <img src={scroll} alt="" className="FourOhFour-Scroll" />
         <div className="FourOhFour-Scroll-Text-Container">

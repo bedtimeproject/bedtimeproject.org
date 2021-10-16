@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
 
@@ -21,6 +20,7 @@ import Sun from "../../../../assets/images/Sun.svg";
 import SunsetCloud from "./images/SunsetCloud.svg";
 import SunsetCloud2 from "./images/SunsetCloud2.svg";
 import WindCloud from "./images/WindCloud.svg";
+import SEO from "../../../../Components/Structural/SEO/SEO";
 
 /**
  * @function MrsBlueSky
@@ -55,9 +55,7 @@ export default function MrsBlueSky() {
 
   return (
     <div className="MrsBlueSkyContainer">
-      <Helmet>
-        <title>Mrs. Blue Sky | The Bedtime Project</title>
-      </Helmet>
+      <SEO title="Mrs. Blue Sky" />
       {/* Styles for the global object, just on this page */}
       <style>{`
         :root * {

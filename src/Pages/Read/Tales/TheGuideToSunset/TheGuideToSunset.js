@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet";
 import React from "react";
-
 import ScrollAnimation from "scroll-animation";
 
-import story from "./TheGuideToSunsetData";
+import SEO from "../../../../Components/Structural/SEO/SEO";
 
+import story from "./TheGuideToSunsetData";
 import "./TheGuideToSunset.scss";
 
 /**
@@ -21,9 +20,7 @@ import "./TheGuideToSunset.scss";
 export default function TheGuideToSunset() {
   return (
     <div className="TheGuideToSunset-Container">
-      <Helmet>
-        <title>{story.title} | The Bedtime Project</title>
-      </Helmet>
+      <SEO title={story.title} />
       <ScrollAnimation story={story} />
     </div>
   );

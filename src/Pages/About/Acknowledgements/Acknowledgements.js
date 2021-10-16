@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import React from "react";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
@@ -7,6 +6,7 @@ import acknowledgementsListData from "./acknowledgementsListData";
 import "./Acknowledgements.scss";
 import HeaderDescription from "../../../Components/General/HeaderDescription/HeaderDescription";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
+import SEO from "../../../Components/Structural/SEO/SEO";
 
 /**
  * @function Acknowledgements
@@ -24,9 +24,7 @@ import RepeatingRadialGradient from "../../../Components/Background/RepeatingRad
 export default function Acknowledgements() {
   return (
     <div className="Acknowledgements-Container">
-      <Helmet>
-        <title>Acknowledgements | The Bedtime Project</title>
-      </Helmet>
+      <SEO title="Acknowledgements" />
       <RepeatingRadialGradient
         primaryColor={"#f3f6f6"}
         secondaryColor={"#c5ece3"}

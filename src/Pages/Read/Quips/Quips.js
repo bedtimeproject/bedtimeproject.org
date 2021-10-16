@@ -1,14 +1,13 @@
-import { Helmet } from "react-helmet";
 import { Route, Switch } from "react-router";
 import React, { useEffect, useState } from "react";
 
-import Breadcrumb from "../../../Components/Structural/Breadcrumb/Breadcrumb";
 import QuipButton from "../../../Components/Buttons/QuipButton/QuipButton";
 import QuipsDisplay from "./QuipsDisplay/QuipsDisplay";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Quips.scss";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import SEO from "../../../Components/Structural/SEO/SEO";
 
 /**
  * @function Quips
@@ -63,9 +62,7 @@ export default function Quips() {
     <StandardWrapper>
       <Switch>
         <Route exact path="/read/quips">
-          <Helmet>
-            <title>Quips | The Bedtime Project</title>
-          </Helmet>
+          <SEO title="Quips" />
           <PageTitle>Quips</PageTitle>
           <div className="Limerick-Display-Container">
             {quips.map((quip, index) => {
@@ -79,18 +76,14 @@ export default function Quips() {
         </Route>
 
         <Route exact path="/read/quips/latest">
-          <Helmet>
-            <title>Latest Quip | The Bedtime Project</title>
-          </Helmet>
+          <SEO title="Latest Quip" />
           <QuipsDisplay quip={latestQuip} />
         </Route>
 
         {quips.map((quip, index) => {
           return (
             <Route key={index} path={`/read/quips/${quip.title}`}>
-              <Helmet>
-                <title>{quip.title} | The Bedtime Project</title>
-              </Helmet>
+              <SEO title={quip.title} />
               <QuipsDisplay quip={quip} />
             </Route>
           );

@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -12,6 +11,8 @@ import image6 from "./images/IMG_3642.jpg";
 import image7 from "./images/IMG_3643.jpg";
 import image8 from "./images/IMG_3649.jpg";
 import image9 from "./images/IMG_3648.jpg";
+
+import SEO from "../../../../Components/Structural/SEO/SEO";
 
 /**
  * @namespace TheLadyAndTheFrog
@@ -49,9 +50,7 @@ export default function TheLadyAndTheFrog() {
 
   return (
     <div className="TheLadyAndTheFrogWrapper">
-      <Helmet>
-        <title>The Lady and the Frog | The Bedtime Project</title>
-      </Helmet>
+      <SEO title="The Lady and the Frog" />
       <main>
         <div className="Story">
           <div className="Card">

@@ -8,7 +8,6 @@ Run this command to get the data
 
 */
 
-import { Helmet } from "react-helmet";
 import React from "react";
 
 import { capitalize } from "../../../utils/capitalize/capitalize";
@@ -19,6 +18,7 @@ import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import "./Licenses.scss";
 import Data from "./licenses.json";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
+import SEO from "../../../Components/Structural/SEO/SEO";
 
 /**
  * @function extractNameFromGithubUrl
@@ -123,9 +123,7 @@ sortDataByKey(licenses, "username");
 export default function Licenses() {
   return (
     <div className="LicensesContainer">
-      <Helmet>
-        <title>Licenses | The Bedtime Project</title>
-      </Helmet>
+      <SEO title="Licenses" />
       <PageTitle>Licenses</PageTitle>
       <RepeatingRadialGradient
         primaryColor={"#f3f6f6"}

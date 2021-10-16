@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import React from "react";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
@@ -6,6 +5,7 @@ import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 import "./Tales.scss";
+import SEO from "../../../Components/Structural/SEO/SEO";
 
 /**
  * @function Tales
@@ -20,9 +20,7 @@ import "./Tales.scss";
 export default function Tales() {
   return (
     <StandardWrapper>
-      <Helmet>
-        <title>Tales | The Bedtime Project</title>
-      </Helmet>
+      <SEO title="Tales" />
       <PageTitle>Tales</PageTitle>
       <div className="Tales-Button-Container">
         <StoryButton link="/read/tales/the-lady-and-the-frog">

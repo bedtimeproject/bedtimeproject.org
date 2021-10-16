@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 import "./LightsOut.scss";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import SEO from "../../../Components/Structural/SEO/SEO";
 
 /**
  * @description A simple game of Lights Out.
@@ -183,9 +183,7 @@ export default function LightsOut() {
   return (
     <StandardWrapper>
       <div className="LightsOutContainer">
-        <Helmet>
-          <title>Lights Out | The Bedtime Project</title>
-        </Helmet>
+        <SEO title="Lights Out" />
         <header className="Lights-Out-Header">
           <h1>Lights Out</h1>
           <p>

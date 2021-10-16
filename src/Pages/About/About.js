@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { Switch, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
@@ -14,6 +13,7 @@ import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 
 import "./About.scss";
 import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
+import SEO from "../../Components/Structural/SEO/SEO";
 
 /**
  * @function About
@@ -41,9 +41,7 @@ export default function About() {
 
   return (
     <StandardWrapper>
-      <Helmet>
-        <title>About | The Bedtime Project</title>
-      </Helmet>
+      <SEO title="About" />
       <Switch>
         <Route exact path="/about">
           <div className="AboutPage-Container">
