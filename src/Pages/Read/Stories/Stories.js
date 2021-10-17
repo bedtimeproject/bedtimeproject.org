@@ -25,6 +25,7 @@ import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString"
  */
 export default function Stories() {
   const [stories, setStories] = useState([]);
+
   function fetchStories() {
     fetch("https://drupal.bedtimeproject.dev/rest/views/stories")
       .then((resp) => resp.json())
@@ -34,6 +35,7 @@ export default function Stories() {
   useEffect(function getListOfStories() {
     fetchStories();
   }, []);
+
   return (
     <StandardWrapper>
       <Switch>
