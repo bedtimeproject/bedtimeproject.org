@@ -1,0 +1,57 @@
+@import "../../../Variables.scss";
+
+.Bookshelf-Container {
+  background-image: url("../../../assets/images/wood.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  .Bookshelf-Page-Title {
+    position: absolute;
+    top: -10px;
+    background-color: $Tequila;
+    padding: 10px;
+    margin: 0;
+    border-radius: 4px;
+    border: 5px double $Blackberry;
+    font-family: "Libre Baskerville";
+    font-size: 1.5rem;
+  }
+
+  .RainyWindow {
+    width: 400px;
+    height: 100%;
+  }
+
+  .RainyWindowLeft {
+    top: 200px;
+  }
+
+  .BooksContainer {
+    position: relative;
+    display: flex;
+    max-width: 600px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url("../../../assets/images/booshelfBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    padding-top: 60px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .RainyWindow {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .BooksContainer {
+      min-width: 420px;
+    }
+  }
+}

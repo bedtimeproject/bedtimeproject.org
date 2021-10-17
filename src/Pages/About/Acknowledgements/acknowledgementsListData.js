@@ -19,6 +19,11 @@ export default [
     link: "https://unsplash.com/@ikasalovic",
   },
   {
+    name: "Malik Skydsgaard",
+    contribution: "Bookshelf Background Image",
+    link: "https://unsplash.com/@malikskyds",
+  },
+  {
     name: "Michal (@Mertl)",
     contribution: "Fireflies on Homepage",
     link: "https://codepen.io/Mertl",
@@ -32,6 +37,16 @@ export default [
     name: "Paul Grant (@cssinate)",
     contribution: "Background on 404 page",
     link: "https://codepen.io/cssinate",
+  },
+  {
+    name: "Ria Puskas",
+    contribution: "Bookshelf Room Wall Image",
+    link: "https://unsplash.com/@riapuskas",
+  },
+  {
+    name: "Ryan Mulligan (@hexagoncircle)",
+    contribution: "Rainy Window",
+    link: "https://codepen.io/hexagoncircle",
   },
   {
     name: "Shane Murphy (@shanomurphy)",

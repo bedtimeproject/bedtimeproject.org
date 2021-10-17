@@ -18,7 +18,7 @@ import "./PageTitle.scss";
  */
 export default function PageTitle({ children }) {
   return (
-    <div>
+    <div className="PageTitle-Container">
       <h1 className="PageTitle">{children}</h1>
     </div>
   );

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import SEO from "../../../Components/Structural/SEO/SEO";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import BookLink from "../../../Components/Buttons/BookLink/BookLink";
+import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
 
 import Story from "./Story/Story";
 
@@ -18,7 +18,7 @@ import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString"
  * on this stack only
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.2.0
+ * @version 2.0.0
  * @component
  * @example
  * <Stories />
@@ -42,9 +42,9 @@ export default function Stories() {
         <Route exact path="/read/stories">
           <div className="Stories-Container">
             <SEO title="Stories" />
-            <PageTitle>Stories</PageTitle>
-            <div className="BooksContainer">
-              {stories.map((story, index) => {
+            <Bookshelf
+              pageTitle="Stories"
+              books={stories.map((story, index) => {
                 const link = formatUrlString(story.title);
                 return (
                   <BookLink
@@ -54,7 +54,7 @@ export default function Stories() {
                   />
                 );
               })}
-            </div>
+            />
           </div>
         </Route>
 

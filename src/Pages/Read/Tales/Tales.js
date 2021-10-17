@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router";
 
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import BookLink from "../../../Components/Buttons/BookLink/BookLink";
 import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
@@ -9,13 +8,14 @@ import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString"
 import "./Tales.scss";
 import SEO from "../../../Components/Structural/SEO/SEO";
 import Tale from "./Tale/Tale";
+import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
 
 /**
  * @function Tales
  * @description A collection of longer poems on the site
  * @author Alexander Burdiss
  * @since 6/15/21
- * @version 2.0.0
+ * @version 3.0.0
  * @component
  * @example
  * <Tales />
@@ -37,19 +37,21 @@ export default function Tales() {
     <StandardWrapper>
       <Switch>
         <Route exact path="/read/tales">
-          <SEO title="Tales" />
-          <PageTitle>Tales</PageTitle>
-          <div className="BooksContainer">
-            {tales.map((story, index) => {
-              const link = formatUrlString(story.title);
-              return (
-                <BookLink
-                  key={index}
-                  link={`/read/tales/${link}`}
-                  story={story}
-                />
-              );
-            })}
+          <div className="Tales-Container">
+            <SEO title="Tales" />
+            <Bookshelf
+              pageTitle="Tales"
+              books={tales.map((story, index) => {
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/tales/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+            />
           </div>
         </Route>
 
