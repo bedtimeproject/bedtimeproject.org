@@ -8,10 +8,12 @@
  * with React Router.
  * @author Alexander Burdiss
  * @since 10/16/21
- * @version 1.0.0
+ * @version 1.1.0
  */
 export function formatUrlString(input) {
   const tempInput = input
+    .replaceAll(".", "")
+    .replaceAll("-", "")
     .replaceAll("(", "")
     .replaceAll(")", "")
     .replaceAll("-", "")
