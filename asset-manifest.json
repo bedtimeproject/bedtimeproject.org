@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.b03bebb8.chunk.css",
-    "main.js": "/static/js/main.bad89160.chunk.js",
-    "main.js.map": "/static/js/main.bad89160.chunk.js.map",
+    "main.css": "/static/css/main.a07bea22.chunk.css",
+    "main.js": "/static/js/main.e9525f84.chunk.js",
+    "main.js.map": "/static/js/main.e9525f84.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.673406d8.chunk.js": "/static/js/2.673406d8.chunk.js",
     "static/js/2.673406d8.chunk.js.map": "/static/js/2.673406d8.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b03bebb8.chunk.css.map": "/static/css/main.b03bebb8.chunk.css.map",
+    "static/css/main.a07bea22.chunk.css.map": "/static/css/main.a07bea22.chunk.css.map",
     "static/js/2.673406d8.chunk.js.LICENSE.txt": "/static/js/2.673406d8.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/BlueFlowers.835c7e42.svg": "/static/media/BlueFlowers.835c7e42.svg",
@@ -50,6 +50,7 @@
     "static/media/Town.d82e6146.svg": "/static/media/Town.d82e6146.svg",
     "static/media/Treasure.14ad7938.svg": "/static/media/Treasure.14ad7938.svg",
     "static/media/WindCloud.cefcf42c.svg": "/static/media/WindCloud.cefcf42c.svg",
+    "static/media/Bookshelf.scss": "/static/media/wood.6b44f250.jpg",
     "static/media/BlackJack.scss": "/static/media/spade.5f655d9b.png",
     "static/media/logo.def79c06.png": "/static/media/logo.def79c06.png",
     "static/media/scroll.76d0a694.svg": "/static/media/scroll.76d0a694.svg",
@@ -61,7 +62,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.673406d8.chunk.js",
-    "static/css/main.b03bebb8.chunk.css",
-    "static/js/main.bad89160.chunk.js"
+    "static/css/main.a07bea22.chunk.css",
+    "static/js/main.e9525f84.chunk.js"
   ]
 }
