@@ -15,7 +15,7 @@ import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDr
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.3.0
+ * @version 1.3.1
  * @component
  * @example
  * <About />

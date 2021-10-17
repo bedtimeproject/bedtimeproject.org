@@ -7,8 +7,33 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  .Header-Container {
+    max-width: 960px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    padding: 10px;
+
+    @media screen and (max-width: 1000px) {
+      margin: 0 20px;
+      margin-top: 20px;
+    }
+
+    .Description-Contianer {
+      text-align: center;
+      margin-bottom: 15px;
+
+      div {
+        padding: 10px;
+      }
+    }
+  }
+
   .All-Contributors-Container {
     margin: 0 10%;
+    max-width: 1000px;
+    margin: auto;
 
     @media (min-width: 750px) {
       display: flex;
@@ -16,15 +41,6 @@
 
     .Contributor-Container {
       flex: 1;
-      width: 100%;
-    }
-  }
-
-  .Description-Contianer {
-    text-align: center;
-
-    div {
-      padding: 10px;
     }
   }
 
