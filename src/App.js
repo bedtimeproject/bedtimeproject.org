@@ -22,9 +22,9 @@ import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
 import Licenses from "./Pages/About/Licenses/Licenses";
 
 // Stories without Header and Footer
-import TheLadyAndTheFrog from "./Pages/Read/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
-import MrsBlueSky from "./Pages/Read/Tales/MrsBlueSky/MrsBlueSky";
-import TheGuideToSunset from "./Pages/Read/Tales/TheGuideToSunset/TheGuideToSunset";
+import TheLadyAndTheFrog from "./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog";
+import MrsBlueSky from "./Pages/Read/BedtimeStories/MrsBlueSky/MrsBlueSky";
+import TheGuideToSunset from "./Pages/Read/BedtimeStories/TheGuideToSunset/TheGuideToSunset";
 import BedtimeStories from "./Pages/Read/BedtimeStories/BedtimeStories";
 
 /**
