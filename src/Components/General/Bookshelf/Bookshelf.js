@@ -24,7 +24,7 @@ export default function Bookshelf({ books, pageTitle }) {
         {books}
       </div>
       <div className="RainyWindowRight RainyWindow">
-        <RainyWindow />
+        <RainyWindow right />
       </div>
     </div>
   );

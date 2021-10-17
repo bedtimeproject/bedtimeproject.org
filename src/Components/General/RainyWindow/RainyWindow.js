@@ -1,6 +1,8 @@
 import React from "react";
 import "./RainyWindow.scss";
 
+import Lighthouse from "../../Background/Lighthouse/Lighthouse";
+
 /**
  * @namespace RainyWindow
  * @function RainyWindow
@@ -9,11 +11,12 @@ import "./RainyWindow.scss";
  * @version 1.0.0
  * @component
  */
-export default function RainyWindow() {
+export default function RainyWindow({ right }) {
   return (
-    <div className="RainyWindow-Container">
+    <div className={`RainyWindow-Container ${right ? "Right" : ""}`}>
       <div className="frame">
         <div className="outside">
+          <Lighthouse minimal right={right} />
           <div className="rain">
             <div className="drop"></div>
             <div className="drop"></div>
@@ -76,8 +79,8 @@ export default function RainyWindow() {
           </div>
         </div>
         <div className="curtain-rod"></div>
-        <div className="curtain left"></div>
-        <div className="curtain right"></div>
+        {!right && <div className="curtain left"></div>}
+        {right && <div className="curtain right"></div>}
         <div className="sill">
           <div className="items">
             <div className="planter">
