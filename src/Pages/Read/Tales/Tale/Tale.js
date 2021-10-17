@@ -1,44 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import "./Tale.scss";
+
 import PaperStory from "../../../../Components/General/PaperStory/PaperStory";
 import { addDrupalUrlToImageTag } from "../../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 
 /**
- * @namespace Story
- * @function Story
+ * @namespace Tale
+ * @function Tale
  * @author Alexander Burdiss
- * @since 10/14/21
- * @version 1.0.1
+ * @since 10/17/21
+ * @version 1.0.0
  * @component
  */
-export default function Story({ story }) {
-  const [storyData, setStoryData] = useState(story);
+export default function Tale({ tale }) {
+  const [taleData, setTaleData] = useState(tale);
 
   useEffect(
     /**
-     * @function Story~useEffect~getStoryData
-     * @description Handles fetching the story data for the story being visited
+     * @function Tale~useEffect~getTaleData
+     * @description Handles fetching the tale data for the tale being visited
      * on page load.
      * @author Alexander Burdiss
      * @since 10/16/21
      * @version 1.0.0
      */
-    function getStoryData() {
-      fetchStoryData();
+    function getTaleData() {
+      fetchTaleData();
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 
   /**
-   * @function fetchStoryData
-   * @description Fetches the individual story data from the server
+   * @function Tale~fetchTaleData
+   * @description Fetches the individual tale data from the server
    * @author Alexander Burdiss
    * @since 10/16/21
    * @version 1.0.0
    */
-  function fetchStoryData() {
+  function fetchTaleData() {
     fetch(
-      "https://drupal.bedtimeproject.dev/rest/views/story?title=" + story.title
+      "https://drupal.bedtimeproject.dev/rest/views/tale?title=" + tale.title
     )
       .then((resp) => resp.json())
       .then((data) => {
@@ -46,13 +48,13 @@ export default function Story({ story }) {
           ...data[0],
           field_chapters: addDrupalUrlToImageTag(data[0]?.field_chapters),
         };
-        setStoryData(dataWithProcessedChapters);
+        setTaleData(dataWithProcessedChapters);
       });
   }
 
   return (
     <PaperStory
-      storyData={storyData}
+      storyData={taleData}
       backLink="/read/stories"
       backLinkText="Back to Stories"
     />
