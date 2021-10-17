@@ -2,6 +2,7 @@ import React from "react";
 import ScrollAnimation from "scroll-animation";
 
 import SEO from "../../../../Components/Structural/SEO/SEO";
+import { useScrollAnimation } from "../../../../utils/useScrollAnimation/useScrollAnimation";
 
 import story from "./TheGuideToSunsetData";
 import "./TheGuideToSunset.scss";
@@ -18,6 +19,8 @@ import "./TheGuideToSunset.scss";
  * <TheGuideToSunset />
  */
 export default function TheGuideToSunset() {
+  useScrollAnimation(story);
+
   return (
     <div className="TheGuideToSunset-Container">
       <SEO title={story.title} />
