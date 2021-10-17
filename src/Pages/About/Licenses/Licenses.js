@@ -19,6 +19,7 @@ import "./Licenses.scss";
 import Data from "./licenses.json";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 import SEO from "../../../Components/Structural/SEO/SEO";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @function extractNameFromGithubUrl
@@ -113,29 +114,29 @@ sortDataByKey(licenses, "username");
  * @description The licences for the software that we used in this application.
  * @author Alexander Burdiss
  * @since 6/10/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
- * ```jsx
  * <Licenses />
- * ```
  */
 export default function Licenses() {
   return (
-    <div className="LicensesContainer">
-      <SEO title="Licenses" />
-      <PageTitle>Licenses</PageTitle>
-      <RepeatingRadialGradient
-        primaryColor={"#f3f6f6"}
-        secondaryColor={"#cccff1"}
-        tertiaryColor={"#4f68d0"}
-      />
-      <div className="LicensesContainer-Description">
-        This project is made possible by these great open-source developers:
+    <StandardWrapper>
+      <div className="LicensesContainer">
+        <SEO title="Licenses" />
+        <PageTitle>Licenses</PageTitle>
+        <RepeatingRadialGradient
+          primaryColor={"#f3f6f6"}
+          secondaryColor={"#cccff1"}
+          tertiaryColor={"#4f68d0"}
+        />
+        <div className="LicensesContainer-Description">
+          This project is made possible by these great open-source developers:
+        </div>
+        <div>
+          <LicensesList licenses={licenses} />
+        </div>
       </div>
-      <div>
-        <LicensesList licenses={licenses} />
-      </div>
-    </div>
+    </StandardWrapper>
   );
 }

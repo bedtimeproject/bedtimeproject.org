@@ -32,7 +32,7 @@ import TheGuideToSunset from "./Pages/Read/Tales/TheGuideToSunset/TheGuideToSuns
  * handles the navigation of the application.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  * @example
  * <App />
@@ -105,18 +105,20 @@ export default function App() {
             </Switch>
           </Route>
           <Route path="/about">
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/about/acknowledgements">
-              <Acknowledgements />
-            </Route>
-            <Route exact path="/about/licenses">
-              <Licenses />
-            </Route>
-            <Route path="/about/*">
-              <FourOhFour />
-            </Route>
+            <Switch>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/about/acknowledgements">
+                <Acknowledgements />
+              </Route>
+              <Route exact path="/about/licenses">
+                <Licenses />
+              </Route>
+              <Route path="/about/*">
+                <FourOhFour />
+              </Route>
+            </Switch>
           </Route>
           <Route path="*">
             <FourOhFour />

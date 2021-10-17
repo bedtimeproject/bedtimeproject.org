@@ -7,6 +7,7 @@ import "./Acknowledgements.scss";
 import HeaderDescription from "../../../Components/General/HeaderDescription/HeaderDescription";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 import SEO from "../../../Components/Structural/SEO/SEO";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @function Acknowledgements
@@ -14,35 +15,35 @@ import SEO from "../../../Components/Structural/SEO/SEO";
  * we used to help out in this project.
  * @author Alexander Burdiss
  * @since 6/10/21
- * @version 1.1.1
+ * @version 1.1.2
  * @component
  * @example
- * ```jsx
  * <Acknowledgements />
- * ```
  */
 export default function Acknowledgements() {
   return (
-    <div className="Acknowledgements-Container">
-      <SEO title="Acknowledgements" />
-      <RepeatingRadialGradient
-        primaryColor={"#f3f6f6"}
-        secondaryColor={"#c5ece3"}
-        tertiaryColor={"#56d1b3"}
-      />
-      <PageTitle>Acknowledgements</PageTitle>
-      <div className="Acknowledgements-List">
-        {acknowledgementsListData.map((item, key) => {
-          return (
-            <HeaderDescription
-              key={key}
-              name={item.name}
-              contribution={item.contribution}
-              link={item.link}
-            />
-          );
-        })}
+    <StandardWrapper>
+      <div className="Acknowledgements-Container">
+        <SEO title="Acknowledgements" />
+        <RepeatingRadialGradient
+          primaryColor={"#f3f6f6"}
+          secondaryColor={"#c5ece3"}
+          tertiaryColor={"#56d1b3"}
+        />
+        <PageTitle>Acknowledgements</PageTitle>
+        <div className="Acknowledgements-List">
+          {acknowledgementsListData.map((item, key) => {
+            return (
+              <HeaderDescription
+                key={key}
+                name={item.name}
+                contribution={item.contribution}
+                link={item.link}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </StandardWrapper>
   );
 }
