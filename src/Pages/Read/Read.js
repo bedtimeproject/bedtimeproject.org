@@ -28,6 +28,7 @@ export default function Read() {
         <StoryButton link="/read/stories">Stories</StoryButton>
         <StoryButton link="/read/tales">Tales</StoryButton>
         <StoryButton link="/read/quips">Quips</StoryButton>
+        <StoryButton link="/read/bedtime-stories">Bedtime Stories</StoryButton>
       </div>
     </StandardWrapper>
   );

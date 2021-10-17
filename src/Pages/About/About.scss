@@ -9,15 +9,13 @@
 
   .Header-Container {
     max-width: 960px;
-    margin: auto;
-    margin-top: 20px;
+    margin: 40px auto 20px auto;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
     padding: 10px;
 
     @media screen and (max-width: 1000px) {
-      margin: 0 20px;
-      margin-top: 20px;
+      margin: 40px 20px 20px 20px;
     }
 
     .Description-Contianer {

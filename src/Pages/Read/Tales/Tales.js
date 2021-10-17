@@ -22,15 +22,6 @@ export default function Tales() {
     <StandardWrapper>
       <SEO title="Tales" />
       <PageTitle>Tales</PageTitle>
-      <div className="Tales-Button-Container">
-        <StoryButton link="/read/tales/the-lady-and-the-frog">
-          The Lady and the Frog
-        </StoryButton>
-        <StoryButton link="/read/tales/mrs-blue-sky">Mrs. Blue Sky</StoryButton>
-        <StoryButton link="/read/tales/the-guide-to-sunset">
-          The Guide to Sunset
-        </StoryButton>
-      </div>
     </StandardWrapper>
   );
 }

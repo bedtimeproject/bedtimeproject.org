@@ -25,6 +25,7 @@ import Licenses from "./Pages/About/Licenses/Licenses";
 import TheLadyAndTheFrog from "./Pages/Read/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
 import MrsBlueSky from "./Pages/Read/Tales/MrsBlueSky/MrsBlueSky";
 import TheGuideToSunset from "./Pages/Read/Tales/TheGuideToSunset/TheGuideToSunset";
+import BedtimeStories from "./Pages/Read/BedtimeStories/BedtimeStories";
 
 /**
  * @function App
@@ -84,14 +85,17 @@ export default function App() {
               <Route path="/read/stories">
                 <Stories />
               </Route>
-              <Route exact path="/read/tales/the-lady-and-the-frog">
+              <Route exact path="/read/bedtime-stories/the-lady-and-the-frog">
                 <TheLadyAndTheFrog />
               </Route>
-              <Route exact path="/read/tales/mrs-blue-sky">
+              <Route exact path="/read/bedtime-stories/mrs-blue-sky">
                 <MrsBlueSky />
               </Route>
-              <Route exact path="/read/tales/the-guide-to-sunset">
+              <Route exact path="/read/bedtime-stories/the-guide-to-sunset">
                 <TheGuideToSunset />
+              </Route>
+              <Route path="/read/bedtime-stories">
+                <BedtimeStories />
               </Route>
               <Route path="/read/quips">
                 <Quips />
