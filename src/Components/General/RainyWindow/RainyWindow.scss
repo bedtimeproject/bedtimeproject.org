@@ -18,8 +18,8 @@ $colorBook3: hsl(194, 100%, 48%);
 $colorPlanter: hsl(0, 100%, 100%);
 $colorLeaf: hsl(72, 40%, 43%);
 
-$borderFrame: 2.5vmin;
-$borderRadius: 0.25vmin;
+$borderFrame: 12px;
+$borderRadius: 2px;
 
 .RainyWindow-Container {
   height: 100%;
@@ -40,9 +40,8 @@ $borderRadius: 0.25vmin;
     position: absolute;
     width: 100%;
     height: 100%;
-    // background-color: $colorOutside;
     overflow: hidden;
-    animation: flash 10s linear infinite;
+    opacity: 0.9;
 
     .Lighthouse-Container {
       position: absolute;
@@ -89,81 +88,6 @@ $borderRadius: 0.25vmin;
     }
   }
 
-  .curtain-rod {
-    position: absolute;
-    top: calc($borderFrame / 4);
-    left: 50%;
-    width: calc(100% + ($pull * 4) - 0.5vmin);
-    height: $heightCurtainRod;
-    background-color: var($colorCurtainRod);
-    border-radius: $borderRadius;
-    transform: translateX(-50%);
-  }
-
-  .curtain {
-    position: absolute;
-    top: calc(($borderFrame / 4) - 0.25vmin);
-    height: calc(100% - $heightAc);
-    width: 40%;
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(white, 0.5),
-        rgba(white, 0.5) 1px,
-        transparent 1px,
-        transparent 2px
-      ),
-      repeating-linear-gradient(
-        -45deg,
-        rgba(white, 0.5),
-        rgba(white, 0.5) 1px,
-        transparent 1px,
-        transparent 2px
-      );
-    border-radius: calc($borderRadius * 2) 0 100% calc($borderRadius * 2);
-    box-shadow: rgba(black, 0.06) 1vmin 1vmin 2vmin;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      height: 100%;
-      border-radius: inherit;
-      background-image: repeating-linear-gradient(
-          45deg,
-          rgba(white, 0.25),
-          rgba(white, 0.25) 2px,
-          transparent 2px,
-          transparent 3px
-        ),
-        repeating-linear-gradient(
-          -45deg,
-          rgba(white, 0.25),
-          rgba(white, 0.25) 2px,
-          transparent 2px,
-          transparent 3px
-        );
-    }
-
-    &::before {
-      left: 5%;
-      width: 80%;
-    }
-    &::after {
-      left: 5%;
-      width: 60%;
-    }
-  }
-
-  .curtain.left {
-    left: -1vmin;
-  }
-
-  .curtain.right {
-    right: -1vmin;
-    transform: scaleX(-1);
-  }
-
   .window {
     position: relative;
     background-color: transparent;
@@ -173,80 +97,12 @@ $borderRadius: 0.25vmin;
   }
 
   .window.top {
-    box-shadow: inset rgba(black, 0.1) 0 0 4vmin;
+    box-shadow: inset rgba(black, 0.1) 0 0 10px;
   }
 
   .window.bottom {
     box-shadow: inset rgba(black, 0.1) 0 0 4vmin,
       rgba(black, 0.1) 0 -2vmin 1.5vmin -1vmin;
-  }
-
-  .ac {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: $heightAc;
-    background-color: $colorFrame;
-    box-shadow: rgba(black, 0.05) 0 -2vmin 1vmin -2vmin;
-    z-index: 0;
-  }
-
-  .ac .unit {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 3fr;
-    grid-gap: 1vmin;
-    padding: 1vmin;
-    position: relative;
-    margin: auto;
-    width: 45%;
-    height: 80%;
-    top: 0.5vmin;
-    background-color: $colorAcUnit;
-    border-radius: $borderRadius;
-    box-shadow: rgba(black, 0.1) 0 0.5vmin 1.5vmin;
-
-    &::before {
-      position: absolute;
-      bottom: 100%;
-      display: block;
-      content: "";
-      width: 100%;
-      height: calc($size / 40);
-      background-color: inherit;
-      box-shadow: inset rgba(black, 0.075) 0 0.5vmin 1.5vmin;
-      clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
-    }
-  }
-
-  .vent.small {
-    grid-column: span 2;
-    display: grid;
-    grid-gap: 1px;
-  }
-
-  .vent.large {
-    grid-column: span 3;
-    display: grid;
-    grid-gap: 1px;
-  }
-
-  .vent .slot {
-    background-color: $colorAcUnitInner;
-    background-image: repeating-linear-gradient(
-      to right,
-      transparent,
-      transparent 32%,
-      $colorAcUnit 32%,
-      $colorAcUnit 34%
-    );
-    border-radius: 360px;
-  }
-
-  .controls {
-    background-color: $colorAcUnitInner;
-    border-radius: 0.5vmin;
   }
 
   .sill {
@@ -408,45 +264,6 @@ $borderRadius: 0.25vmin;
     }
     100% {
       transform: translateY(300%) scaleY(0);
-    }
-  }
-
-  @keyframes flash {
-    0%,
-    1% {
-      opacity: 1;
-    }
-    1.1%,
-    1.5% {
-      opacity: 0.2;
-    }
-    1.6%,
-    4% {
-      opacity: 1;
-    }
-    4.1%,
-    4.3% {
-      opacity: 0.2;
-    }
-    4.4%,
-    4.5% {
-      opacity: 1;
-    }
-    4.6%,
-    4.8% {
-      opacity: 0.2;
-    }
-    4.9%,
-    7.4% {
-      opacity: 1;
-    }
-    7.5%,
-    7.7% {
-      opacity: 0.5;
-    }
-    7.8%,
-    100% {
-      opacity: 1;
     }
   }
 }
