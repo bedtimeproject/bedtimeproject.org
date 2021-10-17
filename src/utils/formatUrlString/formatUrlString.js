@@ -8,7 +8,7 @@
  * with React Router.
  * @author Alexander Burdiss
  * @since 10/16/21
- * @version 1.1.0
+ * @version 1.2.0
  */
 export function formatUrlString(input) {
   const tempInput = input
@@ -17,6 +17,7 @@ export function formatUrlString(input) {
     .replaceAll("(", "")
     .replaceAll(")", "")
     .replaceAll("-", "")
+    .replaceAll("  ", " ")
     .replaceAll(" ", "-")
     .toLowerCase();
   return tempInput;
