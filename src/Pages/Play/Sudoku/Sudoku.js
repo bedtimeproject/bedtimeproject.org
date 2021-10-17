@@ -235,7 +235,6 @@ export default function Sudoku() {
       letterIndex++;
     }
   }
-
   /**
    * @function Sudoku~handleBoxClick
    * @param {Event} event The event that is triggered when a box on the game
@@ -260,8 +259,12 @@ export default function Sudoku() {
         }
         addNumber(event);
         event.target.classList.add("focused");
+          document.querySelector('div').style.pointerEvents = "none"
       }
-    }
+    } 
+    setTimeout(function() { 
+      document.querySelector('div').style.pointerEvents = "auto"
+    }, 1000);    
   }
 
   /**
@@ -346,9 +349,10 @@ export default function Sudoku() {
             boardNumber.classList.add(rowErrorClass);
           }
         }
-
+        console.log(boardNumber)
         if (boardNumber.innerText) {
           usedLetters.push(boardNumber);
+          
         }
       }
     }

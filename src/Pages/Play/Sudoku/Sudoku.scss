@@ -72,15 +72,13 @@
         &#F9 {
           background-color: lighten(peachpuff, 5);
         }
-
-        &.focused {
-          background-color: darken(peachpuff, 10) !important;
-        }
-
         &.rowError,
         &.colError,
         &.squareError {
-          background-color: palevioletred !important;
+          background-color: lighten(palevioletred, 10) !important;
+        }
+        &.focused {
+          background-color: darken(palevioletred, 20) !important;
         }
       }
     }
