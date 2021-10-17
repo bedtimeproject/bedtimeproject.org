@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.efaffe26.chunk.css",
-    "main.js": "/static/js/main.ef07db6d.chunk.js",
-    "main.js.map": "/static/js/main.ef07db6d.chunk.js.map",
+    "main.css": "/static/css/main.54ace405.chunk.css",
+    "main.js": "/static/js/main.3a65f58f.chunk.js",
+    "main.js.map": "/static/js/main.3a65f58f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.673406d8.chunk.js": "/static/js/2.673406d8.chunk.js",
     "static/js/2.673406d8.chunk.js.map": "/static/js/2.673406d8.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.efaffe26.chunk.css.map": "/static/css/main.efaffe26.chunk.css.map",
+    "static/css/main.54ace405.chunk.css.map": "/static/css/main.54ace405.chunk.css.map",
     "static/js/2.673406d8.chunk.js.LICENSE.txt": "/static/js/2.673406d8.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/BlueFlowers.835c7e42.svg": "/static/media/BlueFlowers.835c7e42.svg",
@@ -61,7 +61,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.673406d8.chunk.js",
-    "static/css/main.efaffe26.chunk.css",
-    "static/js/main.ef07db6d.chunk.js"
+    "static/css/main.54ace405.chunk.css",
+    "static/js/main.3a65f58f.chunk.js"
   ]
 }
