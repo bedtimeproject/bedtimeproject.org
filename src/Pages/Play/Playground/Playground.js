@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 
 import { json } from "./playgroundData";
@@ -7,6 +6,8 @@ import RotatingCubes from "../../../Components/Background/RotatingCubes/Rotating
 import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 
 import "./Playground.scss";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import SEO from "../../../Components/Structural/SEO/SEO";
 
 /**
  * @function Playground
@@ -115,89 +116,89 @@ export default function Playground() {
     loadStory();
   }, []);
   return (
-    <article about="/play/playground">
-      <Helmet>
-        <title>Playground | The Bedtime Project</title>
-      </Helmet>
-      <div className="Playground-Container">
-        <div className="Playground-Background-Color" />
-        <RotatingCubes />
+    <StandardWrapper>
+      <article about="/play/playground">
+        <SEO title="Playground" />
+        <div className="Playground-Container">
+          <div className="Playground-Background-Color" />
+          <RotatingCubes />
 
-        <PageTitle>Playground</PageTitle>
+          <PageTitle>Playground</PageTitle>
 
-        <div className="Playground-Main-Button-Container">
-          <StoryButton className="Main-Button">Get a new story</StoryButton>
+          <div className="Playground-Main-Button-Container">
+            <StoryButton className="Main-Button">Get a new story</StoryButton>
+          </div>
+
+          <div className="Story-Container">
+            <div className="Story-Content-Container">
+              <h2>Your Character</h2>
+              <div className="Story-Content">
+                <span id="js-name"></span> the <span id="js-description"></span>{" "}
+                <span id="js-main-character"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container">
+              <h2>The Setting</h2>
+              <div className="Story-Content">
+                <div id="js-location"></div>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container">
+              <h2>Your Sidekick</h2>
+              <div className="Story-Content">
+                <span id="js-second-character-name"></span>{" "}
+                <span id="js-second-character"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container">
+              <h2>The Problem</h2>
+              <div className="Story-Content">
+                <span id="js-problem"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container Story-Villian-Container">
+              <h2>The Villian</h2>
+              <div className="Story-Content">
+                <span id="js-villain"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container">
+              <h2>Your Quest</h2>
+              <div className="Story-Content">
+                You need to go to <span id="js-where-travel"></span> using{" "}
+                <span id="js-how-travel"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container">
+              <h2>Another Problem</h2>
+              <div className="Story-Content">
+                <span id="js-small-travel-conflict"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container">
+              <h2>The Final Scene</h2>
+              <div className="Story-Content">
+                You discover the villian's weakness,{" "}
+                <span id="js-villain-weakness"></span>
+              </div>
+            </div>
+
+            <div className="Story-Content-Container Story-Reward-Container">
+              <h2>Your Reward</h2>
+              <div className="Story-Content">
+                Congratulations! You won <span id="js-prize"></span>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className="Story-Container">
-          <div className="Story-Content-Container">
-            <h2>Your Character</h2>
-            <div className="Story-Content">
-              <span id="js-name"></span> the <span id="js-description"></span>{" "}
-              <span id="js-main-character"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container">
-            <h2>The Setting</h2>
-            <div className="Story-Content">
-              <div id="js-location"></div>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container">
-            <h2>Your Sidekick</h2>
-            <div className="Story-Content">
-              <span id="js-second-character-name"></span>{" "}
-              <span id="js-second-character"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container">
-            <h2>The Problem</h2>
-            <div className="Story-Content">
-              <span id="js-problem"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container Story-Villian-Container">
-            <h2>The Villian</h2>
-            <div className="Story-Content">
-              <span id="js-villain"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container">
-            <h2>Your Quest</h2>
-            <div className="Story-Content">
-              You need to go to <span id="js-where-travel"></span> using{" "}
-              <span id="js-how-travel"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container">
-            <h2>Another Problem</h2>
-            <div className="Story-Content">
-              <span id="js-small-travel-conflict"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container">
-            <h2>The Final Scene</h2>
-            <div className="Story-Content">
-              You discover the villian's weakness,{" "}
-              <span id="js-villain-weakness"></span>
-            </div>
-          </div>
-
-          <div className="Story-Content-Container Story-Reward-Container">
-            <h2>Your Reward</h2>
-            <div className="Story-Content">
-              Congratulations! You won <span id="js-prize"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      </article>
+    </StandardWrapper>
   );
 }

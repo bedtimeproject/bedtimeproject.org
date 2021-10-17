@@ -1,9 +1,15 @@
-import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import SEO from "../../../Components/Structural/SEO/SEO";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import BookLink from "../../../Components/Buttons/BookLink/BookLink";
+import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
+
+import Story from "./Story/Story";
 
 import "./Stories.scss";
+import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
 
 /**
  * @function Stories
@@ -12,23 +18,56 @@ import "./Stories.scss";
  * on this stack only
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.1.1
+ * @version 2.0.0
  * @component
  * @example
  * <Stories />
  */
 export default function Stories() {
+  const [stories, setStories] = useState([]);
+
+  function fetchStories() {
+    fetch("https://drupal.bedtimeproject.dev/rest/views/stories")
+      .then((resp) => resp.json())
+      .then((data) => setStories(data));
+  }
+
+  useEffect(function getListOfStories() {
+    fetchStories();
+  }, []);
+
   return (
-    <div className="Stories-Container">
-      <Helmet>
-        <title>Stories | The Bedtime Project</title>
-      </Helmet>
+    <StandardWrapper>
       <Switch>
         <Route exact path="/read/stories">
-          <PageTitle>Stories</PageTitle>
-          <div className="Stories-Buttons-Container">Coming Soon!</div>
+          <div className="Stories-Container">
+            <SEO title="Stories" />
+            <Bookshelf
+              pageTitle="Stories"
+              books={stories.map((story, index) => {
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/stories/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+            />
+          </div>
         </Route>
+
+        {stories.map((story, index) => {
+          const link = formatUrlString(story.title);
+          return (
+            <Route key={index} exact path={`/read/stories/${link}`}>
+              <SEO title={story.title} />
+              <Story story={story} />
+            </Route>
+          );
+        })}
       </Switch>
-    </div>
+    </StandardWrapper>
   );
 }

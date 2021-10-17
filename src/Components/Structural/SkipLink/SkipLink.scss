@@ -1,0 +1,15 @@
+.SkipLink-Container {
+  position: absolute;
+  height: 0;
+  color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    height: auto;
+    z-index: 10;
+    background-color: white;
+    color: black;
+  }
+}

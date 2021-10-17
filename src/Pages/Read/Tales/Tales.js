@@ -1,39 +1,70 @@
-import { Helmet } from "react-helmet";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router";
 
-import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
-import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import BookLink from "../../../Components/Buttons/BookLink/BookLink";
+import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
 
 import "./Tales.scss";
+import SEO from "../../../Components/Structural/SEO/SEO";
+import Tale from "./Tale/Tale";
+import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
 
 /**
  * @function Tales
  * @description A collection of longer poems on the site
  * @author Alexander Burdiss
  * @since 6/15/21
- * @version 1.1.0
+ * @version 3.0.0
  * @component
  * @example
- * ```jsx
  * <Tales />
- * ```
  */
 export default function Tales() {
+  const [tales, setTales] = useState([]);
+
+  function fetchTales() {
+    fetch("https://drupal.bedtimeproject.dev/rest/views/tales")
+      .then((resp) => resp.json())
+      .then((data) => setTales(data));
+  }
+
+  useEffect(function getListOfTales() {
+    fetchTales();
+  }, []);
+
   return (
-    <div>
-      <Helmet>
-        <title>Tales | The Bedtime Project</title>
-      </Helmet>
-      <PageTitle>Tales</PageTitle>
-      <div className="Tales-Button-Container">
-        <StoryButton link="/read/tales/the-lady-and-the-frog">
-          The Lady and the Frog
-        </StoryButton>
-        <StoryButton link="/read/tales/mrs-blue-sky">Mrs. Blue Sky</StoryButton>
-        <StoryButton link="/read/tales/the-guide-to-sunset">
-          The Guide to Sunset
-        </StoryButton>
-      </div>
-    </div>
+    <StandardWrapper>
+      <Switch>
+        <Route exact path="/read/tales">
+          <div className="Tales-Container">
+            <SEO title="Tales" />
+            <Bookshelf
+              pageTitle="Tales"
+              books={tales.map((story, index) => {
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/tales/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+            />
+          </div>
+        </Route>
+
+        {tales.map((story, index) => {
+          const link = formatUrlString(story.title);
+          return (
+            <Route key={index} exact path={`/read/tales/${link}`}>
+              <SEO title={story.title} />
+              <Tale tale={story} />
+            </Route>
+          );
+        })}
+      </Switch>
+    </StandardWrapper>
   );
 }

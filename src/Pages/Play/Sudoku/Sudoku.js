@@ -1,11 +1,13 @@
-import { Helmet } from "react-helmet";
-import { shuffle } from "underscore";
 import React, { useEffect, useState } from "react";
 
+import { shuffle } from "../../../utils/shuffle/shuffle";
 import { puzzles } from "./puzzles";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Sudoku.scss";
+import SEO from "../../../Components/Structural/SEO/SEO";
+import Waves from "../../../Components/Background/Waves/Waves";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
 /**
  * @todo Add keyboard support
@@ -479,186 +481,203 @@ export default function Sudoku() {
   }
 
   return (
-    <div className="Sudoku-Container">
-      <Helmet>
-        <title>Sudoku | The Bedtime Project</title>
-      </Helmet>
-      <PageTitle>Sudoku</PageTitle>
-      <div className="Game-Container">
-        <div className="Difficulty-Buttons">
-          <button
-            onClick={() => {
-              setDifficulty("easy");
-            }}
-            className={`Difficulty-Button ${
-              difficulty == "easy" ? "highlighted" : ""
-            }`}
-          >
-            Easy
-          </button>
-          <button
-            onClick={() => {
-              setDifficulty("medium");
-            }}
-            className={`Difficulty-Button ${
-              difficulty == "medium" ? "highlighted" : ""
-            }`}
-          >
-            Medium
-          </button>
-          <button
-            onClick={() => {
-              setDifficulty("hard");
-            }}
-            className={`Difficulty-Button ${
-              difficulty == "hard" ? "highlighted" : ""
-            }`}
-          >
-            Hard
-          </button>
-        </div>
-        <div className="Main-Game-Container">
-          <div className="Board" onClick={handleBoxClick}>
-            <div id="A1" />
-            <div id="B1" />
-            <div id="C1" />
-
-            <div id="D1" />
-            <div id="E1" />
-            <div id="F1" />
-
-            <div id="G1" />
-            <div id="H1" />
-            <div id="I1" />
-
-            <div id="A2" />
-            <div id="B2" />
-            <div id="C2" />
-
-            <div id="D2" />
-            <div id="E2" />
-            <div id="F2" />
-
-            <div id="G2" />
-            <div id="H2" />
-            <div id="I2" />
-
-            <div id="A3" />
-            <div id="B3" />
-            <div id="C3" />
-
-            <div id="D3" />
-            <div id="E3" />
-            <div id="F3" />
-
-            <div id="G3" />
-            <div id="H3" />
-            <div id="I3" />
-
-            <div id="A4" />
-            <div id="B4" />
-            <div id="C4" />
-
-            <div id="D4" />
-            <div id="E4" />
-            <div id="F4" />
-
-            <div id="G4" />
-            <div id="H4" />
-            <div id="I4" />
-
-            <div id="A5" />
-            <div id="B5" />
-            <div id="C5" />
-
-            <div id="D5" />
-            <div id="E5" />
-            <div id="F5" />
-
-            <div id="G5" />
-            <div id="H5" />
-            <div id="I5" />
-
-            <div id="A6" />
-            <div id="B6" />
-            <div id="C6" />
-
-            <div id="D6" />
-            <div id="E6" />
-            <div id="F6" />
-
-            <div id="G6" />
-            <div id="H6" />
-            <div id="I6" />
-
-            <div id="A7" />
-            <div id="B7" />
-            <div id="C7" />
-
-            <div id="D7" />
-            <div id="E7" />
-            <div id="F7" />
-
-            <div id="G7" />
-            <div id="H7" />
-            <div id="I7" />
-
-            <div id="A8" />
-            <div id="B8" />
-            <div id="C8" />
-
-            <div id="D8" />
-            <div id="E8" />
-            <div id="F8" />
-
-            <div id="G8" />
-            <div id="H8" />
-            <div id="I8" />
-
-            <div id="A9" />
-            <div id="B9" />
-            <div id="C9" />
-
-            <div id="D9" />
-            <div id="E9" />
-            <div id="F9" />
-
-            <div id="G9" />
-            <div id="H9" />
-            <div id="I9" />
-          </div>
-
-          <div className="NumberContainer">
+    <StandardWrapper>
+      <div className="Sudoku-Container">
+        <Waves />
+        <SEO title="Sudoku" />
+        <PageTitle>Sudoku</PageTitle>
+        <div className="Game-Container">
+          <div className="Difficulty-Buttons">
             <button
-              onClick={(event) => handleNumberClick(1, event)}
-              className="active"
+              onClick={() => {
+                setDifficulty("easy");
+              }}
+              className={`Difficulty-Button ${
+                difficulty == "easy" ? "highlighted" : ""
+              }`}
             >
-              1
+              Easy
             </button>
-            <button onClick={(event) => handleNumberClick(2, event)}>2</button>
-            <button onClick={(event) => handleNumberClick(3, event)}>3</button>
-            <button onClick={(event) => handleNumberClick(4, event)}>4</button>
-            <button onClick={(event) => handleNumberClick(5, event)}>5</button>
-            <button onClick={(event) => handleNumberClick(6, event)}>6</button>
-            <button onClick={(event) => handleNumberClick(7, event)}>7</button>
-            <button onClick={(event) => handleNumberClick(8, event)}>8</button>
-            <button onClick={(event) => handleNumberClick(9, event)}>9</button>
+            <button
+              onClick={() => {
+                setDifficulty("medium");
+              }}
+              className={`Difficulty-Button ${
+                difficulty == "medium" ? "highlighted" : ""
+              }`}
+            >
+              Medium
+            </button>
+            <button
+              onClick={() => {
+                setDifficulty("hard");
+              }}
+              className={`Difficulty-Button ${
+                difficulty == "hard" ? "highlighted" : ""
+              }`}
+            >
+              Hard
+            </button>
           </div>
-        </div>
-        <div className="WinModal-Container">
-          <button onClick={setupNewBoard} className="Difficulty-Button">
-            New Game
-          </button>
-          {modalIsShowing && (
-            <div className="WinModal">
-              <div className="WinModal-Box">
-                <h2>Congratulations!</h2>
-                <button onClick={playAgain}>Play Again</button>
-              </div>
+          <div className="Main-Game-Container">
+            <div className="Board" onClick={handleBoxClick}>
+              <div id="A1" />
+              <div id="B1" />
+              <div id="C1" />
+
+              <div id="D1" />
+              <div id="E1" />
+              <div id="F1" />
+
+              <div id="G1" />
+              <div id="H1" />
+              <div id="I1" />
+
+              <div id="A2" />
+              <div id="B2" />
+              <div id="C2" />
+
+              <div id="D2" />
+              <div id="E2" />
+              <div id="F2" />
+
+              <div id="G2" />
+              <div id="H2" />
+              <div id="I2" />
+
+              <div id="A3" />
+              <div id="B3" />
+              <div id="C3" />
+
+              <div id="D3" />
+              <div id="E3" />
+              <div id="F3" />
+
+              <div id="G3" />
+              <div id="H3" />
+              <div id="I3" />
+
+              <div id="A4" />
+              <div id="B4" />
+              <div id="C4" />
+
+              <div id="D4" />
+              <div id="E4" />
+              <div id="F4" />
+
+              <div id="G4" />
+              <div id="H4" />
+              <div id="I4" />
+
+              <div id="A5" />
+              <div id="B5" />
+              <div id="C5" />
+
+              <div id="D5" />
+              <div id="E5" />
+              <div id="F5" />
+
+              <div id="G5" />
+              <div id="H5" />
+              <div id="I5" />
+
+              <div id="A6" />
+              <div id="B6" />
+              <div id="C6" />
+
+              <div id="D6" />
+              <div id="E6" />
+              <div id="F6" />
+
+              <div id="G6" />
+              <div id="H6" />
+              <div id="I6" />
+
+              <div id="A7" />
+              <div id="B7" />
+              <div id="C7" />
+
+              <div id="D7" />
+              <div id="E7" />
+              <div id="F7" />
+
+              <div id="G7" />
+              <div id="H7" />
+              <div id="I7" />
+
+              <div id="A8" />
+              <div id="B8" />
+              <div id="C8" />
+
+              <div id="D8" />
+              <div id="E8" />
+              <div id="F8" />
+
+              <div id="G8" />
+              <div id="H8" />
+              <div id="I8" />
+
+              <div id="A9" />
+              <div id="B9" />
+              <div id="C9" />
+
+              <div id="D9" />
+              <div id="E9" />
+              <div id="F9" />
+
+              <div id="G9" />
+              <div id="H9" />
+              <div id="I9" />
             </div>
-          )}
+
+            <div className="NumberContainer">
+              <button
+                onClick={(event) => handleNumberClick(1, event)}
+                className="active"
+              >
+                1
+              </button>
+              <button onClick={(event) => handleNumberClick(2, event)}>
+                2
+              </button>
+              <button onClick={(event) => handleNumberClick(3, event)}>
+                3
+              </button>
+              <button onClick={(event) => handleNumberClick(4, event)}>
+                4
+              </button>
+              <button onClick={(event) => handleNumberClick(5, event)}>
+                5
+              </button>
+              <button onClick={(event) => handleNumberClick(6, event)}>
+                6
+              </button>
+              <button onClick={(event) => handleNumberClick(7, event)}>
+                7
+              </button>
+              <button onClick={(event) => handleNumberClick(8, event)}>
+                8
+              </button>
+              <button onClick={(event) => handleNumberClick(9, event)}>
+                9
+              </button>
+            </div>
+          </div>
+          <div className="WinModal-Container">
+            <button onClick={setupNewBoard} className="Difficulty-Button">
+              New Game
+            </button>
+            {modalIsShowing && (
+              <div className="WinModal">
+                <div className="WinModal-Box">
+                  <h2>Congratulations!</h2>
+                  <button onClick={playAgain}>Play Again</button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </StandardWrapper>
   );
 }

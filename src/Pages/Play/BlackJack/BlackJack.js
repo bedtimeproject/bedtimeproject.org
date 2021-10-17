@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "./BlackJack.scss";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
+import Waves from "../../../Components/Background/Waves/Waves";
 
 /**
  * @function BlackJack
@@ -357,6 +358,7 @@ export default function BlackJack() {
 
   return (
     <main className="BlackJack-Container">
+      <Waves />
       <PageTitle>BlackJack</PageTitle>
       <div className="Card-Table">
         <div className="Hand-Container">

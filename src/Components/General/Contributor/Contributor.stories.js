@@ -3,7 +3,7 @@ import React from "react";
 import Contributor from "./Contributor";
 
 import CaptainCode from "../../../assets/images/chess/CaptainCode.png";
-import FostyWally from "../../../assets/images/chess/FostyWally.png";
+import Moonbloom from "../../../assets/images/chess/Moonbloom.png";
 import user from "../../../assets/images/user.svg";
 
 export default {
@@ -11,7 +11,7 @@ export default {
   component: Contributor,
   argTypes: {
     image: {
-      options: [CaptainCode, FostyWally, user],
+      options: [CaptainCode, Moonbloom, user],
       control: {
         type: "select",
       },
@@ -31,7 +31,9 @@ export default {
   },
 };
 
-const Template = (args) => <Contributor {...args} />;
+const Template = (args) => (
+  <Contributor {...args} image={`<img src="${args.image}" />`} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

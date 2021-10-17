@@ -2,20 +2,30 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
-import Header from "./Components/Structural/Header/Header";
-import Footer from "./Components/Structural/Footer/Footer";
-
 // Root components
 import Play from "./Pages/Play/Play";
+import BlackJack from "./Pages/Play/BlackJack/BlackJack";
+import Playground from "./Pages/Play/Playground/Playground";
+import Chess from "./Pages/Play/Chess/Chess";
+import LightsOut from "./Pages/Play/LightsOut/LightsOut";
+import Sudoku from "./Pages/Play/Sudoku/Sudoku";
+import Crossword from "./Pages/Play/Crossword/Crossword";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
+import Construction from "./Pages/Construction/Construction";
 import Read from "./Pages/Read/Read";
+import Stories from "./Pages/Read/Stories/Stories";
+import Tales from "./Pages/Read/Tales/Tales";
+import Quips from "./Pages/Read/Quips/Quips";
 import FourOhFour from "./Pages/404/404";
+import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
+import Licenses from "./Pages/About/Licenses/Licenses";
 
 // Stories without Header and Footer
-import TheLadyAndTheFrog from "./Pages/Read/Tales/TheLadyAndTheFrog/TheLadyAndTheFrog";
-import MrsBlueSky from "./Pages/Read/Tales/MrsBlueSky/MrsBlueSky";
-import TheGuideToSunset from "./Pages/Read/Tales/TheGuideToSunset/TheGuideToSunset";
+import TheLadyAndTheFrog from "./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog";
+import MrsBlueSky from "./Pages/Read/BedtimeStories/MrsBlueSky/MrsBlueSky";
+import TheGuideToSunset from "./Pages/Read/BedtimeStories/TheGuideToSunset/TheGuideToSunset";
+import BedtimeStories from "./Pages/Read/BedtimeStories/BedtimeStories";
 
 /**
  * @function App
@@ -23,7 +33,7 @@ import TheGuideToSunset from "./Pages/Read/Tales/TheGuideToSunset/TheGuideToSuns
  * handles the navigation of the application.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  * @example
  * <App />
@@ -33,38 +43,89 @@ export default function App() {
     <div className="AppWrapper">
       <Router>
         <Switch>
-          {/* Use the outer switch for pages that don't need the header and footer */}
-          <Route exact path="/read/tales/the-lady-and-the-frog">
-            <TheLadyAndTheFrog />
+          <Route exact path="/">
+            <Construction />
           </Route>
-          <Route exact path="/read/tales/mrs-blue-sky">
-            <MrsBlueSky />
+          <Route path="/home">
+            <Home />
           </Route>
-          <Route exact path="/read/tales/the-guide-to-sunset">
-            <TheGuideToSunset />
+          <Route path="/play">
+            <Switch>
+              <Route exact path="/play">
+                <Play />
+              </Route>
+              <Route path="/play/blackjack">
+                <BlackJack />
+              </Route>
+              <Route path="/play/playground">
+                <Playground />
+              </Route>
+              <Route path="/play/chess">
+                <Chess />
+              </Route>
+              <Route path="/play/lights-out">
+                <LightsOut />
+              </Route>
+              <Route path="/play/sudoku">
+                <Sudoku />
+              </Route>
+              <Route path="/play/crossword">
+                <Crossword />
+              </Route>
+              <Route path="/play/*">
+                <FourOhFour />
+              </Route>
+            </Switch>
+          </Route>
+          <Route path="/read">
+            <Switch>
+              <Route exact path="/read">
+                <Read />
+              </Route>
+              <Route path="/read/stories">
+                <Stories />
+              </Route>
+              <Route exact path="/read/bedtime-stories/the-lady-and-the-frog">
+                <TheLadyAndTheFrog />
+              </Route>
+              <Route exact path="/read/bedtime-stories/mrs-blue-sky">
+                <MrsBlueSky />
+              </Route>
+              <Route exact path="/read/bedtime-stories/the-guide-to-sunset">
+                <TheGuideToSunset />
+              </Route>
+              <Route path="/read/bedtime-stories">
+                <BedtimeStories />
+              </Route>
+              <Route path="/read/quips">
+                <Quips />
+              </Route>
+              <Route path="/read/tales">
+                <Tales />
+              </Route>
+              <Route path="/read/*">
+                <FourOhFour />
+              </Route>
+            </Switch>
+          </Route>
+          <Route path="/about">
+            <Switch>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/about/acknowledgements">
+                <Acknowledgements />
+              </Route>
+              <Route exact path="/about/licenses">
+                <Licenses />
+              </Route>
+              <Route path="/about/*">
+                <FourOhFour />
+              </Route>
+            </Switch>
           </Route>
           <Route path="*">
-            <Header />
-            <main className="AppContentContainer">
-              <Switch>
-                <Route exact path="/">
-                  <Home />
-                </Route>
-                <Route path="/play">
-                  <Play />
-                </Route>
-                <Route path="/read">
-                  <Read />
-                </Route>
-                <Route path="/about">
-                  <About />
-                </Route>
-                <Route path="*">
-                  <FourOhFour />
-                </Route>
-              </Switch>
-            </main>
-            <Footer />
+            <FourOhFour />
           </Route>
         </Switch>
       </Router>

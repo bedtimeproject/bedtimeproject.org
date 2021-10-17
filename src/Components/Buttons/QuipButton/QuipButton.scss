@@ -20,7 +20,8 @@
   box-shadow: none;
 }
 
-.LimerickButton-Container:hover {
+.LimerickButton-Container:hover,
+.LimerickButton-Container:focus {
   /* background-color: darken($color: #7e98f9, $amount: 20%); */
   box-shadow: 0px 0px 7px 7px #7e98f9;
 }

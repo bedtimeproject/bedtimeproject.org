@@ -1,0 +1,31 @@
+.QuipsDisplay-Container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  .LeftBox {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+  }
+  .RightBox {
+    flex: 1;
+    padding: 10px;
+  }
+  img {
+    max-width: 260px;
+    height: auto;
+  }
+  @media screen and (min-width: 820px) {
+    flex-direction: row;
+    .LeftBox {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    img {
+      max-width: 500px;
+      height: auto;
+    }
+  }
+}
