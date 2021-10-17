@@ -1,3 +1,5 @@
+@import "../../../Variables.scss";
+
 $size: 250px;
 $pull: 1vmin;
 
@@ -5,7 +7,7 @@ $heightSill: calc($size / 4);
 $heightAc: calc($size / 2.75);
 $heightCurtainRod: calc($size / 40);
 
-$colorFrame: hsl(0, 100%, 100%);
+$colorFrame: $Blackberry;
 $colorAcUnit: hsl(72, 2%, 97%);
 $colorAcUnitInner: hsl(0, 0%, 70%);
 $colorOutside: hsl(213, 74%, 40%);
@@ -54,8 +56,9 @@ $borderRadius: 0.25vmin;
   }
   &.Right {
     .Lighthouse-Container {
-      left: -1000px;
+      left: unset;
       width: 1600px;
+      right: -500px;
     }
   }
 
@@ -174,7 +177,6 @@ $borderRadius: 0.25vmin;
   }
 
   .window.bottom {
-    top: calc($heightAc * -1);
     box-shadow: inset rgba(black, 0.1) 0 0 4vmin,
       rgba(black, 0.1) 0 -2vmin 1.5vmin -1vmin;
   }
