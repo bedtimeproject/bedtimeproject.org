@@ -8,7 +8,7 @@ import "./ForestMountains.scss";
  * @author Paul Grant
  * @author Alexander Burdiss
  * @since 6/5/21
- * @version 1.0.1
+ * @version 1.0.2
  * @param props The JSX props passed to this React component
  * @param {String} [props.timeOfDay] An optional prop that will force the
  * background to render either day or night.
