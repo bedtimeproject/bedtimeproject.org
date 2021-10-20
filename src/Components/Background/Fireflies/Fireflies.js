@@ -8,12 +8,10 @@ import "./Fireflies.scss";
  * @author Alexander Burdiss
  * @see https://codepen.io/Mertl/pen/GexapP
  * @since 6/8/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  * @example
- * ```jsx
  * <Fireflies />
- * ```
  */
 export default function Fireflies() {
   const canvasRef = useRef(null);
@@ -21,8 +19,10 @@ export default function Fireflies() {
   useEffect(() => {
     var canvas = canvasRef.current;
     let c = canvas.getContext("2d"),
-      w = (canvas.width = window.innerWidth - 50),
-      h = (canvas.height = window.innerHeight - 100);
+      w = (canvas.width = window.innerWidth),
+      h = (canvas.height = document.querySelector(
+        ".Fireflies-Container"
+      ).clientHeight);
     c.fillStyle = "rgba(30,30,30,1)";
     c.fillRect(0, 0, w, h);
     //initiation
@@ -101,8 +101,10 @@ export default function Fireflies() {
     }
 
     window.addEventListener("resize", function () {
-      canvas.width = window.innerWidth - 50;
-      canvas.height = window.innerHeight - 100;
+      canvas.width = window.innerWidth;
+      canvas.height = document.querySelector(
+        ".Fireflies-Container"
+      ).clientHeight;
       loop();
     });
 
