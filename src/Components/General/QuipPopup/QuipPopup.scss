@@ -1,0 +1,67 @@
+.QuipPopup-Container {
+  position: relative;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover,
+    &:focus,
+    &.active {
+      transform: rotate(10deg);
+    }
+  }
+
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .QuipPopover {
+    z-index: 20;
+    position: absolute;
+    left: 100%;
+    background-color: white;
+    top: 20%;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+
+    .CloseButton {
+      position: absolute;
+      color: white;
+      background-color: red;
+      padding: 5px 10px;
+      border-radius: 5px;
+      top: 5px;
+      right: 5px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      background-color: white;
+      left: -20px;
+      transform: rotate(45deg);
+      top: 60px;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 820px) {
+      position: fixed;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .Author {
+      font-weight: bold;
+    }
+  }
+}

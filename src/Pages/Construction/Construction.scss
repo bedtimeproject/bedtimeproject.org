@@ -1,4 +1,6 @@
 .Construction-Container {
+  position: relative;
+
   .Text-Container {
     position: absolute;
     z-index: 10;
@@ -16,6 +18,22 @@
     }
     @media screen and (min-width: 800px) {
       left: 50%;
+    }
+  }
+
+  .Quip1 {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+  }
+
+  .Quip2 {
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    z-index: 11;
+    @media screen and (max-width: 820px) {
+      top: 60vh;
     }
   }
 }
