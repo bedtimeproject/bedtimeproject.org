@@ -1,6 +1,14 @@
 .Construction-Container {
   position: relative;
 
+  .QuipPopup-Container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 800px) {
+      flex-direction: row;
+    }
+  }
+
   .Text-Container {
     position: absolute;
     z-index: 10;
@@ -8,32 +16,16 @@
     padding: 20px;
     padding-bottom: 40px;
     border-radius: 10px;
-    top: 20vh;
+    top: 10vh;
     max-width: 300px;
-    left: 10px;
+    left: calc(50% - 150px);
     text-align: center;
     opacity: 0.9;
-    @media screen and (min-width: 400px) {
-      left: 10vw;
-    }
+    max-height: 80vh;
+    overflow: scroll;
     @media screen and (min-width: 800px) {
-      left: 50%;
-    }
-  }
-
-  .Quip1 {
-    position: absolute;
-    top: 0;
-    z-index: 11;
-  }
-
-  .Quip2 {
-    position: absolute;
-    top: 40vh;
-    left: 30vw;
-    z-index: 11;
-    @media screen and (max-width: 820px) {
-      top: 60vh;
+      left: 40%;
+      max-width: 500px;
     }
   }
 }

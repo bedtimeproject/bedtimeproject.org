@@ -37,10 +37,13 @@ export default function Construction() {
       <div className="Text-Container">
         <h1>The Bedtime Project</h1>
         <div>Coming December 1, 2021</div>
+        <p>Click the images below to read some samples.</p>
+        <div className="QuipPopup-Container">
+          <QuipPopup quip={quips[1]} className="Quip1" />
+          <QuipPopup quip={quips[0]} className="Quip2" />
+        </div>
       </div>
       <Lighthouse />
-      <QuipPopup quip={quips[1]} className="Quip1" />
-      <QuipPopup quip={quips[0]} className="Quip2" />
     </div>
   );
 }

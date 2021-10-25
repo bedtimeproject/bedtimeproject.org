@@ -18,14 +18,21 @@
   }
 
   .QuipPopover {
-    z-index: 20;
-    position: absolute;
-    left: 100%;
+    z-index: 25;
     background-color: white;
-    top: 20%;
     padding: 20px;
     border-radius: 10px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    margin-left: -175px;
     width: 350px;
+
+    @media screen and (max-width: 500px) {
+      width: 80%;
+      margin-left: 0;
+      left: 10%;
+    }
 
     .CloseButton {
       position: absolute;
@@ -35,29 +42,6 @@
       border-radius: 5px;
       top: 5px;
       right: 5px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 40px;
-      width: 40px;
-      background-color: white;
-      left: -20px;
-      transform: rotate(45deg);
-      top: 60px;
-      z-index: -1;
-    }
-
-    @media screen and (max-width: 820px) {
-      position: fixed;
-      top: 10%;
-      left: 10%;
-      width: 80%;
-
-      &::before {
-        display: none;
-      }
     }
 
     .Author {
