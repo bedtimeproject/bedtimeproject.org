@@ -1,3 +1,4 @@
+@import "../../../Variables.scss";
 .Door-Button {
   &-Container {
     width: 300px;
@@ -5,26 +6,30 @@
 
     a {
       text-decoration: none;
+      .Door-Button-Door {
+        transition-duration: 0.5s;
+      }
+      &:hover,
+      &:focus {
+        .Door-Button-Door {
+          -webkit-filter: drop-shadow(0 0 5px $DarkSalmon)
+            drop-shadow(0 0 5px $DarkSalmon);
+          filter: drop-shadow(0 0 5px $DarkSalmon)
+            drop-shadow(0 0 5px $DarkSalmon);
+
+          transform: scale(0.98);
+        }
+      }
     }
   }
 
   &-Label {
-    background-color: #f4d5a1;
+    background-color: $Tequila;
     text-align: center;
     margin-top: -6px;
     padding: 8px;
     font-weight: bold;
     font-size: larger;
     border-radius: 8px;
-  }
-
-  &-Door {
-    transition-duration: 0.5s;
-    &:hover {
-      -webkit-filter: drop-shadow(0 0 5px #e98a81) drop-shadow(0 0 5px #e98a81);
-      filter: drop-shadow(0 0 5px #e98a81) drop-shadow(0 0 5px #e98a81);
-
-      transform: scale(0.98);
-    }
   }
 }

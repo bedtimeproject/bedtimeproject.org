@@ -8,15 +8,24 @@
 
   a {
     text-decoration: none;
-  }
-}
 
-.HeaderLogoContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
+    .HeaderLogoContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: text-shadow 0.5s ease;
+      text-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+      .HeaderLogoContainer {
+        text-shadow: 0 0 2px $DarkSalmon;
+      }
+    }
+  }
 }
 
 .HeaderNavigationList {
