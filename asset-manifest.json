@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.24638ea3.chunk.css",
-    "main.js": "/static/js/main.da08909b.chunk.js",
-    "main.js.map": "/static/js/main.da08909b.chunk.js.map",
+    "main.css": "/static/css/main.36e75741.chunk.css",
+    "main.js": "/static/js/main.5d3d6524.chunk.js",
+    "main.js.map": "/static/js/main.5d3d6524.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b3ff901.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b3ff901.js.map",
     "static/js/2.03810208.chunk.js": "/static/js/2.03810208.chunk.js",
     "static/js/2.03810208.chunk.js.map": "/static/js/2.03810208.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.24638ea3.chunk.css.map": "/static/css/main.24638ea3.chunk.css.map",
+    "static/css/main.36e75741.chunk.css.map": "/static/css/main.36e75741.chunk.css.map",
     "static/js/2.03810208.chunk.js.LICENSE.txt": "/static/js/2.03810208.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/BoyFrisbee.209b3597.svg": "/static/media/BoyFrisbee.209b3597.svg",
@@ -42,19 +42,19 @@
     "static/media/SunsetCloud.adc7f2f9.svg": "/static/media/SunsetCloud.adc7f2f9.svg",
     "static/media/SunsetCloud2.638ec3b1.svg": "/static/media/SunsetCloud2.638ec3b1.svg",
     "static/media/WindCloud.cefcf42c.svg": "/static/media/WindCloud.cefcf42c.svg",
-    "static/media/Bookshelf.scss": "/static/media/wood.6b44f250.jpg",
     "static/media/BlackJack.scss": "/static/media/spade.5f655d9b.png",
     "static/media/logo.def79c06.png": "/static/media/logo.def79c06.png",
     "static/media/scroll.76d0a694.svg": "/static/media/scroll.76d0a694.svg",
     "static/media/Home.scss": "/static/media/sunset-beach.8ca7f506.jpg",
     "static/media/PaperStory.scss": "/static/media/tiledPaperWhite.ec7f5a5b.jpg",
     "static/media/About.scss": "/static/media/waves.9364c99a.jpg",
+    "static/media/Bookshelf.scss": "/static/media/wood.6b44f250.jpg",
     "static/media/TheLadyAndTheFrog.scss": "/static/media/yellowFlowers.3f442f01.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2b3ff901.js",
     "static/js/2.03810208.chunk.js",
-    "static/css/main.24638ea3.chunk.css",
-    "static/js/main.da08909b.chunk.js"
+    "static/css/main.36e75741.chunk.css",
+    "static/js/main.5d3d6524.chunk.js"
   ]
 }
