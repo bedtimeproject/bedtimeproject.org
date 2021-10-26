@@ -19,11 +19,6 @@ export default [
     link: "https://unsplash.com/@ikasalovic",
   },
   {
-    name: "Malik Skydsgaard",
-    contribution: "Bookshelf Background Image",
-    link: "https://unsplash.com/@malikskyds",
-  },
-  {
     name: "Michal (@Mertl)",
     contribution: "Fireflies on Homepage",
     link: "https://codepen.io/Mertl",
