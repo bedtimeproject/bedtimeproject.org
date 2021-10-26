@@ -16,7 +16,7 @@ import logo from "../../../assets/images/logo.png";
  */
 export default function Header() {
   return (
-    <div className={"HeaderContainer"}>
+    <header className={"HeaderContainer"}>
       <Link to="/">
         <div className={"HeaderLogoContainer"}>
           <img src={logo} width={50} height={50} alt="The Bedtime Project" />
@@ -39,6 +39,6 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }

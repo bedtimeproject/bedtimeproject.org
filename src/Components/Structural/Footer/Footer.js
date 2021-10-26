@@ -15,11 +15,11 @@ import "./Footer.scss";
  */
 export default function Footer() {
   return (
-    <div className="FooterContainer">
+    <footer className="FooterContainer">
       <div className="CopyrightContainer">
         Copyright © {new Date().getFullYear()} The Bedtime Project, All rights
         reserved
       </div>
-    </div>
+    </footer>
   );
 }

@@ -15,7 +15,7 @@ import MoreContentSoon from "../MoreContentSoon/MoreContentSoon";
 export default function PaperStory({ storyData, backLink, backLinkText }) {
   return storyData ? (
     <div className="PaperStory-Container">
-      <div className="Paper-Container">
+      <article className="Paper-Container">
         <div className="Heading-Information">
           <PageTitle>{storyData.title}</PageTitle>
           <div>By {storyData.field_author}</div>
@@ -30,7 +30,7 @@ export default function PaperStory({ storyData, backLink, backLinkText }) {
         {storyData.field_more_content_coming_soon == "True" && (
           <MoreContentSoon backLink={backLink} backLinkText={backLinkText} />
         )}
-      </div>
+      </article>
     </div>
   ) : null;
 }

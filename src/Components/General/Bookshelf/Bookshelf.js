@@ -21,7 +21,10 @@ export default function Bookshelf({ books, pageTitle }) {
         {pageTitle && (
           <h1 className="Bookshelf-Page-Title">{pageTitle.toUpperCase()}</h1>
         )}
-        {books}
+        <div className="Row">
+          {books}
+          <div className="Shelf"></div>
+        </div>
       </div>
       <div className="RainyWindowRight RainyWindow">
         <RainyWindow right />

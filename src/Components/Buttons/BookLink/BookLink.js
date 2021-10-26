@@ -1,6 +1,9 @@
 import React from "react";
 import "./BookLink.scss";
 import { Link } from "react-router-dom";
+import { randomElement } from "../../../utils/randomElement/randomElement";
+
+const bookColors = ["Green", "Red", "Purple"];
 
 /**
  * @namespace BookLink
@@ -12,7 +15,10 @@ import { Link } from "react-router-dom";
  */
 export default function BookLink({ link, story }) {
   return (
-    <Link className="BookLink-Container" to={link}>
+    <Link
+      className={`BookLink-Container ${randomElement(bookColors)}`}
+      to={link}
+    >
       <div className="TitleContainer">
         <strong>{story.title}</strong>
       </div>
