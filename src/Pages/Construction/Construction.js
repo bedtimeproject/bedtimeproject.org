@@ -3,6 +3,7 @@ import Lighthouse from "../../Components/Background/Lighthouse/Lighthouse";
 import "./Construction.scss";
 
 import QuipPopup from "../../Components/General/QuipPopup/QuipPopup";
+import SEO from "../../Components/Structural/SEO/SEO";
 
 /**
  * @namespace Construction
@@ -35,6 +36,7 @@ export default function Construction() {
   return (
     <div className="Construction-Container">
       <div className="Text-Container">
+        <SEO title="Coming Soon" themeColor="#29284c" />
         <h1>The Bedtime Project</h1>
         <div>Coming December 1, 2021</div>
         <p>Click the images below to read some samples.</p>

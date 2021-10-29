@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 /**
@@ -9,7 +9,14 @@ import { Helmet } from "react-helmet";
  * @version 1.1.0
  * @component
  */
-export default function SEO({ title, description, style }) {
+export default function SEO({ title, description, style, themeColor }) {
+  useEffect(() => {
+    if (themeColor) {
+      document
+        .querySelector("meta[name=theme-color]")
+        .setAttribute("content", themeColor);
+    }
+  }, [themeColor]);
   return (
     <Helmet>
       {description && <meta name="description" content={description} />}

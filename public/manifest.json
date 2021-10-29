@@ -20,7 +20,5 @@
   ],
   "start_url": "/",
   "scope": ".",
-  "display": "standalone",
-  "theme_color": "#625ace",
-  "background_color": "#ffffff"
+  "display": "standalone"
 }
