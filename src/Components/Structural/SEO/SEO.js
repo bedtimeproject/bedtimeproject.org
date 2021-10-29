@@ -6,16 +6,19 @@ import { Helmet } from "react-helmet";
  * @function SEO
  * @author Alexander Burdiss
  * @since 10/14/21
- * @version 1.1.0
+ * @version 1.1.2
  * @component
  */
-export default function SEO({ title, description, style, themeColor }) {
+export default function SEO({
+  title,
+  description,
+  style,
+  themeColor = "#625ace",
+}) {
   useEffect(() => {
-    if (themeColor) {
-      document
-        .querySelector("meta[name=theme-color]")
-        .setAttribute("content", themeColor);
-    }
+    document
+      .querySelector("meta[name=theme-color]")
+      .setAttribute("content", themeColor);
   }, [themeColor]);
   return (
     <Helmet>
