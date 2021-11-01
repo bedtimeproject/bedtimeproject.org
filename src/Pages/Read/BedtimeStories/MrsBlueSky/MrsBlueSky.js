@@ -13,16 +13,17 @@ import HeaderCloud2 from "./images/HeaderCloud2.svg";
 import HighDog from "./images/HighDog.svg";
 import Lightning from "./images/Lightning.svg";
 import Moon from "./images/Moon.svg";
-import Mountain from "../../../../assets/images/Mountain.svg";
+import Mountain from "./images/Mountain.svg";
 import PaperAirplane from "./images/PaperAirplane.svg";
 import SadDogImage from "./images/SadDogImage.svg";
-import Sun from "../../../../assets/images/Sun.svg";
+import Sun from "./images/Sun.svg";
 import SunsetCloud from "./images/SunsetCloud.svg";
 import SunsetCloud2 from "./images/SunsetCloud2.svg";
 import WindCloud from "./images/WindCloud.svg";
 import SEO from "../../../../Components/Structural/SEO/SEO";
 
 /**
+ * @namespace MrsBlueSky
  * @function MrsBlueSky
  * @description A scroll-animated poem. This was originally built using HTML, so
  * it does not currently follow React best practices.
@@ -31,9 +32,7 @@ import SEO from "../../../../Components/Structural/SEO/SEO";
  * @since 5/14/21
  * @component
  * @example
- * ```jsx
  * <MrsBlueSky />
- * ```
  */
 export default function MrsBlueSky() {
   useEffect(() => {

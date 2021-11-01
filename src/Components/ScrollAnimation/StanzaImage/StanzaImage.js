@@ -15,6 +15,18 @@ import { slideupright } from "./animations/slideupright/slideupright";
 import { longslideleft } from "./animations/longslideleft/longslideleft";
 import { longslideright } from "./animations/longslideright/longslideright";
 
+// Newport Nebraska
+import AlaskaFlag from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/AlaskaFlag.svg";
+import CaliforniaFlag from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/CaliforniaFlag.svg";
+import CitySkyline from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/CitySkyline.svg";
+import Corn from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Corn.svg";
+import Grass from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Grass.svg";
+import Surfboard from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Surfboard.svg";
+import Swimsuit from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Swimsuit.svg";
+import Umbrella from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Umbrella.svg";
+import WaveOutline from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/WaveOutline.svg";
+
+// Guide to Sunset
 import BlueFlowers from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/BlueFlowers.svg";
 import CaveEntrance from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/CaveEntrance.svg";
 import CherryPie from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/CherryPie.svg";
@@ -23,8 +35,6 @@ import Kite from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Blu
 import Ramen from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Ramen.svg";
 import Town from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Town.svg";
 import Treasure from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Treasure.svg";
-// import Mountain from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Mountain.svg";
-// import Sun from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Sun.svg";
 import ActionBox from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/ActionBox.svg";
 import Bed from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Bed.svg";
 import Constellation2 from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Constellation2.svg";
@@ -38,6 +48,10 @@ import Penny from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Pe
 import PinkPoodle from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/PinkPoodle.svg";
 import Shrub1 from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Shrub1.svg";
 import Shrub2 from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/Shrub2.svg";
+
+// Mrs. Blue Sky
+import Mountain from "../../../Pages/Read/BedtimeStories/MrsBlueSky/images/Mountain.svg";
+import Sun from "../../../Pages/Read/BedtimeStories/MrsBlueSky/images/Sun.svg";
 
 /**
  * @function stanzaImage
@@ -251,15 +265,16 @@ export default function StanzaImage({
           <img
             src={
               {
-                // "Alaska Flag": AlaskaFlag,
-                // "California Flag": CaliforniaFlag,
-                // "City Skyline": CitySkyline,
-                // Corn: Corn,
-                // Grass: Grass,
-                // Surfboard: Surfboard,
-                // Swimsuit: Swimsuit,
-                // Umbrella: Umbrella,
-                // "Wave Outline": WaveOutline,
+                // Newport Nebraska
+                "Alaska Flag": AlaskaFlag,
+                "California Flag": CaliforniaFlag,
+                "City Skyline": CitySkyline,
+                Corn: Corn,
+                Grass: Grass,
+                Surfboard: Surfboard,
+                Swimsuit: Swimsuit,
+                Umbrella: Umbrella,
+                "Wave Outline": WaveOutline,
                 // Guide to Sunset
                 "Blue Flowers": BlueFlowers,
                 "Cave Entrance": CaveEntrance,
@@ -269,8 +284,6 @@ export default function StanzaImage({
                 Ramen: Ramen,
                 Town: Town,
                 Treasure: Treasure,
-                // Mountain: Mountain,
-                // Sun: Sun,
                 "Action Box": ActionBox,
                 Bed: Bed,
                 "Constellation 2": Constellation2,
@@ -284,6 +297,9 @@ export default function StanzaImage({
                 "Pink Poodle": PinkPoodle,
                 "Shrub 1": Shrub1,
                 "Shrub 2": Shrub2,
+                // Mrs. Blue Sky
+                Mountain: Mountain,
+                Sun: Sun,
               }[children]
             }
             alt={""}
