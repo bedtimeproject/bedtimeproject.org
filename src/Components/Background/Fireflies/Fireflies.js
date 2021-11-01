@@ -100,16 +100,22 @@ export default function Fireflies() {
       draw();
     }
 
-    window.addEventListener("resize", function () {
+    loop();
+    setInterval(loop, 1000 / 60);
+
+    function updateCanvasHeight() {
       canvas.width = window.innerWidth;
       canvas.height = document.querySelector(
         ".Fireflies-Container"
       ).clientHeight;
       loop();
-    });
+    }
 
-    loop();
-    setInterval(loop, 1000 / 60);
+    window.addEventListener("resize", updateCanvasHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateCanvasHeight);
+    };
   }, []);
 
   return (
