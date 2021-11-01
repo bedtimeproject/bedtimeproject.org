@@ -15,7 +15,7 @@ export default {
       stanza: "Test First Stanza\nasdf\nasdf\nasdf",
       images: [
         {
-          component: "Wave Outline",
+          component: "Cave Entrance",
           url: "",
           positionX: "center",
           positionY: "center",

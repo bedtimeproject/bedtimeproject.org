@@ -32,7 +32,7 @@ export default function Construction() {
   useEffect(() => {
     fetchQuips();
   }, []);
-  console.log(quips);
+
   return (
     <div className="Construction-Container">
       <div className="Text-Container">

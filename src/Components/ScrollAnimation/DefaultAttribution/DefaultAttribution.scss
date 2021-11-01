@@ -1,0 +1,18 @@
+.ScrollAnimation-Attribution {
+  &-Container {
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+    position: fixed;
+    margin-left: 10%;
+  }
+
+  &-Border {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    white-space: pre-line;
+  }
+}

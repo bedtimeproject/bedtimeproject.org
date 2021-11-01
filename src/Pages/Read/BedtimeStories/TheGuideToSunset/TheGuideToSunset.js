@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollAnimation from "scroll-animation";
+import ScrollAnimation from "../../../../Components/ScrollAnimation/ScrollAnimation";
 
 import SEO from "../../../../Components/Structural/SEO/SEO";
 import { useScrollAnimation } from "../../../../utils/useScrollAnimation/useScrollAnimation";
@@ -13,7 +13,7 @@ import "./TheGuideToSunset.scss";
  * animation of this project built using React.
  * @author Alexander Burdiss
  * @since 6/4/21
- * @version 1.3.0
+ * @version 1.4.0
  * @component
  * @example
  * <TheGuideToSunset />
