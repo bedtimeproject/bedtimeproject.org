@@ -85,6 +85,8 @@ export default function StanzaImage({
   scale,
   animationOverlap,
 }) {
+  const scaleValue = scale != undefined ? scale : 1;
+  const rotationValue = scale != undefined ? rotation : 0;
   const oneIndexPercent = 100 / (stanzaCount + 2);
 
   return (
@@ -96,11 +98,11 @@ export default function StanzaImage({
           animation-timing-function: linear;
         }
 
-        #stanza${index}Image${imageIndex} img {
-          height: ${250 * scale}px;
-          transform: translateX(-${(250 * scale) / 2}px) translateY(-${
-        (250 * scale) / 2
-      }px) rotate(${rotation}deg);
+        #stanza${index}Image${imageIndex} .Image {
+          height: ${250 * scaleValue}px;
+          transform: translateX(-${(250 * scaleValue) / 2}px) translateY(-${
+        (250 * scaleValue) / 2
+      }px) rotate(${rotationValue}deg);
         }
 
         ${
