@@ -9,7 +9,7 @@ import logo from "../../../assets/images/logo.png";
  * @description The header for the site.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  * @example
  * <Header />
@@ -19,7 +19,7 @@ export default function Header() {
     <header className={"HeaderContainer"}>
       <Link to="/">
         <div className={"HeaderLogoContainer"}>
-          <img src={logo} width={50} height={50} alt="The Bedtime Project" />
+          <img src={logo} width={50} height={50} alt="An Open Book" />
           <div className={"HeaderTitle"}>The Bedtime Project</div>
         </div>
       </Link>
