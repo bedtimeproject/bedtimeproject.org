@@ -13,18 +13,6 @@
   transition: 0.3s;
   font-size: 0.9rem;
 
-  &.Green {
-    background-color: green;
-  }
-
-  &.Red {
-    background-color: maroon;
-  }
-
-  &.Purple {
-    background-color: purple;
-  }
-
   &:hover,
   &:focus {
     scale: 103%;

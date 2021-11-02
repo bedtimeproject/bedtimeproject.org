@@ -23,7 +23,7 @@ export default function TheGuideToSunset() {
 
   return (
     <div className="TheGuideToSunset-Container">
-      <SEO title={story.title} />
+      <SEO title={story.title} themeColor="#0096ff" />
       <ScrollAnimation story={story} />
     </div>
   );

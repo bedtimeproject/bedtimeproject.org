@@ -2,27 +2,31 @@ import React from "react";
 import "./BookLink.scss";
 import { Link } from "react-router-dom";
 import { randomElement } from "../../../utils/randomElement/randomElement";
+import { getContrast } from "../../../utils/getContrast/getContrast";
 
-const bookColors = ["Green", "Red", "Purple"];
+const bookColors = ["green", "maroon", "purple"];
 
 /**
  * @namespace BookLink
  * @function BookLink
  * @author Alexander Burdiss
  * @since 10/16/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  */
-export default function BookLink({ link, story }) {
+export default function BookLink({ link, story, backgroundColor }) {
+  const bgColor = backgroundColor ? backgroundColor : randomElement(bookColors);
+
   return (
     <Link
-      className={`BookLink-Container ${randomElement(bookColors)}`}
+      className={`BookLink-Container`}
+      style={{ backgroundColor: bgColor }}
       to={link}
     >
       <div className="TitleContainer">
-        <strong>{story.title}</strong>
+        <strong style={{ color: getContrast(bgColor) }}>{story.title}</strong>
       </div>
-      <div>{story.field_author}</div>
+      <div style={{ color: getContrast(bgColor) }}>{story.field_author}</div>
     </Link>
   );
 }

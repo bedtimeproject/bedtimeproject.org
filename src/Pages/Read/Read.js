@@ -13,7 +13,7 @@ import { formatUrlString } from "../../utils/formatUrlString/formatUrlString";
  * go to read.
  * @author Alexander Burdiss
  * @since 7/20/21
- * @version 2.0.0
+ * @version 2.0.1
  * @component
  * @example
  * <Read />
@@ -24,6 +24,13 @@ export default function Read() {
       title: "Mrs. Blue Sky",
       link: "/read/bedtime-stories/mrs-blue-sky",
       field_author: "C. A. Moonbloom",
+      backgroundColor: "#133061",
+    },
+    {
+      title: "The Lady and the Frog",
+      link: "read/bedtime-stories/the-lady-and-the-frog",
+      field_author: "Daniel Stigmon",
+      backgroundColor: "#dab656",
     },
   ];
   const [shelf2Books, setShelf2Books] = useState([]);
@@ -59,7 +66,12 @@ export default function Read() {
         drawerHref="/read/quips"
         drawerLabel="Quips"
         books1={shelf1Books.map((book, index) => (
-          <BookLink key={index} link={book.link} story={book} />
+          <BookLink
+            key={index}
+            link={book.link}
+            story={book}
+            backgroundColor={book.backgroundColor}
+          />
         ))}
         shelf1Link="/read/bedtime-stories"
         shelf1Label="Bedtime Stories"
