@@ -19,6 +19,11 @@ export default [
     link: "https://unsplash.com/@ikasalovic",
   },
   {
+    name: "keith.geek (@keithwyland)",
+    contribution: "Bookshelf Drawers",
+    link: "https://codepen.io/keithwyland",
+  },
+  {
     name: "Michal (@Mertl)",
     contribution: "Fireflies on Homepage",
     link: "https://codepen.io/Mertl",

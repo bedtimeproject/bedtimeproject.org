@@ -41,7 +41,7 @@ export default function Tales() {
             <SEO title="Tales" />
             <Bookshelf
               pageTitle="Tales"
-              books={tales.map((story, index) => {
+              books1={tales.map((story, index) => {
                 const link = formatUrlString(story.title);
                 return (
                   <BookLink

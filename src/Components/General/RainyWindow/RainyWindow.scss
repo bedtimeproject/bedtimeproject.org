@@ -31,7 +31,6 @@ $borderRadius: 2px;
     margin-top: calc($heightSill * -1);
     width: $size;
     height: calc($size * 1.5);
-    border-radius: $borderRadius $borderRadius 0 0;
     background-color: $colorFrame;
     margin: auto;
   }

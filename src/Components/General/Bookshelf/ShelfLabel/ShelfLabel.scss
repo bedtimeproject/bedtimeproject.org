@@ -1,0 +1,19 @@
+@import "../../../../Variables.scss";
+
+.ShelfLabel-Container {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  a {
+    position: absolute;
+    background-color: $Tequila;
+    padding: 10px;
+    margin: 0;
+    border-radius: 4px;
+    border: 1px solid $Blackberry;
+    color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+  }
+}
