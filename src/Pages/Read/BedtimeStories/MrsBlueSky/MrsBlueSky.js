@@ -54,7 +54,7 @@ export default function MrsBlueSky() {
 
   return (
     <div className="MrsBlueSkyContainer">
-      <SEO title="Mrs. Blue Sky" />
+      <SEO title="Mrs. Blue Sky" themeColor="#133061" />
       {/* Styles for the global object, just on this page */}
       <style>{`
         :root * {
