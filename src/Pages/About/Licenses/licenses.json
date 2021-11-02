@@ -83,10 +83,6 @@
         "licenseUrl": "https://github.com/sass/dart-sass/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "scroll-animation@1.0.0": {
-        "licenses": "MIT",
-        "parents": "the-bedtime-project"
-    },
     "web-vitals@1.1.2": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/GoogleChrome/web-vitals",

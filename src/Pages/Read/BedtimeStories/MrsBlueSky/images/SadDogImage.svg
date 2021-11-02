@@ -1,4 +1,8 @@
-<svg class="Sad-Dog-Image" xmlns="http://www.w3.org/2000/svg">
+<svg
+  class="Sad-Dog-Image"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="A cartoon line drawing of a dog head. The dog is smiling but looks altogether sad."
+>
   <g transform="translate(0 -350.36)">
     <g transform="matrix(3.0667 0 0 3.6632 -81.933 -2703.9)">
       <path

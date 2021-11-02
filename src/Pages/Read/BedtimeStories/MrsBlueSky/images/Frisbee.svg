@@ -1,4 +1,8 @@
-<svg class="Frisbee" xmlns="http://www.w3.org/2000/svg">
+<svg
+  class="Frisbee"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="An orange frisbee"
+>
   <path
     style="fill: #ffac52"
     d="M255.994,0.004C114.614,0.004,0,114.618,0,256.004c0,141.38,114.614,255.992,255.994,255.992 C397.38,511.996,512,397.382,512,256.004C512,114.618,397.38,0.004,255.994,0.004z"

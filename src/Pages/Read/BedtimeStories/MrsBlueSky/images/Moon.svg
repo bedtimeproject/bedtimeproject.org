@@ -1,4 +1,8 @@
-<svg class="Moon" xmlns="http://www.w3.org/2000/svg">
+<svg
+  class="Moon"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="A cartoon full moon"
+>
   <defs id="defs3">
     <linearGradient id="linearGradient1818">
       <stop id="stop1819" style="stop-color: #ffffff" offset="0" />

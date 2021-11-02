@@ -18,7 +18,7 @@ import PaperAirplane from "./images/PaperAirplane.svg";
 import SadDogImage from "./images/SadDogImage.svg";
 import Sun from "./images/Sun.svg";
 import SunsetCloud from "./images/SunsetCloud.svg";
-import SunsetCloud2 from "./images/SunsetCloud2.svg";
+import SunsetCloud2 from "./images/SunsetCloud.svg";
 import WindCloud from "./images/WindCloud.svg";
 import SEO from "../../../../Components/Structural/SEO/SEO";
 

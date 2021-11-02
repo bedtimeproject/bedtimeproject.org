@@ -2,6 +2,7 @@
   class="Sun"
   xmlns="http://www.w3.org/2000/svg"
   enable-background="new 0 0 300 300"
+  aria-label="A simple drawing of a bright yellow sun."
 >
   <g id="Layer_1">
     <circle

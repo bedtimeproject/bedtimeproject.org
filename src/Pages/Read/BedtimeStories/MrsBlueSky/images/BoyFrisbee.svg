@@ -1,4 +1,9 @@
-<svg class="Boy-Frisbee" xmlns="http://www.w3.org/2000/svg" version="1.0">
+<svg
+  class="Boy-Frisbee"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.0"
+  aria-label="A silhouette of a boy throwing a frisbee"
+>
   <g id="layer1" transform="translate(-38.842 -157.25)">
     <path
       id="path2243"

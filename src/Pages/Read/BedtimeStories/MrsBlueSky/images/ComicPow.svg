@@ -1,4 +1,8 @@
-<svg class="Comic-Pow" xmlns="http://www.w3.org/2000/svg">
+<svg
+  class="Comic-Pow"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="A comic-book themed box that says 'pow'"
+>
   <g transform="translate(37.386 -314.98)">
     <g>
       <path
