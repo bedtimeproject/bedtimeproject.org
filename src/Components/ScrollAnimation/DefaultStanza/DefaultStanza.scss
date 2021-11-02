@@ -5,8 +5,12 @@
   text-align: center;
   margin: 20px;
   position: fixed;
-  left: 10%;
+  left: 25%;
   z-index: 2;
   opacity: 0.95;
   white-space: pre-line;
+
+  @media screen and (max-width: 500px) {
+    left: 10%;
+  }
 }

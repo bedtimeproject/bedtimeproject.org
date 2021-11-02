@@ -19,14 +19,12 @@ import "./DefaultStanza.scss";
  * screen for the duration this stanza is visible.
  * @author Alexander Burdiss
  * @since 6/4/21
- * @version 1.2.0
+ * @version 1.2.1
  * @component
  * @example
- * ```jsx
  * <Stanza>
  *   <p>Some text</p>
  * </Stanza>
- * ```
  */
 export default function DefaultStanza({ children, background, index }) {
   return (
