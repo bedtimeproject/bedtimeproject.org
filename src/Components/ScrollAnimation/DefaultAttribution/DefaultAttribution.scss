@@ -6,7 +6,11 @@
     text-align: center;
     margin: 20px;
     position: fixed;
-    margin-left: 10%;
+    margin-left: 25%;
+
+    @media screen and (max-width: 500px) {
+      margin-left: 10%;
+    }
   }
 
   &-Border {
