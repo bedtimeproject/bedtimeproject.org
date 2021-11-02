@@ -13,18 +13,16 @@ import "./DoorButton.scss";
  * @see Home
  * @author Alexander Burdiss
  * @since 6/8/21
- * @version 1.0.0
+ * @version 1.1.0
  * @component
  * @example
- * ```jsx
  * <DoorButton image={Stories} link="/stories" label="Stories" />
- * ```
  */
-export default function DoorButton({ image, link, label }) {
+export default function DoorButton({ image, link, label, alt }) {
   return (
     <div className="Door-Button-Container">
       <Link to={link}>
-        <img className="Door-Button-Door" src={image} alt={label} />
+        <img className="Door-Button-Door" src={image} alt={alt} />
         <div className="Door-Button-Label">{label}</div>
       </Link>
     </div>

@@ -16,7 +16,7 @@ import StandardWrapper from "../../Components/Structural/StandardWrapper/Standar
  * @description The contents to render on the front page of the website.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 2.1.1
+ * @version 2.2.0
  * @component
  * @example
  * <Home />
@@ -30,9 +30,24 @@ export default function Home() {
         </Helmet>
         <Fireflies />
         <div className="Home-Door-Container">
-          <DoorButton label="Read" image={StoriesImage} link="/read" />
-          <DoorButton label="Play" image={PlaygroundImage} link="/play" />
-          <DoorButton label="About Us" image={AboutUsImage} link="/about" />
+          <DoorButton
+            label="Read"
+            image={StoriesImage}
+            link="/read"
+            alt="An earthy door framed by vines"
+          />
+          <DoorButton
+            label="Play"
+            image={PlaygroundImage}
+            link="/play"
+            alt="A door made of many small stained-glass panels"
+          />
+          <DoorButton
+            label="About Us"
+            image={AboutUsImage}
+            link="/about"
+            alt="A crooked wooden door"
+          />
         </div>
         <DailyLimerickButton />
       </div>
