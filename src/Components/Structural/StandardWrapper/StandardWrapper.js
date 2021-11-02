@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import HeaderDecoration from "../HeaderDecoration/HeaderDecoration";
 import MainContent from "../MainContent/MainContent";
 import SkipLink from "../SkipLink/SkipLink";
 import "./StandardWrapper.scss";
@@ -14,11 +15,16 @@ import "./StandardWrapper.scss";
  * @version 1.0.0
  * @component
  */
-export default function StandardWrapper({ children, breadcrumb = true }) {
+export default function StandardWrapper({
+  children,
+  breadcrumb = true,
+  headerDecoration = true,
+}) {
   return (
     <div className="Standard-Wrapper">
       <SkipLink />
       <Header />
+      {headerDecoration && <HeaderDecoration />}
       <MainContent>
         {breadcrumb && <Breadcrumb />}
         {children}

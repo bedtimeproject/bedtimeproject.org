@@ -261,12 +261,12 @@ export default function Sudoku() {
         }
         addNumber(event);
         event.target.classList.add("focused");
-          document.querySelector('div').style.pointerEvents = "none"
+        document.querySelector("div").style.pointerEvents = "none";
       }
-    } 
-    setTimeout(function() { 
-      document.querySelector('div').style.pointerEvents = "auto"
-    }, 1000);    
+    }
+    setTimeout(function () {
+      document.querySelector("div").style.pointerEvents = "auto";
+    }, 1000);
   }
 
   /**
@@ -351,10 +351,9 @@ export default function Sudoku() {
             boardNumber.classList.add(rowErrorClass);
           }
         }
-        console.log(boardNumber)
+        console.log(boardNumber);
         if (boardNumber.innerText) {
           usedLetters.push(boardNumber);
-          
         }
       }
     }
@@ -481,7 +480,7 @@ export default function Sudoku() {
   }
 
   return (
-    <StandardWrapper>
+    <StandardWrapper headerDecoration={false}>
       <div className="Sudoku-Container">
         <Waves />
         <SEO title="Sudoku" />

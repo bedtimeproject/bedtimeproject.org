@@ -20,7 +20,7 @@ import StandardWrapper from "../../Components/Structural/StandardWrapper/Standar
  */
 export default function Play() {
   return (
-    <StandardWrapper>
+    <StandardWrapper headerDecoration={false}>
       <SEO title="Play" />
 
       <Waves />

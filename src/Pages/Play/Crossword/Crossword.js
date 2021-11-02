@@ -23,9 +23,9 @@ export default function Crossword() {
   // eslint-disable-next-line no-unused-vars
   const [currentCrossword, setCurrentCrossword] = useState(GrowingGreen);
   return (
-    <StandardWrapper>
+    <StandardWrapper headerDecoration={false}>
+      <Waves />
       <div className="Crossword-Container">
-        <Waves />
         <SEO title={`Crossword - ${currentCrossword.name}`} />
         <PageTitle>Crossword - {currentCrossword.name}</PageTitle>
         <div className="Game-Container">
