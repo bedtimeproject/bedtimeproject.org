@@ -15,7 +15,7 @@ import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
  * @description A collection of longer poems on the site
  * @author Alexander Burdiss
  * @since 6/15/21
- * @version 3.0.0
+ * @version 3.0.1
  * @component
  * @example
  * <Tales />
@@ -42,6 +42,37 @@ export default function Tales() {
             <Bookshelf
               pageTitle="Tales"
               books1={tales.map((story, index) => {
+                if (index > 2) {
+                  return null;
+                }
+
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/tales/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+              books2={tales.map((story, index) => {
+                if (index <= 2 || index > 5) {
+                  return null;
+                }
+
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/tales/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+              books3={tales.map((story, index) => {
+                if (index <= 5 || index > 8) {
+                  return null;
+                }
                 const link = formatUrlString(story.title);
                 return (
                   <BookLink

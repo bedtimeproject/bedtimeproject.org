@@ -45,11 +45,42 @@ export default function Stories() {
             <Bookshelf
               pageTitle="Stories"
               books1={stories.map((story, index) => {
+                if (index > 2) {
+                  return null;
+                }
+
                 const link = formatUrlString(story.title);
                 return (
                   <BookLink
                     key={index}
                     link={`/read/stories/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+              books2={stories.map((story, index) => {
+                if (index <= 2 || index > 5) {
+                  return null;
+                }
+
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/tales/${link}`}
+                    story={story}
+                  />
+                );
+              })}
+              books3={stories.map((story, index) => {
+                if (index <= 5 || index > 8) {
+                  return null;
+                }
+                const link = formatUrlString(story.title);
+                return (
+                  <BookLink
+                    key={index}
+                    link={`/read/tales/${link}`}
                     story={story}
                   />
                 );
