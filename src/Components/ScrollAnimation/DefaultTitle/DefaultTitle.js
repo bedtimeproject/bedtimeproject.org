@@ -9,7 +9,7 @@ import { getContrast } from "../../../utils/getContrast/getContrast";
  * a stanza
  * @author Alexander Burdiss
  * @since 6/4/21
- * @version 1.2.0
+ * @version 1.3.0
  * @param props The JSX props passed to this React component
  * @param {String} props.children The title of the scroll animation to render
  * @param {String} props.background The color of the background for this title
@@ -19,7 +19,7 @@ import { getContrast } from "../../../utils/getContrast/getContrast";
  */
 export default function DefaultTitle({ children, background, author }) {
   return (
-    <div
+    <header
       className="ScrollAnimation-Title-Container"
       style={{
         backgroundColor: background,
@@ -35,6 +35,6 @@ export default function DefaultTitle({ children, background, author }) {
         <h1>{children}</h1>
         <h2>{author}</h2>
       </div>
-    </div>
+    </header>
   );
 }

@@ -8,7 +8,7 @@ import StanzaImage from "../StanzaImage/StanzaImage";
  * together for easier implementation of an animated story.
  * @author Alexander Burdiss
  * @since 7/8/21
- * @version 2.1.0
+ * @version 2.2.0
  * @param props The JSX props passed to this React component
  * @param {Object[]} props.story The story object with all of the config baked
  * in.
@@ -41,7 +41,7 @@ export default function Body({ story }) {
   }
 
   return (
-    <div>
+    <main>
       <style>{`
         body {
           animation-name: scrollBody;
@@ -128,6 +128,6 @@ export default function Body({ story }) {
           </div>
         );
       })}
-    </div>
+    </main>
   );
 }
