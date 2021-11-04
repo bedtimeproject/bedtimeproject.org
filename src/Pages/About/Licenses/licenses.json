@@ -11,6 +11,12 @@
         "licenseUrl": "https://github.com/ded/bonzo/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
+    "caniuse-lite@1.0.30001276": {
+        "licenses": "CC-BY-4.0",
+        "repository": "https://github.com/browserslist/caniuse-lite",
+        "licenseUrl": "https://github.com/browserslist/caniuse-lite/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
     "chess.js@0.12.0": {
         "licenses": "BSD-2-Clause",
         "repository": "https://github.com/jhlywa/chess.js",
