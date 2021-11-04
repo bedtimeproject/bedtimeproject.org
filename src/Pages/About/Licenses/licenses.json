@@ -29,6 +29,12 @@
         "licenseUrl": "https://github.com/tschaub/gh-pages/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
+    "normalize.css@8.0.1": {
+        "licenses": "MIT",
+        "repository": "https://github.com/necolas/normalize.css",
+        "licenseUrl": "https://github.com/necolas/normalize.css/raw/master/LICENSE.md",
+        "parents": "the-bedtime-project"
+    },
     "qwery@4.0.0": {
         "licenses": "UNKNOWN",
         "repository": "https://github.com/ded/qwery",
