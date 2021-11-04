@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import React from "react";
 
-import DailyLimerickButton from "../../Components/Buttons/DailyPoemButton/DailyPoemButton";
 import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
 import Fireflies from "../../Components/Background/Fireflies/Fireflies";
 
@@ -49,7 +48,6 @@ export default function Home() {
             alt="A crooked wooden door"
           />
         </div>
-        <DailyLimerickButton />
       </div>
     </StandardWrapper>
   );

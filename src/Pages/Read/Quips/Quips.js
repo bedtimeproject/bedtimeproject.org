@@ -23,7 +23,6 @@ import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString"
  */
 export default function Quips() {
   const [quips, setQuips] = useState([]);
-  const [latestQuip, setLatestQuip] = useState({});
 
   useEffect(
     /**
@@ -32,7 +31,6 @@ export default function Quips() {
      */
     function getQuips() {
       fetchQuips();
-      getLatestQuip();
     },
     []
   );
@@ -52,13 +50,6 @@ export default function Quips() {
       .then((data) => setQuips(data));
   }
 
-  function getLatestQuip() {
-    fetch("https://drupal.bedtimeproject.dev/rest/views/quips/latest")
-      .then((resp) => resp.json())
-      .then((data) => setLatestQuip(data[0]))
-      .catch(() => {});
-  }
-
   return (
     <StandardWrapper>
       <Switch>
@@ -75,11 +66,6 @@ export default function Quips() {
               );
             })}
           </div>
-        </Route>
-
-        <Route exact path="/read/quips/latest">
-          <SEO title="Latest Quip" />
-          <QuipsDisplay quip={latestQuip} />
         </Route>
 
         {quips.map((quip, index) => {
