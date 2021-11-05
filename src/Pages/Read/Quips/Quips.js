@@ -1,14 +1,11 @@
-import { Route, Switch } from "react-router";
 import React, { useEffect, useState } from "react";
 
-import QuipButton from "../../../Components/Buttons/QuipButton/QuipButton";
 import QuipsDisplay from "./QuipsDisplay/QuipsDisplay";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
 import "./Quips.scss";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import SEO from "../../../Components/Structural/SEO/SEO";
-import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
 
 /**
  * @function Quips
@@ -16,13 +13,14 @@ import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString"
  * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 2.0.1
+ * @version 3.0.0
  * @component
  * @example
  * <Quips />
  */
 export default function Quips() {
   const [quips, setQuips] = useState([]);
+  const [openQuip, setOpenQuip] = useState(undefined);
 
   useEffect(
     /**
@@ -52,31 +50,28 @@ export default function Quips() {
 
   return (
     <StandardWrapper>
-      <Switch>
-        <Route exact path="/read/quips">
-          <SEO title="Quips" />
-          <PageTitle>Quips</PageTitle>
-          <div className="Limerick-Display-Container">
+      <SEO title="Quips" />
+      <div className="QuipsContainer">
+        <div className="Limerick-Display-Container">
+          <div className="Drawer">
             {quips.map((quip, index) => {
-              const link = formatUrlString(quip.title);
               return (
-                <QuipButton key={index} link={`/read/quips/${link}`}>
-                  {quip.title}
-                </QuipButton>
+                <QuipsDisplay
+                  quip={quip}
+                  key={index}
+                  index={index}
+                  openQuip={openQuip}
+                  setOpenQuip={setOpenQuip}
+                />
               );
             })}
+            <div className="drawer">
+              <PageTitle>Quips</PageTitle>
+              <div className="handle"></div>
+            </div>
           </div>
-        </Route>
-
-        {quips.map((quip, index) => {
-          const link = formatUrlString(quip.title);
-          return (
-            <Route key={index} exact path={`/read/quips/${link}`}>
-              <QuipsDisplay quip={quip} />
-            </Route>
-          );
-        })}
-      </Switch>
+        </div>
+      </div>
     </StandardWrapper>
   );
 }

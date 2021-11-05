@@ -12,7 +12,7 @@ import "./ChristmasLights.scss";
 export default function ChristmasLights() {
   return (
     <div className="ChristmasLights-Container">
-      <ul class="lightrope">
+      <ul className="lightrope">
         <li></li>
         <li></li>
         <li></li>

@@ -1,31 +1,63 @@
 .QuipsDisplay-Container {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+  width: 600px;
+  position: absolute;
+
+  .QuipsInternalWrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 330px;
+    background: url('../../../../assets/images/tiledBackgrounds/tiledPaperWhite.jpg');
+    box-shadow: 0 0 5px black;
+  }
+
+  .QuipTitleButton {
+    position: absolute;
+    top: -35px;
+    height: 35px;
+    background-color: tan;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
   .LeftBox {
     flex: 1;
     text-align: left;
     padding: 10px;
+
+    .Author {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
   }
   .RightBox {
     flex: 1;
     padding: 10px;
   }
   img {
-    max-width: 260px;
+    width: 280px;
     height: auto;
   }
   @media screen and (min-width: 820px) {
-    flex-direction: row;
     .LeftBox {
       text-align: right;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    img {
-      max-width: 500px;
-      height: auto;
+  }
+
+  @media screen and (min-width: 600px) {
+    .QuipsInternalWrapper {
+      flex-direction: row;
     }
   }
 }
