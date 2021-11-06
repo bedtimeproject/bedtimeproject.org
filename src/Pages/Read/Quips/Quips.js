@@ -24,16 +24,28 @@ export default function Quips() {
   const [openQuip, setOpenQuip] = useState(undefined);
   const [error, setError] = useState(false);
 
-  useEffect(
-    /**
-     * @function Quips~useEffect~getQuips
-     * @description A synchronous wrapper for fetchQuips and getLatestQuip()
-     */
-    function getQuips() {
-      fetchQuips();
-    },
-    []
-  );
+  /**
+   * @function Quips~closeModalWhenTabNotClicked
+   * @description Closes the open Quip if the user clicks anywhere outside the
+   * quip.
+   * @param {Event} event
+   * @author Alexander Burdiss
+   * @since 11/6/21
+   * @version 1.0.0
+   */
+  function closeModalWhenTabNotClicked(event) {
+    const modalButtons = Array.from(
+      document.querySelectorAll(".QuipTitleButton")
+    );
+    const modalTitles = Array.from(
+      document.querySelectorAll(".QuipTitleButton h2")
+    );
+    const buttonClicked = modalButtons.includes(event.target);
+    const titleClicked = modalTitles.includes(event.target);
+    if (!buttonClicked && !titleClicked) {
+      setOpenQuip(undefined);
+    }
+  }
 
   /**
    * @async
@@ -53,6 +65,22 @@ export default function Quips() {
       })
       .catch(() => setError(true));
   }
+
+  useEffect(
+    /**
+     * @function Quips~useEffect~setupComponent
+     * @description Calls all logic required on component setup.
+     * @version 1.0.1
+     */
+    function setupComponent() {
+      fetchQuips();
+      window.addEventListener("click", closeModalWhenTabNotClicked);
+      return () => {
+        window.removeEventListener("click", closeModalWhenTabNotClicked);
+      };
+    },
+    []
+  );
 
   return (
     <StandardWrapper>
