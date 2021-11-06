@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeaderDecoration.scss";
 
-import ChristmasLights from "../../General/ChristmasLights/ChristmasLights";
+import ChristmasLights from "./ChristmasLights/ChristmasLights";
 
 /**
  * @namespace HeaderDecoration
