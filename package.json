@@ -43,13 +43,16 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "deploy:all": "npm run build && npm run deploy && npm run chromatic",
-    "test:all": "react-scripts test",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=6c0dc9e53bb7",
     "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/About/Licenses/licenses.json",
     "gen": "./scripts/generateComponent.sh"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   },
   "eslintConfig": {
     "extends": [
