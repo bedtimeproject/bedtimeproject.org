@@ -9,7 +9,7 @@ import "./QuipsDisplay.scss";
  * @param {String} props.quip The quip to display in this view.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 3.0.0
+ * @version 3.0.1
  * @component
  * @example
  * <QuipsDisplay quip={quip} />
@@ -20,7 +20,7 @@ export default function QuipsDisplay({ quip, index, openQuip, setOpenQuip }) {
     <>
       <style>{`
         .QuipsDisplay-Container.Quip${index} {
-          z-index: ${index};
+          z-index: ${index + 1};
           animation: sendBackToSpot${index} 1s ease;
         }
 
@@ -33,12 +33,12 @@ export default function QuipsDisplay({ quip, index, openQuip, setOpenQuip }) {
         @keyframes bringToFront${index} {
           0% {
             transform: translateY(0%) scale(1);
-            z-index: ${index};
+            z-index: ${index + 1};
           }
       
           50% {
             transform: translateY(-110%) rotate(5deg) rotateX(20deg);
-            z-index: ${index};
+            z-index: ${index + 1};
           }
           51% {
             z-index: 1000;
@@ -62,12 +62,12 @@ export default function QuipsDisplay({ quip, index, openQuip, setOpenQuip }) {
 
           50% {
             transform: translateY(-110%) rotate(5deg) rotateX(20deg);
-            z-index: ${index};
+            z-index: ${index + 1};
           }
       
           100% {
             transform: translatey(0%) scale(1);
-            z-index: ${index};
+            z-index: ${index + 1};
           }
         }
       `}</style>

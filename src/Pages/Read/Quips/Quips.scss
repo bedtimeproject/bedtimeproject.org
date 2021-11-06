@@ -20,6 +20,8 @@
       min-height: 900px;
       background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
       top: 0;
+
+      border-radius: 0 0 20px 20px;
     }
   }
 
@@ -72,5 +74,14 @@
     height: 30px;
     margin: auto;
     z-index: 1;
+  }
+
+  .QuipsLoader {
+    padding-top: 300px;
+  }
+
+  .QuipErrorWrapper {
+    padding-top: 300px;
+    text-align: center;
   }
 }

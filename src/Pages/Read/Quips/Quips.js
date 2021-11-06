@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import "./Quips.scss";
 
 import QuipsDisplay from "./QuipsDisplay/QuipsDisplay";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 
-import "./Quips.scss";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import SEO from "../../../Components/Structural/SEO/SEO";
+import Loading from "../../../Components/Structural/Loading/Loading";
 
 /**
  * @function Quips
@@ -13,7 +14,7 @@ import SEO from "../../../Components/Structural/SEO/SEO";
  * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 3.0.0
+ * @version 3.1.0
  * @component
  * @example
  * <Quips />
@@ -21,6 +22,7 @@ import SEO from "../../../Components/Structural/SEO/SEO";
 export default function Quips() {
   const [quips, setQuips] = useState([]);
   const [openQuip, setOpenQuip] = useState(undefined);
+  const [error, setError] = useState(false);
 
   useEffect(
     /**
@@ -40,12 +42,16 @@ export default function Quips() {
    * them to the state variable in this component.
    * @author Alexander Burdiss
    * @since 5/27/21
-   * @version 1.1.0
+   * @version 2.0.0
    */
   function fetchQuips() {
     fetch("https://drupal.bedtimeproject.dev/rest/views/quips")
       .then((resp) => resp.json())
-      .then((data) => setQuips(data));
+      .then((data) => {
+        setQuips(data);
+        setError(false);
+      })
+      .catch(() => setError(true));
   }
 
   return (
@@ -54,17 +60,27 @@ export default function Quips() {
       <div className="QuipsContainer">
         <div className="Limerick-Display-Container">
           <div className="Drawer">
-            {quips.map((quip, index) => {
-              return (
-                <QuipsDisplay
-                  quip={quip}
-                  key={index}
-                  index={index}
-                  openQuip={openQuip}
-                  setOpenQuip={setOpenQuip}
-                />
-              );
-            })}
+            {error ? (
+              <div className="QuipErrorWrapper">
+                <p>Please check your connection and reload this page.</p>
+              </div>
+            ) : quips.length ? (
+              quips.map((quip, index) => {
+                return (
+                  <QuipsDisplay
+                    quip={quip}
+                    key={index}
+                    index={index}
+                    openQuip={openQuip}
+                    setOpenQuip={setOpenQuip}
+                  />
+                );
+              })
+            ) : (
+              <div className="QuipsLoader">
+                <Loading />
+              </div>
+            )}
             <div className="drawer">
               <PageTitle>Quips</PageTitle>
               <div className="handle"></div>
