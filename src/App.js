@@ -20,6 +20,9 @@ import Quips from "./Pages/Read/Quips/Quips";
 import FourOhFour from "./Pages/404/404";
 import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
 import Licenses from "./Pages/About/Licenses/Licenses";
+import Parents from "./Pages/Parents/Parents";
+import CreatePWA from "./Pages/Parents/CreatePWA/CreatePWA";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 // Stories without Header and Footer
 import TheLadyAndTheFrog from "./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog";
@@ -123,6 +126,22 @@ export default function App() {
                 <FourOhFour />
               </Route>
             </Switch>
+          </Route>
+          <Route path="/parents">
+            <Switch>
+              <Route exact path="/parents">
+                <Parents />
+              </Route>
+              <Route exact path="/parents/create-pwa">
+                <CreatePWA />
+              </Route>
+              <Route path="/parents/*">
+                <FourOhFour />
+              </Route>
+            </Switch>
+          </Route>
+          <Route exact path="/privacy-policy">
+            <PrivacyPolicy />
           </Route>
           <Route path="*">
             <FourOhFour />

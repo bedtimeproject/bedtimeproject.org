@@ -3,10 +3,23 @@
   overflow: hidden;
   min-height: 58px;
   color: white;
-}
+  position: relative;
 
-.CopyrightContainer {
-  text-align: center;
-  transform: rotate(-4deg);
-  margin: 20px;
+  .CopyrightContainer {
+    text-align: center;
+    transform: rotate(-4deg);
+    margin: 20px;
+    @media screen and (max-width: 700px) {
+      padding-bottom: 25px;
+    }
+  }
+
+  .PrivacyPolicyContainer {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    a {
+      color: white;
+    }
+  }
 }
