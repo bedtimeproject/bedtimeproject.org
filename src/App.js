@@ -19,7 +19,6 @@ import FourOhFour from "./Pages/404/404";
 import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
 import Licenses from "./Pages/About/Licenses/Licenses";
 import Parents from "./Pages/Parents/Parents";
-import CreatePWA from "./Pages/Parents/CreatePWA/CreatePWA";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 // Stories without Header and Footer
@@ -123,9 +122,6 @@ export default function App() {
             <Switch>
               <Route exact path="/parents">
                 <Parents />
-              </Route>
-              <Route exact path="/parents/create-pwa">
-                <CreatePWA />
               </Route>
               <Route path="/parents/*">
                 <FourOhFour />

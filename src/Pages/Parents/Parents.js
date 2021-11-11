@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import "./Parents.scss";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
-import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 import SecondaryHeadline from "../../Components/Structural/SecondaryHeadline/SecondaryHeadline";
+
+import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 
 /**
  * @namespace Parents
@@ -35,7 +36,9 @@ export default function Parents() {
         {sections && (
           <div
             className="Sections-Container"
-            dangerouslySetInnerHTML={{ __html: sections }}
+            dangerouslySetInnerHTML={{
+              __html: addDrupalUrlToImageTag(sections),
+            }}
           />
         )}
         <SecondaryHeadline>FAQ</SecondaryHeadline>
@@ -46,7 +49,7 @@ export default function Parents() {
           />
         )}
         <div className="Links-Container">
-          <StoryButton link="/parents/create-pwa">Create a PWA</StoryButton>
+          {/* <StoryButton link="/parents/create-pwa">Create a PWA</StoryButton> */}
         </div>
       </div>
     </StandardWrapper>
