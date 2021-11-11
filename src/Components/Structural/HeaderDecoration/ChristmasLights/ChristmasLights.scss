@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .ChristmasLights-Container {
   position: relative;
   $globe-width: 12px;
@@ -30,24 +32,24 @@
       width: $globe-width;
       height: $globe-height;
       border-radius: 50%;
-      margin: $globe-spacing/2;
+      margin: math.div($globe-spacing, 2);
       display: inline-block;
       background: rgba(0, 247, 165, 1);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(0, 247, 165, 1);
       animation-name: flash-1;
       animation-duration: 2s;
       &:nth-child(2n + 1) {
         background: rgba(0, 255, 255, 1);
-        box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
-          rgba(0, 255, 255, 0.5);
+        box-shadow: 0px math.div($globe-height, 6) $globe-width * 2
+          $globe-spread rgba(0, 255, 255, 0.5);
         animation-name: flash-2;
         animation-duration: 0.4s;
       }
       &:nth-child(4n + 2) {
         background: rgba(247, 0, 148, 1);
-        box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
-          rgba(247, 0, 148, 1);
+        box-shadow: 0px math.div($globe-height, 6) $globe-width * 2
+          $globe-spread rgba(247, 0, 148, 1);
         animation-name: flash-3;
         animation-duration: 1.1s;
       }
@@ -62,18 +64,18 @@
         position: absolute;
         background: #222;
         width: ($globe-width - 2);
-        height: $globe-height/3;
+        height: math.div($globe-height, 3);
         border-radius: 3px;
-        top: (0 - ($globe-height/6));
+        top: (0 - math.div($globe-height, 6));
         left: 1px;
       }
       &:after {
         content: "";
-        top: (0 - $globe-height/2);
+        top: (0 - math.div($globe-height, 2));
         left: $globe-width - 3;
         position: absolute;
         width: $globe-spacing + 12;
-        height: ($globe-height/3 * 2);
+        height: (math.div($globe-height, 3) * 2);
         border-bottom: solid #222 2px;
         border-radius: 50%;
       }
@@ -89,12 +91,12 @@
     0%,
     100% {
       background: rgba(0, 247, 165, 1);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(0, 247, 165, 1);
     }
     50% {
       background: rgba(0, 247, 165, $light-off-opacity);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(0, 247, 165, 0.2);
     }
   }
@@ -102,12 +104,12 @@
     0%,
     100% {
       background: rgba(0, 255, 255, 1);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(0, 255, 255, 1);
     }
     50% {
       background: rgba(0, 255, 255, $light-off-opacity);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(0, 255, 255, 0.2);
     }
   }
@@ -115,12 +117,12 @@
     0%,
     100% {
       background: rgba(247, 0, 148, 1);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(247, 0, 148, 1);
     }
     50% {
       background: rgba(247, 0, 148, $light-off-opacity);
-      box-shadow: 0px $globe-height/6 $globe-width * 2 $globe-spread
+      box-shadow: 0px math.div($globe-height, 6) $globe-width * 2 $globe-spread
         rgba(247, 0, 148, 0.2);
     }
   }
