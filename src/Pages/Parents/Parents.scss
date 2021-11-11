@@ -1,0 +1,47 @@
+@import "../../Variables.scss";
+
+.Parents-Container {
+  .Sections-Container {
+    .paragraph--type--section {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: $Tequila;
+      padding: 20px;
+      border-radius: 20px;
+      line-height: 1.5;
+
+      .field--name-field-chapter-title {
+        font-weight: bold;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .Faq-Container {
+    .paragraph--type--section {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: $Tequila;
+      padding: 20px;
+      border-radius: 20px;
+      line-height: 1.5;
+
+      .field--name-field-chapter-title {
+        font-weight: bold;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .Links-Container {
+    display: flex;
+    justify-content: center;
+  }
+  padding: 40px;
+}
