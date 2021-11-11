@@ -4,12 +4,10 @@ import "./App.scss";
 
 // Root components
 import Play from "./Pages/Play/Play";
-import BlackJack from "./Pages/Play/BlackJack/BlackJack";
 import Playground from "./Pages/Play/Playground/Playground";
 import Chess from "./Pages/Play/Chess/Chess";
 import LightsOut from "./Pages/Play/LightsOut/LightsOut";
 import Sudoku from "./Pages/Play/Sudoku/Sudoku";
-import Crossword from "./Pages/Play/Crossword/Crossword";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Construction from "./Pages/Construction/Construction";
@@ -57,9 +55,6 @@ export default function App() {
               <Route exact path="/play">
                 <Play />
               </Route>
-              <Route path="/play/blackjack">
-                <BlackJack />
-              </Route>
               <Route path="/play/playground">
                 <Playground />
               </Route>
@@ -71,9 +66,6 @@ export default function App() {
               </Route>
               <Route path="/play/sudoku">
                 <Sudoku />
-              </Route>
-              <Route path="/play/crossword">
-                <Crossword />
               </Route>
               <Route path="/play/*">
                 <FourOhFour />
