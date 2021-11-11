@@ -4,31 +4,6 @@ object-assign
 @license MIT
 */
 
-/*!
-  * @preserve Qwery - A selector engine
-  * https://github.com/ded/qwery
-  * (c) Dustin Diaz 2014 | License MIT
-  */
-
-/*!
-  * Bean - copyright (c) Jacob Thornton 2011-2012
-  * https://github.com/fat/bean
-  * MIT license
-  */
-
-/*!
-  * Bonzo: DOM Utility (c) Dustin Diaz 2012
-  * https://github.com/ded/bonzo
-  * License MIT
-  */
-
-/*!
- * EventEmitter v5.2.9 - git.io/ee
- * Unlicense - http://unlicense.org/
- * Oliver Caldwell - https://oli.me.uk/
- * @preserve
- */
-
 /** @license React v0.20.2
  * scheduler.production.min.js
  *
