@@ -1,4 +1,7 @@
+// @ts-check
+
 import React from "react";
+import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 import "./PrivacyPolicy.scss";
 
@@ -14,7 +17,11 @@ export default function PrivacyPolicy() {
   return (
     <StandardWrapper>
       <div className="PrivacyPolicy-Container">
-        <div>PrivacyPolicy Works!</div>
+        <PageTitle>Privacy Policy</PageTitle>
+        <article>
+          <h2>Data collection policies</h2>
+          <p>Coming Soon!</p>
+        </article>
       </div>
     </StandardWrapper>
   );

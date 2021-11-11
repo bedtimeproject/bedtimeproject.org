@@ -1,16 +1,4 @@
 {
-    "bean@1.0.15": {
-        "licenses": "MIT*",
-        "repository": "https://github.com/fat/bean",
-        "licenseUrl": "https://github.com/fat/bean/raw/master/LICENSE",
-        "parents": "the-bedtime-project"
-    },
-    "bonzo@2.0.0": {
-        "licenses": "MIT*",
-        "repository": "https://github.com/ded/bonzo",
-        "licenseUrl": "https://github.com/ded/bonzo/raw/master/LICENSE",
-        "parents": "the-bedtime-project"
-    },
     "caniuse-lite@1.0.30001278": {
         "licenses": "CC-BY-4.0",
         "repository": "https://github.com/browserslist/caniuse-lite",
@@ -23,12 +11,6 @@
         "licenseUrl": "https://github.com/jhlywa/chess.js/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "fastdom@1.0.10": {
-        "licenses": "MIT",
-        "repository": "https://github.com/wilsonpage/fastdom",
-        "licenseUrl": "https://github.com/wilsonpage/fastdom",
-        "parents": "the-bedtime-project"
-    },
     "gh-pages@3.2.3": {
         "licenses": "MIT",
         "repository": "https://github.com/tschaub/gh-pages",
@@ -39,12 +21,6 @@
         "licenses": "MIT",
         "repository": "https://github.com/necolas/normalize.css",
         "licenseUrl": "https://github.com/necolas/normalize.css/raw/master/LICENSE.md",
-        "parents": "the-bedtime-project"
-    },
-    "qwery@4.0.0": {
-        "licenses": "UNKNOWN",
-        "repository": "https://github.com/ded/qwery",
-        "licenseUrl": "https://github.com/ded/qwery/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
     "react-dom@17.0.2": {
@@ -83,28 +59,10 @@
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "sass-mq@5.0.1": {
-        "licenses": "MIT",
-        "repository": "https://github.com/sass-mq/sass-mq",
-        "licenseUrl": "https://github.com/sass-mq/sass-mq/raw/master/LICENSE.md",
-        "parents": "the-bedtime-project"
-    },
     "sass@1.43.4": {
         "licenses": "MIT",
         "repository": "https://github.com/sass/dart-sass",
         "licenseUrl": "https://github.com/sass/dart-sass/raw/master/LICENSE",
-        "parents": "the-bedtime-project"
-    },
-    "web-vitals@1.1.2": {
-        "licenses": "Apache-2.0",
-        "repository": "https://github.com/GoogleChrome/web-vitals",
-        "licenseUrl": "https://github.com/GoogleChrome/web-vitals/raw/master/LICENSE",
-        "parents": "the-bedtime-project"
-    },
-    "wolfy87-eventemitter@5.2.9": {
-        "licenses": "Unlicense",
-        "repository": "https://github.com/Olical/EventEmitter",
-        "licenseUrl": "https://github.com/Olical/EventEmitter/raw/master/UNLICENSE",
         "parents": "the-bedtime-project"
     }
 }
