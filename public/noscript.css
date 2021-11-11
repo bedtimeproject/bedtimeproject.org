@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+
+body {
+  margin: 0;
+}
+.ns-header {
+  background-color: #625ace;
+  font-family: "Quicksand";
+}
+
+.ns-header a {
+  text-decoration: none;
+}
+
+.ns-header .HeaderLogoContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.ns-header .HeaderTitle {
+  font-size: x-large;
+  margin: 10px;
+  color: white;
+}
+
+main.ns-center {
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  padding: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  height: calc(100vh - 130px);
+}
+
+.ns-footer {
+  font-family: "Quicksand";
+  background-color: #381223;
+  overflow: hidden;
+  min-height: 58px;
+  color: white;
+}
+
+.ns-footer .CopyrightContainer {
+  text-align: center;
+  transform: rotate(-4deg);
+  margin: 20px;
+}
