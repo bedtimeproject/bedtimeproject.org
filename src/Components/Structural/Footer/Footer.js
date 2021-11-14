@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 /**
@@ -19,6 +20,9 @@ export default function Footer() {
       <div className="CopyrightContainer">
         Copyright © {new Date().getFullYear()} The Bedtime Project, All rights
         reserved
+      </div>
+      <div className="PrivacyPolicyContainer">
+        <Link to="/privacy-policy">Privacy Policy</Link>
       </div>
     </footer>
   );

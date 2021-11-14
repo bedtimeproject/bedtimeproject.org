@@ -8,7 +8,7 @@
  * is needed to render the image correctly.
  * @author Alexander Burdiss
  * @since 10/2/21
- * @version 1.1.0
+ * @version 1.1.1
  */
 export function addDrupalUrlToImageTag(input) {
   if (input == "" || !input) {
@@ -16,8 +16,8 @@ export function addDrupalUrlToImageTag(input) {
   }
 
   const correctedUrl = input.replaceAll(
-    '<img src="/sites/default/files',
-    '<img src="https://drupal.bedtimeproject.dev/sites/default/files'
+    'src="/sites/default/files',
+    'src="https://drupal.bedtimeproject.dev/sites/default/files'
   );
 
   return correctedUrl;

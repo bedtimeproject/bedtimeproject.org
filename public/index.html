@@ -11,10 +11,38 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="noscript.css" />
     <title>The Bedtime Project</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <style>
+        #root {
+          height: 0 !important;
+        }
+      </style>
+      <header class="ns-header">
+        <a href="#/"
+          ><div class="HeaderLogoContainer">
+            <img
+              src="/static/media/logo.def79c06.png"
+              alt="An Open Book"
+              width="50"
+              height="50"
+            />
+            <div class="HeaderTitle">The Bedtime Project</div>
+          </div></a
+        >
+      </header>
+      <main class="ns-center">
+        You need to enable JavaScript to run this app.
+      </main>
+      <footer class="ns-footer">
+        <div class="CopyrightContainer">
+          Copyright © The Bedtime Project, All rights reserved
+        </div>
+      </footer>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

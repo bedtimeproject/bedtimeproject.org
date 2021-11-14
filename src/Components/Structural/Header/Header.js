@@ -37,6 +37,9 @@ export default function Header() {
           <li>
             <HeaderButton link="/about">About</HeaderButton>
           </li>
+          <li>
+            <HeaderButton link="/parents">Parents</HeaderButton>
+          </li>
         </ul>
       </nav>
     </header>

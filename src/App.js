@@ -4,12 +4,10 @@ import "./App.scss";
 
 // Root components
 import Play from "./Pages/Play/Play";
-import BlackJack from "./Pages/Play/BlackJack/BlackJack";
 import Playground from "./Pages/Play/Playground/Playground";
 import Chess from "./Pages/Play/Chess/Chess";
 import LightsOut from "./Pages/Play/LightsOut/LightsOut";
 import Sudoku from "./Pages/Play/Sudoku/Sudoku";
-import Crossword from "./Pages/Play/Crossword/Crossword";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
 import Construction from "./Pages/Construction/Construction";
@@ -20,6 +18,8 @@ import Quips from "./Pages/Read/Quips/Quips";
 import FourOhFour from "./Pages/404/404";
 import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
 import Licenses from "./Pages/About/Licenses/Licenses";
+import Parents from "./Pages/Parents/Parents";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 // Stories without Header and Footer
 import TheLadyAndTheFrog from "./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog";
@@ -54,9 +54,6 @@ export default function App() {
               <Route exact path="/play">
                 <Play />
               </Route>
-              <Route path="/play/blackjack">
-                <BlackJack />
-              </Route>
               <Route path="/play/playground">
                 <Playground />
               </Route>
@@ -68,9 +65,6 @@ export default function App() {
               </Route>
               <Route path="/play/sudoku">
                 <Sudoku />
-              </Route>
-              <Route path="/play/crossword">
-                <Crossword />
               </Route>
               <Route path="/play/*">
                 <FourOhFour />
@@ -123,6 +117,19 @@ export default function App() {
                 <FourOhFour />
               </Route>
             </Switch>
+          </Route>
+          <Route path="/parents">
+            <Switch>
+              <Route exact path="/parents">
+                <Parents />
+              </Route>
+              <Route path="/parents/*">
+                <FourOhFour />
+              </Route>
+            </Switch>
+          </Route>
+          <Route exact path="/privacy-policy">
+            <PrivacyPolicy />
           </Route>
           <Route path="*">
             <FourOhFour />

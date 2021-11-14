@@ -30,7 +30,6 @@ export default function Play() {
         {/* <PlayButton link="/play/chess">Chess</PlayButton> */}
         <PlayButton link="/play/lights-out">Lights Out</PlayButton>
         <PlayButton link="/play/sudoku">Sudoku</PlayButton>
-        <PlayButton link="/play/crossword">Crossword</PlayButton>
       </div>
     </StandardWrapper>
   );
