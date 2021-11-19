@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
-//=================================================================
-//  Variables
-//=================================================================
-
-$Break-Large: 1200px;
-
-$Sky-Blue: rgb(139, 201, 228);
-$Sky-Dark: rgb(19, 48, 97);
-$Sunset-Color: #9795ef;
-$Sunset-Color-2: #fb8caa;
-$Cloud-2-Color: #d3d3d3;
-
-//=================================================================
-//  Global Styles
-//=================================================================
+@import "../../../../Variables.scss";
 
 .MrsBlueSkyContainer {
   padding: 0;

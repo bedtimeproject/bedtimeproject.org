@@ -1,12 +1,25 @@
-//colors
-$Apple: #3ea42f;
+//=================================================================
+//  Theme Colors
+//=================================================================
 $Blackberry: #381223;
+$Cadillac: #a24c65;
+$MiddleBlueGreen: #88d9d7;
+$SlateBlue: #625ace;
+$Tamarillo: #782a30;
+$Tequila: #f4d5a1;
+$TrueV: #9679cd;
+$White: #ffffff;
+
+//=================================================================
+//  Other Colors
+// TODO: Remove colors that are only used in one place or so.
+//=================================================================
+$Apple: #3ea42f;
 $Blonde: #f9ebb7;
 $BlueDiamond: #542860;
 $BlueRibbon: #7e98f9;
 $Bone: #e8e4d4;
 $BrightGray: #efefef;
-$Cadillac: #a24c65;
 $CharlestonGreen: #2c2c2c;
 $Cloud-2-Color: #d3d3d3;
 $Cranberry: #e96a49;
@@ -19,7 +32,6 @@ $Granite: #686868;
 $JetStream: #bee3c0;
 $LavenderPurple: #938ec1;
 $LightBeige: #d1a776;
-$MiddleBlueGreen: #88d9d7;
 $Oasis: #fff1c5;
 $OuterSpace: #454545;
 $RaisinBlack: #222222;
@@ -27,20 +39,19 @@ $RossoCorsa: #d20404;
 $Sepia: #6c4116;
 $Sky-Blue: rgb(139, 201, 228);
 $Sky-Dark: rgb(19, 48, 97);
-$SlateBlue: #625ace;
 $Sunset-Color-2: #7e787a;
 $Sunset-Color: #9795ef;
-$Tamarillo: #782a30;
-$Tequila: #f4d5a1;
-$TrueV: #9679cd;
 $TurquoiseGreen: #a7d7af;
-$White: #ffffff;
 
+// TODO: get rid of these.
 $TopBackground: $SlateBlue;
 $TopHover: $BlueDiamond;
 $TopOutline: $Tequila;
 
-//fixed font sizes
+//=================================================================
+//  Font Sizes
+// TODO: Standardize these
+//=================================================================
 $fixedSize0: 10px;
 $fixedSize1: 11px;
 $fixedSize2: 13px;
@@ -52,15 +63,6 @@ $fixedSize7: 20px;
 $sizeL: larger;
 $sizeM: medium;
 $sizeXL: x-large;
-
-//scale for padding and margin
-$scale0: 5px;
-$scale1: 10px;
-$scale2: 20px;
-$scale3: 25px;
-$scale4: 40px;
-
-//font sizes
 $size0: 0.85em;
 $size1: 0.9em;
 $size2: 1em;
@@ -70,3 +72,17 @@ $size5: 1.6em;
 $size6: 2em;
 $size7: 2.5em;
 $size8: 3.5em;
+
+//=================================================================
+//  Scale for Padding and Margin
+//=================================================================
+$scale0: 5px;
+$scale1: 10px;
+$scale2: 20px;
+$scale3: 25px;
+$scale4: 40px;
+
+//=================================================================
+//  Breakpoints
+//=================================================================
+$Break-Large: 1200px;
