@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
@@ -5,6 +6,11 @@ import { Helmet } from "react-helmet";
  * @namespace SEO
  * @function SEO
  * @author Alexander Burdiss
+ * @param {object} props
+ * @param {string} [props.title]
+ * @param {string} [props.description]
+ * @param {string} [props.style]
+ * @param {string} [props.themeColor]
  * @since 10/14/21
  * @version 1.1.2
  * @component

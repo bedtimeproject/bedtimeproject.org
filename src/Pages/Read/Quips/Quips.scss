@@ -14,14 +14,16 @@
     min-height: 900px;
     .Drawer {
       position: absolute;
-      width: 630px;
       padding-left: 15px;
       padding-right: 15px;
       min-height: 900px;
       background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
       top: 0;
-
       border-radius: 0 0 20px 20px;
+      width: 90%;
+      @media screen and (min-width: 700px) {
+        width: 630px;
+      }
     }
   }
 
@@ -30,13 +32,16 @@
     box-shadow: 0 0 0 1px #6c4116;
     border-radius: 20px;
     display: inline-block;
-    width: 640px;
     height: 330px;
     position: absolute;
     transition: 0.2s ease-out all;
     z-index: 998;
     bottom: 0px;
     margin-left: -20px;
+    width: calc(100% + 10px);
+    @media screen and (min-width: 700px) {
+      width: 640px;
+    }
   }
 
   .PageTitle-Container {

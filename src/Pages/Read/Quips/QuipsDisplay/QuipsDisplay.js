@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import { addDrupalUrlToImageTag } from "../../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 import "./QuipsDisplay.scss";
@@ -5,8 +6,11 @@ import "./QuipsDisplay.scss";
 /**
  * @function QuipsDisplay
  * @description A wrapper that handles rendering the quips.
- * @param props The JSX props passed to this React component
- * @param {String} props.quip The quip to display in this view.
+ * @param {object} props The JSX props passed to this React component
+ * @param {object} props.quip The quip to display in this view.
+ * @param {number} props.index
+ * @param {number} props.openQuip
+ * @param {function} props.setOpenQuip
  * @author Alexander Burdiss
  * @since 5/27/21
  * @version 3.0.1

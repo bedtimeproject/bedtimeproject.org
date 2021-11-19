@@ -1,6 +1,10 @@
 .QuipsDisplay-Container {
-  width: 600px;
   position: absolute;
+  width: calc(100% - 30px);
+
+  @media screen and (min-width: 700px) {
+    width: 600px;
+  }
 
   .QuipsInternalWrapper {
     display: flex;
@@ -17,13 +21,23 @@
     top: -35px;
     height: 35px;
     background-color: tan;
+    transition: background-color 0.2s;
     border: 1px solid black;
     border-bottom: none;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
+    max-width: calc(100% - 40px);
 
+    &:hover,
+    &:focus {
+      background-color: darken(tan, 10%);
+    }
     h2 {
       margin: 0;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 
@@ -44,6 +58,7 @@
   }
   img {
     width: 280px;
+    max-width: 100%;
     height: auto;
   }
   @media screen and (min-width: 820px) {

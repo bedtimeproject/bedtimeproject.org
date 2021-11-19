@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect, useState } from "react";
 import "./Quips.scss";
 
@@ -14,7 +15,7 @@ import Loading from "../../../Components/Structural/Loading/Loading";
  * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 3.1.0
+ * @version 3.2.0
  * @component
  * @example
  * <Quips />
@@ -40,7 +41,9 @@ export default function Quips() {
     const modalTitles = Array.from(
       document.querySelectorAll(".QuipTitleButton h2")
     );
+    // @ts-ignore
     const buttonClicked = modalButtons.includes(event.target);
+    // @ts-ignore
     const titleClicked = modalTitles.includes(event.target);
     if (!buttonClicked && !titleClicked) {
       setOpenQuip(undefined);
