@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./RainyWindow.scss";
 
@@ -7,6 +8,8 @@ import Lighthouse from "../../Background/Lighthouse/Lighthouse";
  * @namespace RainyWindow
  * @function RainyWindow
  * @author Alexander Burdiss
+ * @param {object} props
+ * @param {boolean} [props.right]
  * @since 10/17/21
  * @version 1.0.0
  * @component

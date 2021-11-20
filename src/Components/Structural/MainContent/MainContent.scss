@@ -1,4 +1,7 @@
 .AppContentContainer {
   flex: 1;
   position: relative;
+  &:focus {
+    outline: none;
+  }
 }

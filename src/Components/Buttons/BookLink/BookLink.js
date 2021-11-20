@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./BookLink.scss";
 import { Link } from "react-router-dom";

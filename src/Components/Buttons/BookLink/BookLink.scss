@@ -1,17 +1,23 @@
+@import "../../../Variables.scss";
+
 .BookLink-Container {
   display: inline-block;
   position: relative;
   width: 120px;
   height: 160px;
-  margin: 10px;
-  color: white;
+  color: $White;
   text-decoration: none;
   text-align: center;
-  padding: 10px;
+  padding: $scale1;
   z-index: 3;
   overflow: hidden;
   transition: 0.3s;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  margin: $scale1 $scale0;
+  @media screen and (min-width: $Break-Small) {
+    margin: $scale1;
+    font-size: 0.9rem;
+  }
 
   &:hover,
   &:focus {

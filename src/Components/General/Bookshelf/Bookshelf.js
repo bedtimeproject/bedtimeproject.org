@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./Bookshelf.scss";
 
@@ -18,7 +19,6 @@ export default function Bookshelf({
   books2,
   books3,
   pageTitle,
-  scrollable,
   drawerHref,
   drawerLabel,
   shelf1Link,
