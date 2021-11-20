@@ -4,7 +4,7 @@
 # Since: 9/7/21
 # Description: Generates a React component and all the necessary files that go
 # along with it.
-version="1.0.1"
+version="1.0.2"
 
 path=$1
 component=$2
@@ -94,6 +94,6 @@ describe(\"renders $component\", () => {
 });" > "src/$path/$component/$component.test.js"
 
 echo
-echo "Component src/$path/$component Created Successfuly!"
+echo "Component src/$path/$component Created Successfully!"
 echo
 exit 0
