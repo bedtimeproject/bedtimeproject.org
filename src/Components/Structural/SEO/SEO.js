@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
+import packageJson from "../../../../package.json";
+
 /**
  * @namespace SEO
  * @function SEO
@@ -11,8 +13,12 @@ import { Helmet } from "react-helmet";
  * @param {string} [props.description]
  * @param {string} [props.style]
  * @param {string} [props.themeColor]
+ * @param {string} [props.ogType]
+ * @param {string} [props.twitterCard]
+ * @param {object} [props.children] Optional additional meta tags that can be
+ * added to the HEAD component
  * @since 10/14/21
- * @version 1.1.2
+ * @version 1.2.0
  * @component
  */
 export default function SEO({
@@ -20,6 +26,9 @@ export default function SEO({
   description,
   style,
   themeColor = "#625ace",
+  ogType,
+  twitterCard,
+  children,
 }) {
   useEffect(() => {
     document
@@ -34,7 +43,34 @@ export default function SEO({
       ) : (
         <title>The Bedtime Project</title>
       )}
+
+      <meta
+        property="og:title"
+        content={title ? title : "The Bedtime Project"}
+      />
+      <meta property="og:type" content={ogType ? ogType : "article"} />
+      <meta property="og:url" content={window.location.href} />
+      <meta
+        property="og:description"
+        content={description ? description : packageJson.description}
+      />
+      <meta property="og:site_name" content="The Bedtime Project" />
+
+      <meta
+        name="twitter:title"
+        content={title ? title : "The Bedtime Project"}
+      />
+      <meta
+        name="twitter:description"
+        content={description ? description : packageJson.description}
+      />
+      <meta
+        name="twitter:card"
+        content={twitterCard ? twitterCard : "summary"}
+      />
+
       {style && <style type="text/css">{style}</style>}
+      {children}
     </Helmet>
   );
 }

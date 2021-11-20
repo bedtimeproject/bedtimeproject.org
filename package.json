@@ -1,6 +1,7 @@
 {
   "name": "the-bedtime-project",
   "homepage": "https://bedtimeproject.org",
+  "description": "The Bedtime Project - A fun and engaging way to hit the hay",
   "version": "5.0.0",
   "private": true,
   "dependencies": {
