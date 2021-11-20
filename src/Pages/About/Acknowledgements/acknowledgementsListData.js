@@ -5,6 +5,16 @@ export default [
     link: "https://codepen.io/agathaco",
   },
   {
+    name: "alphardex (@alphardex)",
+    contribution: "Snow",
+    link: "https://codepen.io/alphardex",
+  },
+  {
+    name: "Diego Pardo (@diegopardo)",
+    contribution: "Wood Background on Read",
+    link: "https://codepen.io/diegopardo",
+  },
+  {
     name: "Evan Bacon",
     contribution: "Code for Licenses Page",
   },

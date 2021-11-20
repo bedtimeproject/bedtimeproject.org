@@ -1,5 +1,6 @@
+// @ts-check
 import { Helmet } from "react-helmet";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
 import Fireflies from "../../Components/Background/Fireflies/Fireflies";
@@ -9,6 +10,8 @@ import AboutUsImage from "../../assets/images/doors/AboutUs.svg";
 import PlaygroundImage from "../../assets/images/doors/Playground.svg";
 import StoriesImage from "../../assets/images/doors/Stories.svg";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
+import { getWeather } from "../../utils/getWeather/getWeather";
+import Snow from "../../Components/Background/Snow/Snow";
 
 /**
  * @function Home
@@ -21,13 +24,22 @@ import StandardWrapper from "../../Components/Structural/StandardWrapper/Standar
  * <Home />
  */
 export default function Home() {
+  const [weather, setWeather] = useState("clear");
+  useEffect(function setup() {
+    setWeather(getWeather());
+  }, []);
   return (
     <StandardWrapper>
       <div className="Home-Container">
         <Helmet>
           <title>The Bedtime Project</title>
         </Helmet>
-        <Fireflies />
+        {weather !== "snow" && <Fireflies />}
+        {weather == "snow" && (
+          <div className="Snow-Home-Container">
+            <Snow />
+          </div>
+        )}
         <div className="Home-Door-Container">
           <DoorButton
             label="Read"

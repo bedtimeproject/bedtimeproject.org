@@ -51,6 +51,10 @@ $borderRadius: 2px;
         height: 630px;
       }
     }
+    .Snow-Container {
+      position: relative;
+      z-index: 500;
+    }
   }
   &.Right {
     .Lighthouse-Container {

@@ -1,10 +1,11 @@
 // @ts-check
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Bookshelf.scss";
 
 import RainyWindow from "../RainyWindow/RainyWindow";
 import ShelfLabel from "./ShelfLabel/ShelfLabel";
 import Drawers from "./Drawers/Drawers";
+import { getWeather } from "../../../utils/getWeather/getWeather";
 
 /**
  * @namespace Bookshelf
@@ -28,10 +29,14 @@ export default function Bookshelf({
   shelf3Link,
   shelf3Label,
 }) {
+  const [weather, setWeather] = useState("rain");
+  useEffect(function setup() {
+    setWeather(getWeather());
+  }, []);
   return (
     <div className="Bookshelf-Container">
       <div className="RainyWindowLeft RainyWindow">
-        <RainyWindow />
+        <RainyWindow weather={weather} />
       </div>
       <div className="BooksContainer">
         {pageTitle && (
@@ -55,7 +60,7 @@ export default function Bookshelf({
         {drawerHref && <Drawers href={drawerHref} label={drawerLabel} />}
       </div>
       <div className="RainyWindowRight RainyWindow">
-        <RainyWindow right />
+        <RainyWindow right weather={weather} />
       </div>
     </div>
   );

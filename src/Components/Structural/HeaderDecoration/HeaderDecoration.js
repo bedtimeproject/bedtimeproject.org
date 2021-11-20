@@ -16,6 +16,12 @@ export default function HeaderDecoration() {
   const currentDay = today.getDate();
   const currentMonth = today.getMonth() + 1;
 
+  // Christmas in July
+  if (currentMonth == 7 && currentDay == 25) {
+    return <ChristmasLights />;
+  }
+
+  // Decorating for Christmas
   if (currentMonth == 11 || (currentMonth == 12 && currentDay < 26)) {
     return <ChristmasLights />;
   }
