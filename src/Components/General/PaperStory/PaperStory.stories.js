@@ -2,7 +2,7 @@ import React from "react";
 import PaperStory from "./PaperStory";
 
 export default {
-  title: "Components/General/PaperStory",
+  title: "General/PaperStory",
   component: PaperStory,
   argTypes: {},
 };

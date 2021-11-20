@@ -2,7 +2,7 @@ import React from "react";
 import Loading from "./Loading";
 
 export default {
-  title: "Components/Structural/Loading",
+  title: "Structural/Loading",
   component: Loading,
   argTypes: {},
 };

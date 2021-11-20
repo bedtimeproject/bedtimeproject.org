@@ -2,7 +2,7 @@ import React from "react";
 import Bookshelf from "./Bookshelf";
 
 export default {
-  title: "Components/General/Bookshelf",
+  title: "General/Bookshelf",
   component: Bookshelf,
   argTypes: {},
 };

@@ -2,7 +2,7 @@ import React from "react";
 import QuipPopup from "./QuipPopup";
 
 export default {
-  title: "Components/General/QuipPopup",
+  title: "General/QuipPopup",
   component: QuipPopup,
   argTypes: {},
 };

@@ -2,7 +2,7 @@ import React from "react";
 import SecondaryHeadline from "./SecondaryHeadline";
 
 export default {
-  title: "Components/Structural/SecondaryHeadline",
+  title: "Structural/SecondaryHeadline",
   component: SecondaryHeadline,
   argTypes: {},
 };

@@ -2,7 +2,7 @@ import React from "react";
 import SkipLink from "./SkipLink";
 
 export default {
-  title: "Components/Structural/SkipLink",
+  title: "Structural/SkipLink",
   component: SkipLink,
   argTypes: {},
 };

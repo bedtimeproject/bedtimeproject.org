@@ -2,7 +2,7 @@ import React from "react";
 import Drawers from "./Drawers";
 
 export default {
-  title: "Components/General/Bookshelf/Drawers",
+  title: "General/Bookshelf/Drawers",
   component: Drawers,
   argTypes: {},
 };

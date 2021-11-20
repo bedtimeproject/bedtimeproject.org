@@ -2,7 +2,7 @@ import React from "react";
 import MoreContentSoon from "./MoreContentSoon";
 
 export default {
-  title: "Components/General/MoreContentSoon",
+  title: "General/MoreContentSoon",
   component: MoreContentSoon,
   argTypes: {},
 };

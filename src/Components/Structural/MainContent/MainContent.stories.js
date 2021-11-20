@@ -2,7 +2,7 @@ import React from "react";
 import MainContent from "./MainContent";
 
 export default {
-  title: "Components/Structural/MainContent",
+  title: "Structural/MainContent",
   component: MainContent,
   argTypes: {},
 };

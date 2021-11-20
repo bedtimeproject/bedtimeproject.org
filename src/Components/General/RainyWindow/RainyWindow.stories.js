@@ -2,7 +2,7 @@ import React from "react";
 import RainyWindow from "./RainyWindow";
 
 export default {
-  title: "Components/General/RainyWindow",
+  title: "General/RainyWindow",
   component: RainyWindow,
   argTypes: {},
 };

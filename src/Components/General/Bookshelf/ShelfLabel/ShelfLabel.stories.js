@@ -2,7 +2,7 @@ import React from "react";
 import ShelfLabel from "./ShelfLabel";
 
 export default {
-  title: "Components/General/Bookshelf/ShelfLabel",
+  title: "General/Bookshelf/ShelfLabel",
   component: ShelfLabel,
   argTypes: {},
 };

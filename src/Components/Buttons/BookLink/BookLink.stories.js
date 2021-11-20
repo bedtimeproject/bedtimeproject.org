@@ -2,7 +2,7 @@ import React from "react";
 import BookLink from "./BookLink";
 
 export default {
-  title: "Components/Buttons/BookLink",
+  title: "Buttons/BookLink",
   component: BookLink,
   argTypes: {},
 };

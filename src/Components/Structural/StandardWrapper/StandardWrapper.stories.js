@@ -2,7 +2,7 @@ import React from "react";
 import StandardWrapper from "./StandardWrapper";
 
 export default {
-  title: "Components/Structural/StandardWrapper",
+  title: "Structural/StandardWrapper",
   component: StandardWrapper,
   argTypes: {},
 };

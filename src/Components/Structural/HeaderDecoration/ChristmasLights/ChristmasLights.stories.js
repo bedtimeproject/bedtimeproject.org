@@ -2,7 +2,7 @@ import React from "react";
 import ChristmasLights from "./ChristmasLights";
 
 export default {
-  title: "Components/General/ChristmasLights",
+  title: "Structural/HeaderDecoration/ChristmasLights",
   component: ChristmasLights,
   argTypes: {},
 };

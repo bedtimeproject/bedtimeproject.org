@@ -2,7 +2,7 @@ import React from "react";
 import HeaderDecoration from "./HeaderDecoration";
 
 export default {
-  title: "Components/Structural/HeaderDecoration",
+  title: "Structural/HeaderDecoration",
   component: HeaderDecoration,
   argTypes: {},
 };

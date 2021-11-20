@@ -2,7 +2,7 @@ import React from "react";
 import Snow from "./Snow";
 
 export default {
-  title: "Components/Background/Snow",
+  title: "Background/Snow",
   component: Snow,
   argTypes: {},
 };
