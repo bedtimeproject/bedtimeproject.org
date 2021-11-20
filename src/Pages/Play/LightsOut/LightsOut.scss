@@ -1,3 +1,5 @@
+@import "../../../Variables.scss";
+
 .LightsOutContainer main {
   padding: 0 !important;
 }
@@ -5,21 +7,6 @@
 .Lights-Out-Header {
   text-align: center;
   padding-bottom: 40px;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.Lights-Out-Header h1 {
-  font-family: "Lora", serif;
-  font-weight: bold;
-  background-image: linear-gradient(#ebe0de, white);
-  padding: 75px;
-  margin: auto;
-  letter-spacing: 0.2em;
-  font-size: 2.5em;
-}
-
-.Lights-Out-Header h1:hover {
-  color: #3d3968;
 }
 
 .Lights-Out-Header > p {
@@ -34,31 +21,51 @@
   font-family: inherit;
   color: inherit;
   vertical-align: top;
+  cursor: pointer;
 }
 
 .LightsOutContainer #the-game {
-  background-image: linear-gradient(white, #e96a49);
   display: grid;
+  box-sizing: content-box;
   grid-gap: 0;
-  grid-template-columns: repeat(5, 70px);
-  grid-template-rows: repeat(5, 70px);
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(5, 50px);
+  @media screen and (min-width: 400px) {
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: repeat(5, 70px);
+  }
   grid-auto-flow: row;
   justify-content: center;
   margin: auto;
   padding-bottom: 60px;
 }
 
-.LightsOutContainer #the-game div {
-  border: 1px solid rgb(0, 0, 0);
-  background-color: white;
-  margin: 0px;
+.LightsOutContainer #the-game button {
+  border-radius: 7px;
+  border: 2px solid $TrueV;
+  background-color: #fff;
   transition: background-color 0.3s linear;
   cursor: pointer;
+  &:hover {
+    background-color: #bbbbbb;
+  }
+  &:hover,
+  &:focus {
+    border: 2px dotted $TrueV;
+  }
 }
 
-.LightsOutContainer .out {
-  background-color: grey !important;
+.LightsOutContainer #the-game button.out {
+  border: 2px solid #000;
+  background-color: #777777;
   transition: background-color 0.3s linear;
+  &:hover {
+    background-color: #555555;
+  }
+  &:hover,
+  &:focus {
+    border: 2px dotted #000;
+  }
 }
 
 .LightsOutContainer #stats-box {

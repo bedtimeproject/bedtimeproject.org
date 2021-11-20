@@ -1,19 +1,20 @@
-import { useEffect } from "react";
+// @ts-check
+import React, { useEffect } from "react";
 
 import "./LightsOut.scss";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
 import SEO from "../../../Components/Structural/SEO/SEO";
+import Waves from "../../../Components/Background/Waves/Waves";
 
 /**
  * @description A simple game of Lights Out.
  * @author Alexander Burdiss
  * @since 5/13/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  * @example
- * ```jsx
  * <LightsOut />
- * ```
  */
 export default function LightsOut() {
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function LightsOut() {
     }
 
     function resetGame() {
-      var divs = document.querySelectorAll("#the-game > div");
+      var divs = document.querySelectorAll("#the-game > button");
       for (var i = 0; i < divs.length; i++) {
         divs[i].classList.add("out");
       }
@@ -37,7 +38,7 @@ export default function LightsOut() {
 
     function resetMoveCounter() {
       const moveCounter = document.querySelector("#js-moves");
-      moveCounter.innerHTML = 0;
+      moveCounter.innerHTML = (0).toString();
     }
 
     function clickRandomLights() {
@@ -50,7 +51,7 @@ export default function LightsOut() {
     }
 
     function turnLightsOut(event) {
-      const element = getElement(event);
+      const element = event.target;
       if (element.id !== "the-game") {
         toggleLight(element);
         toggleAdjacentLights(element);
@@ -61,14 +62,8 @@ export default function LightsOut() {
 
     function updateMoveCounter() {
       const moveCounter = document.querySelector("#js-moves");
-      const previousMoveCount = parseInt(moveCounter.innerHTML, 10);
-      moveCounter.innerHTML = previousMoveCount + 1;
-    }
-
-    function getElement(event) {
-      const elementID = event.target.id;
-      const elementSelector = "#" + elementID;
-      return document.querySelector(elementSelector);
+      const previousMoveCount = Number(moveCounter.innerHTML);
+      moveCounter.innerHTML = String(previousMoveCount + 1);
     }
 
     function toggleLight(element) {
@@ -146,7 +141,7 @@ export default function LightsOut() {
     }
 
     function checkForWin() {
-      const gameBoard = document.querySelectorAll("#the-game > div");
+      const gameBoard = document.querySelectorAll("#the-game > button");
       for (var i = 0; i < gameBoard.length; i++) {
         if (!gameBoard[i].classList.contains("out")) {
           return false;
@@ -166,13 +161,13 @@ export default function LightsOut() {
     function logBestMoves() {
       const currentBest = document.querySelector("#js-best");
       const thisGame = document.querySelector("#js-moves");
-      const currentBestCount = parseInt(currentBest.innerHTML, 10);
-      const thisGameCount = parseInt(thisGame.innerHTML, 10);
+      const currentBestCount = Number(currentBest.innerHTML);
+      const thisGameCount = Number(thisGame.innerHTML);
       if (thisGameCount < currentBestCount) {
-        currentBest.innerHTML = thisGameCount;
+        currentBest.innerHTML = String(thisGameCount);
         return thisGameCount;
       } else if (currentBestCount === 0) {
-        currentBest.innerHTML = thisGameCount;
+        currentBest.innerHTML = String(thisGameCount);
         return thisGameCount;
       }
       return null;
@@ -181,11 +176,12 @@ export default function LightsOut() {
     main();
   }, []);
   return (
-    <StandardWrapper>
+    <StandardWrapper headerDecoration={false}>
+      <Waves />
       <div className="LightsOutContainer">
         <SEO title="Lights Out" />
         <header className="Lights-Out-Header">
-          <h1>Lights Out</h1>
+          <PageTitle>Lights Out</PageTitle>
           <p>
             There is one objective: <i>turn all the lights out</i>.
           </p>
@@ -208,31 +204,31 @@ export default function LightsOut() {
           </div>
         </header>
         <div id="the-game">
-          <div id="a1" className="out"></div>
-          <div id="a2" className="out"></div>
-          <div id="a3" className="out"></div>
-          <div id="a4" className="out"></div>
-          <div id="a5" className="out"></div>
-          <div id="a6" className="out"></div>
-          <div id="a7" className="out"></div>
-          <div id="a8" className="out"></div>
-          <div id="a9" className="out"></div>
-          <div id="a10" className="out"></div>
-          <div id="a11" className="out"></div>
-          <div id="a12" className="out"></div>
-          <div id="a13" className="out"></div>
-          <div id="a14" className="out"></div>
-          <div id="a15" className="out"></div>
-          <div id="a16" className="out"></div>
-          <div id="a17" className="out"></div>
-          <div id="a18" className="out"></div>
-          <div id="a19" className="out"></div>
-          <div id="a20" className="out"></div>
-          <div id="a21" className="out"></div>
-          <div id="a22" className="out"></div>
-          <div id="a23" className="out"></div>
-          <div id="a24" className="out"></div>
-          <div id="a25" className="out"></div>
+          <button id="a1" className="out"></button>
+          <button id="a2" className="out"></button>
+          <button id="a3" className="out"></button>
+          <button id="a4" className="out"></button>
+          <button id="a5" className="out"></button>
+          <button id="a6" className="out"></button>
+          <button id="a7" className="out"></button>
+          <button id="a8" className="out"></button>
+          <button id="a9" className="out"></button>
+          <button id="a10" className="out"></button>
+          <button id="a11" className="out"></button>
+          <button id="a12" className="out"></button>
+          <button id="a13" className="out"></button>
+          <button id="a14" className="out"></button>
+          <button id="a15" className="out"></button>
+          <button id="a16" className="out"></button>
+          <button id="a17" className="out"></button>
+          <button id="a18" className="out"></button>
+          <button id="a19" className="out"></button>
+          <button id="a20" className="out"></button>
+          <button id="a21" className="out"></button>
+          <button id="a22" className="out"></button>
+          <button id="a23" className="out"></button>
+          <button id="a24" className="out"></button>
+          <button id="a25" className="out"></button>
         </div>
       </div>
     </StandardWrapper>
