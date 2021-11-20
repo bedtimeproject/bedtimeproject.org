@@ -1,9 +1,17 @@
+@import "../../../Variables.scss";
+
 .FooterContainer {
   background-color: #381223;
   overflow: hidden;
-  min-height: 58px;
   color: white;
   position: relative;
+  min-height: 100px;
+  @media screen and (min-width: 550px) {
+    min-height: 68px;
+  }
+  @media screen and (min-width: 700px) {
+    min-height: 58px;
+  }
 
   .CopyrightContainer {
     text-align: center;
