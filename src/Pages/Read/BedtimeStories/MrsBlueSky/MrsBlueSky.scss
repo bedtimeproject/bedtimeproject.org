@@ -168,7 +168,7 @@
   }
 
   .Paper-Airplane {
-    height: 50px;
+    height: 80px;
     position: fixed;
     left: -120px;
     top: 50vh;
@@ -180,16 +180,16 @@
   }
   @keyframes Paper-Airplane {
     1% {
-      transform: translate(0%);
+      transform: translate(0%) scaleX(-1) rotate(25deg);
     }
     4% {
-      transform: translate(1000%, 100px);
+      transform: translate(1000%, 100px) scaleX(-1) rotate(25deg);
     }
     7% {
-      transform: translate(2500%, -200px);
+      transform: translate(2500%, -200px) scaleX(-1) rotate(25deg);
     }
     100% {
-      transform: translate(2500%, -200px);
+      transform: translate(2500%, -200px) scaleX(-1) rotate(25deg);
     }
   }
 

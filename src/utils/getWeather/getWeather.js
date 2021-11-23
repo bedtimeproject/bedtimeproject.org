@@ -7,7 +7,7 @@
  * the site, so it won't keep switching weather.
  * @author Alexander Burdiss
  * @since 11/19/21
- * @version 1.0.0
+ * @version 1.0.1
  * @returns {string} One of "snow", "rain", or "clear"
  */
 export function getWeather() {
@@ -26,13 +26,13 @@ export function getWeather() {
     currentMonth == 1 ||
     currentMonth == 2
   ) {
-    if (!(currentDay % 2 == 0) && !(currentDay % 3 == 0)) {
+    if (currentDay % 2 == 0 || currentDay % 3 == 0) {
       return "snow";
     }
   }
 
   if (currentMonth == 3 || currentMonth == 4 || currentMonth == 5) {
-    if (currentDay % 4 == 0) {
+    if (currentDay % 3 == 0) {
       return "rain";
     }
   }

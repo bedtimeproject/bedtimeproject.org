@@ -2,7 +2,13 @@
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
 
+// Styles
+
 import "./MrsBlueSky.scss";
+// Components
+import SEO from "../../../../Components/Structural/SEO/SEO";
+
+// Images
 import BoyFrisbee from "./images/BoyFrisbee.svg";
 import ComicPow from "./images/ComicPow.svg";
 import Cow from "./images/Cow.svg";
@@ -14,20 +20,19 @@ import HighDog from "./images/HighDog.svg";
 import Lightning from "./images/Lightning.svg";
 import Moon from "./images/Moon.svg";
 import Mountain from "./images/Mountain.svg";
-import PaperAirplane from "./images/PaperAirplane.svg";
+import Aviantor from "../../../../assets/images/aviantor.png";
 import SadDogImage from "./images/SadDogImage.svg";
 import Sun from "./images/Sun.svg";
 import SunsetCloud from "./images/SunsetCloud.svg";
 import SunsetCloud2 from "./images/SunsetCloud.svg";
 import WindCloud from "./images/WindCloud.svg";
-import SEO from "../../../../Components/Structural/SEO/SEO";
 
 /**
  * @namespace MrsBlueSky
  * @function MrsBlueSky
  * @description A scroll-animated poem. This was originally built using HTML, so
  * it does not currently follow React best practices.
- * @version 2.1.0
+ * @version 2.2.0
  * @author Alexander Burdiss
  * @since 5/14/21
  * @component
@@ -73,7 +78,7 @@ export default function MrsBlueSky() {
           <img src={HeaderCloud} className="Header-Cloud" />
           <h1 className="Poem-Title">Mrs. Blue Sky</h1>
           <h2 className="Poem-Author">C.A. Moonbloom</h2>
-          <img src={PaperAirplane} className="Paper-Airplane" />
+          <img src={Aviantor} className="Paper-Airplane" />
           <img src={Moon} className="Moon" />
         </div>
         <div className="Poem-Stanza-Wrapper">
