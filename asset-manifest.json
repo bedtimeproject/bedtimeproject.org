@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.89fd00a0.chunk.css",
-    "main.js": "/static/js/main.01c48fc8.chunk.js",
-    "main.js.map": "/static/js/main.01c48fc8.chunk.js.map",
+    "main.css": "/static/css/main.55b96a60.chunk.css",
+    "main.js": "/static/js/main.bb735219.chunk.js",
+    "main.js.map": "/static/js/main.bb735219.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a16d222.js",
     "runtime-main.js.map": "/static/js/runtime-main.0a16d222.js.map",
     "static/css/2.679831fc.chunk.css": "/static/css/2.679831fc.chunk.css",
-    "static/js/2.9965c43e.chunk.js": "/static/js/2.9965c43e.chunk.js",
-    "static/js/2.9965c43e.chunk.js.map": "/static/js/2.9965c43e.chunk.js.map",
+    "static/js/2.81382ac1.chunk.js": "/static/js/2.81382ac1.chunk.js",
+    "static/js/2.81382ac1.chunk.js.map": "/static/js/2.81382ac1.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.679831fc.chunk.css.map": "/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.89fd00a0.chunk.css.map": "/static/css/main.89fd00a0.chunk.css.map",
-    "static/js/2.9965c43e.chunk.js.LICENSE.txt": "/static/js/2.9965c43e.chunk.js.LICENSE.txt",
+    "static/css/main.55b96a60.chunk.css.map": "/static/css/main.55b96a60.chunk.css.map",
+    "static/js/2.81382ac1.chunk.js.LICENSE.txt": "/static/js/2.81382ac1.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/ActionBox.324ce66e.svg": "/static/media/ActionBox.324ce66e.svg",
     "static/media/AlaskaFlag.c2caed8d.svg": "/static/media/AlaskaFlag.c2caed8d.svg",
@@ -72,8 +72,11 @@
     "static/media/Umbrella.49818ec3.svg": "/static/media/Umbrella.49818ec3.svg",
     "static/media/WaveOutline.674050ed.svg": "/static/media/WaveOutline.674050ed.svg",
     "static/media/WindCloud.5351c174.svg": "/static/media/WindCloud.5351c174.svg",
+    "static/media/bulb.229ce97b.svg": "/static/media/bulb.229ce97b.svg",
+    "static/media/castle.ec5eb1fa.svg": "/static/media/castle.ec5eb1fa.svg",
     "static/media/logo.def79c06.png": "/static/media/logo.def79c06.png",
     "static/media/scroll.76d0a694.svg": "/static/media/scroll.76d0a694.svg",
+    "static/media/sudoku.2e080d5d.svg": "/static/media/sudoku.2e080d5d.svg",
     "static/media/Home.scss": "/static/media/sunset-beach.8ca7f506.jpg",
     "static/media/QuipsDisplay.scss": "/static/media/tiledPaperWhite.ec7f5a5b.jpg",
     "static/media/About.scss": "/static/media/waves.9364c99a.jpg",
@@ -82,8 +85,8 @@
   "entrypoints": [
     "static/js/runtime-main.0a16d222.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.9965c43e.chunk.js",
-    "static/css/main.89fd00a0.chunk.css",
-    "static/js/main.01c48fc8.chunk.js"
+    "static/js/2.81382ac1.chunk.js",
+    "static/css/main.55b96a60.chunk.css",
+    "static/js/main.bb735219.chunk.js"
   ]
 }
