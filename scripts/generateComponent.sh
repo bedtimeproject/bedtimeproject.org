@@ -46,7 +46,8 @@ fi
 mkdir "src/$path/$component"
 
 # Make JS File
-echo "import React from \"react\";
+echo "// @ts-check
+import React from \"react\";
 import \"./$component.scss\";
 
 /**

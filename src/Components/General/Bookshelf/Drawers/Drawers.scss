@@ -27,7 +27,12 @@
   }
 
   .drawer {
-    background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
+    background-image: linear-gradient(
+      to bottom,
+      #f9ebb7 3%,
+      #e4c695 4%,
+      #d6a867
+    );
     box-shadow: 0 0 0 1px #6c4116;
     border-radius: 4px;
     display: inline-block;
@@ -40,7 +45,7 @@
 
   .handle {
     background-image: linear-gradient(
-      top,
+      to top,
       #efefef 35%,
       #454545 38%,
       #2c2c2c 75%,

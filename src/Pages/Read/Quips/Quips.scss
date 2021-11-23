@@ -17,7 +17,12 @@
       padding-left: 15px;
       padding-right: 15px;
       min-height: 900px;
-      background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
+      background-image: linear-gradient(
+        to bottom,
+        #f9ebb7 3%,
+        #e4c695 4%,
+        #d6a867
+      );
       top: 0;
       border-radius: 0 0 20px 20px;
       width: 90%;
@@ -28,7 +33,12 @@
   }
 
   .drawer {
-    background-image: linear-gradient(#f9ebb7 3%, #e4c695 4%, #d6a867);
+    background-image: linear-gradient(
+      to bottom,
+      #f9ebb7 3%,
+      #e4c695 4%,
+      #d6a867
+    );
     box-shadow: 0 0 0 1px #6c4116;
     border-radius: 20px;
     display: inline-block;
@@ -59,7 +69,7 @@
 
   .handle {
     background-image: linear-gradient(
-      top,
+      tp top,
       #efefef 35%,
       #454545 38%,
       #2c2c2c 75%,

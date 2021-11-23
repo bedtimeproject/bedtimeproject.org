@@ -10,6 +10,5 @@
 export function isIE() {
   let ua = window.navigator.userAgent;
   let isIE = /MSIE|Trident/.test(ua);
-  console.log(isIE);
   return isIE;
 }

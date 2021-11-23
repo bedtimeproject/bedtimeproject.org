@@ -1,31 +1,55 @@
+import React, { lazy } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
+// Styles
 import "./App.scss";
 
-// Root components
-import Play from "./Pages/Play/Play";
-import Playground from "./Pages/Play/Playground/Playground";
-import Chess from "./Pages/Play/Chess/Chess";
-import LightsOut from "./Pages/Play/LightsOut/LightsOut";
-import Sudoku from "./Pages/Play/Sudoku/Sudoku";
-import About from "./Pages/About/About";
-import Home from "./Pages/Home/Home";
-import Construction from "./Pages/Construction/Construction";
-import Read from "./Pages/Read/Read";
-import Stories from "./Pages/Read/Stories/Stories";
-import Tales from "./Pages/Read/Tales/Tales";
-import Quips from "./Pages/Read/Quips/Quips";
-import FourOhFour from "./Pages/404/404";
-import Acknowledgements from "./Pages/About/Acknowledgements/Acknowledgements";
-import Licenses from "./Pages/About/Licenses/Licenses";
-import Parents from "./Pages/Parents/Parents";
-import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+// Helper Components
+import LazyRoute from "./Components/Structural/LazyRoute/LazyRoute";
 
-// Stories without Header and Footer
-import TheLadyAndTheFrog from "./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog";
-import MrsBlueSky from "./Pages/Read/BedtimeStories/MrsBlueSky/MrsBlueSky";
-import TheGuideToSunset from "./Pages/Read/BedtimeStories/TheGuideToSunset/TheGuideToSunset";
-import BedtimeStories from "./Pages/Read/BedtimeStories/BedtimeStories";
+// Base Components
+import Home from "./Pages/Home/Home";
+// TODO: Lazy Load this after launch
+import Construction from "./Pages/Construction/Construction";
+
+// Read Pages
+const Read = lazy(() => import("./Pages/Read/Read"));
+const BedtimeStories = lazy(() =>
+  import("./Pages/Read/BedtimeStories/BedtimeStories")
+);
+const TheLadyAndTheFrog = lazy(() =>
+  import("./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog")
+);
+const MrsBlueSky = lazy(() =>
+  import("./Pages/Read/BedtimeStories/MrsBlueSky/MrsBlueSky")
+);
+const TheGuideToSunset = lazy(() =>
+  import("./Pages/Read/BedtimeStories/TheGuideToSunset/TheGuideToSunset")
+);
+const Stories = lazy(() => import("./Pages/Read/Stories/Stories"));
+const Tales = lazy(() => import("./Pages/Read/Tales/Tales"));
+const Quips = lazy(() => import("./Pages/Read/Quips/Quips"));
+
+// Play Pages
+const Play = lazy(() => import("./Pages/Play/Play"));
+const Playground = lazy(() => import("./Pages/Play/Playground/Playground"));
+const Chess = lazy(() => import("./Pages/Play/Chess/Chess"));
+const LightsOut = lazy(() => import("./Pages/Play/LightsOut/LightsOut"));
+const Sudoku = lazy(() => import("./Pages/Play/Sudoku/Sudoku"));
+
+// About Pages
+const About = lazy(() => import("./Pages/About/About"));
+const Licenses = lazy(() => import("./Pages/About/Licenses/Licenses"));
+const Acknowledgements = lazy(() =>
+  import("./Pages/About/Acknowledgements/Acknowledgements")
+);
+
+// Parents Pages
+const Parents = lazy(() => import("./Pages/Parents/Parents"));
+
+// Misc Pages
+const FourOhFour = lazy(() => import("./Pages/404/404"));
+const PrivacyPolicy = lazy(() => import("./Pages/PrivacyPolicy/PrivacyPolicy"));
 
 /**
  * @function App
@@ -51,89 +75,92 @@ export default function App() {
           </Route>
           <Route path="/play">
             <Switch>
-              <Route exact path="/play">
+              <LazyRoute exact path="/play">
                 <Play />
-              </Route>
-              <Route path="/play/playground">
+              </LazyRoute>
+              <LazyRoute path="/play/playground">
                 <Playground />
-              </Route>
-              <Route path="/play/chess">
+              </LazyRoute>
+              <LazyRoute path="/play/chess">
                 <Chess />
-              </Route>
-              <Route path="/play/lights-out">
+              </LazyRoute>
+              <LazyRoute path="/play/lights-out">
                 <LightsOut />
-              </Route>
-              <Route path="/play/sudoku">
+              </LazyRoute>
+              <LazyRoute path="/play/sudoku">
                 <Sudoku />
-              </Route>
-              <Route path="/play/*">
+              </LazyRoute>
+              <LazyRoute path="/play/*">
                 <FourOhFour />
-              </Route>
+              </LazyRoute>
             </Switch>
           </Route>
           <Route path="/read">
             <Switch>
-              <Route exact path="/read">
+              <LazyRoute exact path="/read">
                 <Read />
-              </Route>
-              <Route path="/read/stories">
+              </LazyRoute>
+              <LazyRoute path="/read/stories">
                 <Stories />
-              </Route>
-              <Route exact path="/read/bedtime-stories/the-lady-and-the-frog">
+              </LazyRoute>
+              <LazyRoute
+                exact
+                path="/read/bedtime-stories/the-lady-and-the-frog"
+              >
                 <TheLadyAndTheFrog />
-              </Route>
-              <Route exact path="/read/bedtime-stories/mrs-blue-sky">
+              </LazyRoute>
+              <LazyRoute exact path="/read/bedtime-stories/mrs-blue-sky">
                 <MrsBlueSky />
-              </Route>
-              <Route exact path="/read/bedtime-stories/the-guide-to-sunset">
+              </LazyRoute>
+              <LazyRoute exact path="/read/bedtime-stories/the-guide-to-sunset">
                 <TheGuideToSunset />
-              </Route>
-              <Route path="/read/bedtime-stories">
+              </LazyRoute>
+              <LazyRoute path="/read/bedtime-stories">
                 <BedtimeStories />
-              </Route>
-              <Route path="/read/quips">
+              </LazyRoute>
+              <LazyRoute path="/read/quips">
                 <Quips />
-              </Route>
-              <Route path="/read/tales">
+              </LazyRoute>
+              <LazyRoute path="/read/tales">
                 <Tales />
-              </Route>
-              <Route path="/read/*">
+              </LazyRoute>
+              <LazyRoute path="/read/*">
                 <FourOhFour />
-              </Route>
+              </LazyRoute>
             </Switch>
           </Route>
           <Route path="/about">
             <Switch>
-              <Route exact path="/about">
+              <LazyRoute exact path="/about">
                 <About />
-              </Route>
-              <Route exact path="/about/acknowledgements">
+              </LazyRoute>
+              <LazyRoute exact path="/about/acknowledgements">
                 <Acknowledgements />
-              </Route>
-              <Route exact path="/about/licenses">
+              </LazyRoute>
+              <LazyRoute exact path="/about/licenses">
                 <Licenses />
-              </Route>
-              <Route path="/about/*">
+              </LazyRoute>
+              <LazyRoute path="/about/*">
                 <FourOhFour />
-              </Route>
+              </LazyRoute>
             </Switch>
           </Route>
           <Route path="/parents">
             <Switch>
-              <Route exact path="/parents">
+              <LazyRoute exact path="/parents">
                 <Parents />
-              </Route>
-              <Route path="/parents/*">
+              </LazyRoute>
+              <LazyRoute path="/parents/*">
                 <FourOhFour />
-              </Route>
+              </LazyRoute>
             </Switch>
           </Route>
-          <Route exact path="/privacy-policy">
+          <LazyRoute exact path="/privacy-policy">
             <PrivacyPolicy />
-          </Route>
-          <Route path="*">
+          </LazyRoute>
+          <LazyRoute path="*">
             <FourOhFour />
-          </Route>
+          </LazyRoute>
         </Switch>
       </Router>
     </div>

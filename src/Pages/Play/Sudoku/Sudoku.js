@@ -351,7 +351,6 @@ export default function Sudoku() {
             boardNumber.classList.add(rowErrorClass);
           }
         }
-        console.log(boardNumber);
         if (boardNumber.innerText) {
           usedLetters.push(boardNumber);
         }
