@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.55b96a60.chunk.css",
-    "main.js": "/static/js/main.bb735219.chunk.js",
-    "main.js.map": "/static/js/main.bb735219.chunk.js.map",
+    "main.css": "/static/css/main.bbd613e1.chunk.css",
+    "main.js": "/static/js/main.bee3b95a.chunk.js",
+    "main.js.map": "/static/js/main.bee3b95a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0a16d222.js",
     "runtime-main.js.map": "/static/js/runtime-main.0a16d222.js.map",
     "static/css/2.679831fc.chunk.css": "/static/css/2.679831fc.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.81382ac1.chunk.js.map": "/static/js/2.81382ac1.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.679831fc.chunk.css.map": "/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.55b96a60.chunk.css.map": "/static/css/main.55b96a60.chunk.css.map",
+    "static/css/main.bbd613e1.chunk.css.map": "/static/css/main.bbd613e1.chunk.css.map",
     "static/js/2.81382ac1.chunk.js.LICENSE.txt": "/static/js/2.81382ac1.chunk.js.LICENSE.txt",
     "static/media/AboutUs.a8ffa233.svg": "/static/media/AboutUs.a8ffa233.svg",
     "static/media/ActionBox.324ce66e.svg": "/static/media/ActionBox.324ce66e.svg",
@@ -54,7 +54,6 @@
     "static/media/Mountains.01b988fa.svg": "/static/media/Mountains.01b988fa.svg",
     "static/media/MusicNotes.c9a9e04e.svg": "/static/media/MusicNotes.c9a9e04e.svg",
     "static/media/Oak.db44e893.svg": "/static/media/Oak.db44e893.svg",
-    "static/media/PaperAirplane.3d91a11a.svg": "/static/media/PaperAirplane.3d91a11a.svg",
     "static/media/Penny.94f5ad40.svg": "/static/media/Penny.94f5ad40.svg",
     "static/media/PinkPoodle.b1eb5be5.svg": "/static/media/PinkPoodle.b1eb5be5.svg",
     "static/media/Playground.8508e49b.svg": "/static/media/Playground.8508e49b.svg",
@@ -72,6 +71,7 @@
     "static/media/Umbrella.49818ec3.svg": "/static/media/Umbrella.49818ec3.svg",
     "static/media/WaveOutline.674050ed.svg": "/static/media/WaveOutline.674050ed.svg",
     "static/media/WindCloud.5351c174.svg": "/static/media/WindCloud.5351c174.svg",
+    "static/media/aviantor.7479e439.png": "/static/media/aviantor.7479e439.png",
     "static/media/bulb.229ce97b.svg": "/static/media/bulb.229ce97b.svg",
     "static/media/castle.ec5eb1fa.svg": "/static/media/castle.ec5eb1fa.svg",
     "static/media/logo.def79c06.png": "/static/media/logo.def79c06.png",
@@ -86,7 +86,7 @@
     "static/js/runtime-main.0a16d222.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.81382ac1.chunk.js",
-    "static/css/main.55b96a60.chunk.css",
-    "static/js/main.bb735219.chunk.js"
+    "static/css/main.bbd613e1.chunk.css",
+    "static/js/main.bee3b95a.chunk.js"
   ]
 }
