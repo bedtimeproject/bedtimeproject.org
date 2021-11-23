@@ -1,8 +1,54 @@
+@import "../../Variables.scss";
+
 .Play-Links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 90%;
-  margin: auto;
-  margin-top: 40px;
+  margin-bottom: 60px;
+
+  .Links-Left,
+  .Links-Right {
+    display: flex;
+    flex-direction: column;
+    max-width: min(80%, 750px);
+    margin: 50px auto;
+    @media screen and (min-width: $Break-Medium) {
+      flex-direction: row;
+    }
+  }
+
+  .LinkDescription-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @media screen and (min-width: $Break-Medium) {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  .Links-Right {
+    background-color: #eeeeee;
+    border-radius: 20px;
+    padding: 30px 0;
+    @media screen and (min-width: $Break-Medium) {
+      flex-direction: row-reverse;
+    }
+    .LinkDescription-Container {
+      @media screen and (min-width: $Break-Medium) {
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+  }
+
+  .Image-Container {
+    display: flex;
+    justify-content: center;
+    img {
+      padding: 30px;
+      max-height: 300px;
+      height: auto;
+      width: 300px;
+    }
+  }
 }
