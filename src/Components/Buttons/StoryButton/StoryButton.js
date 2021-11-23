@@ -1,3 +1,5 @@
+// @ts-check
+import React from "react";
 import { Link } from "react-router-dom";
 import "./StoryButton.scss";
 
@@ -6,7 +8,7 @@ import "./StoryButton.scss";
  * @description A link that exists currently on the playground. If a link is
  * passed, the component will route to another page, but if not, the onClick
  * function will be called on click.
- * @param {Object} props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {string} props.children The text to render in this button
  * @param {Function} [props.onClick] A function to call when this button is
  * clicked. If props.link is passed, this will not be called.
@@ -33,6 +35,7 @@ export default function StoryButton({ children, onClick, link, className }) {
     </Link>
   ) : (
     <button
+      // @ts-ignore
       onClick={onClick}
       className={"ButtonContainer" + (className ? " " + className : "")}
     >

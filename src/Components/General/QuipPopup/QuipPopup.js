@@ -1,6 +1,8 @@
+// @ts-check
 import React, { useEffect, useState } from "react";
 import "./QuipPopup.scss";
 
+// Utils
 import { addDrupalUrlToImageTag } from "../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 
 /**

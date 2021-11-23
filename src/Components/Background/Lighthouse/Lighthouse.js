@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./Lighthouse.scss";
 

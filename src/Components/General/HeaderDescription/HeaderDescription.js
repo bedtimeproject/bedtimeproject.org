@@ -1,10 +1,11 @@
+// @ts-check
 import React from "react";
 import "./HeaderDescription.scss";
 
 /**
  * @function HeaderDescription
  * @description One list item in the Acknowledgements list.
- * @param {*} props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {string} props.name The name of the contributor
  * @param {string} props.contribution The contribution that the contrubutor
  * made to the project

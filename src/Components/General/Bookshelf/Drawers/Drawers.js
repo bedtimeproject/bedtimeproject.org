@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Drawers.scss";
@@ -7,26 +8,27 @@ import "./Drawers.scss";
  * @function Drawers
  * @author Alexander Burdiss
  * @since 11/01/21
- * @version 1.0.0
+ * @lastModified 11/22/21
+ * @version 1.0.1
  * @component
  */
 export default function Drawers({ label, href }) {
   return (
-    <div class="Drawers-wrap">
+    <div className="Drawers-wrap">
       <h2>{label}</h2>
-      <ul class="drawers">
-        <Link class="drawer" to={href} aria-label={"Navigates to " + label}>
-          <span class="handle"></span>
+      <ul className="drawers">
+        <Link className="drawer" to={href} aria-label={"Navigates to " + label}>
+          <span className="handle"></span>
         </Link>
-        <Link class="drawer" to={href} aria-label={"Navigates to " + label}>
-          <span class="handle"></span>
+        <Link className="drawer" to={href} aria-label={"Navigates to " + label}>
+          <span className="handle"></span>
         </Link>
         <Link
-          class="drawer third"
+          className="drawer third"
           to={href}
           aria-label={"Navigates to " + label}
         >
-          <span class="handle"></span>
+          <span className="handle"></span>
         </Link>
       </ul>
     </div>

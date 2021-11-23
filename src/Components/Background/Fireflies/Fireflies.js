@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect, useRef } from "react";
 import "./Fireflies.scss";
 
@@ -81,12 +82,17 @@ export default function Fireflies() {
       false
     );
 
+    // @ts-ignore
     window.requestAnimFrame = function () {
       return (
         window.requestAnimationFrame ||
+        // @ts-ignore
         window.webkitRequestAnimationFrame ||
+        // @ts-ignore
         window.mozRequestAnimationFrame ||
+        // @ts-ignore
         window.oRequestAnimationFrame ||
+        // @ts-ignore
         window.msRequestAnimationFrame ||
         function (callback) {
           window.setTimeout(callback);
@@ -95,6 +101,7 @@ export default function Fireflies() {
     };
 
     function loop() {
+      // @ts-ignore
       window.requestAnimFrame(loop);
       c.clearRect(0, 0, w, h);
       draw();

@@ -1,3 +1,5 @@
+// @ts-check
+import React from "react";
 import { Link } from "react-router-dom";
 import "./PlayButton.scss";
 
@@ -5,7 +7,7 @@ import "./PlayButton.scss";
  * @function PlayButton
  * @description A button that is used on the Play site to take users to the
  * different games that exist on the site.
- * @param props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {String} props.children The text to render on this component
  * @param {String} props.link A link to another page on the site
  * @author Alexander Burdiss

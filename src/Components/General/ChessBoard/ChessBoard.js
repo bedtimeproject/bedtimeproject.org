@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./ChessBoard.scss";
 import ChessBoardSquare from "./ChessBoardSquare/ChessBoardSquare";

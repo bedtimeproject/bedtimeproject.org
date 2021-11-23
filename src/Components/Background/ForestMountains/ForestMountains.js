@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./ForestMountains.scss";
 
@@ -9,7 +10,7 @@ import "./ForestMountains.scss";
  * @author Alexander Burdiss
  * @since 6/5/21
  * @version 1.0.2
- * @param props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {String} [props.timeOfDay] An optional prop that will force the
  * background to render either day or night.
  */
