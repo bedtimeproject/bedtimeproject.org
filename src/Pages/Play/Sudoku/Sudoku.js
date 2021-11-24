@@ -16,7 +16,7 @@ import StandardWrapper from "../../../Components/Structural/StandardWrapper/Stan
  * @function Sudoku
  * @author Alexander Burdiss
  * @since 6/15/21
- * @version 1.1.1
+ * @version 1.1.2
  * @description A game of sudoku that handles validation, and allows user input
  * with the mouse or on a touch device.
  * @component
@@ -252,11 +252,15 @@ export default function Sudoku() {
    * box that is clicked.
    * @author Alexander Burdiss
    * @since 6/16/21
-   * @version 1.0.0
+   * @version 1.0.1
    */
   function handleBoxClick(event) {
-    // @ts-ignore
-    if (!event.target.classList.contains("locked")) {
+    if (
+      // @ts-ignore
+      !event.target.classList.contains("locked") &&
+      // @ts-ignore
+      !event.target.classList.contains("Board")
+    ) {
       // @ts-ignore
       if (event.target.innerText == focusedNumber) {
         // @ts-ignore
@@ -270,12 +274,8 @@ export default function Sudoku() {
         addNumber(event);
         // @ts-ignore
         event.target.classList.add("focused");
-        document.querySelector("div").style.pointerEvents = "none";
       }
     }
-    setTimeout(function () {
-      document.querySelector("div").style.pointerEvents = "auto";
-    }, 1000);
   }
 
   /**
@@ -341,7 +341,7 @@ export default function Sudoku() {
    * appropriate error classes to the board.
    * @author Alexander Burdiss
    * @since 6/16/21
-   * @version 1.0.0
+   * @version 1.0.1
    */
   function validateRows() {
     document.querySelectorAll(`.${rowErrorClass}`).forEach((node) => {
@@ -361,11 +361,11 @@ export default function Sudoku() {
             usedLetter.innerText == boardNumber.innerText
           ) {
             usedLetter.classList.add(rowErrorClass);
-            boardNumber.classList.add(rowErrorClass);
+            boardNumber?.classList.add(rowErrorClass);
           }
         }
         // @ts-ignore
-        if (boardNumber.innerText) {
+        if (boardNumber?.innerText) {
           usedLetters.push(boardNumber);
         }
       }
@@ -378,7 +378,7 @@ export default function Sudoku() {
    * appropriate error classes to the board.
    * @author Alexander Burdiss
    * @since 6/16/21
-   * @version 1.0.0
+   * @version 1.0.1
    */
   function validateColumns() {
     document.querySelectorAll(`.${colErrorClass}`).forEach((node) => {
@@ -403,7 +403,7 @@ export default function Sudoku() {
         }
 
         // @ts-ignore
-        if (boardNumber.innerText) {
+        if (boardNumber?.innerText) {
           usedNumbers.push(boardNumber);
         }
       }
