@@ -16,14 +16,12 @@ import StandardWrapper from "../../../Components/Structural/StandardWrapper/Stan
  * @function Sudoku
  * @author Alexander Burdiss
  * @since 6/15/21
- * @version 1.1.0
+ * @version 1.1.1
  * @description A game of sudoku that handles validation, and allows user input
  * with the mouse or on a touch device.
  * @component
  * @example
- * ```jsx
  * <Sudoku />
- * ```
  */
 export default function Sudoku() {
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
