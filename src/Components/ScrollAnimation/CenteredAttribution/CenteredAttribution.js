@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CenteredAttribution.scss";
@@ -12,9 +13,10 @@ import { getContrast } from "../../../utils/getContrast/getContrast";
  * @author Alexander Burdiss
  * @since 9/5/21
  * @version 1.0.0
- * @param props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {React.Component} props.children The text to render on this component
  * @param {string} props.background The background to render on this component
+ * @param {string} props.backlink
  */
 export default function CenteredAttribution({
   children,

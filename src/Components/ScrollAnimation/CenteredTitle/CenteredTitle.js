@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./CenteredTitle.scss";
 
@@ -11,12 +12,11 @@ import { getContrast } from "../../../utils/getContrast/getContrast";
  * @author Alexander Burdiss
  * @since 9/5/21
  * @version 1.1.0
- * @param props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {String} props.children The title of the scroll animation to render
  * @param {String} props.background The color of the background for this title
  * component
  * @param {String} props.author The author of the poem
- * @param {number} props.stanzaCount The number of stanzas in the body
  */
 export default function CenteredTitle({ children, background, author }) {
   return (

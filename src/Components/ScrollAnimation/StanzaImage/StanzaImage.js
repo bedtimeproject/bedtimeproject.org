@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 
 import "./StanzaImage.scss";
@@ -56,8 +57,8 @@ import Sun from "../../../Pages/Read/BedtimeStories/MrsBlueSky/images/Sun.svg";
 /**
  * @function stanzaImage
  * @description Displays One image for the stanza.
- * @param props The JSX props passed to this React component
- * @param {React.Component} props.children The image to render inside this
+ * @param {object} props The JSX props passed to this React component
+ * @param {React.Component|string} props.children The image to render inside this
  * stanza.
  * @param {number} props.index The stanza index that this image is being
  * rendered with
@@ -77,7 +78,7 @@ import Sun from "../../../Pages/Read/BedtimeStories/MrsBlueSky/images/Sun.svg";
  * @param {string} props.url A url to use for an external image.
  * @param {number} props.rotation The rotation of the image
  * @param {number} props.scale The amount to scale the image
- * @param {Boolean} props.animationOverlap Whether the animations should overlap
+ * @param {string} props.animationOverlap Whether the animations should overlap
  * with the previous and next animations
  * @param {number} props.stanzaDuration The number of stanzas that this image
  * should remain onscreen.

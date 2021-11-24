@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./DefaultTitle.scss";
 
@@ -10,7 +11,7 @@ import { getContrast } from "../../../utils/getContrast/getContrast";
  * @author Alexander Burdiss
  * @since 6/4/21
  * @version 1.3.0
- * @param props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {String} props.children The title of the scroll animation to render
  * @param {String} props.background The color of the background for this title
  * component

@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import DefaultStanza from "../DefaultStanza/DefaultStanza";
 import StanzaImage from "../StanzaImage/StanzaImage";
@@ -9,8 +10,8 @@ import StanzaImage from "../StanzaImage/StanzaImage";
  * @author Alexander Burdiss
  * @since 7/8/21
  * @version 2.2.0
- * @param props The JSX props passed to this React component
- * @param {Object[]} props.story The story object with all of the config baked
+ * @param {object} props The JSX props passed to this React component
+ * @param {object} props.story The story object with all of the config baked
  * in.
  */
 export default function Body({ story }) {
@@ -94,11 +95,6 @@ export default function Body({ story }) {
                   <DefaultStanza
                     index={index + 1}
                     background={story.stanzaBackgroundColor}
-                    bodyBackground={
-                      stanza.background
-                        ? stanza.background
-                        : story.defaultBackgroundColor
-                    }
                   >
                     {stanza.stanza}
                   </DefaultStanza>

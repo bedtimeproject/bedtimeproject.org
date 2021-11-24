@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function longslideright
  * @description Returns a string for a keyframes slide left animation with the

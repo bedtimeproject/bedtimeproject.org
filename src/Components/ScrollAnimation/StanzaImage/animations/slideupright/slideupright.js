@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function slideupright
  * @description Returns a string for a keyframes slide up right animation with

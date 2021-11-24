@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect } from "react";
 
 import DefaultTitle from "./DefaultTitle/DefaultTitle";
@@ -11,11 +12,8 @@ import Body from "./Body/Body";
  * @description A container for one Scroll Animation that handles the styles and
  * different logistical elements for a scroll animation poem. This should be
  * used in conjunction with `Stanza`, `Title`, and `Attribution`.
- * @param props The JSX props passed to this React component
- * @param {React.Component} props.children The parts of the poem to render on the
- * screen
- * @param {string} props.bodyStyleMinHeight The minimum height of the screen,
- * preferrably in Viewport heights that will be attached to the body.
+ * @param {object} props The JSX props passed to this React component
+ * @param {object} props.story
  * @author Alexander Burdiss
  * @since 6/26/21
  * @version 2.0.0
@@ -29,11 +27,14 @@ export default function ScrollAnimation({ story }) {
   useEffect(() => {
     if (document.querySelector("#page")) {
       const bodyStyleMinHeight = `${story.body.length * 100}vh`;
+      // @ts-ignore
       document.querySelector("#page").style.minHeight = bodyStyleMinHeight;
       function handleScroll() {
         document.body.style.setProperty(
           "--scroll",
+          // @ts-ignore
           window.pageYOffset /
+            // @ts-ignore
             (document.querySelector("#page").offsetHeight - window.innerHeight)
         );
       }
@@ -41,6 +42,7 @@ export default function ScrollAnimation({ story }) {
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
+        // @ts-ignore
         document.querySelector("#page").style.minHeight = "";
         document.body.style.removeProperty("--scroll");
       };
@@ -129,7 +131,7 @@ export default function ScrollAnimation({ story }) {
           default: (
             <DefaultAttribution
               background={story.stanzaBackgroundColor}
-              backlink={"/read/tales"}
+              backlink={"/read/bedtime-stories"}
             >
               {story.attribution}
             </DefaultAttribution>
@@ -137,9 +139,9 @@ export default function ScrollAnimation({ story }) {
           centered: (
             <CenteredAttribution
               background={story.stanzaBackgroundColor}
-              author={story.author}
+              backlink={"/read/bedtime-stories"}
             >
-              {story.title}
+              {story.attribution}
             </CenteredAttribution>
           ),
         }[story.attributionCard]
