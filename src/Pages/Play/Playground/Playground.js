@@ -1,21 +1,27 @@
-import { useEffect } from "react";
+// @ts-check
+import React, { useEffect } from "react";
 
-import { json } from "./playgroundData";
+// Components
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
-import RotatingCubes from "../../../Components/Background/RotatingCubes/RotatingCubes";
 import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
-
-import "./Playground.scss";
-import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import SEO from "../../../Components/Structural/SEO/SEO";
+import Waves from "../../../Components/Background/Waves/Waves";
+import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+
+// Styles
+import "./Playground.scss";
+
+// Assets
+import { json } from "./playgroundData";
 
 /**
+ * @namespace Playground
  * @function Playground
  * @description A story generator that generates a new story each time the
  * button is clicked.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  * @example
  * <Playground />
@@ -116,12 +122,12 @@ export default function Playground() {
     loadStory();
   }, []);
   return (
-    <StandardWrapper>
+    <StandardWrapper headerDecoration={false}>
+      <Waves />
       <article about="/play/playground">
         <SEO title="Playground" />
         <div className="Playground-Container">
           <div className="Playground-Background-Color" />
-          <RotatingCubes />
 
           <PageTitle>Playground</PageTitle>
 
