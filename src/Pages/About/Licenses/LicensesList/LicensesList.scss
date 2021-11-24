@@ -1,7 +1,9 @@
+@import "../../../../Variables.scss";
+
 .LicensesList-Container {
   padding-top: 20px;
   padding-bottom: 10px;
-  background-color: white;
+  background-color: $White;
   max-width: 600px;
   margin: 40px auto;
   padding: 20px 0;
@@ -28,7 +30,7 @@
       flex-direction: row;
       max-width: 100%;
       flex-wrap: wrap;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid $SlateBlue;
     }
 
     .name {
@@ -41,11 +43,11 @@
       aspect-ratio: 1;
       width: 58px;
       border-radius: 29px;
-      background-color: white;
+      background-color: $White;
     }
 
     .text {
-      color: gray;
+      color: $SlateBlue;
       margin-top: 3px;
     }
   }

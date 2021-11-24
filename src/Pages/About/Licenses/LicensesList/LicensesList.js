@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./LicensesList.scss";
 
@@ -5,12 +6,12 @@ import "./LicensesList.scss";
  * @function LicensesList
  * @description The list of licenses, created from the data passed by
  * Licenses.js
- * @param props The JSX props passed to this React component
+ * @param {object} props The JSX props passed to this React component
  * @param {Object[]} props.licenses The licenses that are used throughout this
  * app and will be displayed in a list on this component.
  * @author Alexander Burdiss
  * @since 6/10/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 export default function LicensesList({ licenses }) {
   return (
