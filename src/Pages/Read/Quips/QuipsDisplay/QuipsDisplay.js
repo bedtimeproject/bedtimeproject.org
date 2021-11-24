@@ -4,6 +4,7 @@ import { addDrupalUrlToImageTag } from "../../../../utils/addDrupalUrlToImageTag
 import "./QuipsDisplay.scss";
 
 /**
+ * @namespace QuipsDisplay
  * @function QuipsDisplay
  * @description A wrapper that handles rendering the quips.
  * @param {object} props The JSX props passed to this React component
@@ -13,7 +14,7 @@ import "./QuipsDisplay.scss";
  * @param {function} props.setOpenQuip
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 3.0.1
+ * @version 3.0.2
  * @component
  * @example
  * <QuipsDisplay quip={quip} />

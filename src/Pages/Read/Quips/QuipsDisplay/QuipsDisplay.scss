@@ -27,6 +27,7 @@
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     max-width: calc(100% - 40px);
+    color: #000;
 
     &:hover,
     &:focus {
@@ -38,6 +39,7 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      color: #000;
     }
   }
 
