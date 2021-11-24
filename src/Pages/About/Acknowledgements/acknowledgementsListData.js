@@ -68,8 +68,4 @@ export default [
     contribution: "Background Pattern on Acknowledgements Page",
     link: "https://codepen.io/TutulDevs",
   },
-  {
-    name: "Will Reddig",
-    contribution: "About Us Page Illustrations",
-  },
 ];
