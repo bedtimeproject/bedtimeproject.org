@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect, useState } from "react";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
@@ -21,7 +22,7 @@ import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDr
  * <About />
  */
 export default function About() {
-  const [contributors, setContributors] = useState();
+  const [contributors, setContributors] = useState([]);
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(

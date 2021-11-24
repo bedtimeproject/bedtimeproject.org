@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useState, useEffect } from "react";
 
 import "./Read.scss";
@@ -62,7 +63,6 @@ export default function Read() {
       <SEO title="Read" />
       <Bookshelf
         pageTitle="Read"
-        scrollable
         drawerHref="/read/quips"
         drawerLabel="Quips"
         books1={shelf1Books.map((book, index) => (

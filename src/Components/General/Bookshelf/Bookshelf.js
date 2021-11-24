@@ -10,6 +10,19 @@ import { getWeather } from "../../../utils/getWeather/getWeather";
 /**
  * @namespace Bookshelf
  * @function Bookshelf
+ * @param {object} props
+ * @param {object[]} [props.books1]
+ * @param {object[]} [props.books2]
+ * @param {object[]} [props.books3]
+ * @param {string} [props.pageTitle]
+ * @param {string} [props.drawerHref]
+ * @param {string} [props.drawerLabel]
+ * @param {string} [props.shelf1Link]
+ * @param {string} [props.shelf1Label]
+ * @param {string} [props.shelf2Link]
+ * @param {string} [props.shelf2Label]
+ * @param {string} [props.shelf3Link]
+ * @param {string} [props.shelf3Label]
  * @author Alexander Burdiss
  * @since 10/17/21
  * @version 1.1.0

@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";

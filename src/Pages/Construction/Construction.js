@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect, useState } from "react";
 import Lighthouse from "../../Components/Background/Lighthouse/Lighthouse";
 import "./Construction.scss";

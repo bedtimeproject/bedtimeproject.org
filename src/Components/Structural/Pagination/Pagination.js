@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import ReactPaginate from "react-paginate";
 import "./Pagination.scss";
@@ -6,7 +7,7 @@ import "./Pagination.scss";
  * @function Pagination
  * @description Styled pagination to use on different paginated elements
  * throughout the site
- * @param props The JSX props passed to this React component.
+ * @param {object} props The JSX props passed to this React component.
  * @param {Number} props.pageCount The number of pages to display with this
  * pagination
  * @param {Function} props.onPageChange The function to call when one of the
@@ -26,6 +27,7 @@ export default function Pagination({ pageCount, onPageChange }) {
         pageCount={pageCount}
         marginPagesDisplayed={2}
         pageRangeDisplayed={5}
+        // @ts-ignore
         onPageChange={onPageChange}
         containerClassName={"pagination"}
         activeClassName={"active"}

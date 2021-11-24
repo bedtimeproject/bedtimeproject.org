@@ -1,3 +1,4 @@
+// @ts-check
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -34,13 +35,16 @@ export default function TheLadyAndTheFrog() {
 
       let cards = document.querySelectorAll(".TheLadyAndTheFrogWrapper .Card");
       cards.forEach((card) => {
+        // @ts-ignore
         windowWidth += card.offsetWidth;
       });
 
       let main = document.querySelector(".TheLadyAndTheFrogWrapper main");
+      // @ts-ignore
       main.style.width = `${windowWidth + 2000}px`;
 
       document.addEventListener("resize", function (e) {
+        // @ts-ignore
         this.location.reload(false);
       });
     },

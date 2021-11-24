@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useState, useEffect } from "react";
 import "./Tale.scss";
 

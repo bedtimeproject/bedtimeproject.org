@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import ScrollAnimation from "../../../../Components/ScrollAnimation/ScrollAnimation";
 

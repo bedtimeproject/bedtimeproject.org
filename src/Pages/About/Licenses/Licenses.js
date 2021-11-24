@@ -1,3 +1,4 @@
+// @ts-check
 /*
 
 Download this lib: https://www.npmjs.com/package/npm-license-crawler

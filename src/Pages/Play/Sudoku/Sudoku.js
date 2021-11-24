@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useEffect, useState } from "react";
 
 import { shuffle } from "../../../utils/shuffle/shuffle";
@@ -58,8 +59,10 @@ export default function Sudoku() {
      * @since 6/18/21
      * @version 1.0.0
      */
+    // @ts-ignore
     window.win = () => {
       function setText(id, number) {
+        // @ts-ignore
         document.querySelector(`#${id}`).innerText = number;
       }
       setText("B1", "4");
@@ -174,19 +177,23 @@ export default function Sudoku() {
     let boards = puzzles[difficulty];
     let currentBoardFirstFour = "";
 
+    // @ts-ignore
     const currentBoardFirst = document.querySelector("#A1").innerText;
     currentBoardFirstFour = currentBoardFirst == "" ? "0" : currentBoardFirst;
 
+    // @ts-ignore
     const currentBoardSecond = document.querySelector("#A2").innerText;
     currentBoardFirstFour =
       currentBoardFirstFour +
       (currentBoardSecond == "" ? "0" : currentBoardSecond);
 
+    // @ts-ignore
     const currentBoardThird = document.querySelector("#A3").innerText;
     currentBoardFirstFour =
       currentBoardFirstFour +
       (currentBoardThird == "" ? "0" : currentBoardThird);
 
+    // @ts-ignore
     const currentBoardFourth = document.querySelector("#A4").innerText;
     currentBoardFirstFour =
       currentBoardFirstFour +
@@ -250,8 +257,11 @@ export default function Sudoku() {
    * @version 1.0.0
    */
   function handleBoxClick(event) {
+    // @ts-ignore
     if (!event.target.classList.contains("locked")) {
+      // @ts-ignore
       if (event.target.innerText == focusedNumber) {
+        // @ts-ignore
         event.target.innerText = "";
         validateBoard();
       } else {
@@ -260,6 +270,7 @@ export default function Sudoku() {
           previousFocusedElement.classList.remove("focused");
         }
         addNumber(event);
+        // @ts-ignore
         event.target.classList.add("focused");
         document.querySelector("div").style.pointerEvents = "none";
       }
@@ -285,6 +296,7 @@ export default function Sudoku() {
     if (previousFocusedElement) {
       previousFocusedElement.classList.remove("active");
     }
+    // @ts-ignore
     event.target.classList.add("active");
   }
 
@@ -299,6 +311,7 @@ export default function Sudoku() {
    * @version 1.0.0
    */
   function addNumber(event) {
+    // @ts-ignore
     event.target.innerText = focusedNumber;
     validateBoard();
   }
@@ -344,13 +357,16 @@ export default function Sudoku() {
         const boardNumber = document.querySelector(`#${letter}${number}`);
         for (let usedLetter of usedLetters) {
           if (
+            // @ts-ignore
             usedLetter.innerText &&
+            // @ts-ignore
             usedLetter.innerText == boardNumber.innerText
           ) {
             usedLetter.classList.add(rowErrorClass);
             boardNumber.classList.add(rowErrorClass);
           }
         }
+        // @ts-ignore
         if (boardNumber.innerText) {
           usedLetters.push(boardNumber);
         }
@@ -378,7 +394,9 @@ export default function Sudoku() {
         const boardNumber = document.querySelector(`#${letter}${number}`);
         for (let usedNumber of usedNumbers) {
           if (
+            // @ts-ignore
             usedNumber.innerText &&
+            // @ts-ignore
             usedNumber.innerText == boardNumber.innerText
           ) {
             usedNumber.classList.add(colErrorClass);
@@ -386,6 +404,7 @@ export default function Sudoku() {
           }
         }
 
+        // @ts-ignore
         if (boardNumber.innerText) {
           usedNumbers.push(boardNumber);
         }
@@ -412,7 +431,9 @@ export default function Sudoku() {
         const boardNumber = document.querySelector(`#${square}`);
         for (let usedNumber of usedNumbers) {
           if (
+            // @ts-ignore
             usedNumber.innerText &&
+            // @ts-ignore
             usedNumber.innerText == boardNumber.innerText
           ) {
             usedNumber.classList.add(squareErrorClass);
@@ -420,6 +441,7 @@ export default function Sudoku() {
           }
         }
 
+        // @ts-ignore
         if (boardNumber.innerText) {
           usedNumbers.push(boardNumber);
         }
@@ -440,6 +462,7 @@ export default function Sudoku() {
     for (let letter of letters) {
       for (let number of numbers) {
         const element = document.querySelector(`#${letter}${number}`);
+        // @ts-ignore
         if (!element.innerText) {
           return false;
         }
@@ -518,7 +541,11 @@ export default function Sudoku() {
             </button>
           </div>
           <div className="Main-Game-Container">
-            <div className="Board" onClick={handleBoxClick}>
+            <div
+              className="Board"
+              // @ts-ignore
+              onClick={handleBoxClick}
+            >
               <div id="A1" />
               <div id="B1" />
               <div id="C1" />
@@ -630,33 +657,98 @@ export default function Sudoku() {
 
             <div className="NumberContainer">
               <button
+                // @ts-ignore
                 onClick={(event) => handleNumberClick(1, event)}
                 className="active"
               >
                 1
               </button>
-              <button onClick={(event) => handleNumberClick(2, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    2,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 2
               </button>
-              <button onClick={(event) => handleNumberClick(3, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    3,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 3
               </button>
-              <button onClick={(event) => handleNumberClick(4, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    4,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 4
               </button>
-              <button onClick={(event) => handleNumberClick(5, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    5,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 5
               </button>
-              <button onClick={(event) => handleNumberClick(6, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    6,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 6
               </button>
-              <button onClick={(event) => handleNumberClick(7, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    7,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 7
               </button>
-              <button onClick={(event) => handleNumberClick(8, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    8,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 8
               </button>
-              <button onClick={(event) => handleNumberClick(9, event)}>
+              <button
+                onClick={(event) =>
+                  handleNumberClick(
+                    9,
+                    // @ts-ignore
+                    event
+                  )
+                }
+              >
                 9
               </button>
             </div>

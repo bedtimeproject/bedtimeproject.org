@@ -6,6 +6,9 @@ import "./Lighthouse.scss";
  * @namespace Lighthouse
  * @function Lighthouse
  * @author Alexander Burdiss
+ * @param {object} props The JSX props passed to this React component
+ * @param {boolean} [props.minimal]
+ * @param {boolean} [props.right]
  * @since 10/10/21
  * @version 1.0.1
  * @component

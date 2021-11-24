@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -9,7 +10,6 @@ import "./Breadcrumb.scss";
  * @function Breadcrumb
  * @description A stylized breadcrumb link to render on the site. This component
  * takes no arguments, but creates the breadcrumbs automatically from the url.
- * @param props The JSX props passed to this React component
  * @author Alexander Burdiss
  * @since 5/27/21
  * @version 2.2.0

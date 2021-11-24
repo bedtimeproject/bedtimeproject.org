@@ -1,3 +1,4 @@
+// @ts-check
 import React, { useState, useEffect } from "react";
 import ChessBoard from "../../../Components/General/ChessBoard/ChessBoard";
 import ChessJs from "chess.js";
@@ -16,6 +17,7 @@ import "./Chess.scss";
 export default function Chess() {
   const [board, setBoard] = useState([]);
   useEffect(function setupBoard() {
+    // @ts-ignore
     const game = new ChessJs();
     setBoard(game.board());
   }, []);

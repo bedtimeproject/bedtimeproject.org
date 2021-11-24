@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./SkipLink.scss";
 
@@ -12,6 +13,9 @@ import "./SkipLink.scss";
 export default function SkipLink() {
   function sendFocusToMainContent() {
     const mainContentId = "#mainContent";
+    /**
+     * @type {HTMLElement}
+     */
     const main = document.querySelector(mainContentId);
     main.focus();
   }

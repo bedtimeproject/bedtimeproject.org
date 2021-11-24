@@ -1,3 +1,4 @@
+// @ts-check
 /* eslint-disable jsx-a11y/alt-text */
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -45,7 +46,9 @@ export default function MrsBlueSky() {
     function handleScroll() {
       document.body.style.setProperty(
         "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+        String(
+          window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+        )
       );
     }
     handleScroll();

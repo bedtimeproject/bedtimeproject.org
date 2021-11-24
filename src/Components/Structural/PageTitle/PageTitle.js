@@ -1,3 +1,4 @@
+// @ts-check
 import React from "react";
 import "./PageTitle.scss";
 
@@ -12,9 +13,7 @@ import "./PageTitle.scss";
  * @version 1.0.0
  * @component
  * @example
- * ```jsx
  * <PageTitle>Hello, Title!</PageTitle>
- * ```
  */
 export default function PageTitle({ children }) {
   return (

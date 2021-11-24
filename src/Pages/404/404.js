@@ -1,13 +1,18 @@
-import { shuffle } from "../../utils/shuffle/shuffle";
+// @ts-check
 import React from "react";
 
+// Components
 import ForestMountains from "../../Components/Background/ForestMountains/ForestMountains";
-import oneLiners from "./404OneLiners";
-
-import "./404.scss";
-import scroll from "./scroll.svg";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 import SEO from "../../Components/Structural/SEO/SEO";
+
+// Utils
+import { shuffle } from "../../utils/shuffle/shuffle";
+
+// Assets
+import oneLiners from "./404OneLiners";
+import scroll from "./scroll.svg";
+import "./404.scss";
 
 /**
  * @function FourOhFour

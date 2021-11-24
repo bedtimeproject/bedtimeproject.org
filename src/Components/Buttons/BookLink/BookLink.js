@@ -11,6 +11,10 @@ const bookColors = ["green", "maroon", "purple"];
  * @namespace BookLink
  * @function BookLink
  * @author Alexander Burdiss
+ * @param {object} props
+ * @param {string} props.link
+ * @param {object} props.story
+ * @param {string} [props.backgroundColor]
  * @since 10/16/21
  * @version 1.1.0
  * @component
