@@ -1,0 +1,69 @@
+@import "../../../Variables.scss";
+
+.LinkModal-Container {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: 500ms;
+
+  &.Showing {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .LinkModal-Content {
+      width: min(500px, 90%);
+      margin: auto;
+      margin-top: 25vh;
+      padding: 20px;
+      background-color: $TrueV;
+      border-radius: 20px;
+
+      .Description-Container {
+        text-align: center;
+        margin: 10px;
+        color: $White;
+        font-weight: bold;
+      }
+    }
+
+    .Button-Container {
+      padding: 10px;
+      button,
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px white solid;
+        text-align: center;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: $TrueV;
+        overflow-wrap: break-word;
+        &:focus,
+        &:hover {
+          background-color: darken($TrueV, 5);
+        }
+      }
+
+      a {
+        background-color: $Tequila;
+        color: #000;
+        &:focus,
+        &:hover {
+          background-color: lighten($Tequila, 5);
+        }
+      }
+    }
+  }
+}
