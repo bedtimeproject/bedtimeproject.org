@@ -1,3 +1,4 @@
+// @ts-check
 import { useEffect } from "react";
 
 /**
@@ -20,10 +21,12 @@ export function useScrollAnimation(story) {
       document.body.id = "page";
     }
     const bodyStyleMinHeight = `${story.body.length * 100}vh`;
+    // @ts-ignore
     page.style.minHeight = bodyStyleMinHeight;
     function handleScroll() {
       document.body.style.setProperty(
         "--scroll",
+        // @ts-ignore
         window.pageYOffset / (page.offsetHeight - window.innerHeight)
       );
     }
@@ -31,6 +34,7 @@ export function useScrollAnimation(story) {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      // @ts-ignore
       page.style.minHeight = "";
       document.body.style.removeProperty("--scroll");
     };

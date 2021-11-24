@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function randomElement
  * @description Returns a random element from an array.

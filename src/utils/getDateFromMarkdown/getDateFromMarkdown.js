@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function getDateFromMarkdown
  * @description Gets the first date stored in a markdown file.

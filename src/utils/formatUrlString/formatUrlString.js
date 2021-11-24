@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function formatUrlString
  * @description Formats a string to be used as an argument in React Router, so
@@ -12,6 +13,7 @@
  */
 export function formatUrlString(input) {
   const tempInput = input
+    // @ts-ignore
     .replaceAll(".", "")
     .replaceAll("-", "")
     .replaceAll("(", "")

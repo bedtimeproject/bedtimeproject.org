@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function getTitleFromMarkdown
  * @description Gets the first H1 present in the markdown, and returns it

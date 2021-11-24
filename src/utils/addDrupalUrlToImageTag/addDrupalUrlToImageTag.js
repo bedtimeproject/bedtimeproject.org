@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @function addDrupalUrlToImageTag
  * @description Adds a missing drupal URL to an image object. Useful if the
@@ -15,6 +16,7 @@ export function addDrupalUrlToImageTag(input) {
     return undefined;
   }
 
+  // @ts-ignore
   const correctedUrl = input.replaceAll(
     'src="/sites/default/files',
     'src="https://drupal.bedtimeproject.dev/sites/default/files'
