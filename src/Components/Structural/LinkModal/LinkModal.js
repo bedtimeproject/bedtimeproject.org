@@ -30,7 +30,6 @@ export default function LinkModal() {
     // Find all links that are off the site and add a warning.
     const pageLinks = Array.from(document.querySelectorAll("a"));
     pageLinks.forEach((link) => {
-      console.log(link.href);
       if (
         !link.href.includes("http://localhost") &&
         !link.href.includes("https://bedtimeproject.org")
