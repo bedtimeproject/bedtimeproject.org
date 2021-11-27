@@ -2,9 +2,14 @@
 
 .HeaderContainer {
   background-color: $TopBackground;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+  .HeaderInner {
+    max-width: $Break-Large;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   a {
     text-decoration: none;

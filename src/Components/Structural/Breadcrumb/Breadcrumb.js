@@ -44,25 +44,27 @@ export default function Breadcrumb() {
     [location]
   );
   return pathParts && pathParts.length ? (
-    <div className="Breadcrumb-Container">
-      {pathParts.map((crumb, index) => {
-        if (!crumb) {
-          return null;
-        }
+    <div className="Breadcrumb-Outer">
+      <div className="Breadcrumb-Inner">
+        {pathParts.map((crumb, index) => {
+          if (!crumb) {
+            return null;
+          }
 
-        let path = "";
-        for (let i = 0; i <= index; i++) {
-          path += "/" + pathParts[i];
-        }
+          let path = "";
+          for (let i = 0; i <= index; i++) {
+            path += "/" + pathParts[i];
+          }
 
-        return (
-          <span className="Breadcrumb" key={index}>
-            <Link to={path}>
-              <span>{capitalize(crumb)}</span>
-            </Link>
-          </span>
-        );
-      })}
+          return (
+            <span className="Breadcrumb-Text" key={index}>
+              <Link className="Breadcrumb-Link" to={path}>
+                <span>{capitalize(crumb)}</span>
+              </Link>
+            </span>
+          );
+        })}
+      </div>
     </div>
   ) : null;
 }
