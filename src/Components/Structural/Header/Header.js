@@ -18,31 +18,33 @@ import logo from "../../../assets/images/logo.png";
 export default function Header() {
   return (
     <header className={"HeaderContainer"}>
-      <Link to="/">
-        <div className={"HeaderLogoContainer"}>
-          <img src={logo} width={50} height={50} alt="An Open Book" />
-          <div className={"HeaderTitle"}>The Bedtime Project</div>
-        </div>
-      </Link>
-      <nav>
-        <ul className="HeaderNavigationList">
-          <li>
-            <HeaderButton link={"/"}>Home</HeaderButton>
-          </li>
-          <li>
-            <HeaderButton link="/read">Read</HeaderButton>
-          </li>
-          <li>
-            <HeaderButton link="/play">Play</HeaderButton>
-          </li>
-          <li>
-            <HeaderButton link="/about">About</HeaderButton>
-          </li>
-          <li>
-            <HeaderButton link="/parents">Parents</HeaderButton>
-          </li>
-        </ul>
-      </nav>
+      <div className="HeaderInner">
+        <Link to="/">
+          <div className={"HeaderLogoContainer"}>
+            <img src={logo} width={50} height={50} alt="An Open Book" />
+            <div className={"HeaderTitle"}>The Bedtime Project</div>
+          </div>
+        </Link>
+        <nav>
+          <ul className="HeaderNavigationList">
+            <li>
+              <HeaderButton link={"/"}>Home</HeaderButton>
+            </li>
+            <li>
+              <HeaderButton link="/read">Read</HeaderButton>
+            </li>
+            <li>
+              <HeaderButton link="/play">Play</HeaderButton>
+            </li>
+            <li>
+              <HeaderButton link="/about">About</HeaderButton>
+            </li>
+            <li>
+              <HeaderButton link="/parents">Parents</HeaderButton>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
