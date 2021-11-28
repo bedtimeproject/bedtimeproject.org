@@ -11,7 +11,7 @@ import "./LicensesList.scss";
  * app and will be displayed in a list on this component.
  * @author Alexander Burdiss
  * @since 6/10/21
- * @version 1.0.1
+ * @version 1.0.2
  */
 export default function LicensesList({ licenses }) {
   return (
@@ -42,7 +42,11 @@ export default function LicensesList({ licenses }) {
                 <div className="card">
                   {image && (
                     <a href={userUrl}>
-                      <img src={image} className="image" alt={title} />
+                      <img
+                        src={image}
+                        className="image"
+                        alt={title + " Github Profile Picture"}
+                      />
                     </a>
                   )}
                   <div style={{ maxWidth: "90%" }} className="item">
