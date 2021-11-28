@@ -4,9 +4,12 @@
   &-Outer {
     margin: 0 auto;
     max-width: $Break-Large;
+    position: relative;
   }
   &-Inner {
     position: absolute;
+    top: 5px;
+    left: 10px;
     background-color: white;
     border-radius: 20px;
     z-index: 100;
