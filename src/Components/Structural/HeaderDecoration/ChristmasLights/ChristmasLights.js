@@ -7,7 +7,7 @@ import "./ChristmasLights.scss";
  * @function ChristmasLights
  * @author Alexander Burdiss
  * @since 11/01/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  */
 export default function ChristmasLights() {
