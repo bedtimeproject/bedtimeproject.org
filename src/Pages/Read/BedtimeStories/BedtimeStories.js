@@ -7,6 +7,8 @@ import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 import SEO from "../../../Components/Structural/SEO/SEO";
 
+import { bedtimeStories } from "../Read";
+
 /**
  * @namespace BedtimeStories
  * @function BedtimeStories
@@ -16,36 +18,54 @@ import SEO from "../../../Components/Structural/SEO/SEO";
  * @component
  */
 export default function BedtimeStories() {
-  const shelf1Books = [
-    {
-      title: "Mrs. Blue Sky",
-      link: "/read/bedtime-stories/mrs-blue-sky",
-      field_author: "C. A. Moonbloom",
-      backgroundColor: "#133061",
-    },
-    {
-      title: "The Lady and the Frog",
-      link: "read/bedtime-stories/the-lady-and-the-frog",
-      field_author: "Daniel Stigmon",
-      backgroundColor: "#dab656",
-    },
-  ];
   return (
     <StandardWrapper>
       <div className="BedtimeStories-Container">
         <SEO title="Bedtime Stories" />
         <Bookshelf
           pageTitle="Bedtime Stories"
-          books1={shelf1Books.map((book, index) => (
-            <BookLink
-              key={index}
-              link={book.link}
-              story={book}
-              backgroundColor={book.backgroundColor}
-            />
-          ))}
-          books2={null}
-          books3={null}
+          books1={bedtimeStories.map((book, index) => {
+            if (index > 2) {
+              return null;
+            }
+
+            return (
+              <BookLink
+                key={index}
+                link={book.link}
+                story={book}
+                backgroundColor={book.backgroundColor}
+              />
+            );
+          })}
+          books2={bedtimeStories.map((book, index) => {
+            if (index <= 2 || index > 5) {
+              return null;
+            }
+
+            return (
+              <BookLink
+                key={index}
+                link={book.link}
+                story={book}
+                backgroundColor={book.backgroundColor}
+              />
+            );
+          })}
+          books3={bedtimeStories.map((book, index) => {
+            if (index <= 5 || index > 8) {
+              return null;
+            }
+
+            return (
+              <BookLink
+                key={index}
+                link={book.link}
+                story={book}
+                backgroundColor={book.backgroundColor}
+              />
+            );
+          })}
         />
       </div>
     </StandardWrapper>
