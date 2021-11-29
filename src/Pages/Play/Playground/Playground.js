@@ -12,7 +12,7 @@ import StandardWrapper from "../../../Components/Structural/StandardWrapper/Stan
 import "./Playground.scss";
 
 // Assets
-import { json } from "./playgroundData";
+import json from "./playgroundData.json";
 
 /**
  * @namespace Playground
@@ -21,7 +21,7 @@ import { json } from "./playgroundData";
  * button is clicked.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.2
+ * @version 1.1.0
  * @component
  * @example
  * <Playground />
@@ -40,7 +40,6 @@ export default function Playground() {
     var travelsHow = [];
     var travelConflict = [];
     var villainWeakness = [];
-    var prize = [];
 
     var nameContainer = document.querySelector("#js-name");
     var descriptionContainer = document.querySelector("#js-description");
@@ -62,7 +61,6 @@ export default function Playground() {
     var villainWeaknessContainer = document.querySelector(
       "#js-villain-weakness"
     );
-    var prizeContainer = document.querySelector("#js-prize");
 
     function loadStory() {
       nameContainer.innerHTML = names[Math.floor(Math.random() * names.length)];
@@ -91,8 +89,6 @@ export default function Playground() {
         travelConflict[Math.floor(Math.random() * travelConflict.length)];
       villainWeaknessContainer.innerHTML =
         villainWeakness[Math.floor(Math.random() * villainWeakness.length)];
-      prizeContainer.innerHTML =
-        prize[Math.floor(Math.random() * prize.length)];
     }
 
     document.querySelector(".Main-Button").addEventListener("click", loadStory);
@@ -114,9 +110,6 @@ export default function Playground() {
         );
       }
       villainWeakness.push(json[object]["Villain Weakness"]);
-      if (json[object]["Prize"]) {
-        prize.push(json[object]["Prize"]);
-      }
     }
 
     loadStory();
@@ -193,13 +186,6 @@ export default function Playground() {
               <div className="Story-Content">
                 You discover the villian's weakness,{" "}
                 <span id="js-villain-weakness"></span>
-              </div>
-            </div>
-
-            <div className="Story-Content-Container Story-Reward-Container">
-              <h2>Your Reward</h2>
-              <div className="Story-Content">
-                Congratulations! You won <span id="js-prize"></span>
               </div>
             </div>
           </div>
