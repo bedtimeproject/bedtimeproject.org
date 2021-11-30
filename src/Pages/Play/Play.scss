@@ -9,7 +9,7 @@
     flex-direction: column;
     max-width: min(80%, 750px);
     margin: 50px auto;
-    @media screen and (min-width: $Break-Medium) {
+    @media screen and (min-width: $BreakM) {
       flex-direction: row;
     }
   }
@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    @media screen and (min-width: $Break-Medium) {
+    @media screen and (min-width: $BreakM) {
       align-items: flex-start;
       text-align: left;
     }
@@ -30,11 +30,11 @@
     background-color: #eeeeee;
     border-radius: 20px;
     padding: 30px 0;
-    @media screen and (min-width: $Break-Medium) {
+    @media screen and (min-width: $BreakM) {
       flex-direction: row-reverse;
     }
     .LinkDescription-Container {
-      @media screen and (min-width: $Break-Medium) {
+      @media screen and (min-width: $BreakM) {
         align-items: flex-end;
         text-align: right;
       }

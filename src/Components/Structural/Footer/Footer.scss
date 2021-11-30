@@ -1,15 +1,15 @@
 @import "../../../Variables.scss";
 
 .FooterContainer {
-  background-color: #381223;
+  background-color: $Blackberry;
   overflow: hidden;
-  color: white;
+  color: $White;
   position: relative;
   min-height: 100px;
-  @media screen and (min-width: 550px) {
+  @media screen and (min-width: $BreakS) {
     min-height: 68px;
   }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: $BreakMS) {
     min-height: 58px;
   }
 
@@ -17,7 +17,7 @@
     text-align: center;
     transform: rotate(-4deg);
     margin: 20px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: $BreakMS) {
       padding-bottom: 25px;
     }
   }
@@ -27,7 +27,7 @@
     right: 20px;
     bottom: 20px;
     a {
-      color: white;
+      color: $White;
     }
   }
 }

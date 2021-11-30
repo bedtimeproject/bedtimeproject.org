@@ -1,10 +1,10 @@
 @import "../../../Variables.scss";
 
 .HeaderContainer {
-  background-color: $TopBackground;
+  background-color: $SlateBlue;
 
   .HeaderInner {
-    max-width: $Break-Large;
+    max-width: $BreakL;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -47,16 +47,18 @@
 .HeaderTitle {
   font-size: x-large;
   margin: 10px;
-  color: white;
+  color: $White;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: $BreakM) {
   .HeaderContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
+    .HeaderInner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+    }
   }
 
   .HeaderLogoContainer {

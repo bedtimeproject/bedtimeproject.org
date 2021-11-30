@@ -3,14 +3,14 @@
 .Breadcrumb {
   &-Outer {
     margin: 0 auto;
-    max-width: $Break-Large;
+    max-width: $BreakL;
     position: relative;
   }
   &-Inner {
     position: absolute;
     top: 5px;
     left: 10px;
-    background-color: white;
+    background-color: $White;
     border-radius: 20px;
     z-index: 100;
   }

@@ -14,7 +14,7 @@
   transition: 0.3s;
   font-size: 0.75rem;
   margin: $scale1 $scale0;
-  @media screen and (min-width: $Break-Small) {
+  @media screen and (min-width: $BreakXS) {
     margin: $scale1;
     font-size: 0.9rem;
   }

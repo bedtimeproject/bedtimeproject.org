@@ -85,7 +85,7 @@
       transform: translateX(500%);
     }
   }
-  @media (min-width: $Break-Large) {
+  @media (min-width: $BreakL) {
     @keyframes Poem-Title {
       3% {
         left: 75vw;
