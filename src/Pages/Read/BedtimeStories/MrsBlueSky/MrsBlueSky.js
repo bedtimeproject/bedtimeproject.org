@@ -33,9 +33,10 @@ import WindCloud from "./images/WindCloud.svg";
  * @function MrsBlueSky
  * @description A scroll-animated poem. This was originally built using HTML, so
  * it does not currently follow React best practices.
- * @version 2.2.0
+ * @version 2.2.1
  * @author Alexander Burdiss
  * @since 5/14/21
+ * @lastModified 11/30/21
  * @component
  * @example
  * <MrsBlueSky />
@@ -165,7 +166,7 @@ export default function MrsBlueSky() {
       <div className="Poem-Credits">
         <p>Written by C.A. Moonbloom</p>
         <p>Animated by Captain Code</p>
-        <Link to="/read/tales" className="Back-Button">
+        <Link to="/read/bedtime-stories" className="Back-Button">
           Back to site
         </Link>
       </div>
