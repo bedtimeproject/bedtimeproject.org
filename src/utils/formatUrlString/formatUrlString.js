@@ -9,10 +9,10 @@
  * with React Router.
  * @author Alexander Burdiss
  * @since 10/16/21
- * @version 1.2.1
+ * @version 1.2.2
  */
 export function formatUrlString(input) {
-  const tempInput = input
+  const tempInput = String(input)
     // @ts-ignore
     .replaceAll(".", "")
     .replaceAll("-", "")
