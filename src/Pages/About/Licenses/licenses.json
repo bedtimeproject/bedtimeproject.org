@@ -11,6 +11,12 @@
         "licenseUrl": "https://github.com/jhlywa/chess.js/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
+    "core-js@3.19.2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/zloirock/core-js",
+        "licenseUrl": "https://github.com/zloirock/core-js/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
     "gh-pages@3.2.3": {
         "licenses": "MIT",
         "repository": "https://github.com/tschaub/gh-pages",
