@@ -39,7 +39,7 @@ export default function Story({ story }) {
    */
   function fetchStoryData() {
     fetch(
-      "https://drupal.bedtimeproject.dev/rest/views/story?title=" + story.title
+      "https://drupal.bedtimeproject.dev/rest/views/story?title=" + story?.title
     )
       .then((resp) => resp.json())
       .then((data) => {

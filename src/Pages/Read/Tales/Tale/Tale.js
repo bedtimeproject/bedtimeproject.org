@@ -41,7 +41,7 @@ export default function Tale({ tale }) {
    */
   function fetchTaleData() {
     fetch(
-      "https://drupal.bedtimeproject.dev/rest/views/tale?title=" + tale.title
+      "https://drupal.bedtimeproject.dev/rest/views/tale?title=" + tale?.title
     )
       .then((resp) => resp.json())
       .then((data) => {

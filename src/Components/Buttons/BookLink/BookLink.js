@@ -1,7 +1,11 @@
 // @ts-check
 import React from "react";
-import "./BookLink.scss";
 import { Link } from "react-router-dom";
+
+// Styles
+import "./BookLink.scss";
+
+// Utils
 import { randomElement } from "../../../utils/randomElement/randomElement";
 import { getContrast } from "../../../utils/getContrast/getContrast";
 
@@ -16,7 +20,7 @@ const bookColors = ["green", "maroon", "purple"];
  * @param {object} props.story
  * @param {string} [props.backgroundColor]
  * @since 10/16/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  */
 export default function BookLink({ link, story, backgroundColor }) {
@@ -29,9 +33,9 @@ export default function BookLink({ link, story, backgroundColor }) {
       to={link}
     >
       <div className="TitleContainer">
-        <strong style={{ color: getContrast(bgColor) }}>{story.title}</strong>
+        <strong style={{ color: getContrast(bgColor) }}>{story?.title}</strong>
       </div>
-      <div style={{ color: getContrast(bgColor) }}>{story.field_author}</div>
+      <div style={{ color: getContrast(bgColor) }}>{story?.field_author}</div>
     </Link>
   );
 }

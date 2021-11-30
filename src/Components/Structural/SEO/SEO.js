@@ -18,7 +18,7 @@ import packageJson from "../../../../package.json";
  * @param {object} [props.children] Optional additional meta tags that can be
  * added to the HEAD component
  * @since 10/14/21
- * @version 1.2.0
+ * @version 1.2.1
  * @component
  */
 export default function SEO({
@@ -31,9 +31,8 @@ export default function SEO({
   children,
 }) {
   useEffect(() => {
-    document
-      .querySelector("meta[name=theme-color]")
-      .setAttribute("content", themeColor);
+    const themeMeta = document.querySelector("meta[name=theme-color]");
+    themeMeta?.setAttribute("content", themeColor);
   }, [themeColor]);
   return (
     <Helmet>
