@@ -18,9 +18,6 @@ const Read = lazy(() => import("./Pages/Read/Read"));
 const BedtimeStories = lazy(() =>
   import("./Pages/Read/BedtimeStories/BedtimeStories")
 );
-const TheLadyAndTheFrog = lazy(() =>
-  import("./Pages/Read/BedtimeStories/TheLadyAndTheFrog/TheLadyAndTheFrog")
-);
 const MrsBlueSky = lazy(() =>
   import("./Pages/Read/BedtimeStories/MrsBlueSky/MrsBlueSky")
 );
@@ -103,12 +100,6 @@ export default function App() {
               </LazyRoute>
               <LazyRoute path="/read/stories">
                 <Stories />
-              </LazyRoute>
-              <LazyRoute
-                exact
-                path="/read/bedtime-stories/the-lady-and-the-frog"
-              >
-                <TheLadyAndTheFrog />
               </LazyRoute>
               <LazyRoute exact path="/read/bedtime-stories/mrs-blue-sky">
                 <MrsBlueSky />
