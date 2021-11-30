@@ -11,7 +11,8 @@ import "./LinkModal.scss";
  * included in the StandardWrapper
  * @author Alexander Burdiss
  * @since 11/23/21
- * @version 1.0.0
+ * @lastModified 11/30/21
+ * @version 1.0.1
  * @component
  */
 export default function LinkModal() {
@@ -19,9 +20,8 @@ export default function LinkModal() {
   const [isShowing, setIsShowing] = useState(false);
 
   useEffect(() => {
-    // @ts-ignore
-
     // Attach function to window to open external links
+    // @ts-ignore
     window.openBtpLink = function (newHref) {
       setHref(newHref);
       setIsShowing(true);
@@ -32,7 +32,8 @@ export default function LinkModal() {
     pageLinks.forEach((link) => {
       if (
         !link.href.includes("http://localhost") &&
-        !link.href.includes("https://bedtimeproject.org")
+        !link.href.includes("https://bedtimeproject.org") &&
+        !link.href.includes("http://bedtimeproject.org")
       ) {
         link.onclick = (event) => {
           event.preventDefault();
