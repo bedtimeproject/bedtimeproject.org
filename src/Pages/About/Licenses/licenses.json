@@ -29,10 +29,10 @@
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "react-helmet@6.1.0": {
-        "licenses": "MIT",
-        "repository": "https://github.com/nfl/react-helmet",
-        "licenseUrl": "https://github.com/nfl/react-helmet/raw/master/LICENSE",
+    "react-helmet-async@1.1.2": {
+        "licenses": "Apache-2.0",
+        "repository": "http://github.com/staylor/react-helmet-async",
+        "licenseUrl": "http://github.com/staylor/react-helmet-async/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
     "react-paginate@7.1.5": {
