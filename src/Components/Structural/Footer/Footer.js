@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 /**
+ * @namespace Footer
  * @function Footer
  * @description The footer for the site.
  * @author Alexander Burdiss

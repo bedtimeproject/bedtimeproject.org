@@ -1,5 +1,13 @@
 import { render } from "@testing-library/react";
-import Parents from "./Parents";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import ParentsComponent from "./Parents";
+
+const Parents = (props) => (
+  <Router>
+    <ParentsComponent {...props} />
+  </Router>
+);
 
 describe("renders Parents", () => {
   test("renders base component", () => {

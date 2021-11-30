@@ -1,5 +1,13 @@
 import { render } from "@testing-library/react";
-import Drawers from "./Drawers";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import DrawersComponent from "./Drawers";
+
+const Drawers = (props) => (
+  <Router>
+    <DrawersComponent href="#" {...props} />
+  </Router>
+);
 
 describe("renders Drawers", () => {
   test("renders base component", () => {
