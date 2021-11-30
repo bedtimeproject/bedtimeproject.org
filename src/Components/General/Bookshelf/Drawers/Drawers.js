@@ -9,7 +9,7 @@ import "./Drawers.scss";
  * @author Alexander Burdiss
  * @since 11/01/21
  * @lastModified 11/22/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  */
 export default function Drawers({ label, href }) {
@@ -17,7 +17,12 @@ export default function Drawers({ label, href }) {
     <div className="Drawers-wrap">
       <h2>{label}</h2>
       <ul className="drawers">
-        <Link className="drawer" to={href} aria-label={"Navigates to " + label}>
+        <Link
+          className="drawer"
+          to={href}
+          aria-label={"Navigates to " + label}
+          tabIndex={-1}
+        >
           <span className="handle"></span>
         </Link>
         <Link className="drawer" to={href} aria-label={"Navigates to " + label}>
@@ -27,6 +32,7 @@ export default function Drawers({ label, href }) {
           className="drawer third"
           to={href}
           aria-label={"Navigates to " + label}
+          tabIndex={-1}
         >
           <span className="handle"></span>
         </Link>
