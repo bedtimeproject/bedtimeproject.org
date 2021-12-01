@@ -32,10 +32,13 @@
       max-width: 300px;
       margin: auto;
       height: auto;
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      display: block;
     }
 
     .field--name-field-chapter-title {
