@@ -10,8 +10,6 @@ import LazyRoute from "./Components/Structural/LazyRoute/LazyRoute";
 
 // Base Components
 import Home from "./Pages/Home/Home";
-// TODO: Lazy Load this after launch
-import Construction from "./Pages/Construction/Construction";
 
 // Read Pages
 const Read = lazy(() => import("./Pages/Read/Read"));
@@ -55,7 +53,7 @@ const PrivacyPolicy = lazy(() => import("./Pages/PrivacyPolicy/PrivacyPolicy"));
  * handles the navigation of the application.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.2
+ * @version 1.0.3
  * @component
  * @example
  * <App />
@@ -66,7 +64,7 @@ export default function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Construction />
+            <Home />
           </Route>
           <Route path="/home">
             <Home />
