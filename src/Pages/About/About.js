@@ -16,7 +16,7 @@ import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDr
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.3.1
+ * @version 1.4.0
  * @component
  * @example
  * <About />
@@ -60,6 +60,18 @@ export default function About() {
                 />
               );
             })}
+        </div>
+        <div className="Header-Container">
+          <div className="Description-Contianer">
+            <div>
+              Contact us if you have any questions at all, want to report a bug,
+              or have any suggestions.
+            </div>
+            <a href="code@bedtimeproject.org">code@bedtimeproject.org</a>{" "}
+            <a href="moonbloom@bedtimeproject.org ">
+              moonbloom@bedtimeproject.org
+            </a>
+          </div>
         </div>
         <div className="Link-Container">
           <StoryButton link="/about/acknowledgements">
