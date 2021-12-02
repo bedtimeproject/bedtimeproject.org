@@ -21,7 +21,7 @@ import json from "./playgroundData.json";
  * button is clicked.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.1.0
+ * @version 1.1.1
  * @component
  * @example
  * <Playground />
@@ -159,8 +159,8 @@ export default function Playground() {
               </div>
             </div>
 
-            <div className="Story-Content-Container Story-Villian-Container">
-              <h2>The Villian</h2>
+            <div className="Story-Content-Container Story-Villain-Container">
+              <h2>The Villain</h2>
               <div className="Story-Content">
                 <span id="js-villain"></span>
               </div>
@@ -184,7 +184,7 @@ export default function Playground() {
             <div className="Story-Content-Container">
               <h2>The Final Scene</h2>
               <div className="Story-Content">
-                You discover the villian's weakness,{" "}
+                You discover the villain's weakness,{" "}
                 <span id="js-villain-weakness"></span>
               </div>
             </div>
