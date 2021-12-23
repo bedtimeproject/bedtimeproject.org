@@ -84,7 +84,7 @@ import Sun from "../../../Pages/Read/BedtimeStories/MrsBlueSky/images/Sun.svg";
  * should remain onscreen.
  * @author Alexander Burdiss
  * @since 7/10/21
- * @version 2.0.0
+ * @version 2.0.1
  */
 export default function StanzaImage({
   children,
@@ -101,7 +101,7 @@ export default function StanzaImage({
   animationOverlap,
 }) {
   const scaleValue = scale != undefined ? scale : 1;
-  const rotationValue = scale != undefined ? rotation : 0;
+  const rotationValue = rotation != undefined ? rotation : 0;
   const oneIndexPercent = 100 / (stanzaCount + 2);
 
   return (
@@ -261,9 +261,10 @@ export default function StanzaImage({
         }}
       >
         {children === "url" ? (
-          <img src={url} alt={""} />
+          <img src={url} alt={""} className="Image" />
         ) : (
           <img
+            className="Image"
             src={
               {
                 // Newport Nebraska
