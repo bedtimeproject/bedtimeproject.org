@@ -17,15 +17,15 @@ import { longslideleft } from "./animations/longslideleft/longslideleft";
 import { longslideright } from "./animations/longslideright/longslideright";
 
 // Newport Nebraska
-import AlaskaFlag from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/AlaskaFlag.svg";
-import CaliforniaFlag from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/CaliforniaFlag.svg";
-import CitySkyline from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/CitySkyline.svg";
-import Corn from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Corn.svg";
-import Grass from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Grass.svg";
-import Surfboard from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Surfboard.svg";
-import Swimsuit from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Swimsuit.svg";
-import Umbrella from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/Umbrella.svg";
-import WaveOutline from "../../../Pages/Read/BedtimeStories/NewportNebraska/images/WaveOutline.svg";
+import AlaskaFlag from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/AlaskaFlag.svg";
+import CaliforniaFlag from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/CaliforniaFlag.svg";
+import CitySkyline from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/CitySkyline.svg";
+import Corn from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/Corn.svg";
+import Grass from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/Grass.svg";
+import Surfboard from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/Surfboard.svg";
+import Swimsuit from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/Swimsuit.svg";
+import Umbrella from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/Umbrella.svg";
+import WaveOutline from "../../../Pages/Read/BedtimeStories/SurfersHideaway/images/WaveOutline.svg";
 
 // Guide to Sunset
 import BlueFlowers from "../../../Pages/Read/BedtimeStories/TheGuideToSunset/images/BlueFlowers.svg";
@@ -115,6 +115,7 @@ export default function StanzaImage({
 
         #stanza${index}Image${imageIndex} .Image {
           height: ${250 * scaleValue}px;
+          min-width: ${250 * scaleValue}px;
           transform: translateX(-${(250 * scaleValue) / 2}px) translateY(-${
         (250 * scaleValue) / 2
       }px) rotate(${rotationValue}deg);
