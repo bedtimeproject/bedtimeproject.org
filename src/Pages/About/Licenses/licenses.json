@@ -41,6 +41,12 @@
         "licenseUrl": "http://github.com/staylor/react-helmet-async/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
+    "react-icons@4.3.1": {
+        "licenses": "MIT",
+        "repository": "https://github.com:react-icons/react-icons",
+        "licenseUrl": "https://github.com:react-icons/react-icons/raw/master/LICENSE",
+        "parents": "the-bedtime-project"
+    },
     "react-paginate@7.1.5": {
         "licenses": "MIT",
         "repository": "https://github.com/AdeleD/react-paginate",
