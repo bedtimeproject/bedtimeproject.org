@@ -1,0 +1,59 @@
+.AudioPlayer-Container {
+  button {
+    background-color: #f3ebe8;
+    transition: all 0.2s;
+    border: solid #938ec1 1px;
+    border-radius: 20px;
+    z-index: 1000;
+    padding: 20px;
+    width: 200px;
+    margin: auto;
+
+    .ImagesContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .record {
+      display: none;
+      @media screen and (min-width: 500px) {
+        display: inline;
+      }
+      position: absolute;
+      z-index: -1;
+      top: 50px;
+      height: 130px;
+      padding: 0;
+      animation: spin linear infinite 10s;
+      transition: 1s;
+
+      &.on {
+        top: 0px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #efced8;
+    }
+    img {
+      height: 100px;
+      padding-right: 20px;
+    }
+  }
+
+  .Attribution {
+    padding-top: 10px;
+    display: inline-block;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

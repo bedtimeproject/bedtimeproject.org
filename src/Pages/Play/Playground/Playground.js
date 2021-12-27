@@ -7,6 +7,7 @@ import StoryButton from "../../../Components/Buttons/StoryButton/StoryButton";
 import SEO from "../../../Components/Structural/SEO/SEO";
 import Waves from "../../../Components/Background/Waves/Waves";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
+import AudioPlayer from "../../../Components/General/AudioPlayer/AudioPlayer";
 
 // Styles
 import "./Playground.scss";
@@ -21,7 +22,7 @@ import json from "./playgroundData.json";
  * button is clicked.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.1.1
+ * @version 1.2.0
  * @component
  * @example
  * <Playground />
@@ -114,6 +115,7 @@ export default function Playground() {
 
     loadStory();
   }, []);
+
   return (
     <StandardWrapper headerDecoration={false}>
       <Waves />
@@ -122,10 +124,23 @@ export default function Playground() {
         <div className="Playground-Container">
           <div className="Playground-Background-Color" />
 
-          <PageTitle>Playground</PageTitle>
+          <div className="TitleButtonContainer">
+            <div>
+              <PageTitle>Playground</PageTitle>
 
-          <div className="Playground-Main-Button-Container">
-            <StoryButton className="Main-Button">Get a new story</StoryButton>
+              <div className="Playground-Main-Button-Container">
+                <StoryButton className="Main-Button">
+                  Get a new story
+                </StoryButton>
+              </div>
+            </div>
+
+            <AudioPlayer
+              src={
+                "https://drupal.bedtimeproject.dev/sites/default/files/2021-12/LastLight.mp3"
+              }
+              attribution={"Music by Capt. Code"}
+            />
           </div>
 
           <div className="Story-Container">

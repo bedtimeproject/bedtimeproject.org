@@ -2,6 +2,16 @@
   position: relative;
   padding: 40px 0;
   overflow: hidden;
+
+  .TitleButtonContainer {
+    @media screen and (min-width: 500px) {
+      align-items: flex-end;
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 500px;
+      margin: auto;
+    }
+  }
 }
 
 .Playground-Container .Main-Content {
