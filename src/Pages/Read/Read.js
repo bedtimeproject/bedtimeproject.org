@@ -10,6 +10,12 @@ import { formatUrlString } from "../../utils/formatUrlString/formatUrlString";
 
 export const bedtimeStories = [
   {
+    title: "Surfer's Hideaway",
+    link: "/read/bedtime-stories/surfers-hideaway",
+    field_author: "C. A. Moonbloom",
+    backgroundColor: "#fb8e49",
+  },
+  {
     title: "Mrs. Blue Sky",
     link: "/read/bedtime-stories/mrs-blue-sky",
     field_author: "C. A. Moonbloom",

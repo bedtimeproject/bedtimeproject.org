@@ -12,7 +12,7 @@ import "./Breadcrumb.scss";
  * takes no arguments, but creates the breadcrumbs automatically from the url.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 2.2.0
+ * @version 2.2.1
  * @component
  * @example
  * <Breadcrumb />
@@ -59,7 +59,7 @@ export default function Breadcrumb() {
           return (
             <span className="Breadcrumb-Text" key={index}>
               <Link className="Breadcrumb-Link" to={path}>
-                <span>{capitalize(crumb)}</span>
+                <span>{capitalize(crumb.replace("-", " "))}</span>
               </Link>
             </span>
           );

@@ -111,8 +111,11 @@ export default function App() {
               <LazyRoute exact path="/read/bedtime-stories/the-guide-to-sunset">
                 <TheGuideToSunset />
               </LazyRoute>
-              <LazyRoute path="/read/bedtime-stories">
+              <LazyRoute exact path="/read/bedtime-stories">
                 <BedtimeStories />
+              </LazyRoute>
+              <LazyRoute path="/read/bedtime-stories/*">
+                <FourOhFour />
               </LazyRoute>
               <LazyRoute path="/read/quips">
                 <Quips />
