@@ -257,8 +257,12 @@ export default function StanzaImage({
         id={`stanza${index}Image${imageIndex}`}
         className="ScrollAnimation-StanzaImage-Container"
         style={{
-          right: { left: "45%", center: "25%", right: "5%" }[positionX],
-          top: { top: "5%", center: "30%", bottom: "55%" }[positionY],
+          right: Number.isInteger(positionX)
+            ? `${positionX}%`
+            : { left: "45%", center: "25%", right: "5%" }[positionX],
+          top: Number.isInteger(positionY)
+            ? `${positionY}%`
+            : { top: "5%", center: "30%", bottom: "55%" }[positionY],
         }}
       >
         {children === "url" ? (
