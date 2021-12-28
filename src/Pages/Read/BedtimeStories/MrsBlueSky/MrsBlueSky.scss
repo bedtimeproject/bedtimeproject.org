@@ -439,7 +439,7 @@
   .Wind-Cloud {
     position: fixed;
     z-index: 75;
-    transform: scale(5) scaleX(-1);
+    transform: scale(5) scaleX(-1) rotateY(180deg);
     width: 111px;
     height: 107px;
     left: -100vw;

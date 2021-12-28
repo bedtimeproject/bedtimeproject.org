@@ -33,7 +33,7 @@ import WindCloud from "./images/WindCloud.svg";
  * @function MrsBlueSky
  * @description A scroll-animated poem. This was originally built using HTML, so
  * it does not currently follow React best practices.
- * @version 2.2.1
+ * @version 2.2.2
  * @author Alexander Burdiss
  * @since 5/14/21
  * @lastModified 11/30/21
