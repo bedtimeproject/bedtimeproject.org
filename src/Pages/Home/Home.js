@@ -7,6 +7,7 @@ import Snow from "../../Components/Background/Snow/Snow";
 import SEO from "../../Components/Structural/SEO/SEO";
 import DoorButton from "../../Components/Buttons/DoorButton/DoorButton";
 import Fireflies from "../../Components/Background/Fireflies/Fireflies";
+import Fireworks from "../../Components/Background/Fireworks/Fireworks";
 
 // Styles
 import "./Home.scss";
@@ -34,11 +35,17 @@ export default function Home() {
   useEffect(function setup() {
     setWeather(getWeather());
   }, []);
+
   return (
     <StandardWrapper>
       <div className="Home-Container">
         <SEO />
-        {weather !== "snow" && <Fireflies />}
+        {weather == "fireworks" && (
+          <div className="Fireworks-Home-Container">
+            <Fireworks />
+          </div>
+        )}
+        {weather == "clear" && <Fireflies />}
         {weather == "snow" && (
           <div className="Snow-Home-Container">
             <Snow />

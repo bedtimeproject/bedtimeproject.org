@@ -1,0 +1,100 @@
+@use "sass:math";
+.Fireworks-Container {
+  height: 100%;
+  overflow: hidden;
+
+  $fire: 8;
+  $works: 80;
+
+  $size: 4px;
+
+  $mid-shadow: ();
+  $end-shadow: ();
+
+  // Base styling
+  .fire {
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    width: $size;
+    height: $size;
+    will-change: transform, box-shadow;
+    mix-blend-mode: color-dodge;
+  }
+
+  // Scatter and randomize
+  @for $i from 1 through $fire {
+    .fire:nth-child(#{$i}) {
+      animation: anim 7s infinite random($fire) * 1s;
+
+      color: hsl(random(200), 100, 50);
+
+      top: (random(10) + 5) * 1vh;
+      left: random(100) * 1vw;
+      transform: translate3d((random(100) - 50) * 1px, 100vh, 0) scale(1.2);
+    }
+    &.Window .fire:nth-child(#{$i}) {
+      left: random(300) * 1px;
+    }
+  }
+
+  // Explode
+  @for $i from 1 through $works {
+    $mid-shadow: append(
+      $mid-shadow,
+      math.cos($i * 14) *
+        $size *
+        $i
+        math.sin($i * 14) *
+        $size *
+        $i
+        1px
+        currentColor,
+      comma
+    );
+  }
+
+  // Fade out
+  @for $i from 1 through $works {
+    $end-shadow: append(
+      $end-shadow,
+      math.cos($i * 14) *
+        ($size * 0.9) *
+        $i
+        math.sin($i * 14) *
+        ($size * 0.9) *
+        $i
+        3px
+        1px
+        transparent,
+      comma
+    );
+  }
+
+  @keyframes anim {
+    0%,
+    20% {
+      box-shadow: none;
+    }
+
+    30% {
+      transform: none;
+    }
+
+    45% {
+      box-shadow: $mid-shadow;
+    }
+
+    65%,
+    100% {
+      box-shadow: $end-shadow;
+    }
+  }
+
+  //== Pen styling, ignore
+  // Using a wrapper instead of body so mix-blend-mode works
+  body {
+    background: #1b1635;
+    overflow: hidden;
+  }
+}

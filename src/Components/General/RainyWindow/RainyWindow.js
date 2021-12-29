@@ -4,6 +4,7 @@ import "./RainyWindow.scss";
 
 import Lighthouse from "../../Background/Lighthouse/Lighthouse";
 import Snow from "../../Background/Snow/Snow";
+import Fireworks from "../../Background/Fireworks/Fireworks";
 
 /**
  * @namespace RainyWindow
@@ -57,6 +58,7 @@ export default function RainyWindow({ right, weather = "rain" }) {
             </div>
           )}
           {weather == "snow" && <Snow />}
+          {weather == "fireworks" && <Fireworks window />}
         </div>
         <div className="window top"></div>
         <div className="window bottom"></div>
