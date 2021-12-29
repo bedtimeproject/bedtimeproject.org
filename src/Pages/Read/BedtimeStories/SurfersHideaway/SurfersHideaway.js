@@ -12,7 +12,7 @@ import story from "./SurfersHideawayStory.json";
  * @description A wrapper for the Scroll Animation Story Surfer's Hideaway.
  * @author Alexander Burdiss
  * @since 12/27/21
- * @version 1.0.0
+ * @version 1.0.1
  */
 export default function SurfersHideaway() {
   useScrollAnimation(story);
@@ -20,7 +20,7 @@ export default function SurfersHideaway() {
   return (
     <div className="SurfersHideawayContainer">
       <SEO title={story.title} themeColor="#FB8E49" />
-      <ScrollAnimation story={story} />;
+      <ScrollAnimation story={story} />
     </div>
   );
 }
