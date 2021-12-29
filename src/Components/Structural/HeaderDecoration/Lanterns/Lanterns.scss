@@ -1,0 +1,85 @@
+@import "../../../../Variables.scss";
+
+.Lanterns-Container {
+  position: relative;
+  margin-bottom: -68px;
+  z-index: 100;
+  .lines {
+    margin: auto;
+    padding-top: 8px;
+    max-width: $BreakL;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .lantern {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0%;
+    width: 40px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-top: #facc43 solid 20px;
+    border-bottom: #facc43 solid 5px;
+    border-left: #facc43 solid 2px;
+    border-right: #facc43 solid 2px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    transition: all 2s;
+    &:hover {
+      transform: rotate(20deg);
+    }
+    &:nth-child(even):hover {
+      transform: rotate(-20deg);
+    }
+
+    &.extra {
+      display: none;
+      @media screen and (min-width: $BreakM) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .hook {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    width: 10px;
+    height: 0px;
+    background-color: yellow;
+    border-top: #facc43 solid 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .hook:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    width: 1px;
+    height: 5px;
+    background-color: #facc43;
+  }
+
+  .light {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 15px yellow;
+    background-color: yellow;
+  }
+  .light.red {
+    box-shadow: 0 0 25px 15px red;
+    background-color: red;
+  }
+}
