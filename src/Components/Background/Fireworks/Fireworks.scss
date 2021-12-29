@@ -27,7 +27,7 @@
     .fire:nth-child(#{$i}) {
       animation: anim 7s infinite random($fire) * 1s;
 
-      color: hsl(random(200), 100, 50);
+      color: hsl(random(200), 100%, 50%);
 
       top: (random(10) + 5) * 1vh;
       left: random(100) * 1vw;
