@@ -9,7 +9,7 @@ import { CalendarChinese } from "date-chinese";
  * the site, so it won't keep switching weather.
  * @author Alexander Burdiss
  * @since 11/19/21
- * @version 1.1.0
+ * @version 1.1.1
  * @returns {string} One of "snow", "rain", "fireworks", or "clear"
  */
 export function getWeather() {
@@ -57,6 +57,7 @@ export function getWeather() {
     }
   }
 
+  // Rain every third day in March, April, or May.
   if (currentMonth == 3 || currentMonth == 4 || currentMonth == 5) {
     if (currentDay % 3 == 0) {
       return "rain";
