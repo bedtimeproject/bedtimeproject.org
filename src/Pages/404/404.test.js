@@ -1,11 +1,14 @@
 import { render, screen } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router } from "react-router-dom";
 import FourOhFour from "./404";
 
 test("renders 404", () => {
   render(
     <Router>
-      <FourOhFour />
+      <HelmetProvider>
+        <FourOhFour />
+      </HelmetProvider>
     </Router>
   );
   const header = screen.queryByText(/404 Error/);

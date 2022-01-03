@@ -7,7 +7,7 @@ import "./Lanterns.scss";
  * @function Lanterns
  * @author Alexander Burdiss
  * @since 12/29/21
- * @version 1.0.0
+ * @version 1.0.1
  * @component
  */
 export default function Lanterns() {
@@ -16,7 +16,7 @@ export default function Lanterns() {
       <div className="lines">
         <div className="lantern">
           <div className="hook"></div>
-          <div className="light red"></div>
+          <div className="light"></div>
         </div>
         <div className="lantern">
           <div className="hook"></div>
@@ -24,7 +24,7 @@ export default function Lanterns() {
         </div>
         <div className="lantern">
           <div className="hook"></div>
-          <div className="light red"></div>
+          <div className="light"></div>
         </div>
         <div className="lantern">
           <div className="hook"></div>
@@ -32,7 +32,7 @@ export default function Lanterns() {
         </div>
         <div className="lantern extra">
           <div className="hook"></div>
-          <div className="light red"></div>
+          <div className="light"></div>
         </div>
         <div className="lantern extra">
           <div className="hook"></div>
@@ -40,7 +40,7 @@ export default function Lanterns() {
         </div>
         <div className="lantern extra">
           <div className="hook"></div>
-          <div className="light red"></div>
+          <div className="light"></div>
         </div>
         <div className="lantern extra">
           <div className="hook"></div>
