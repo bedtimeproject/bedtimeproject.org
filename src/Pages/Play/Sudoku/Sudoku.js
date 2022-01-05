@@ -290,12 +290,37 @@ export default function Sudoku() {
    */
   function handleNumberClick(number, event) {
     setFocusedNumber(number);
+    highlightRelatedNumbers(number);
     const previousFocusedElement = document.querySelector(".active");
     if (previousFocusedElement) {
       previousFocusedElement.classList.remove("active");
     }
     // @ts-ignore
     event.target.classList.add("active");
+  }
+  /**
+   * @function Sudoku~highlightRelatedNumbers
+   * @description Adds a related class and highlights the numbers on the board
+   * that are related to the current number selected and removes the old ones
+   * @param {Number} number The new number that was clicked by the user.
+   * @author Trevor Cash
+   * @since 1/4/21
+   * @version 1.0.0
+   */
+  function highlightRelatedNumbers(number) {
+    // Remove previous related highlights
+    const priorRelated = document.querySelectorAll(".Board .related");
+    for (let i = 0; i < priorRelated.length; i++) {
+      const element = priorRelated[i];
+      element.classList.remove("related");
+    }
+    const tiles = document.querySelectorAll(".Board > div");
+    for (let i = 0; i < tiles.length; i++) {
+      const tile = tiles[i];
+      if (Number(tile.innerText) === number) {
+        tile.classList.add("related");
+      }
+    }
   }
 
   /**
@@ -328,6 +353,9 @@ export default function Sudoku() {
     validateRows();
     validateColumns();
     validateSquares();
+    checkCompleteNumbers();
+    highlightRelatedNumbers(focusedNumber);
+
     const win = checkForWin();
     if (win) {
       document.querySelector(".Board").classList.add("win");
@@ -442,6 +470,78 @@ export default function Sudoku() {
         // @ts-ignore
         if (boardNumber.innerText) {
           usedNumbers.push(boardNumber);
+        }
+      }
+    }
+  }
+  /**
+   * @function Sudoku~checkCompleteNumbers
+   * @description Checks to see if the number is done being added and can
+   * be hidden down below
+   * @author Trevor Cash
+   * @since 12/1/21
+   * @version 1.0.0
+   */
+  function checkCompleteNumbers() {
+    // If there is no errors check to see if any should be hidden or shown
+    // Else make sure no prior complete numbers were messed up
+    const tiles = document.querySelectorAll(".Board > div");
+    if (
+      !document.querySelector(`.${colErrorClass}`) &&
+      !document.querySelector(`.${rowErrorClass}`) &&
+      !document.querySelector(`.${squareErrorClass}`)
+    ) {
+      // Counts to see if each number has 9 or fewer and assigns the appropiate classes accordingly
+      // Iterates from 1-9
+      for (let i = 1; i <= 9; i++) {
+        let numCount = 0;
+        const numberButtons = document.querySelectorAll(
+          ".NumberContainer > button"
+        );
+        // Loop through all the tiles and determine number
+        for (let j = 0; j < tiles.length; j++) {
+          const tile = tiles[j];
+          if (tile.innerText == i) {
+            numCount++;
+          }
+        }
+        /**
+         * If 9 of the current number found add done class otherwise remove
+         * it in the case it has it and it is removed
+         */
+        if (numCount === 9) {
+          numberButtons[i - 1].classList.add("done");
+        } else {
+          document
+            .querySelectorAll(".NumberContainer > button")
+            [i - 1].classList.remove("done");
+        }
+      }
+    }
+    // Check to see if the error messed up the any
+    else {
+      const finishedButtons = document.querySelectorAll(
+        ".NumberContainer > button.done"
+      );
+      // Loop through hidden elements to determine if an error messed up their "completeness"
+      for (let i = 0; i < finishedButtons.length; i++) {
+        const finishedButton = finishedButtons[i];
+        let numCount = 0;
+        for (let j = 0; j < tiles.length; j++) {
+          const tile = tiles[j];
+          /**
+           * If the inner text of the current title is the same as the finished button
+           * in scope then increment counter
+           */
+
+          // @ts-ignore
+          if (tile.innerText === finishedButton.innerText) {
+            numCount++;
+          }
+        }
+        // If there is a number other than 9 the error messed up this number from being complete
+        if (numCount !== 9) {
+          finishedButton.classList.remove("done");
         }
       }
     }
