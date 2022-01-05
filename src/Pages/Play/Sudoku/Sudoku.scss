@@ -1,3 +1,4 @@
+@import "../../../Variables.scss";
 .Sudoku-Container {
   $GameBreak: 600px;
   position: relative;
@@ -101,10 +102,16 @@
         &#E9,
         &#F9 {
           background-color: lighten(peachpuff, 5);
+          &.related {
+            background-color: $Sky-Blue;
+          }
         }
 
         &.focused {
           background-color: darken(peachpuff, 20) !important;
+        }
+        &.related {
+          background-color: $Sky-Blue;
         }
 
         &.rowError,
@@ -133,6 +140,13 @@
 
       &.active {
         background-color: peachpuff;
+      }
+      &.done {
+        // visibility: hidden;
+        background-color: $MiddleBlueGreen;
+        &.active {
+          background-color: darken($MiddleBlueGreen, 20%);
+        }
       }
     }
   }
