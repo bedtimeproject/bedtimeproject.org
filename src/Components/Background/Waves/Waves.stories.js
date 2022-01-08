@@ -6,6 +6,14 @@ import Waves from "./Waves";
 export default {
   title: "Background/Waves",
   component: Waves,
+  argTypes: {
+    color: {
+      name: 'Color',
+      control: {
+        type: 'color',
+      },
+    },
+  },
 };
 
 const Template = (args) => (
@@ -15,4 +23,6 @@ const Template = (args) => (
 );
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  color: "#625ace",
+};

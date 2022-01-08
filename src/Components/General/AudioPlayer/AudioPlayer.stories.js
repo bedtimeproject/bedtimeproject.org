@@ -2,7 +2,7 @@ import React from "react";
 import AudioPlayer from "./AudioPlayer";
 
 export default {
-  title: "Components/General/AudioPlayer",
+  title: "General/AudioPlayer",
   component: AudioPlayer,
   argTypes: {},
 };

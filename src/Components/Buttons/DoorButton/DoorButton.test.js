@@ -1,14 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import DoorButton from "./DoorButton";
+import DoorButtonComponent from "./DoorButton";
+
+function DoorButton(props) {
+  return (
+    <Router>
+      <DoorButtonComponent {...props} />
+    </Router>
+  );
+}
 
 test("renders DoorButton", () => {
   const testText = "Story";
-  render(
-    <Router>
-      <DoorButton link="/" label={testText} />
-    </Router>
-  );
+  render(<DoorButton link="/" label={testText} />);
   const buttonText = screen.queryByText(testText);
   expect(buttonText).not.toBeNull();
 });

@@ -2,7 +2,7 @@ import React from "react";
 import Lanterns from "./Lanterns";
 
 export default {
-  title: "Components/Structural/HeaderDecoration/Lanterns",
+  title: "Structural/HeaderDecoration/Lanterns",
   component: Lanterns,
   argTypes: {},
 };

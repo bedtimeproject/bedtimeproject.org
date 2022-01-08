@@ -11,3 +11,6 @@ const Template = (args) => <Lighthouse {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.parameters = {
+  controls: { hideNoControlsWarning: true },
+};
