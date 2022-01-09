@@ -10,7 +10,7 @@ import { useInitialData } from "./utils/useInitialData/useInitialData";
 
 // Components
 import Home from "./Pages/Home/Home";
-import Loading from "./Components/Structural/Loading/Loading";
+import Loading from "./Pages/LoadingPage/LoadingPage";
 
 // Read Pages
 const Read = lazy(() => import("./Pages/Read/Read"));

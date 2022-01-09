@@ -1,8 +1,4 @@
-@import "../../../Variables.scss";
-
 .Loading-Container {
-  $spinnerColor: $TrueV;
-
   .loading {
     width: 1em;
     height: 50px;
@@ -24,10 +20,6 @@
     height: 1em;
     animation: spinner 2s infinite linear;
     border-radius: 0.5em;
-    box-shadow: $spinnerColor 1.5em 0 0 0, $spinnerColor 1.1em 1.1em 0 0,
-      $spinnerColor 0 1.5em 0 0, $spinnerColor -1.1em 1.1em 0 0,
-      $spinnerColor -1.5em 0 0 0, $spinnerColor -1.1em -1.1em 0 0,
-      $spinnerColor 0 -1.5em 0 0, $spinnerColor 1.1em -1.1em 0 0;
   }
 
   /* Animation */

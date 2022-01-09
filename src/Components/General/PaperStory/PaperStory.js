@@ -4,6 +4,7 @@ import "./PaperStory.scss";
 
 import PageTitle from "../../Structural/PageTitle/PageTitle";
 import MoreContentSoon from "../MoreContentSoon/MoreContentSoon";
+import Loading from "../../Structural/Loading/Loading";
 
 /**
  * @namespace PaperStory
@@ -11,13 +12,13 @@ import MoreContentSoon from "../MoreContentSoon/MoreContentSoon";
  * @description Displays one paper story for the site.
  * @author Alexander Burdiss
  * @since 10/17/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  */
 export default function PaperStory({ storyData, backLink, backLinkText }) {
   return storyData ? (
     <div className="PaperStory-Container">
-      {storyData.title && (
+      {storyData.title ? (
         <article className="Paper-Container">
           <div className="Heading-Information">
             <PageTitle>{storyData.title}</PageTitle>
@@ -34,6 +35,10 @@ export default function PaperStory({ storyData, backLink, backLinkText }) {
             <MoreContentSoon backLink={backLink} backLinkText={backLinkText} />
           )}
         </article>
+      ) : (
+        <div className="PaperStory-Loading-Container">
+          <Loading color="#FFFFFF" />
+        </div>
       )}
     </div>
   ) : null;
