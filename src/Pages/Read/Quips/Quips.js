@@ -15,7 +15,7 @@ import Loading from "../../../Components/Structural/Loading/Loading";
  * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 3.2.0
+ * @version 3.2.1
  * @component
  * @example
  * <Quips />
