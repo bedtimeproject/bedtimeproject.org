@@ -8,12 +8,15 @@ import "core-js/features/string/replace-all";
 import "normalize.css";
 import "./index.css";
 import App from "./App";
+import { AppProvider } from "./Contexts/AppContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
+    <AppProvider>
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

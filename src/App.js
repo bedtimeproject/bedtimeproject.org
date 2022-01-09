@@ -1,15 +1,16 @@
 // @ts-check
-import React, { lazy } from "react";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import React, { lazy, Suspense } from "react";
+import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 
 // Styles
 import "./App.scss";
 
-// Helper Components
-import LazyRoute from "./Components/Structural/LazyRoute/LazyRoute";
+// Utils
+import { useInitialData } from "./utils/useInitialData/useInitialData";
 
-// Base Components
+// Components
 import Home from "./Pages/Home/Home";
+import Loading from "./Components/Structural/Loading/Loading";
 
 // Read Pages
 const Read = lazy(() => import("./Pages/Read/Read"));
@@ -26,7 +27,9 @@ const SurfersHideaway = lazy(() =>
   import("./Pages/Read/BedtimeStories/SurfersHideaway/SurfersHideaway")
 );
 const Stories = lazy(() => import("./Pages/Read/Stories/Stories"));
+const Story = lazy(() => import("./Pages/Read/Stories/Story/Story"));
 const Tales = lazy(() => import("./Pages/Read/Tales/Tales"));
+const Tale = lazy(() => import("./Pages/Read/Tales/Tale/Tale"));
 const Quips = lazy(() => import("./Pages/Read/Quips/Quips"));
 
 // Play Pages
@@ -56,111 +59,233 @@ const PrivacyPolicy = lazy(() => import("./Pages/PrivacyPolicy/PrivacyPolicy"));
  * handles the navigation of the application.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 1.0.3
+ * @version 2.0.0
  * @component
  * @example
  * <App />
  */
 export default function App() {
+  useInitialData();
+
   return (
     <div className="AppWrapper">
       <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/play">
-            <Switch>
-              <LazyRoute exact path="/play">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route
+            path="/play"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Play />
-              </LazyRoute>
-              <LazyRoute path="/play/playground">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/play/playground"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Playground />
-              </LazyRoute>
-              <LazyRoute path="/play/chess">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/play/chess"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Chess />
-              </LazyRoute>
-              <LazyRoute path="/play/lights-out">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/play/lights-out"
+            element={
+              <Suspense fallback={<Loading />}>
                 <LightsOut />
-              </LazyRoute>
-              <LazyRoute path="/play/sudoku">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/play/sudoku"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Sudoku />
-              </LazyRoute>
-              <LazyRoute path="/play/*">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/play/*"
+            element={
+              <Suspense fallback={<Loading />}>
                 <FourOhFour />
-              </LazyRoute>
-            </Switch>
-          </Route>
-          <Route path="/read">
-            <Switch>
-              <LazyRoute exact path="/read">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/read"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Read />
-              </LazyRoute>
-              <LazyRoute path="/read/stories">
-                <Stories />
-              </LazyRoute>
-              <LazyRoute exact path="/read/bedtime-stories/mrs-blue-sky">
+              </Suspense>
+            }
+          />
+          <Route path="/read/stories" element={<Outlet />}>
+            <Route
+              index
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Stories />
+                </Suspense>
+              }
+            />
+            <Route
+              path=":story"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Story />
+                </Suspense>
+              }
+            />
+          </Route>
+          <Route
+            path="/read/bedtime-stories/mrs-blue-sky"
+            element={
+              <Suspense fallback={<Loading />}>
                 <MrsBlueSky />
-              </LazyRoute>
-              <LazyRoute exact path="/read/bedtime-stories/surfers-hideaway">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/read/bedtime-stories/surfers-hideaway"
+            element={
+              <Suspense fallback={<Loading />}>
                 <SurfersHideaway />
-              </LazyRoute>
-              <LazyRoute exact path="/read/bedtime-stories/the-guide-to-sunset">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/read/bedtime-stories/the-guide-to-sunset"
+            element={
+              <Suspense fallback={<Loading />}>
                 <TheGuideToSunset />
-              </LazyRoute>
-              <LazyRoute exact path="/read/bedtime-stories">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/read/bedtime-stories"
+            element={
+              <Suspense fallback={<Loading />}>
                 <BedtimeStories />
-              </LazyRoute>
-              <LazyRoute path="/read/bedtime-stories/*">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/read/bedtime-stories/*"
+            element={
+              <Suspense fallback={<Loading />}>
                 <FourOhFour />
-              </LazyRoute>
-              <LazyRoute path="/read/quips">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/read/quips"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Quips />
-              </LazyRoute>
-              <LazyRoute path="/read/tales">
-                <Tales />
-              </LazyRoute>
-              <LazyRoute path="/read/*">
-                <FourOhFour />
-              </LazyRoute>
-            </Switch>
+              </Suspense>
+            }
+          />
+          <Route path="/read/tales" element={<Outlet />}>
+            <Route
+              index
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Tales />
+                </Suspense>
+              }
+            />
+            <Route
+              path={":tale"}
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Tale />
+                </Suspense>
+              }
+            />
           </Route>
-          <Route path="/about">
-            <Switch>
-              <LazyRoute exact path="/about">
+          <Route
+            path="/read/*"
+            element={
+              <Suspense fallback={<Loading />}>
+                <FourOhFour />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<Loading />}>
                 <About />
-              </LazyRoute>
-              <LazyRoute exact path="/about/acknowledgements">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about/acknowledgements"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Acknowledgements />
-              </LazyRoute>
-              <LazyRoute exact path="/about/licenses">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about/licenses"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Licenses />
-              </LazyRoute>
-              <LazyRoute path="/about/*">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about/*"
+            element={
+              <Suspense fallback={<Loading />}>
                 <FourOhFour />
-              </LazyRoute>
-            </Switch>
-          </Route>
-          <Route path="/parents">
-            <Switch>
-              <LazyRoute exact path="/parents">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/parents"
+            element={
+              <Suspense fallback={<Loading />}>
                 <Parents />
-              </LazyRoute>
-              <LazyRoute path="/parents/*">
+              </Suspense>
+            }
+          />
+          <Route
+            path="/parents/*"
+            element={
+              <Suspense fallback={<Loading />}>
                 <FourOhFour />
-              </LazyRoute>
-            </Switch>
-          </Route>
-          <LazyRoute exact path="/privacy-policy">
-            <PrivacyPolicy />
-          </LazyRoute>
-          <LazyRoute path="*">
-            <FourOhFour />
-          </LazyRoute>
-        </Switch>
+              </Suspense>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <Suspense fallback={<Loading />}>
+                <PrivacyPolicy />
+              </Suspense>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<Loading />}>
+                <FourOhFour />
+              </Suspense>
+            }
+          />
+        </Routes>
       </Router>
     </div>
   );

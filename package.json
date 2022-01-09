@@ -5,20 +5,19 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
-    "caniuse-lite": "^1.0.30001276",
+    "caniuse-lite": "^1.0.30001298",
     "chess.js": "^0.12.0",
-    "core-js": "^3.19.2",
+    "core-js": "^3.20.2",
     "date-chinese": "^2.1.3",
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^3.2.3",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet-async": "^1.1.2",
+    "react-helmet-async": "^1.2.2",
     "react-icons": "^4.3.1",
-    "react-paginate": "^7.1.3",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "sass": "^1.35.1"
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "sass": "^1.47.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.2.9",
@@ -32,6 +31,7 @@
     "@testing-library/user-event": "^12.8.3",
     "chromatic": "^5.8.3",
     "eslint": "^7.26.0",
+    "eslint-config-react-app": "^7.0.0",
     "storybook-react-router": "^1.0.8"
   },
   "scripts": {

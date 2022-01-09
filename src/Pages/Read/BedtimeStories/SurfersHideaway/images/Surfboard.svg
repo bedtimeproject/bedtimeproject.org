@@ -1,12 +1,6 @@
 <svg
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:cc="http://web.resource.org/cc/"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:svg="http://www.w3.org/2000/svg"
   version="1.1"
-  xml:space="preserve"
   enable-background="new 0 0 500 500"
   y="0px"
   x="0px"
@@ -111,41 +105,4 @@
     </linearGradient>
     <path d="m-54 91" fill="url(#SVGID_5_)" />
   </g>
-  <metadata>
-    <rdf:RDF
-      ><cc:Work
-        ><dc:format>image/svg+xml</dc:format
-        ><dc:type
-          rdf:resource="http://purl.org/dc/dcmitype/StillImage"
-        /><cc:license
-          rdf:resource="http://creativecommons.org/licenses/publicdomain/"
-        /><dc:publisher
-          ><cc:Agent rdf:about="http://openclipart.org/"
-            ><dc:title>Openclipart</dc:title></cc:Agent
-          ></dc:publisher
-        ><dc:title>Summer Surfboard</dc:title
-        ><dc:date>2010-07-06T05:16:58</dc:date
-        ><dc:description
-          >A surfboard, created for the "summer2010" clip art
-          package.</dc:description
-        ><dc:source
-          >http://openclipart.org/detail/70687/summer-surfboard-by-pianobrad</dc:source
-        ><dc:creator
-          ><cc:Agent><dc:title>pianoBrad</dc:title></cc:Agent></dc:creator
-        ><dc:subject
-          ><rdf:Bag
-            ><rdf:li>beach</rdf:li><rdf:li>clip art</rdf:li
-            ><rdf:li>clipart</rdf:li><rdf:li>sports</rdf:li
-            ><rdf:li>summer</rdf:li><rdf:li>summer2010</rdf:li
-            ><rdf:li>surf</rdf:li><rdf:li>surfboard</rdf:li><rdf:li>tide</rdf:li
-            ><rdf:li>water</rdf:li><rdf:li>wave</rdf:li></rdf:Bag
-          ></dc:subject
-        ></cc:Work
-      ><cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/"
-        ><cc:permits
-          rdf:resource="http://creativecommons.org/ns#Reproduction" /><cc:permits
-          rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:permits
-          rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /></cc:License
-    ></rdf:RDF>
-  </metadata>
 </svg>

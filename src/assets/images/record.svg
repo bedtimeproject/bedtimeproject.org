@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <svg
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:cc="http://web.resource.org/cc/"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:svg="http://www.w3.org/2000/svg"
   id="svg2"
   viewBox="0 0 400 400"
   version="1.0"
@@ -20,7 +15,6 @@
     </filter>
     <radialGradient
       id="radialGradient3328"
-      xlink:href="#linearGradient3153"
       gradientUnits="userSpaceOnUse"
       cy="209.67"
       cx="289.43"
@@ -29,7 +23,6 @@
     />
     <radialGradient
       id="radialGradient3331"
-      xlink:href="#linearGradient3153"
       gradientUnits="userSpaceOnUse"
       cy="209.67"
       cx="289.43"

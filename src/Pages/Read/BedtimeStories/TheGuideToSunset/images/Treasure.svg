@@ -1,12 +1,5 @@
 <svg
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:svg="http://www.w3.org/2000/svg"
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
   width="11in"
   height="8.5in"
   viewBox="0 0 990.00003 765"
@@ -622,12 +615,6 @@
         id="path4176"
       />
       <path
-        sodipodi:ry="22.857143"
-        sodipodi:rx="37.142857"
-        sodipodi:cy="132.3622"
-        sodipodi:cx="105.71429"
-        sodipodi:type="arc"
-        inkscape:path-effect="#path-effect4155"
         d="m 142.85714,132.3622 c 0,3.11022 -1.09062,6.16687 -2.82733,8.74705 -2.05275,3.04971 -4.92068,5.48869 -8.05156,7.41539 0,0 0,0 0,0 -7.78838,4.79285 -17.11901,6.6947 -26.26396,6.6947 -9.144955,0 -18.475595,-1.90186 -26.263969,-6.6947 -10e-7,0 -2e-6,0 -3e-6,0 -3.130878,-1.9267 -5.998803,-4.36568 -8.051556,-7.41539 -1.736708,-2.58018 -2.827332,-5.63683 -2.827332,-8.74705 0,-3.11022 1.090624,-6.16688 2.827332,-8.74705 2.052753,-3.04972 4.92068,-5.4887 8.051559,-7.41539 7.788374,-4.79285 17.119014,-6.69471 26.263969,-6.69471 0,1e-5 0,1e-5 10e-6,1e-5 9.14494,0 18.47557,1.90185 26.26394,6.69469 1e-5,1e-5 1e-5,1e-5 1e-5,1e-5 3.13088,1.92669 5.99881,4.36567 8.05156,7.41539 1.73671,2.58017 2.82733,5.63683 2.82733,8.74705 z"
         id="path4136"
         style="
@@ -20211,7 +20198,6 @@
   </g>
   <g
     id="layer2"
-    inkscape:label="Layer 2"
     style="display: inline"
     transform="translate(0,-765)"
   >
@@ -20229,16 +20215,6 @@
         stroke-opacity: 1;
       "
       id="path25458"
-      sodipodi:sides="6"
-      sodipodi:cx="8.2051888"
-      sodipodi:cy="1313.7501"
-      sodipodi:r1="11.248179"
-      sodipodi:r2="0.94893599"
-      sodipodi:arg1="1.2120257"
-      sodipodi:arg2="1.7356245"
-      inkscape:flatsided="false"
-      inkscape:rounded="-3.46945e-018"
-      inkscape:randomized="0"
       d="m 12.154688,1324.2821 -4.1052034,-9.5959 -6.9905248,7.7503 6.2577125,-8.3532 -10.2072115,-2.1788 10.3629156,1.2427 -3.2166867,-9.9291 4.1052032,9.5959 6.9905251,-7.7502 -6.2577128,8.3531 10.2072118,2.1789 -10.3629159,-1.2428 z"
     />
     <use
