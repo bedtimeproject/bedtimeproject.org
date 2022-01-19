@@ -63,7 +63,7 @@ export default function Quips() {
     fetch("https://drupal.bedtimeproject.dev/rest/views/quips")
       .then((resp) => resp.json())
       .then((data) => {
-        setQuips(data);
+        setQuips(data.reverse());
         setError(false);
       })
       .catch(() => setError(true));
