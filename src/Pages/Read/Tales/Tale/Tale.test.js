@@ -1,12 +1,15 @@
 import { render } from "@testing-library/react";
 import { MockRouter } from "../../../../Jest/MockRouter";
+import { HelmetProvider } from "react-helmet-async";
 import TaleComponent from "./Tale";
 
 function Tale(props) {
   return (
-    <MockRouter>
-      <TaleComponent {...props} />
-    </MockRouter>
+    <HelmetProvider>
+      <MockRouter>
+        <TaleComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
   );
 }
 

@@ -1,5 +1,5 @@
 {
-    "caniuse-lite@1.0.30001278": {
+    "caniuse-lite@1.0.30001298": {
         "licenses": "CC-BY-4.0",
         "repository": "https://github.com/browserslist/caniuse-lite",
         "licenseUrl": "https://github.com/browserslist/caniuse-lite/raw/master/LICENSE",
@@ -11,7 +11,7 @@
         "licenseUrl": "https://github.com/jhlywa/chess.js/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "core-js@3.19.2": {
+    "core-js@3.20.2": {
         "licenses": "MIT",
         "repository": "https://github.com/zloirock/core-js",
         "licenseUrl": "https://github.com/zloirock/core-js/raw/master/LICENSE",
@@ -41,7 +41,7 @@
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "react-helmet-async@1.1.2": {
+    "react-helmet-async@1.2.2": {
         "licenses": "Apache-2.0",
         "repository": "http://github.com/staylor/react-helmet-async",
         "licenseUrl": "http://github.com/staylor/react-helmet-async/raw/master/LICENSE",
@@ -53,19 +53,13 @@
         "licenseUrl": "https://github.com:react-icons/react-icons/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "react-paginate@7.1.5": {
+    "react-router-dom@6.2.1": {
         "licenses": "MIT",
-        "repository": "https://github.com/AdeleD/react-paginate",
-        "licenseUrl": "https://github.com/AdeleD/react-paginate/raw/master/LICENSE",
+        "repository": "https://github.com/remix-run/react-router",
+        "licenseUrl": "https://github.com/remix-run/react-router/raw/master/LICENSE.md",
         "parents": "the-bedtime-project"
     },
-    "react-router-dom@5.3.0": {
-        "licenses": "MIT",
-        "repository": "https://github.com/ReactTraining/react-router",
-        "licenseUrl": "https://github.com/ReactTraining/react-router",
-        "parents": "the-bedtime-project"
-    },
-    "react-scripts@4.0.3": {
+    "react-scripts@5.0.0": {
         "licenses": "MIT",
         "repository": "https://github.com/facebook/create-react-app",
         "licenseUrl": "https://github.com/facebook/create-react-app/raw/master/LICENSE",
@@ -77,7 +71,7 @@
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
         "parents": "the-bedtime-project"
     },
-    "sass@1.43.4": {
+    "sass@1.47.0": {
         "licenses": "MIT",
         "repository": "https://github.com/sass/dart-sass",
         "licenseUrl": "https://github.com/sass/dart-sass/raw/master/LICENSE",

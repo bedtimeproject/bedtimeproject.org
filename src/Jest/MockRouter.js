@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, HashRouter, Routes } from "react-router-dom";
 
 /**
  * @function MockRouter
@@ -8,11 +8,10 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
  */
 export function MockRouter({children}) {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route index element={children} />
-        {/* <Route index element={<div />} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

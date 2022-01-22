@@ -1,11 +1,19 @@
 import { render } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
-import TheGuideToSunset from "./TheGuideToSunset";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../../../Jest/MockRouter";
+
+import TheGuideToSunsetComponent from "./TheGuideToSunset";
+
+function TheGuideToSunset(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <TheGuideToSunsetComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  );
+}
 
 test("renders TheGuideToSunset", () => {
-  render(
-    <Router>
-      <TheGuideToSunset />
-    </Router>
-  );
+  render(<TheGuideToSunset />);
 });
