@@ -1,4 +1,3 @@
-import { L } from "caniuse-lite/data/agents";
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { MockRouter } from "../../Jest/MockRouter";
