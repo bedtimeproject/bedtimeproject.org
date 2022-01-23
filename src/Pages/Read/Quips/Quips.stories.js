@@ -1,13 +1,23 @@
 import React from "react";
-import StoryRouter from "storybook-react-router";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import Quips from "./Quips";
+import QuipsComponent from "./Quips";
+
+function Quips(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <QuipsComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  );
+}
 
 export default {
-  title: "Pages/Quips",
+  title: "Pages/Read/Quips",
   component: Quips,
   argTypes: {},
-  decorators: [StoryRouter({}, { initialEntries: ["/read/quips"] })],
 };
 
 const Template = (args) => <Quips {...args} />;
@@ -23,6 +33,3 @@ Latest.args = {};
 Latest.parameters = {
   controls: { hideNoControlsWarning: true },
 };
-Latest.decorators = [
-  StoryRouter({}, { initialEntries: ["/read/quips/latest"] }),
-];

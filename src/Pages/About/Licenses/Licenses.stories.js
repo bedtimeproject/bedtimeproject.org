@@ -1,9 +1,21 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import Licenses from "./Licenses";
+import LicensesComponent from "./Licenses";
+
+function Licenses(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <LicensesComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  )
+}
 
 export default {
-  title: "Pages/Licenses",
+  title: "Pages/About/Licenses",
   component: Licenses,
   argTypes: {},
 };

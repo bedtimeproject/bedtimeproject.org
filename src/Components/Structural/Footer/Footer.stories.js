@@ -1,6 +1,15 @@
 import React from "react";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import Footer from "./Footer";
+import FooterComponent from "./Footer";
+
+function Footer(props) {
+  return (
+    <MockRouter>
+      <FooterComponent {...props} />
+    </MockRouter>
+  )
+}
 
 export default {
   title: "Structural/Footer",

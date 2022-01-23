@@ -3,7 +3,7 @@ import React from "react";
 import Chess from "./Chess";
 
 export default {
-  title: "Pages/Chess",
+  title: "Pages/Play/Chess",
   component: Chess,
   argTypes: {},
 };

@@ -1,9 +1,21 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import Sudoku from "./Sudoku";
+import SudokuComponent from "./Sudoku";
+
+function Sudoku(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <SudokuComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  )
+}
 
 export default {
-  title: "Pages/Sudoku",
+  title: "Pages/Play/Sudoku",
   component: Sudoku,
   argTypes: {},
 };

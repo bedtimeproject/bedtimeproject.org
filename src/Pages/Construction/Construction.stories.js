@@ -1,5 +1,19 @@
+import { L } from "caniuse-lite/data/agents";
 import React from "react";
-import Construction from "./Construction";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../Jest/MockRouter";
+
+import ConstructionComponent from "./Construction";
+
+function Construction(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <ConstructionComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  )
+}
 
 export default {
   title: "Pages/Construction",

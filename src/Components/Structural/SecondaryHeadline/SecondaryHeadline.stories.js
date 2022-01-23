@@ -4,10 +4,19 @@ import SecondaryHeadline from "./SecondaryHeadline";
 export default {
   title: "Structural/SecondaryHeadline",
   component: SecondaryHeadline,
-  argTypes: {},
+  argTypes: {
+    children: {
+      name: "Text",
+      control: {
+        type: "text",
+      },
+    },
+  },
 };
 
 const Template = (args) => <SecondaryHeadline {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  children: "Hello, Secondary Headline!",
+};

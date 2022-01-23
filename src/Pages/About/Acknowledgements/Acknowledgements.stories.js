@@ -1,9 +1,21 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import Acknowledgements from "./Acknowledgements";
+import AcknowledgementsComponent from "./Acknowledgements";
+
+function Acknowledgements(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <AcknowledgementsComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  )
+}
 
 export default {
-  title: "Pages/Acknowledgements",
+  title: "Pages/About/Acknowledgements",
   component: Acknowledgements,
   argTypes: {},
 };

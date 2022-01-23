@@ -32,7 +32,7 @@ const Template = (args) => (
   <Router>
     <CenteredAttribution
       background={args.background}
-      linkback={"/poems/tales/"}
+      backlink={"/poems/tales/"}
     >
       <p>{args.firstLine}</p>
       <p>{args.secondLine}</p>

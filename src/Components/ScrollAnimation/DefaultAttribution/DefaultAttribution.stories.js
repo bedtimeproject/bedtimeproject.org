@@ -30,7 +30,7 @@ export default {
 
 const Template = (args) => (
   <Router>
-    <Attribution background={args.background} linkback={"/poems/tales/"}>
+    <Attribution background={args.background} backlink={"/poems/tales/"}>
       <p>{args.firstLine}</p>
       <p>{args.secondLine}</p>
     </Attribution>

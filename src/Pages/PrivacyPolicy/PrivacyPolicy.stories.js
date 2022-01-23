@@ -1,5 +1,18 @@
 import React from "react";
-import PrivacyPolicy from "./PrivacyPolicy";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../Jest/MockRouter";
+
+import PrivacyPolicyComponent from "./PrivacyPolicy";
+
+function PrivacyPolicy(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <PrivacyPolicyComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  )
+}
 
 export default {
   title: "Pages/PrivacyPolicy",

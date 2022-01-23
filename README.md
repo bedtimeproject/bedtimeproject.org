@@ -28,3 +28,7 @@ This project also uses Sass in a couple places. Each Sass file is compiled in th
 
 This project is open source! Feel free to send a pull request to add fun new
 features, games, and stories to this website!
+
+## Notes
+
+Deploy does not work with `yarn`. You must use `npm` to run the deploy scripts

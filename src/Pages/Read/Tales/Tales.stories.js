@@ -1,13 +1,23 @@
 import React from "react";
-import StoryRouter from "storybook-react-router";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import Tales from "./Tales";
+import TalesComponent from "./Tales";
+
+function Tales(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <TalesComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  );
+}
 
 export default {
-  title: "Pages/Tales",
+  title: "Pages/Read/Tales",
   component: Tales,
   argTypes: {},
-  decorators: [StoryRouter({}, { initialEntries: ["/read/tales"] })],
 };
 
 const Template = (args) => <Tales {...args} />;

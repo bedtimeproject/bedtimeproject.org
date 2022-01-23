@@ -1,22 +1,32 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { MockRouter } from "../../../Jest/MockRouter";
 
-import PageTitle from "./PageTitle";
+import PageTitleComponent from "./PageTitle";
+
+function PageTitle(props) {
+  return (
+    <MockRouter>
+      <PageTitleComponent {...props} />
+    </MockRouter>
+  );
+}
 
 export default {
   title: "Structural/Page Title",
   component: PageTitle,
-  argTypes: {},
+  argTypes: {
+    children: {
+      name: "Text",
+      control: {
+        type: "text",
+      },
+    },
+  },
 };
 
-const Template = (args) => (
-  <Router>
-    <PageTitle {...args} />
-  </Router>
-);
+const Template = (args) => <PageTitle link="#" {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   children: "Hello, Page Heading!",
-  link: "/",
 };

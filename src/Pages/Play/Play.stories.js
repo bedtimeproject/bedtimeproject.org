@@ -1,13 +1,23 @@
 import React from "react";
-import StoryRouter from "storybook-react-router";
+import { HelmetProvider } from "react-helmet-async";
+import { MockRouter } from "../../Jest/MockRouter";
 
-import Play from "./Play";
+import PlayComponent from "./Play";
+
+function Play(props) {
+  return (
+    <HelmetProvider>
+      <MockRouter>
+        <PlayComponent {...props} />
+      </MockRouter>
+    </HelmetProvider>
+  )
+}
 
 export default {
   title: "Pages/Play",
   component: Play,
   argTypes: {},
-  decorators: [StoryRouter({}, { initialEntries: ["/play"] })],
 };
 
 const Template = (args) => <Play {...args} />;
