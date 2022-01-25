@@ -12,7 +12,7 @@ import "./LinkModal.scss";
  * @author Alexander Burdiss
  * @since 11/23/21
  * @lastModified 11/30/21
- * @version 1.0.1
+ * @version 1.0.2
  * @component
  */
 export default function LinkModal() {
@@ -33,7 +33,8 @@ export default function LinkModal() {
       if (
         !link.href.includes("http://localhost") &&
         !link.href.includes("https://bedtimeproject.org") &&
-        !link.href.includes("http://bedtimeproject.org")
+        !link.href.includes("http://bedtimeproject.org") &&
+        !link.href.includes("mailto:")
       ) {
         link.onclick = (event) => {
           event.preventDefault();
