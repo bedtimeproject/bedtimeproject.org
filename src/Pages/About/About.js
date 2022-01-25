@@ -16,7 +16,7 @@ import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDr
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.4.2
+ * @version 1.4.3
  * @component
  * @example
  * <About />
@@ -77,7 +77,7 @@ export default function About() {
           <StoryButton link="/about/acknowledgements">
             Acknowledgements
           </StoryButton>
-          <StoryButton link="./about/licenses">Licenses</StoryButton>
+          <StoryButton link="/about/licenses">Licenses</StoryButton>
         </div>
       </div>
     </StandardWrapper>
