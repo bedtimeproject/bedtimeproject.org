@@ -1,5 +1,6 @@
 // @ts-check
 import React, { useEffect, useState } from "react";
+import Modal from "../Modal/Modal";
 import "./LinkModal.scss";
 
 /**
@@ -12,7 +13,7 @@ import "./LinkModal.scss";
  * @author Alexander Burdiss
  * @since 11/23/21
  * @lastModified 11/30/21
- * @version 1.0.2
+ * @version 1.1.0
  * @component
  */
 export default function LinkModal() {
@@ -46,9 +47,9 @@ export default function LinkModal() {
     });
   }, []);
 
-  return (
-    <div className={`LinkModal-Container ${isShowing ? "Showing" : ""}`}>
-      {isShowing ? (
+  return isShowing ? (
+    <Modal>
+      <div className="LinkModal-Container">
         <div className="LinkModal-Content">
           <div className="Description-Container">
             Yikes! You are now leaving The Bedtime Project. Would you like to
@@ -69,7 +70,7 @@ export default function LinkModal() {
             </a>
           </div>
         </div>
-      ) : null}
-    </div>
-  );
+      </div>
+    </Modal>
+  ) : null;
 }
