@@ -1,5 +1,6 @@
 // @ts-check
 import React, { useEffect, useState } from "react";
+import sanityClient from "../../client";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../../Components/General/Contributor/Contributor";
@@ -32,6 +33,24 @@ export default function About() {
       setContributors(data);
     }
     fetchData();
+
+    sanityClient
+      .fetch(
+        `*[_type == "contributor"]{
+          name,
+          slug,
+          image{
+            asset->{
+              _id,
+              url
+            },
+          },
+          alt,
+          bio
+        }`
+      )
+      .then((data) => console.log(data))
+      .catch(console.error);
   }, []);
 
   return (
