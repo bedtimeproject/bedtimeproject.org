@@ -1,6 +1,11 @@
 // @ts-check
 import React, { useEffect, useState } from "react";
+
+import "./About.scss";
+
 import sanityClient from "../../client";
+
+import { imageUrl } from "../../utils/imageUrl/imageUrl";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import Contributor from "../../Components/General/Contributor/Contributor";
@@ -8,16 +13,14 @@ import StandardWrapper from "../../Components/Structural/StandardWrapper/Standar
 import StoryButton from "../../Components/Buttons/StoryButton/StoryButton";
 import SEO from "../../Components/Structural/SEO/SEO";
 
-import "./About.scss";
-import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
-
 /**
  * @function About
  * @description Information about the contributors of the site, and about the
  * site itself.
  * @author Alexander Burdiss
  * @since 6/6/21
- * @version 1.4.3
+ * @lastmodified 2/19/22
+ * @version 1.5.0
  * @component
  * @example
  * <About />
@@ -25,15 +28,6 @@ import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDr
 export default function About() {
   const [contributors, setContributors] = useState([]);
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(
-        "https://drupal.bedtimeproject.dev/rest/views/contributors"
-      );
-      const data = await response.json();
-      setContributors(data);
-    }
-    fetchData();
-
     sanityClient
       .fetch(
         `*[_type == "contributor"]{
@@ -49,7 +43,7 @@ export default function About() {
           bio
         }`
       )
-      .then((data) => console.log(data))
+      .then(setContributors)
       .catch(console.error);
   }, []);
 
@@ -73,9 +67,13 @@ export default function About() {
               return (
                 <Contributor
                   key={index}
-                  name={contributor.title}
-                  bio={contributor.body}
-                  image={addDrupalUrlToImageTag(contributor.field_main_image)}
+                  name={contributor.name}
+                  bio={contributor.bio}
+                  image={imageUrl(contributor.image)
+                    .width(400)
+                    .height(400)
+                    .url()}
+                  alt={contributor.alt}
                 />
               );
             })}
