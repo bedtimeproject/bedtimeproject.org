@@ -1,8 +1,9 @@
 @import "../../Variables.scss";
 
 .Parents-Container {
-  .Sections-Container {
-    .paragraph--type--section {
+  .Sections-Container,
+  .Faq-Container {
+    .Section {
       max-width: 600px;
       margin: 20px auto;
       background-color: $Tequila;
@@ -10,8 +11,10 @@
       border-radius: 20px;
       line-height: 1.5;
 
-      .field--name-field-chapter-title {
+      h3 {
         font-weight: bold;
+        margin: 0;
+        margin-bottom: 1rem;
       }
 
       p {
@@ -21,25 +24,6 @@
       img {
         height: 1rem;
         width: auto;
-      }
-    }
-  }
-
-  .Faq-Container {
-    .paragraph--type--section {
-      max-width: 600px;
-      margin: 20px auto;
-      background-color: $Tequila;
-      padding: 20px;
-      border-radius: 20px;
-      line-height: 1.5;
-
-      .field--name-field-chapter-title {
-        font-weight: bold;
-      }
-
-      p {
-        margin: 0;
       }
     }
   }

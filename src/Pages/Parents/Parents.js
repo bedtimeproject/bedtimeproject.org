@@ -1,19 +1,20 @@
 // @ts-check
 import React, { useState, useEffect } from "react";
+import BlockContent from "@sanity/block-content-to-react";
 import "./Parents.scss";
+
+import sanityClient from "../../client";
 
 import PageTitle from "../../Components/Structural/PageTitle/PageTitle";
 import StandardWrapper from "../../Components/Structural/StandardWrapper/StandardWrapper";
 import SecondaryHeadline from "../../Components/Structural/SecondaryHeadline/SecondaryHeadline";
-
-import { addDrupalUrlToImageTag } from "../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 
 /**
  * @namespace Parents
  * @function Parents
  * @author Alexander Burdiss
  * @since 11/08/21
- * @version 1.1.0
+ * @version 1.2.0
  * @component
  */
 export default function Parents() {
@@ -21,12 +22,24 @@ export default function Parents() {
   const [faq, setFaq] = useState(null);
 
   useEffect(() => {
-    fetch("https://drupal.bedtimeproject.dev/rest/views/parents")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setSections(data[0].field_sections);
-        setFaq(data[0].field_chapters);
-      });
+    sanityClient
+      .fetch(
+        `*[_type == "faq"] | order(sortOrder) {
+          name,
+          body,
+        }`
+      )
+      .then(setFaq)
+      .catch(console.error);
+    sanityClient
+      .fetch(
+        `*[_type == "parentInfo"] | order(sortOrder) {
+          name,
+          body,
+        }`
+      )
+      .then(setSections)
+      .catch(console.error);
   }, []);
 
   return (
@@ -34,19 +47,35 @@ export default function Parents() {
       <div className="Parents-Container">
         <PageTitle>Parents</PageTitle>
         {sections && (
-          <div
-            className="Sections-Container"
-            dangerouslySetInnerHTML={{
-              __html: addDrupalUrlToImageTag(sections),
-            }}
-          />
+          <div className="Sections-Container">
+            {sections.map((section) => (
+              <div className="Section" key={section.name}>
+                <h3>{section.name}</h3>
+                <BlockContent
+                  blocks={section.body}
+                  projectId={sanityClient.config().projectId}
+                  dataset={sanityClient.config().dataset}
+                />
+              </div>
+            ))}
+          </div>
         )}
-        <SecondaryHeadline>FAQ</SecondaryHeadline>
         {faq && (
-          <div
-            className="Faq-Container"
-            dangerouslySetInnerHTML={{ __html: faq }}
-          />
+          <>
+            <SecondaryHeadline>FAQ</SecondaryHeadline>
+            <div className="Faq-Container">
+              {faq.map((question) => (
+                <div className="Section" key={question.name}>
+                  <h3>{question.name}</h3>
+                  <BlockContent
+                    blocks={question.body}
+                    projectId={sanityClient.config().projectId}
+                    dataset={sanityClient.config().dataset}
+                  />
+                </div>
+              ))}
+            </div>
+          </>
         )}
         <div className="Links-Container">
           {/* <StoryButton link="/parents/create-pwa">Create a PWA</StoryButton> */}
