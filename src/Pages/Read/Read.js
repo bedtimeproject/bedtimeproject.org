@@ -65,6 +65,9 @@ export default function Read() {
         shelf1Link="/read/bedtime-stories"
         shelf1Label="Bedtime Stories"
         books2={stories.map((story, index) => {
+          if (index > 2) {
+            return null;
+          }
           const link = story.slug?.current;
           return (
             <BookLink
@@ -77,6 +80,9 @@ export default function Read() {
         shelf2Link="/read/stories"
         shelf2Label="Stories"
         books3={tales.map((tale, index) => {
+          if (index > 2) {
+            return null;
+          }
           const link = tale.slug?.current;
           return (
             <BookLink key={index} link={`/read/tales/${link}`} story={tale} />
