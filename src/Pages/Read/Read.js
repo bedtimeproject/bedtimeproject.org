@@ -1,5 +1,5 @@
 // @ts-check
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 
 import "./Read.scss";
 
@@ -8,19 +8,19 @@ import SEO from "../../Components/Structural/SEO/SEO";
 import Bookshelf from "../../Components/General/Bookshelf/Bookshelf";
 import BookLink from "../../Components/Buttons/BookLink/BookLink";
 
-import { formatUrlString } from "../../utils/formatUrlString/formatUrlString";
+import { AppContext } from "../../Contexts/AppContext";
 
 export const bedtimeStories = [
   {
     title: "Surfer's Hideaway",
     link: "/read/bedtime-stories/surfers-hideaway",
-    field_author: "C. A. Moonbloom",
+    author: "C. A. Moonbloom",
     backgroundColor: "#fb8e49",
   },
   {
     title: "Mrs. Blue Sky",
     link: "/read/bedtime-stories/mrs-blue-sky",
-    field_author: "C. A. Moonbloom",
+    author: "C. A. Moonbloom",
     backgroundColor: "#133061",
   },
 ];
@@ -31,32 +31,15 @@ export const bedtimeStories = [
  * go to read.
  * @author Alexander Burdiss
  * @since 7/20/21
- * @version 2.0.2
+ * @version 3.0.0
  * @component
  * @example
  * <Read />
  */
 export default function Read() {
-  const [shelf2Books, setShelf2Books] = useState([]);
-  const [shelf3Books, setShelf3Books] = useState([]);
-
-  function fetchStories() {
-    fetch("https://drupal.bedtimeproject.dev/rest/views/stories/read")
-      .then((resp) => resp.json())
-      .then((data) => setShelf2Books(data));
-  }
-
-  function fetchTales() {
-    fetch("https://drupal.bedtimeproject.dev/rest/views/tales/read")
-      .then((resp) => resp.json())
-      .then((data) => setShelf3Books(data));
-  }
-
-  useEffect(() => {
-    fetchStories();
-    fetchTales();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const {
+    state: { tales, stories },
+  } = useContext(AppContext);
 
   return (
     <StandardWrapper>
@@ -81,8 +64,8 @@ export default function Read() {
         })}
         shelf1Link="/read/bedtime-stories"
         shelf1Label="Bedtime Stories"
-        books2={shelf2Books.map((story, index) => {
-          const link = formatUrlString(story.title);
+        books2={stories.map((story, index) => {
+          const link = story.slug?.current;
           return (
             <BookLink
               key={index}
@@ -93,10 +76,10 @@ export default function Read() {
         })}
         shelf2Link="/read/stories"
         shelf2Label="Stories"
-        books3={shelf3Books.map((story, index) => {
-          const link = formatUrlString(story.title);
+        books3={tales.map((tale, index) => {
+          const link = tale.slug?.current;
           return (
-            <BookLink key={index} link={`/read/tales/${link}`} story={story} />
+            <BookLink key={index} link={`/read/tales/${link}`} story={tale} />
           );
         })}
         shelf3Link="/read/tales"

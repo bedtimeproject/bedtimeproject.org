@@ -1,6 +1,8 @@
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../Contexts/AppContext";
 
+import sanityClient from "../../client";
+
 /**
  * @function useInitialData
  * @description A custom hook that handles fetching all of the data needed at
@@ -19,18 +21,36 @@ export function useInitialData() {
      * data to the global context for use building out the routes correctly.
      * @author Alexander Burdiss
      * @since 1/9/22
-     * @version 1.0.0
+     * @version 2.0.0
      */
     function fetchStoryData() {
-      // grab tales
-      fetch("https://drupal.bedtimeproject.dev/rest/views/tales")
-        .then((resp) => resp.json())
-        .then((data) => dispatch({ type: "SET_TALES", payload: data }));
+      sanityClient
+        .fetch(
+          `*[_type == "tale" && dateTime(publishedAt) < dateTime(now())] | order(publishedAt) {
+            title,
+            slug,
+            author,
+            mainImage,
+            publishedAt,
+          }`
+        )
+        .then((data) => {
+          dispatch({ type: "SET_TALES", payload: data });
+        });
 
-      // Grab Stories
-      fetch("https://drupal.bedtimeproject.dev/rest/views/stories")
-        .then((resp) => resp.json())
-        .then((data) => dispatch({ type: "SET_STORIES", payload: data }));
+      sanityClient
+        .fetch(
+          `*[_type == "story" && dateTime(publishedAt) < dateTime(now())] | order(publishedAt) {
+          title,
+          slug,
+          author,
+          mainImage,
+          publishedAt,
+        }`
+        )
+        .then((data) => {
+          dispatch({ type: "SET_STORIES", payload: data });
+        });
     },
     [dispatch]
   );

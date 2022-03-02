@@ -39,11 +39,10 @@ export default function Stories() {
               return null;
             }
 
-            const link = formatUrlString(story.title);
             return (
               <BookLink
                 key={index}
-                link={`/read/stories/${link}`}
+                link={`/read/stories/${story.slug.current}`}
                 story={story}
               />
             );

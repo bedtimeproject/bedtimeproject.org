@@ -1,10 +1,15 @@
 // @ts-check
 import React from "react";
+import BlockContent from "@sanity/block-content-to-react";
 import "./PaperStory.scss";
+
+import sanityClient from "../../../client";
 
 import PageTitle from "../../Structural/PageTitle/PageTitle";
 import MoreContentSoon from "../MoreContentSoon/MoreContentSoon";
 import Loading from "../../Structural/Loading/Loading";
+
+import { imageUrl } from "../../../utils/imageUrl/imageUrl";
 
 /**
  * @namespace PaperStory
@@ -12,7 +17,7 @@ import Loading from "../../Structural/Loading/Loading";
  * @description Displays one paper story for the site.
  * @author Alexander Burdiss
  * @since 10/17/21
- * @version 1.2.0
+ * @version 2.0.0
  * @component
  */
 export default function PaperStory({ storyData, backLink, backLinkText }) {
@@ -22,16 +27,20 @@ export default function PaperStory({ storyData, backLink, backLinkText }) {
         <article className="Paper-Container">
           <div className="Heading-Information">
             <PageTitle>{storyData.title}</PageTitle>
-            {storyData.field_author && <div>By {storyData.field_author}</div>}
+            {storyData.author && <div>By {storyData.author}</div>}
           </div>
           <div className="Chapters">
-            {storyData.field_chapters && (
-              <div
-                dangerouslySetInnerHTML={{ __html: storyData.field_chapters }}
-              />
-            )}
+            <img
+              src={imageUrl(storyData.mainImage).url()}
+              alt={storyData.alt}
+            />
+            <BlockContent
+              blocks={storyData.body}
+              projectId={sanityClient.config().projectId}
+              dataset={sanityClient.config().dataset}
+            />
           </div>
-          {storyData.field_more_content_coming_soon == "True" && (
+          {storyData.more && (
             <MoreContentSoon backLink={backLink} backLinkText={backLinkText} />
           )}
         </article>

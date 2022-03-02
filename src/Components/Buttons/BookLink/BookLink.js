@@ -35,7 +35,7 @@ export default function BookLink({ link, story, backgroundColor }) {
       <div className="TitleContainer">
         <strong style={{ color: getContrast(bgColor) }}>{story?.title}</strong>
       </div>
-      <div style={{ color: getContrast(bgColor) }}>{story?.field_author}</div>
+      <div style={{ color: getContrast(bgColor) }}>{story?.author}</div>
     </Link>
   );
 }
