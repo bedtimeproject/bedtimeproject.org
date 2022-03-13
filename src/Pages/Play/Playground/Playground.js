@@ -25,25 +25,28 @@ import { setupPlayground } from "./utils/setupPlayground";
  * button is clicked.
  * @author Alexander Burdiss
  * @since 5/12/21
- * @version 2.0.0
+ * @version 2.0.1
  * @component
  * @example
  * <Playground />
  */
 export default function Playground() {
   const [songs, setSongs] = useState([]);
+
+  /**
+   * @function fetchAudio
+   * @description Handles grabbing all audio files from the server.
+   */
   function fetchAudio() {
     sanityClient
       .fetch(
-        `*[_type == "song"] {
+        `*[_type == "audio" && playground] {
         name,
         "url": audio.asset->url,
-        composer
+        attribution
       }`
       )
-      .then((data) => {
-        setSongs(data);
-      });
+      .then(setSongs);
   }
 
   useEffect(function setupStoryGenerator() {
@@ -72,7 +75,9 @@ export default function Playground() {
 
             <AudioPlayer
               src={songs[0]?.url}
-              attribution={"Music By " + songs[0]?.composer}
+              attribution={
+                songs[0]?.attribution ? "Music By " + songs[0]?.attribution : ""
+              }
             />
           </div>
 

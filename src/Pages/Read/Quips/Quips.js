@@ -17,7 +17,7 @@ import sanityClient from "../../../client";
  * that are in the Quips tab.
  * @author Alexander Burdiss
  * @since 5/27/21
- * @version 3.2.1
+ * @version 3.2.2
  * @component
  * @example
  * <Quips />
@@ -59,12 +59,12 @@ export default function Quips() {
    * them to the state variable in this component.
    * @author Alexander Burdiss
    * @since 5/27/21
-   * @version 2.0.0
+   * @version 2.0.1
    */
   function fetchQuips() {
     sanityClient
       .fetch(
-        `*[_type == "quip" && dateTime(publishedAt) < dateTime(now())] | order(publishedAt) {
+        `*[_type == "quip" && dateTime(publishedAt) < dateTime(now())][0...16] | order(publishedAt) {
         title,
         author,
         mainImage,
@@ -74,10 +74,7 @@ export default function Quips() {
         publishedAt,
       }`
       )
-      .then((data) => {
-        console.log(data);
-        setQuips(data);
-      })
+      .then(setQuips)
       .catch(() => setError(true));
   }
 
