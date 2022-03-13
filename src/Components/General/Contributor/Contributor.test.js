@@ -12,11 +12,4 @@ describe("Contributor renders correct attributes", () => {
     const textExists = screen.queryByText(testText);
     expect(textExists).toBeTruthy();
   });
-
-  test("Contributor shows appropriate bio", () => {
-    const testText = "Hello, World!";
-    render(<Contributor bio={testText} />);
-    const textExists = screen.queryByText(testText);
-    expect(textExists).toBeTruthy();
-  });
 });

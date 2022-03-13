@@ -23,7 +23,7 @@ describe("renders BookLink", () => {
 
   test("renders author", () => {
     const testAuthor = "John Locke";
-    render(<BookLink story={{ field_author: testAuthor }} />);
+    render(<BookLink story={{ author: testAuthor }} />);
     const authorExists = screen.queryByText(testAuthor);
     expect(authorExists).toBeTruthy();
   });
@@ -31,6 +31,7 @@ describe("renders BookLink", () => {
   test("renders background color", () => {
     const testColor = "rgb(12, 12, 12)";
     const { container } = render(<BookLink backgroundColor={testColor} />);
+    // eslint-disable-next-line testing-library/no-node-access
     expect(container.firstChild.style.backgroundColor).toEqual(testColor);
   });
 });
