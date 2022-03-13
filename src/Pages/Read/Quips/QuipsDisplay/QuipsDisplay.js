@@ -1,7 +1,10 @@
 // @ts-check
 import React from "react";
-import { addDrupalUrlToImageTag } from "../../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
 import "./QuipsDisplay.scss";
+
+import BlockContent from "@sanity/block-content-to-react";
+import { imageUrl } from "../../../../utils/imageUrl/imageUrl";
+import sanityClient from "../../../../client";
 
 /**
  * @namespace QuipsDisplay
@@ -20,7 +23,6 @@ import "./QuipsDisplay.scss";
  * <QuipsDisplay quip={quip} />
  */
 export default function QuipsDisplay({ quip, index, openQuip, setOpenQuip }) {
-  const image = addDrupalUrlToImageTag(quip.field_main_image);
   return (
     <>
       <style>{`
@@ -96,14 +98,16 @@ export default function QuipsDisplay({ quip, index, openQuip, setOpenQuip }) {
             <h2>{quip.title}</h2>
           </button>
           <div className="LeftBox">
-            <div dangerouslySetInnerHTML={{ __html: quip.body }} />
-            {quip.field_author && (
-              <div className="Author">- {quip.field_author}</div>
-            )}
+            <BlockContent
+              blocks={quip.body}
+              projectId={sanityClient.config().projectId}
+              dataset={sanityClient.config().dataset}
+            />
+            {quip.author && <div className="Author">- {quip.author}</div>}
           </div>
-          {image && (
+          {quip.mainImage && (
             <div className="RightBox">
-              <div dangerouslySetInnerHTML={{ __html: image }} />
+              <img src={imageUrl(quip.mainImage).url()} alt={quip.alt} />
             </div>
           )}
         </div>

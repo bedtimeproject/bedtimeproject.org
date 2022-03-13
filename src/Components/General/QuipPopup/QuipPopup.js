@@ -2,9 +2,6 @@
 import React, { useEffect, useState } from "react";
 import "./QuipPopup.scss";
 
-// Utils
-import { addDrupalUrlToImageTag } from "../../../utils/addDrupalUrlToImageTag/addDrupalUrlToImageTag";
-
 /**
  * @namespace QuipPopup
  * @function QuipPopup
@@ -40,7 +37,7 @@ export default function QuipPopup({ quip, className }) {
             onClick={toggleIsShowing}
             className={`ImageContainer ${isShowing ? "active" : ""}`}
             dangerouslySetInnerHTML={{
-              __html: addDrupalUrlToImageTag(quip.field_main_image),
+              __html: quip.field_main_image,
             }}
           />
           {isShowing && (

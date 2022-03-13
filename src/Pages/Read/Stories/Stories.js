@@ -8,7 +8,6 @@ import StandardWrapper from "../../../Components/Structural/StandardWrapper/Stan
 import BookLink from "../../../Components/Buttons/BookLink/BookLink";
 import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
 
-import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
 import { AppContext } from "../../../Contexts/AppContext";
 
 /**
@@ -52,7 +51,7 @@ export default function Stories() {
               return null;
             }
 
-            const link = formatUrlString(story.title);
+            const link = story.slug?.current;
             return (
               <BookLink
                 key={index}
@@ -65,7 +64,8 @@ export default function Stories() {
             if (index <= 5 || index > 8) {
               return null;
             }
-            const link = formatUrlString(story.title);
+
+            const link = story.slug?.current;
             return (
               <BookLink
                 key={index}

@@ -9,6 +9,8 @@ import StandardWrapper from "../../../Components/Structural/StandardWrapper/Stan
 import SEO from "../../../Components/Structural/SEO/SEO";
 import Loading from "../../../Components/Structural/Loading/Loading";
 
+import sanityClient from "../../../client";
+
 /**
  * @function Quips
  * @description The main parent component for all of the screens and components
@@ -60,11 +62,21 @@ export default function Quips() {
    * @version 2.0.0
    */
   function fetchQuips() {
-    fetch("https://drupal.bedtimeproject.dev/rest/views/quips")
-      .then((resp) => resp.json())
+    sanityClient
+      .fetch(
+        `*[_type == "quip" && dateTime(publishedAt) < dateTime(now())] | order(publishedAt) {
+        title,
+        author,
+        mainImage,
+        alt,
+        mainImageAuthor,
+        body,
+        publishedAt,
+      }`
+      )
       .then((data) => {
-        setQuips(data.reverse());
-        setError(false);
+        console.log(data);
+        setQuips(data);
       })
       .catch(() => setError(true));
   }

@@ -8,7 +8,6 @@ import BookLink from "../../../Components/Buttons/BookLink/BookLink";
 import SEO from "../../../Components/Structural/SEO/SEO";
 import Bookshelf from "../../../Components/General/Bookshelf/Bookshelf";
 
-import { formatUrlString } from "../../../utils/formatUrlString/formatUrlString";
 import { AppContext } from "../../../Contexts/AppContext";
 
 /**
@@ -50,7 +49,7 @@ export default function Tales() {
               return null;
             }
 
-            const link = formatUrlString(story.title);
+            const link = story.slug?.current;
             return (
               <BookLink
                 key={index}
@@ -63,7 +62,8 @@ export default function Tales() {
             if (index <= 5 || index > 8) {
               return null;
             }
-            const link = formatUrlString(story.title);
+
+            const link = story.slug?.current;
             return (
               <BookLink
                 key={index}
