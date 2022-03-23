@@ -35,7 +35,6 @@ const Quips = lazy(() => import("./Pages/Read/Quips/Quips"));
 // Play Pages
 const Play = lazy(() => import("./Pages/Play/Play"));
 const Playground = lazy(() => import("./Pages/Play/Playground/Playground"));
-const Chess = lazy(() => import("./Pages/Play/Chess/Chess"));
 const LightsOut = lazy(() => import("./Pages/Play/LightsOut/LightsOut"));
 const Sudoku = lazy(() => import("./Pages/Play/Sudoku/Sudoku"));
 
@@ -86,14 +85,6 @@ export default function App() {
             element={
               <Suspense fallback={<Loading />}>
                 <Playground />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/play/chess"
-            element={
-              <Suspense fallback={<Loading />}>
-                <Chess />
               </Suspense>
             }
           />
