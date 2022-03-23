@@ -4,7 +4,7 @@
 # Since: 9/7/21
 # Description: Generates a React component and all the necessary files that go
 # along with it.
-version="1.0.2"
+version="1.0.3"
 
 path=$1
 component=$2
@@ -68,21 +68,6 @@ export default function $component() {
 
 # Make SCSS File
 touch "src/$path/$component/$component.scss"
-
-# Make Storybook File
-echo "import React from \"react\";
-import $component from \"./$component\";
-
-export default {
-  title: \"$path/$component\",
-  component: $component,
-  argTypes: {},
-};
-
-const Template = (args) => <$component {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};" > "src/$path/$component/$component.stories.js"
 
 # Make Jest test file
 echo "import { render } from \"@testing-library/react\";

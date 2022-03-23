@@ -14,12 +14,6 @@ You can run the app by running `yarn start`. This will run the basic react build
 
 This project uses `@testing-library/react` and `jest` for unit tests. Run tests with `yarn test`
 
-## Storybook
-
-This project also uses Storybook as a component library. Run it using `yarn storybook`
-
-This project's Storybook is published using chromatic: https://www.chromatic.com/builds?appId=60aeea53da1d8b00395c505f
-
 ## Sass
 
 This project also uses Sass in a couple places. Each Sass file is compiled in the same directory and imported into the master.scss file in the src/ directory.
