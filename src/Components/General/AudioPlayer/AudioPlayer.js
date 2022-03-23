@@ -2,10 +2,10 @@
 import React, { useRef, useState } from "react";
 import "./AudioPlayer.scss";
 
-import { IoPlay, IoPause } from "react-icons/io5";
-
 import oldRecordPlayer from "../../../assets/images/oldrecordplayer.svg";
 import record from "../../../assets/images/record.svg";
+import play from "../../../assets/images/play.svg";
+import pause from "../../../assets/images/pause.svg";
 
 /**
  * @namespace AudioPlayer
@@ -21,7 +21,6 @@ import record from "../../../assets/images/record.svg";
  * @component
  */
 export default function AudioPlayer({ src, attribution }) {
-  const ICON_SIZE = 30;
   const audioElemRef = useRef(null);
   const [playing, setPlaying] = useState(false);
 
@@ -44,8 +43,16 @@ export default function AudioPlayer({ src, attribution }) {
             alt=""
             className={`record ${playing ? "on" : ""}`}
           />
-          <img src={oldRecordPlayer} alt="A hand crank record player" />
-          {playing ? <IoPause size={ICON_SIZE} /> : <IoPlay size={ICON_SIZE} />}
+          <img
+            className="Record-Player"
+            src={oldRecordPlayer}
+            alt="A hand crank record player"
+          />
+          {playing ? (
+            <img className="Play-Pause-Button" src={pause} alt="Pause" />
+          ) : (
+            <img className="Play-Pause-Button" src={play} alt="Play" />
+          )}
         </div>
         {attribution && <span className="Attribution">{attribution}</span>}
       </button>
