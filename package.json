@@ -8,7 +8,6 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.0.6",
     "@sanity/image-url": "^1.0.1",
-    "caniuse-lite": "^1.0.30001298",
     "chess.js": "^0.12.0",
     "core-js": "^3.20.2",
     "date-chinese": "^2.1.3",
