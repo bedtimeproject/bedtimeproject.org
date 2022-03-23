@@ -1,1 +1,80 @@
-{}
+{
+  "@sanity/block-content-to-react@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sanity-io/block-content-to-react",
+    "licenseUrl": "https://github.com/sanity-io/block-content-to-react/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "@sanity/client@3.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sanity-io/client",
+    "licenseUrl": "https://github.com/sanity-io/client/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "@sanity/image-url@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sanity-io/image-url",
+    "licenseUrl": "https://github.com/sanity-io/image-url/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "core-js@3.20.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/zloirock/core-js",
+    "licenseUrl": "https://github.com/zloirock/core-js/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "date-chinese@2.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/commenthol/date-chinese",
+    "licenseUrl": "https://github.com/commenthol/date-chinese/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "gh-pages@3.2.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tschaub/gh-pages",
+    "licenseUrl": "https://github.com/tschaub/gh-pages/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "react-dom@17.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "react-helmet-async@1.2.2": {
+    "licenses": "Apache-2.0",
+    "repository": "http://github.com/staylor/react-helmet-async",
+    "licenseUrl": "http://github.com/staylor/react-helmet-async/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "react-icons@4.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com:react-icons/react-icons",
+    "licenseUrl": "https://github.com:react-icons/react-icons/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "react-router-dom@6.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/remix-run/react-router",
+    "licenseUrl": "https://github.com/remix-run/react-router/raw/master/LICENSE.md",
+    "parents": "the-bedtime-project"
+  },
+  "react-scripts@5.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/create-react-app",
+    "licenseUrl": "https://github.com/facebook/create-react-app/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "react@17.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/facebook/react",
+    "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  },
+  "sass@1.47.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sass/dart-sass",
+    "licenseUrl": "https://github.com/sass/dart-sass/raw/master/LICENSE",
+    "parents": "the-bedtime-project"
+  }
+}
