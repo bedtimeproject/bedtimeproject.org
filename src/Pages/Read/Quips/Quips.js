@@ -55,7 +55,7 @@ export default function Quips() {
   /**
    * @async
    * @function Quips~fetchQuips
-   * @description Fetches All of the quips from the drupal backend and adds
+   * @description Fetches All of the quips from the Sanity backend and adds
    * them to the state variable in this component.
    * @author Alexander Burdiss
    * @since 5/27/21

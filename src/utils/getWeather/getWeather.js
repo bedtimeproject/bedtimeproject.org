@@ -1,5 +1,18 @@
 // @ts-check
-import { CalendarChinese } from "date-chinese";
+
+import { isChineseNewYear } from "../isChineseNewYear/isChineseNewYear";
+
+/**
+ * Enum for weather types
+ * @enum {string}
+ * @readonly
+ */
+export const WEATHER = {
+  snow: "snow",
+  rain: "rain",
+  fireworks: "fireworks",
+  clear: "clear",
+};
 
 /**
  * @function getWeather
@@ -7,27 +20,23 @@ import { CalendarChinese } from "date-chinese";
  * day. It will be consistent so if a user checks in in the morning and evening
  * it will rain both times. It will also keep the snow across different parts of
  * the site, so it won't keep switching weather.
+ * @param {Date} [date] An optional argument that will be used as the date. If
+ * not passed, today will be used.
  * @author Alexander Burdiss
  * @since 11/19/21
- * @version 1.1.1
+ * Last Modified 3/29/22
+ * @version 1.2.0
  * @returns {string} One of "snow", "rain", "fireworks", or "clear"
  */
-export function getWeather() {
+export function getWeather(date) {
   // Get current Date
-  const today = new Date();
+  const today = date ? date : new Date();
   const currentDay = today.getDate();
   const currentMonth = today.getMonth() + 1;
 
-  // Get Chinese Calendar Date
-  const cal = new CalendarChinese();
-  let newYear = cal.newYear(today.getFullYear());
-  cal.fromJDE(newYear);
-  // convert to Date
-  const chineseNewYear = cal.toDate();
-
   // Christmas in July
   if (currentMonth == 7 && currentDay == 25) {
-    return "snow";
+    return WEATHER.snow;
   }
 
   // Fireworks on Holidays
@@ -39,10 +48,9 @@ export function getWeather() {
     // July 4th
     (currentMonth == 7 && currentDay == 4) ||
     // Chinese New Year
-    (currentMonth == chineseNewYear.getMonth() + 1 &&
-      currentDay == chineseNewYear.getDate())
+    isChineseNewYear(today)
   ) {
-    return "fireworks";
+    return WEATHER.fireworks;
   }
 
   // Snow intermittently from November 18 to February
@@ -53,15 +61,15 @@ export function getWeather() {
     currentMonth == 2
   ) {
     if (currentDay % 2 == 0 || currentDay % 3 == 0) {
-      return "snow";
+      return WEATHER.snow;
     }
   }
 
   // Rain every third day in March, April, or May.
   if (currentMonth == 3 || currentMonth == 4 || currentMonth == 5) {
     if (currentDay % 3 == 0) {
-      return "rain";
+      return WEATHER.rain;
     }
   }
-  return "clear";
+  return WEATHER.clear;
 }

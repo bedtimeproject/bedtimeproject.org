@@ -9,7 +9,7 @@ import sanityClient from "../../client";
  * the start of the app.
  * @author Alexander Burdiss
  * @since 1/9/22
- * @version 1.0.0
+ * @version 1.0.1
  */
 export function useInitialData() {
   const { dispatch } = useContext(AppContext);
@@ -17,7 +17,7 @@ export function useInitialData() {
   useEffect(
     /**
      * @function useInitialData~fetchStoryData
-     * @description Handles fetching the data from Drupal and setting that
+     * @description Handles fetching the data from Sanity and setting that
      * data to the global context for use building out the routes correctly.
      * @author Alexander Burdiss
      * @since 1/9/22
