@@ -1,11 +1,11 @@
 // @ts-check
 /*
 
-Download this lib: https://www.npmjs.com/package/npm-license-crawler
-I did it globally: `npm i npm-license-crawler -g`
+You can use either the npm-license-crawler dependency to get data that will
+work with this component, or the custom script at:
+the-bedtime-project/scripts/licenseCrawler.js
 
-Run this command to get the data
-`npm-license-crawler --onlyDirectDependencies --json src/Pages/About/Licenses/licenses.json`
+Run the script to generate the file ./licenses.json
 
 */
 
@@ -38,7 +38,8 @@ function extractNameFromGithubUrl(url) {
     return null;
   }
 
-  const reg = /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_]{1,15})(\/([-a-z]{1,20}))?/i;
+  const reg =
+    /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_]{1,15})(\/([-a-z]{1,20}))?/i;
   const components = reg.exec(url);
 
   if (components && components.length > 5) {
@@ -53,7 +54,7 @@ function extractNameFromGithubUrl(url) {
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @since 12/17/20
- * @version 1.0.1
+ * @version 1.0.2
  * @param {Array} data The list of licenses.
  * @param {String|Number} key An object key inside each member of data.
  * @returns {Array} A sorted version of the data array that is passed in.
@@ -65,18 +66,8 @@ function sortDataByKey(data, key) {
   return data;
 }
 
-// Add license for library I downloaded directly and use
-const allData = Data;
-allData["react-crossword@0.2.3"] = {
-  licenses: "Apache-2.0",
-  repository: "https://github.com/guardian/react-crossword",
-  licenseUrl:
-    "https://raw.githubusercontent.com/guardian/react-crossword/master/LICENSE",
-  parents: "the-bedtime-project",
-};
-
-let licenses = Object.keys(allData).map((key) => {
-  let { licenses, ...license } = allData[key];
+let licenses = Object.keys(Data).map((key) => {
+  let { licenses, ...license } = Data[key];
   let name, version;
   if (key[0] == "@") {
     [, name, version] = key.split("@");

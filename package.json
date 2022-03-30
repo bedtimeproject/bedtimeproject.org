@@ -23,7 +23,6 @@
     "@testing-library/user-event": "^13.5.0",
     "eslint": "^7.26.0",
     "eslint-config-react-app": "^7.0.0",
-    "npm-license-crawler": "^0.2.1",
     "webpack": "5"
   },
   "scripts": {
@@ -34,7 +33,7 @@
     "deploy:all": "npm run build && npm run deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "licenses": "npm-license-crawler --onlyDirectDependencies --json src/Pages/About/Licenses/licenses.json",
+    "licenses": "node ./scripts/licenseCrawler.js",
     "gen": "./scripts/generateComponent.sh"
   },
   "resolutions": {
