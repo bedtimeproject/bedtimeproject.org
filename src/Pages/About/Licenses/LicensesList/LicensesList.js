@@ -52,7 +52,6 @@ export default function LicensesList({ licenses }) {
                   <div style={{ maxWidth: "90%" }} className="item">
                     <a href={repository}>
                       <div className="name">{title}</div>
-                      <div className="text">{version}</div>
                     </a>
                     <a className="text" href={licenseUrl}>
                       {licenses}

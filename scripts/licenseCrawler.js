@@ -8,7 +8,8 @@
  *
  * @author Alexander Burdiss
  * @since 3/29/22
- * @version 1.0.0
+ * Last modified 3/29/22
+ * @version 1.0.1
  */
 const fs = require("fs");
 
@@ -63,6 +64,7 @@ function parseRepoUrl(url) {
   return url
     .replace("git://", "https://")
     .replace("git+http", "http")
+    .replace("http://", "https://")
     .replace(".git", "");
 }
 

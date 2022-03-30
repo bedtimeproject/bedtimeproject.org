@@ -11,42 +11,16 @@ Run the script to generate the file ./licenses.json
 
 import React from "react";
 
-import { capitalize } from "../../../utils/capitalize/capitalize";
-
 import LicensesList from "./LicensesList/LicensesList";
 import PageTitle from "../../../Components/Structural/PageTitle/PageTitle";
-
-import "./Licenses.scss";
-import Data from "./licenses.json";
 import RepeatingRadialGradient from "../../../Components/Background/RepeatingRadialGradient/RepeatingRadialGradient";
 import SEO from "../../../Components/Structural/SEO/SEO";
 import StandardWrapper from "../../../Components/Structural/StandardWrapper/StandardWrapper";
 
-/**
- * @function extractNameFromGithubUrl
- * @description Takes a url to a gitHub repository and returns the username of
- * the author of the software.
- * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
- * @author Alexander Burdiss
- * @version 1.1.0
- * @since 12/17/20
- * @param {String} url The GitHub url of a piece of software.
- * @returns {String} The GitHub username
- */
-function extractNameFromGithubUrl(url) {
-  if (!url) {
-    return null;
-  }
+import { extractNameFromGithubUrl } from "./utils/extractNameFromGithubUrl/extractNameFromGithubUrl";
 
-  const reg =
-    /((https?:\/\/)?(www\.)?github\.com\/)?(@|#!\/)?([A-Za-z0-9_]{1,15})(\/([-a-z]{1,20}))?/i;
-  const components = reg.exec(url);
-
-  if (components && components.length > 5) {
-    return components[5];
-  }
-  return null;
-}
+import "./Licenses.scss";
+import Data from "./licenses.json";
 
 /**
  * @function sortDataByKey
@@ -54,7 +28,7 @@ function extractNameFromGithubUrl(url) {
  * [Created with help from an online article]{@link https://blog.expo.io/licenses-the-best-part-of-your-app-29e7285b544f}
  * @author Alexander Burdiss
  * @since 12/17/20
- * @version 1.0.2
+ * @version 1.0.3
  * @param {Array} data The list of licenses.
  * @param {String|Number} key An object key inside each member of data.
  * @returns {Array} A sorted version of the data array that is passed in.
@@ -75,14 +49,11 @@ let licenses = Object.keys(Data).map((key) => {
     [name, version] = key.split("@");
   }
 
-  let username =
-    extractNameFromGithubUrl(license.repository) ||
-    extractNameFromGithubUrl(license.licenseUrl);
+  let username = extractNameFromGithubUrl(license.repository);
 
   let userUrl;
   let image;
   if (username) {
-    username = capitalize(username);
     image = `http://github.com/${username}.png`;
     userUrl = `http://github.com/${username}`;
   }
