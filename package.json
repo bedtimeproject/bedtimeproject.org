@@ -29,9 +29,9 @@
     "start": "react-scripts start",
     "build": "npm run licenses && react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "deploy:all": "npm run build && npm run deploy",
-    "test": "react-scripts test",
+    "deploy": "npm run test && gh-pages -d build",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
     "licenses": "node ./scripts/licenseCrawler.js",
     "gen": "./scripts/generateComponent.sh"
