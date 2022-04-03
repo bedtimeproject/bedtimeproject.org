@@ -83,7 +83,7 @@ $borderRadius: 2px;
     background-color: rgba(white, 0.3);
     width: 1px;
     height: 4vmin;
-    animation: fall 200ms linear infinite;
+    animation: fall 300ms linear infinite;
 
     @for $i from 1 through 30 {
       &:nth-child(#{$i}) {

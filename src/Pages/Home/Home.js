@@ -18,7 +18,7 @@ import PlaygroundImage from "../../assets/images/doors/Playground.svg";
 import StoriesImage from "../../assets/images/doors/Stories.svg";
 
 // Utils
-import { getWeather } from "../../utils/getWeather/getWeather";
+import { getWeather, WEATHER } from "../../utils/getWeather/getWeather";
 
 /**
  * @function Home
@@ -31,7 +31,7 @@ import { getWeather } from "../../utils/getWeather/getWeather";
  * <Home />
  */
 export default function Home() {
-  const [weather, setWeather] = useState("clear");
+  const [weather, setWeather] = useState(WEATHER.clear);
   useEffect(function setup() {
     setWeather(getWeather());
   }, []);
@@ -40,15 +40,49 @@ export default function Home() {
     <StandardWrapper>
       <div className="Home-Container">
         <SEO />
-        {weather == "fireworks" && (
+        {weather == WEATHER.fireworks && (
           <div className="Fireworks-Home-Container">
             <Fireworks />
           </div>
         )}
-        {weather == "clear" && <Fireflies />}
-        {weather == "snow" && (
+        {weather == WEATHER.clear && <Fireflies />}
+        {weather == WEATHER.snow && (
           <div className="Snow-Home-Container">
             <Snow />
+          </div>
+        )}
+        {weather == WEATHER.rain && (
+          <div className="Rain-Container">
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
+            <div className="drop"></div>
           </div>
         )}
         <div className="Home-Door-Container">
