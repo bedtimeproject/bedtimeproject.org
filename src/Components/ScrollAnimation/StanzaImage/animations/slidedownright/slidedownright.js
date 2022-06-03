@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function slidedownright
  * @description Returns a string for a keyframes slide down right animation with

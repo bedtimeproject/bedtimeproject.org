@@ -1,4 +1,3 @@
-// @ts-check
 /*
 
 You can use either the npm-license-crawler dependency to get data that will

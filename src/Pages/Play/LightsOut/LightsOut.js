@@ -1,4 +1,3 @@
-// @ts-check
 import React, { useState, useEffect } from "react";
 
 import "./LightsOut.scss";
@@ -149,7 +148,8 @@ export default function LightsOut() {
 
   useEffect(() => {
     resetGame();
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <StandardWrapper headerDecoration={false}>

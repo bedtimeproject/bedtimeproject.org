@@ -1,4 +1,3 @@
-// @ts-check
 import React, { useEffect, useState } from "react";
 
 import { shuffle } from "../../../utils/shuffle/shuffle";

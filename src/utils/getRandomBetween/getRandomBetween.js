@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function getRandomBetween
  * @description Gets a random number between the inputted min and max.

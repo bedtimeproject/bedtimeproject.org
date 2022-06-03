@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function slideupleft
  * @description Returns a string for a keyframes slide up left animation with

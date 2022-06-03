@@ -1,4 +1,3 @@
-// @ts-check
 import { Link } from "react-router-dom";
 import "./Header.scss";
 import HeaderButton from "../../Buttons/HeaderButton/HeaderButton";

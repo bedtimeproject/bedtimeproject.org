@@ -1,4 +1,3 @@
-// @ts-check
 import React from "react";
 import DefaultStanza from "../DefaultStanza/DefaultStanza";
 import StanzaImage from "../StanzaImage/StanzaImage";

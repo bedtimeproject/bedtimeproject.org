@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function isIE
  * @description Returns true if the user is using Internet Explorer of any

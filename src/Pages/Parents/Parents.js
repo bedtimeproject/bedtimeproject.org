@@ -1,4 +1,3 @@
-// @ts-check
 import React, { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import "./Parents.scss";

@@ -1,4 +1,3 @@
-// @ts-check
 export function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;

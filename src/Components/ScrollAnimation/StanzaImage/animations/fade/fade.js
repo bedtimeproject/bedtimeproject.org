@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function fade
  * @description Returns a string for a keyframes fade animation with the

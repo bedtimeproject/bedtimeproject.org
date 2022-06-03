@@ -1,4 +1,3 @@
-// @ts-check
 import React, { useEffect } from "react";
 
 import DefaultTitle from "./DefaultTitle/DefaultTitle";

@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function getContrast
  * @description Get the contrasting color for any hex color

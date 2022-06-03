@@ -1,7 +1,7 @@
-// @ts-check
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
+// @ts-ignore
 import packageJson from "../../../../package.json";
 
 /**

@@ -1,4 +1,3 @@
-// @ts-check
 import React, { lazy, Suspense } from "react";
 import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 

@@ -1,4 +1,3 @@
-// @ts-check
 import React, { useContext, useEffect, useState } from "react";
 
 import SEO from "../../../../Components/Structural/SEO/SEO";

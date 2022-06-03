@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function slideup
  * @description Returns a string for a keyframes slide up animation with the

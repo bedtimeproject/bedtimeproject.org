@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @function capitalize
  * @description Capitalizes the first letter of the string passed in.

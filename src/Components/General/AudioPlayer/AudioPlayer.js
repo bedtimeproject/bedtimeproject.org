@@ -1,4 +1,3 @@
-// @ts-check
 import React, { useRef, useState } from "react";
 import "./AudioPlayer.scss";
 
