@@ -1,1 +1,1 @@
-{"version":3,"file":"static/css/700.a0ffb240.chunk.css","mappings":"AAAA,iBACE","sources":["Pages/Read/Tales/Tales.scss"],"sourcesContent":[".Tales-Container {\r\n  height: 100%;\r\n}\r\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"static/css/700.a0ffb240.chunk.css","mappings":"AAAA,iBACE","sources":["Pages/Read/Tales/Tales.scss"],"sourcesContent":[".Tales-Container {\n  height: 100%;\n}\n"],"names":[],"sourceRoot":""}
