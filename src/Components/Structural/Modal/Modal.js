@@ -8,8 +8,8 @@ const modalRoot = document.querySelector("#modal");
  * @description A self-contained modal component that handles animating into
  * the DOM. Uses React Portals to render the modal outside of the "#root"
  * element, but still be controllable on a component basis.
- * @param {*} props The JSX props passed to this React component
- * @param {React.Component} props.children Any JSX to render as a Modal
+ * @param {Object} props The JSX props passed to this React component
+ * @param {JSX.Element} props.children Any JSX to render as a Modal
  * @author Alexander Burdiss
  * @since 2/7/22
  * @version 1.0.0

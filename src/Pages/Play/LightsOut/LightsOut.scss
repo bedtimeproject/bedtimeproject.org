@@ -43,12 +43,9 @@
 .LightsOutContainer #the-game button {
   border-radius: 7px;
   border: 2px solid $TrueV;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: background-color 0.3s linear;
   cursor: pointer;
-  &:hover {
-    background-color: #bbbbbb;
-  }
   &:hover,
   &:focus {
     border: 2px dotted $TrueV;
@@ -59,9 +56,6 @@
   border: 2px solid #000;
   background-color: #777777;
   transition: background-color 0.3s linear;
-  &:hover {
-    background-color: #555555;
-  }
   &:hover,
   &:focus {
     border: 2px dotted #000;
@@ -84,4 +78,76 @@
 .LightsOutContainer #best-moves > p {
   display: inline-block;
   margin: 0;
+}
+
+.LightsOutModalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 500;
+
+  .Wrapper {
+    position: absolute;
+    background-color: $Tequila;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    overflow: hidden;
+    border: 2px solid $Tequila;
+
+    .Border {
+      position: absolute;
+      display: block;
+      top: -50%;
+      left: -50%;
+      z-index: -9;
+      display: block;
+      height: 200%;
+      width: 200%;
+      transform: rotate(-45deg);
+      overflow: hidden;
+      background: linear-gradient(
+        to right,
+        #fff 20%,
+        #fff 40%,
+        #ecd08c 50%,
+        #ecd08c 55%,
+        #fff 70%,
+        #fff 100%
+      );
+      background-size: 200% auto;
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .PlayAgainButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 2px solid $TrueV;
+      background-color: $White;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        background-color: #eeeeee;
+      }
+    }
+  }
 }
