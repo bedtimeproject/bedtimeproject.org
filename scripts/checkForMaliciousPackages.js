@@ -1,3 +1,8 @@
+// Updates to make:
+// Check if not in package.json, but is in package-lock (error)
+// Check if in package.json, but not locked (error)
+// Check if locked in package.json at compromised version (error)
+
 const fs = require("fs");
 const semver = require("semver");
 const { dependencies, devDependencies } = require("../package.json");

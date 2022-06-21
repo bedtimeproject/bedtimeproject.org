@@ -26,8 +26,9 @@
     "webpack": "5"
   },
   "scripts": {
+    "preinstall": "cp -R scripts/hooks/ .git/hooks/ && chmod -R +x .git/hooks/ && echo 'git hooks copied'",
     "start": "react-scripts start",
-    "build": "npm run licenses && react-scripts build",
+    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "npm run test && gh-pages -d build",
     "test": "react-scripts test --watchAll=false",
