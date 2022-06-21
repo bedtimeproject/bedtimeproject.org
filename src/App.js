@@ -26,6 +26,7 @@ const SurfersHideaway = lazy(() =>
   import("./Pages/Read/BedtimeStories/SurfersHideaway/SurfersHideaway")
 );
 const Stories = lazy(() => import("./Pages/Read/Stories/Stories"));
+const Wiki = lazy(() => import("./Pages/Read/Stories/Wiki/Wiki"))
 const Story = lazy(() => import("./Pages/Read/Stories/Story/Story"));
 const Tales = lazy(() => import("./Pages/Read/Tales/Tales"));
 const Tale = lazy(() => import("./Pages/Read/Tales/Tale/Tale"));
@@ -125,6 +126,14 @@ export default function App() {
               element={
                 <Suspense fallback={<Loading />}>
                   <Stories />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/read/stories/wiki"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Wiki />
                 </Suspense>
               }
             />
