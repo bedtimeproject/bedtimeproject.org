@@ -26,7 +26,10 @@ const SurfersHideaway = lazy(() =>
   import("./Pages/Read/BedtimeStories/SurfersHideaway/SurfersHideaway")
 );
 const Stories = lazy(() => import("./Pages/Read/Stories/Stories"));
-const Wiki = lazy(() => import("./Pages/Read/Stories/Wiki/Wiki"))
+const Wiki = lazy(() => import("./Pages/Read/Stories/Wiki/Wiki"));
+const IsleOfAlto = lazy(() =>
+  import("./Pages/Read/Stories/Wiki/IsleOfAlto/IsleOfAlto")
+);
 const Story = lazy(() => import("./Pages/Read/Stories/Story/Story"));
 const Tales = lazy(() => import("./Pages/Read/Tales/Tales"));
 const Tale = lazy(() => import("./Pages/Read/Tales/Tale/Tale"));
@@ -134,6 +137,14 @@ export default function App() {
               element={
                 <Suspense fallback={<Loading />}>
                   <Wiki />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/read/stories/wiki/isle-of-alto"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <IsleOfAlto />
                 </Suspense>
               }
             />

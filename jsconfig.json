@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "checkJs": true,
-    "jsx": "react",
-    "target": "esnext"
-  },
-  "include": ["src/**/*"]
-}
