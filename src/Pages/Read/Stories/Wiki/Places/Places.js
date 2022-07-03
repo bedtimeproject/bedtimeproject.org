@@ -1,23 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Wiki.scss";
+import StandardWrapper from "../../../../../Components/Structural/StandardWrapper/StandardWrapper";
+import PageTitle from "../../../../../Components/Structural/PageTitle/PageTitle";
+import SEO from "../../../../../Components/Structural/SEO/SEO";
 
-import StandardWrapper from "../../../../Components/Structural/StandardWrapper/StandardWrapper";
-import SEO from "../../../../Components/Structural/SEO/SEO";
-import PageTitle from "../../../../Components/Structural/PageTitle/PageTitle";
-
-export default function Wiki() {
+export default function Places() {
   return (
     <StandardWrapper>
-      <SEO title="The Wiki" />
+      <SEO title="Places | The Wiki | The Bedtime Project" />
       <div className="Wiki-Page-Wrapper">
-        <article className="inner-content">
-          <PageTitle>The Wiki</PageTitle>
-          <div>The wiki is currently under construction!</div>
-          <h2>
-            <Link to={"/read/stories/wiki/places"}>Places</Link>
-          </h2>
+        <div className="inner-content">
+          <PageTitle>Places</PageTitle>
           <div className="Links">
             <Link to={"/read/stories/wiki/places/isle-of-alto"}>
               Isle of Alto
@@ -52,15 +46,7 @@ export default function Wiki() {
               The Dry Sea
             </Link>
           </div>
-          <h2>People</h2>
-          <p>Coming Soon!</p>
-          <h2>Culinary Delights</h2>
-          <p>Coming Soon!</p>
-          <h2>Lore</h2>
-          <p>Coming Soon!</p>
-          <h2>Clouds</h2>
-          <p>Coming Soon!</p>
-        </article>
+        </div>
       </div>
     </StandardWrapper>
   );
