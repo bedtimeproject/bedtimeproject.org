@@ -22,7 +22,6 @@
     "@testing-library/user-event": "^13.5.0",
     "eslint": "^7.26.0",
     "eslint-config-react-app": "^7.0.0",
-    "semver": "^7.3.7",
     "webpack": "5"
   },
   "scripts": {
