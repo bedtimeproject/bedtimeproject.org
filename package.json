@@ -8,6 +8,7 @@
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^3.0.6",
     "@sanity/image-url": "^1.0.1",
+    "coa": "2.0.2",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -20,7 +21,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "eslint": "^7.26.0",
+    "eslint": "^8.31.0",
     "eslint-config-react-app": "^7.0.0",
     "webpack": "5"
   },
@@ -33,7 +34,7 @@
     "test": "react-scripts test --watchAll=false",
     "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
-    "licenses": "node ./scripts/licenseCrawler.js",
+    "licenses": "node ./scripts/licenseCrawler.js && git add ./src/Pages/About/Licenses/licenses.json",
     "check-packages": "node ./scripts/checkForMaliciousPackages.js",
     "gen": "./scripts/generateComponent.sh"
   },

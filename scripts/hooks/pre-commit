@@ -3,9 +3,14 @@
 # the-bedtime-project
 # pre-commit git hook
 #
-# Version 1.0.0
+# Version 1.0.1
 # Created by Alexander Burdiss 6/20/22
+# Last Modified 1/3/23
 #
 
+# stop the commit if anything fails
+set -e
+
 npm run check-packages
+
 npm run licenses
