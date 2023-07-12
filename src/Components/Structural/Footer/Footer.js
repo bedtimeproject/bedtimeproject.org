@@ -6,6 +6,8 @@ import "./Footer.scss";
  * @namespace Footer
  * @function Footer
  * @description The footer for the site.
+ * Note: If you are updating this component, also look at the Error component
+ * since it has a rebuild of this component not using any React Router links
  * @author Alexander Burdiss
  * @since 5/13/21
  * @version 1.0.1
