@@ -1,15 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
 <svg
-  class="Wind-Cloud"
+  xmlnsDc="http://purl.org/dc/elements/1.1/"
+  xmlnsCc="http://creativecommons.org/ns#"
+  xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlnsSvg="http://www.w3.org/2000/svg"
   xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
   width="31.270271mm"
   height="30.137573mm"
-  aria-label="A cartoon cloud with a face that is blowing wind very fast"
+  viewBox="0 0 110.80017 106.78667"
+  id="svg2"
+  version="1.1"
 >
-  <pattern
-    id="pattern6819"
-    patternTransform="matrix(0.61315749,0,0,0.59547982,1.4142136,947.11612)"
-  />
-  <defs>
+  <title id="title4136">wind - lineart</title>
+  <defs id="defs4">
+    <pattern
+      xlinkHref="#Polkadots-large"
+      id="pattern6819"
+      patternTransform="matrix(0.61315749,0,0,0.59547982,1.4142136,947.11612)"
+    />
     <pattern
       id="Polkadots-large"
       patternTransform="translate(0,0) scale(10,10)"
@@ -327,7 +337,10 @@
       />
     </pattern>
   </defs>
-  <g id="layer1" transform="translate(2.566475,-944.07849)">
+  <g
+    id="layer1"
+    transform="translate(2.566475,-944.07849)"
+  >
     <path
       style="
         fill: #ffffff;
