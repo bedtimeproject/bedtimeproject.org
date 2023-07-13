@@ -5,8 +5,8 @@
   }
   &-Scroll {
     display: none;
-    width: 80%;
-    margin: 40px 10%;
+    width: 622px;
+    margin: 40px auto;
     @media (min-width: 750px) {
       display: block;
     }
@@ -22,9 +22,11 @@
         position: absolute;
         top: 0;
         padding: 0;
-        width: 50%;
-        margin: 17% 20% 20% 30%;
+        width: 400px;
+        margin: 120px 20px 100px 40px;
         opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       & h1 {

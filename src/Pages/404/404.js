@@ -12,6 +12,7 @@ import { shuffle } from "../../utils/shuffle/shuffle";
 import oneLiners from "./404OneLiners";
 import scroll from "./scroll.svg";
 import "./404.scss";
+import { Link } from "react-router-dom";
 
 /**
  * @function FourOhFour
@@ -48,6 +49,7 @@ export default function FourOhFour() {
             {getRandomOneLiner()}
           </p>
           <p>Sincerely, C.A. Moonbloom</p>
+          <Link to="/">Head back home</Link>
         </div>
       </div>
     </StandardWrapper>
