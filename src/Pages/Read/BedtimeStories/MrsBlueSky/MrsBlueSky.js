@@ -77,12 +77,16 @@ export default function MrsBlueSky() {
       `}</style>
       <main className="Poem">
         <div className="Poem-Meta-Info">
-          <img src={HeaderCloud2} className="Header-Cloud-2" />
-          <img src={HeaderCloud} className="Header-Cloud" />
+          <img src={HeaderCloud2} className="Header-Cloud-2" alt="A cloud" />
+          <img src={HeaderCloud} className="Header-Cloud" alt="A cloud" />
           <h1 className="Poem-Title">Mrs. Blue Sky</h1>
           <h2 className="Poem-Author">C.A. Moonbloom</h2>
-          <img src={Aviantor} className="Paper-Airplane" />
-          <img src={Moon} className="Moon" />
+          <img
+            src={Aviantor}
+            className="Paper-Airplane"
+            alt="An ant riding a paper airplane"
+          />
+          <img src={Moon} className="Moon" alt="The moon" />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza First-Stanza">
@@ -91,7 +95,7 @@ export default function MrsBlueSky() {
             <p>My fluffy white dog</p>
             <p>Is starting to fade</p>
           </div>
-          <img src={SadDogImage} className="Sad-Dog-Image" />
+          <img src={SadDogImage} className="Sad-Dog-Image" alt="A sad dog" />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Second-Stanza">
@@ -100,9 +104,9 @@ export default function MrsBlueSky() {
             <p>It looks like the ring</p>
             <p>Around the word “POW”</p>
           </div>
-          <img src={Dragon} className="Dragon" />
-          <img src={Cow} className="Cow" />
-          <img src={ComicPow} className="Comic-Pow" />
+          <img src={Dragon} className="Dragon" alt="A Dragon" />
+          <img src={Cow} className="Cow" alt="A Cow" />
+          <img src={ComicPow} className="Comic-Pow" alt="A comic book Pow!" />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Third-Stanza">
@@ -111,10 +115,18 @@ export default function MrsBlueSky() {
             <p>Be it over that mountain</p>
             <p>Or back in a sack</p>
           </div>
-          <img src={Sun} className="Sun" />
-          <img src={SunsetCloud} className="Sunset-Cloud" />
-          <img src={SunsetCloud2} className="Sunset-Cloud-2" />
-          <img src={Mountain} className="Mountain" />
+          <img src={Sun} className="Sun" alt="The Sun" />
+          <img
+            src={SunsetCloud}
+            className="Sunset-Cloud"
+            alt="A small colorful cloud"
+          />
+          <img
+            src={SunsetCloud2}
+            className="Sunset-Cloud-2"
+            alt="Another small colorful cloud"
+          />
+          <img src={Mountain} className="Mountain" alt="A striking mountain" />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Fourth-Stanza">
@@ -123,7 +135,11 @@ export default function MrsBlueSky() {
             <p>Because playtime without him</p>
             <p>just isn't alright.</p>
           </div>
-          <img src={WindCloud} className="Wind-Cloud" />
+          <img
+            src={WindCloud}
+            className="Wind-Cloud"
+            alt="A cloud blowing himself across the screen"
+          />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Fifth-Stanza">
@@ -132,7 +148,11 @@ export default function MrsBlueSky() {
             <p>How his fur would flop</p>
             <p>In all sorts of ways</p>
           </div>
-          <img src={BoyFrisbee} className="Boy-Frisbee" />
+          <img
+            src={BoyFrisbee}
+            className="Boy-Frisbee"
+            alt="A boy throwing a frisbee"
+          />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Sixth-Stanza">
@@ -141,7 +161,7 @@ export default function MrsBlueSky() {
             <p>He was my best friend </p>
             <p>I think… don’t you?</p>
           </div>
-          <img src={Frisbee} className="Frisbee" />
+          <img src={Frisbee} className="Frisbee" alt="A flying frisbee" />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Seventh-Stanza">
@@ -150,7 +170,11 @@ export default function MrsBlueSky() {
             <p>My dog doesn’t usually </p>
             <p>go that high...</p>
           </div>
-          <img src={HighDog} className="High-Dog" />
+          <img
+            src={HighDog}
+            className="High-Dog"
+            alt="A small dog high in the sky"
+          />
         </div>
         <div className="Poem-Stanza-Wrapper">
           <div className="Poem-Stanza Eighth-Stanza">
@@ -159,7 +183,11 @@ export default function MrsBlueSky() {
             <p>My dogs turned to thunder</p>
             <p>I’m going inside</p>
           </div>
-          <img src={Lightning} className="Lightning" />
+          <img
+            src={Lightning}
+            className="Lightning"
+            alt="A bolt of lightning"
+          />
         </div>
       </main>
       <div className="Poem-Credits">
