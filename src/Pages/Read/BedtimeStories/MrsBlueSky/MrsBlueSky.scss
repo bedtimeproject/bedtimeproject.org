@@ -439,11 +439,10 @@
   .Wind-Cloud {
     position: fixed;
     z-index: 75;
-    transform: scale(5) scaleX(-1) rotateY(180deg);
-    width: 111px;
-    height: 107px;
+    width: 311px;
+    height: 307px;
     left: -100vw;
-    top: 50vh;
+    top: 30vh;
 
     animation-name: Wind-Cloud;
     animation-duration: 1s;
