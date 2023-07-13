@@ -45,7 +45,7 @@ export default function PaperStory({ storyData, backLink, backLinkText }) {
         </article>
       ) : (
         <div className="PaperStory-Loading-Container">
-          <Loading color="#FFFFFF" />
+          <Loading />
         </div>
       )}
     </div>
