@@ -33,14 +33,14 @@ export default function Stories() {
         <Bookshelf
           pageTitle="Stories"
           books1={[
-            <BookLink
-              link={"/read/stories/wiki"}
-              story={{
-                title: "The Wiki",
-                author: "C. A. Moonbloom and Calcius Caldwell",
-              }}
-              backgroundColor={"#88d9d7"}
-            />,
+            // <BookLink
+            //   link={"/read/stories/wiki"}
+            //   story={{
+            //     title: "The Wiki",
+            //     author: "C. A. Moonbloom and Calcius Caldwell",
+            //   }}
+            //   backgroundColor={"#88d9d7"}
+            // />,
             ...stories.map((story, index) => {
               if (index > 1) {
                 return null;
