@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import "./Bookshelf.scss";
 
 import RainyWindow from "../RainyWindow/RainyWindow";
@@ -77,3 +78,18 @@ export default function Bookshelf({
     </div>
   );
 }
+
+Bookshelf.propTypes = {
+  books1: PropTypes.arrayOf(PropTypes.object),
+  books2: PropTypes.arrayOf(PropTypes.object),
+  books3: PropTypes.arrayOf(PropTypes.object),
+  pageTitle: PropTypes.string,
+  drawerHref: PropTypes.string,
+  drawerLabel: PropTypes.string,
+  shelf1Link: PropTypes.string,
+  shelf1Label: PropTypes.string,
+  shelf2Link: PropTypes.string,
+  shelf2Label: PropTypes.string,
+  shelf3Link: PropTypes.string,
+  shelf3Label: PropTypes.string,
+};

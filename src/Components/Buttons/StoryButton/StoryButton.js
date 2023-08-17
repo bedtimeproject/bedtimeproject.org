@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./StoryButton.scss";
 
@@ -42,3 +43,10 @@ export default function StoryButton({ children, onClick, link, className }) {
     </button>
   );
 }
+
+StoryButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  link: PropTypes.string,
+  className: PropTypes.string,
+};

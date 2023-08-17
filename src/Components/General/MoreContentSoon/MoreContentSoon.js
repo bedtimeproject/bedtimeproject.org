@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./MoreContentSoon.scss";
 
@@ -24,3 +25,8 @@ export default function MoreContentSoon({ backLink, backLinkText }) {
     </div>
   );
 }
+
+MoreContentSoon.propTypes = {
+  backLink: PropTypes.string,
+  backLinkText: PropTypes.string,
+};

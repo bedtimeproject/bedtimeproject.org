@@ -1,5 +1,5 @@
-//@ts-check
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./ShelfLabel.scss";
 
@@ -18,3 +18,8 @@ export default function ShelfLabel({ link, title }) {
     </div>
   );
 }
+
+ShelfLabel.propTypes = {
+  link: PropTypes.string,
+  title: PropTypes.string,
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 // Styles
@@ -38,3 +39,9 @@ export default function BookLink({ link, story, backgroundColor }) {
     </Link>
   );
 }
+
+BookLink.propTypes = {
+  link: PropTypes.string,
+  story: PropTypes.object,
+  backgroundColor: PropTypes.string,
+};

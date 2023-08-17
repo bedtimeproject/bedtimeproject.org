@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./QuipButton.scss";
 
@@ -20,3 +21,8 @@ export default function QuipButton({ children, link }) {
     </Link>
   );
 }
+
+QuipButton.propTypes = {
+  children: PropTypes.node,
+  link: PropTypes.string,
+};

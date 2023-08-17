@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Waves.scss";
 
 /**
@@ -54,3 +55,7 @@ export default function Waves({ color = "#625ace" }) {
     </div>
   );
 }
+
+Waves.propTypes = {
+  color: PropTypes.string,
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./RepeatingRadialGradient.scss";
 
 /**
@@ -37,3 +38,9 @@ export default function RepeatingRadialGradient({
     </>
   );
 }
+
+RepeatingRadialGradient.propTypes = {
+  primaryColor: PropTypes.string,
+  secondaryColor: PropTypes.string,
+  tertiaryColor: PropTypes.string,
+};

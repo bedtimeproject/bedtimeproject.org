@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./RainyWindow.scss";
 
 import Lighthouse from "../../Background/Lighthouse/Lighthouse";
@@ -81,3 +82,8 @@ export default function RainyWindow({ right, weather = "rain" }) {
     </div>
   );
 }
+
+RainyWindow.propTypes = {
+  right: PropTypes.bool,
+  weather: PropTypes.string,
+};

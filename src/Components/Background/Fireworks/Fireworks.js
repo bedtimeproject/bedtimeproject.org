@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Fireworks.scss";
 
 /**
@@ -26,3 +27,7 @@ export default function Fireworks({ window }) {
     </div>
   );
 }
+
+Fireworks.propTypes = {
+  window: PropTypes.bool,
+};

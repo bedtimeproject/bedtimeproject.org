@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./DoorButton.scss";
 
@@ -29,3 +30,10 @@ export default function DoorButton({ image, link, label, alt }) {
     </div>
   );
 }
+
+DoorButton.propTypes = {
+  image: PropTypes.string,
+  link: PropTypes.string,
+  label: PropTypes.string,
+  alt: PropTypes.string,
+};

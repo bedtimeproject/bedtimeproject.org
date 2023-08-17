@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./PlayButton.scss";
 
@@ -25,3 +26,8 @@ export default function PlayButton({ children, link }) {
     </Link>
   );
 }
+
+PlayButton.propTypes = {
+  children: PropTypes.node,
+  link: PropTypes.string,
+};

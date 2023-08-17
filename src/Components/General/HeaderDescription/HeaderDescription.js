@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./HeaderDescription.scss";
 
 /**
@@ -29,3 +30,9 @@ export default function HeaderDescription({ name, contribution, link }) {
     </div>
   );
 }
+
+HeaderDescription.propTypes = {
+  name: PropTypes.string,
+  contribution: PropTypes.string,
+  link: PropTypes.string,
+};

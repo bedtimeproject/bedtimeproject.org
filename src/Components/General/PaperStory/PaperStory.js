@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import BlockContent from "@sanity/block-content-to-react";
 import "./PaperStory.scss";
 
@@ -51,3 +52,9 @@ export default function PaperStory({ storyData, backLink, backLinkText }) {
     </div>
   ) : null;
 }
+
+PaperStory.propTypes = {
+  storyData: PropTypes.object,
+  backLink: PropTypes.object,
+  backLinkText: PropTypes.string,
+};

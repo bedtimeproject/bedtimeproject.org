@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import BlockContent from "@sanity/block-content-to-react";
 
 import "./Contributor.scss";
@@ -31,3 +32,10 @@ export default function Contributor({ name, bio, image, alt }) {
     </div>
   );
 }
+
+Contributor.propTypes = {
+  name: PropTypes.string,
+  bio: PropTypes.object,
+  image: PropTypes.string,
+  alt: PropTypes.string,
+};

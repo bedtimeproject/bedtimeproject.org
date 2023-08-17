@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Checkerboard.scss";
 
 /**
@@ -20,13 +21,13 @@ export default function Checkerboard({ primaryColor, secondaryColor }) {
       <style>{`
         .Checkerboard div {
           background: repeating-conic-gradient(
-            ${primaryColor} 0deg 90deg, 
+            ${primaryColor} 0deg 90deg,
             ${secondaryColor} 0deg 180deg
-          ) 
-          0 
+          )
+          0
           0 /
           200px
-          200px 
+          200px
           round;
         }
       `}</style>
@@ -80,3 +81,8 @@ export default function Checkerboard({ primaryColor, secondaryColor }) {
     </div>
   );
 }
+
+Checkerboard.propTypes = {
+  primaryColor: PropTypes.string,
+  secondaryColor: PropTypes.string,
+};

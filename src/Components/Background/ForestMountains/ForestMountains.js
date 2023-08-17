@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./ForestMountains.scss";
 
 /**
@@ -361,3 +362,7 @@ export default function ForestMountains({ timeOfDay }) {
     </div>
   );
 }
+
+ForestMountains.propTypes = {
+  timeOfDay: PropTypes.string,
+};

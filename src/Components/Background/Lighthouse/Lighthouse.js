@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Lighthouse.scss";
 
 /**
@@ -167,3 +168,8 @@ export default function Lighthouse({ minimal, right }) {
     </div>
   );
 }
+
+Lighthouse.propTypes = {
+  minimal: PropTypes.bool,
+  right: PropTypes.bool,
+};

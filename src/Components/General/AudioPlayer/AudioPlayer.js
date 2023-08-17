@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import PropTypes from "prop-types";
 import "./AudioPlayer.scss";
 
 import oldRecordPlayer from "../../../assets/images/oldrecordplayer.svg";
@@ -59,3 +60,8 @@ export default function AudioPlayer({ src, attribution }) {
     </div>
   );
 }
+
+AudioPlayer.propTypes = {
+  src: PropTypes.string,
+  attribution: PropTypes.string,
+};
