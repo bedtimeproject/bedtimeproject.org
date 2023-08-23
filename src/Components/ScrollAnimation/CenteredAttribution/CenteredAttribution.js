@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./CenteredAttribution.scss";
 
@@ -42,3 +43,9 @@ export default function CenteredAttribution({
     </div>
   );
 }
+
+CenteredAttribution.propTypes = {
+  children: PropTypes.node,
+  background: PropTypes.string,
+  backlink: PropTypes.string,
+};

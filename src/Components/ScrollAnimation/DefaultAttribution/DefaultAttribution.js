@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./DefaultAttribution.scss";
 
@@ -37,3 +38,9 @@ export default function DefaultAttribution({ children, background, backlink }) {
     </div>
   );
 }
+
+DefaultAttribution.propTypes = {
+  children: PropTypes.node,
+  background: PropTypes.string,
+  backlink: PropTypes.string,
+};

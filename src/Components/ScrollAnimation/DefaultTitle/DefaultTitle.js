@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./DefaultTitle.scss";
 
 import { getContrast } from "../../../utils/getContrast/getContrast";
@@ -38,3 +39,9 @@ export default function DefaultTitle({ children, background, author }) {
     </header>
   );
 }
+
+DefaultTitle.propTypes = {
+  children: PropTypes.node,
+  background: PropTypes.string,
+  author: PropTypes.node,
+};

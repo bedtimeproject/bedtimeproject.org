@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 import DefaultTitle from "./DefaultTitle/DefaultTitle";
 import CenteredTitle from "./CenteredTitle/CenteredTitle";
@@ -148,3 +149,7 @@ export default function ScrollAnimation({ story }) {
     </div>
   );
 }
+
+ScrollAnimation.propTypes = {
+  story: PropTypes.object,
+};

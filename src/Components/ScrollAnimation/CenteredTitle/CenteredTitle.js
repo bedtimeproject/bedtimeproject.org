@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./CenteredTitle.scss";
 
 import { getContrast } from "../../../utils/getContrast/getContrast";
@@ -38,3 +39,9 @@ export default function CenteredTitle({ children, background, author }) {
     </header>
   );
 }
+
+CenteredTitle.propTypes = {
+  children: PropTypes.node,
+  background: PropTypes.string,
+  author: PropTypes.node,
+};

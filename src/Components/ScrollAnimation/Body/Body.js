@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import DefaultStanza from "../DefaultStanza/DefaultStanza";
 import StanzaImage from "../StanzaImage/StanzaImage";
 
@@ -126,3 +127,7 @@ export default function Body({ story }) {
     </main>
   );
 }
+
+Body.propTypes = {
+  story: PropTypes.object,
+};

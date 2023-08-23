@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { getContrast } from "../../../utils/getContrast/getContrast";
 
@@ -37,3 +38,9 @@ export default function DefaultStanza({ children, background, index }) {
     </div>
   );
 }
+
+DefaultStanza.propTypes = {
+  children: PropTypes.node,
+  background: PropTypes.string,
+  index: PropTypes.number,
+};

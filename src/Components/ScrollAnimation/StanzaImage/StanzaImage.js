@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import "./StanzaImage.scss";
 
@@ -315,3 +316,18 @@ export default function StanzaImage({
     </div>
   );
 }
+
+StanzaImage.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number,
+  imageIndex: PropTypes.number,
+  stanzaCount: PropTypes.number,
+  animation: PropTypes.string,
+  positionX: PropTypes.string,
+  positionY: PropTypes.string,
+  stanzaDuration: PropTypes.string,
+  url: PropTypes.string,
+  rotation: PropTypes.string,
+  scale: PropTypes.string,
+  animationOverlap: PropTypes.bool,
+};
