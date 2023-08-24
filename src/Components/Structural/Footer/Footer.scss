@@ -5,6 +5,7 @@
   overflow: hidden;
   color: $White;
   position: relative;
+  max-width:100%;
   min-height: 100px;
   @media screen and (min-width: $BreakS) {
     min-height: 68px;
