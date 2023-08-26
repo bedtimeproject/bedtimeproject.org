@@ -18,12 +18,14 @@ import "./Footer.scss";
 export default function Footer() {
   return (
     <footer className="FooterContainer">
+      <div className="FooterInner">
       <div className="CopyrightContainer">
         Copyright © {new Date().getFullYear()} The Bedtime Project, All rights
         reserved
       </div>
       <div className="PrivacyPolicyContainer">
         <Link to="/privacy-policy">Privacy Policy</Link>
+      </div>
       </div>
     </footer>
   );
