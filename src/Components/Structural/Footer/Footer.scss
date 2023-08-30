@@ -22,8 +22,6 @@
   }
 
   .CopyrightContainer {
-    position:relative;
-    left:10px;
     text-align: center;
     transform: rotate(-4deg);
     @media screen and (min-width: $BreakS) {
@@ -32,20 +30,15 @@
 
     @media screen and (min-width: $BreakL) {
       padding-bottom: 25px;
-      left:150px;
     }
 
     @media screen and (min-width: $BreakL) {
       padding-bottom: 25px;
-      left:340px;
     }
-
-
-
   }
 
   .PrivacyPolicyContainer {
-
+    position: absolute;
     right: 20px;
     @media (min-width: $BreakS) {
       bottom: 20px;
