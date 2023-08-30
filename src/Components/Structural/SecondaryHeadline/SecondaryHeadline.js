@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./SecondaryHeadline.scss";
 
 /**
@@ -15,3 +16,7 @@ import "./SecondaryHeadline.scss";
 export default function SecondaryHeadline({ children }) {
   return <h2 className="SecondaryHeadline-Container">{children}</h2>;
 }
+
+SecondaryHeadline.propTypes = {
+  children: PropTypes.node,
+};

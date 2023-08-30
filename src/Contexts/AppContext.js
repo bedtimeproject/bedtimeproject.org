@@ -1,5 +1,6 @@
 //@ts-check
 import React, { useReducer } from "react";
+import PropTypes from "prop-types";
 const initialAppState = { tales: [], stories: [] };
 const AppContext = React.createContext({
   state: initialAppState,
@@ -37,5 +38,9 @@ function AppProvider({ children }) {
     </AppContext.Provider>
   );
 }
+
+AppProvider.propTypes = {
+  children: PropTypes.node,
+};
 
 export { AppContext, AppProvider };

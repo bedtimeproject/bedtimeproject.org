@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./MainContent.scss";
 
 /**
@@ -16,3 +17,7 @@ export default function MainContent({ children }) {
     </main>
   );
 }
+
+MainContent.propTypes = {
+  children: PropTypes.node,
+};

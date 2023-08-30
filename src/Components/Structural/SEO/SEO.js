@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import { Helmet } from "react-helmet-async";
 
 // @ts-ignore
@@ -73,3 +74,13 @@ export default function SEO({
     </Helmet>
   );
 }
+
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  style: PropTypes.string,
+  themeColor: PropTypes.string,
+  ogType: PropTypes.string,
+  twitterCard: PropTypes.string,
+  children: PropTypes.node,
+};

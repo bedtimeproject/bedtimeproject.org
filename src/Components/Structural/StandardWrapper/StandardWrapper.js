@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./StandardWrapper.scss";
 
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
@@ -38,3 +39,9 @@ export default function StandardWrapper({
     </div>
   );
 }
+
+StandardWrapper.propTypes = {
+  children: PropTypes.node,
+  breadcrumb: PropTypes.bool,
+  headerDecoration: PropTypes.bool,
+};

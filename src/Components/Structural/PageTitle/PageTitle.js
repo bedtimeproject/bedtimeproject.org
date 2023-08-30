@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./PageTitle.scss";
 
 /**
@@ -21,3 +22,7 @@ export default function PageTitle({ children }) {
     </div>
   );
 }
+
+PageTitle.propTypes = {
+  children: PropTypes.node,
+};

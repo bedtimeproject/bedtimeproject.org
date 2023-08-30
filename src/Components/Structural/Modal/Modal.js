@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { createPortal } from "react-dom";
 
 const modalRoot = document.querySelector("#modal");
@@ -44,3 +45,7 @@ export default function Modal({ children }) {
     elRef.current
   );
 }
+
+Modal.propTypes = {
+  children: PropTypes.node,
+};
